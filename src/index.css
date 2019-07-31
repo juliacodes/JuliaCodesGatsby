@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: none;
+}
+
+.long {
+  transform: translateY(5px);
+}
+
+h1 {
+  font-weight: 900;
+}

@@ -9,6 +9,7 @@ import TwoColumnDiv from "../components/TwoColumnDiv";
 import Paragraph from "../components/Paragraph";
 import Heading from "../components/Heading";
 import Button from "../components/Button";
+import "../index.css";
 
 const Layout = styled.div`
   display: flex;
@@ -18,6 +19,9 @@ const Layout = styled.div`
   margin: 0 auto;
 
   * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     font-family: "Lato", sans-serif;
     text-decoration: none;
   }
@@ -145,7 +149,7 @@ const Right = styled.div`
 
 const GrayContainer = styled(Container)`
   background: linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%);
-  margin: 0;
+  margin: 100px 0 0 0;
 `;
 
 const SolidGrayContainer = styled(Container)`
