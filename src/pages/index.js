@@ -4,6 +4,11 @@ import styled from "styled-components";
 import { breakpoints } from "../../Media";
 import Hamburger from "../components/hamburger";
 import DescriptionHome from "../components/descriptionhome";
+import { Container } from "../components/container";
+import TwoColumnDiv from "../components/TwoColumnDiv";
+import Paragraph from "../components/Paragraph";
+import Heading from "../components/Heading";
+import Button from "../components/Button";
 
 const Layout = styled.div`
   display: flex;
@@ -62,6 +67,22 @@ const WhiteTriangle = styled.div`
   }
 `;
 
+const WhiteTriangleAlt = styled.div`
+  opacity: 0;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 0;
+    border-bottom: 100vh solid white;
+    border-left: 40vw solid transparent;
+    opacity: 1;
+  }
+`;
+
 const Left = styled.div`
   flex: 100%;
   z-index: 1;
@@ -116,6 +137,120 @@ const Right = styled.div`
   }
 `;
 
+const GrayContainer = styled(Container)`
+  background: linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%);
+  margin: 0;
+`;
+
+const SolidGrayContainer = styled(Container)`
+  background-color: #f2f2f2;
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 0;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    padding-left: 10%;
+  }
+
+  p {
+    max-width: 400px;
+  }
+`;
+
+const ProjectDescription = styled(Container)`
+  width: 100%;
+  height: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 20px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 40%;
+    margin-left: 5%;
+  }
+`;
+
+const ProjectDiv = styled(Container)`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 30%;
+    height: 800px;
+    display: block;
+    margin: 100px;
+  }
+`;
+
+const Project = styled(Container)`
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  margin: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #d3d3d3;
+  transition: box-shadow 0.2s;
+  /* background-image: url("https://s3-alpha-sig.figma.com/img/0f29/4ab3/d756d27ec4094f94acb28e642e628864?Expires=1563753600&Signature=JYk6w9M-Jj4Er-y8IuSG-FEiZUTuj9M~QP7b4wMho1fT3~ElNEBmAMNTo-N1jvOAye~RuJDBXVSqvqxv06B0ffJIIQPA3IcZ~sLtgipNokLkvWR4XhTOsc-mcbzrsExUkK~ERKBUiA0a4uO80vJpWIyygk~GyQLkamxvS4cp36rXe1K97nG6LzhMSgcFG86PQTr6EGk6ZqllqdIoqkOHdDPKVnMIiVcZO7XCOGOGU8SpVnP8FR7ZCxC-6KERGw2x4naITmG3uI5Is9EI1Js4Q~SHDSjepUJr9bnyNgJyhPHbAdTV-FI74dvWBAVsTS2KYPCeBbr9szlP~dFcXoNKNg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"); */
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    margin: 0 20px 20px 40px;
+    width: 400px;
+    height: 33%;
+  }
+
+  ::after {
+    content: "+";
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.2s;
+    font-size: 20px;
+    content: "+";
+    padding: 20px 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    ::after {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  :nth-child(1) {
+    transform: translateX(0px);
+    @media (min-width: ${breakpoints.mobileMax}) {
+      transform: translateX(0px);
+    }
+  }
+
+  :nth-child(2) {
+    transform: translateX(0px);
+    @media (min-width: ${breakpoints.mobileMax}) {
+      transform: translateX(-100px);
+    }
+  }
+
+  :nth-child(3) {
+    transform: translateX(0px);
+    @media (min-width: ${breakpoints.mobileMax}) {
+      transform: translateX(-200px);
+    }
+  }
+`;
+
 const IndexPage = () => (
   <Layout>
     <Content>
@@ -134,6 +269,27 @@ const IndexPage = () => (
           <DescriptionHome />
         </Right>
       </HomeLanding>
+      <GrayContainer>
+        <TwoColumnDiv />
+      </GrayContainer>
+      <SolidGrayContainer>
+        <WhiteTriangleAlt />
+        <ProjectDescription>
+          <Heading>My Projects</Heading>
+          <Paragraph>
+            I spend lots of my free exploring new technologies and picking up
+            new development projects. <br />
+            <br />
+            Take a look at what I've been working on recently.
+          </Paragraph>
+          <Button>See My Work</Button>
+        </ProjectDescription>
+        <ProjectDiv>
+          <Project />
+          <Project />
+          <Project />
+        </ProjectDiv>
+      </SolidGrayContainer>
     </Content>
   </Layout>
 );
