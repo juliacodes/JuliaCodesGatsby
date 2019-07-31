@@ -1,8 +1,22 @@
 import React from "react";
+import styled from "styled-components";
 import { Link } from "gatsby";
+import { breakpoints } from "../../Media";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
+
+const Layout = styled.div`
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 2000px;
+  margin: 0 auto;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 100vw;
+    height: 100vh;
+  }
+`;
 
 const AboutPage = () => (
   <Layout>

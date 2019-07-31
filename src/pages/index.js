@@ -1,21 +1,57 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import { breakpoints } from "../../Media";
+import Hamburger from "../components/hamburger";
 
-const Hello = styled.div`
-  color: blue;
+const Layout = styled.div`
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 2000px;
+  margin: 0 auto;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 100vw;
+    height: 100vh;
+  }
+`;
+
+const Content = styled.div`
+  margin: 10px;
+  display: flex;
+  width: calc(100% - 90px);
+  flex: 1 0 auto;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: scroll;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    margin: 30px;
+  }
+`;
+
+const HomeLanding = styled.div`
+  height: calc(100vh - 20px);
+  background-color: #ecf3f4;
+  width: 100%;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    display: flex;
+    flex: 1 0 auto;
+    background-color: #ecf3f4;
+    height: 100%;
+    flex-wrap: wrap;
+  }
 `;
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <Hello>Hi me</Hello>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
-    <Link to="/about/">Go to page 2</Link>
+    <Content>
+      <HomeLanding>
+        <Hamburger />
+      </HomeLanding>
+    </Content>
   </Layout>
 );
 

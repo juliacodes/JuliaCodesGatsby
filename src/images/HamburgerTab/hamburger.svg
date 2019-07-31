@@ -1,0 +1,9 @@
+<svg width="30" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<g class="trex">
+     <path class="long" d="M22 1H0" stroke="black" stroke-width="2"/>
+     <path style="transform: translateY(6px)" class="long" d="M22 1H0" stroke="black" stroke-width="2"/>
+    <path style="transform: translateY(12px)" class="short" d="M15.5294 1H0" stroke="black" stroke-width="2"/>
+
+  </g>
+</svg>
