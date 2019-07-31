@@ -115,6 +115,7 @@ const Links = styled.div`
     font-size: 45px;
     margin: 5% 0 0 0;
     line-height: 91.45%;
+    font-family: "Source Sans Pro", sans-serif;
     position: relative;
     z-index: 2;
     opacity: 0;
