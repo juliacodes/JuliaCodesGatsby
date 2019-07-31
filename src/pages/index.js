@@ -17,6 +17,11 @@ const Layout = styled.div`
   max-width: 2000px;
   margin: 0 auto;
 
+  * {
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+  }
+
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 100vw;
     height: 100vh;
@@ -102,6 +107,7 @@ const JULIA = styled.div`
   z-index: 99;
 
   p {
+    font-family: "Source Sans Pro", sans-serif;
     margin: 0 auto;
     font-weight: 900;
     font-size: 100px;
