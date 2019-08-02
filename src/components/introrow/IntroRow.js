@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import Me from "../../images/About/Me.png";
+import { breakpoints } from "../../../Media";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 
@@ -11,14 +12,14 @@ const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  @media (min-width: 900px) {
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
   }
 `;
 
 const Left = styled.div`
   flex: 100%;
-
-  @media (min-width: 900px) {
+  @media (min-width: ${breakpoints.mobileMax}) {
     flex: 55%;
     align-items: center;
     display: flex;
@@ -30,7 +31,7 @@ const HeaderText = styled.div`
   flex: 100%;
   padding: 20px;
 
-  @media (min-width: 900px) {
+  @media (min-width: ${breakpoints.mobileMax}) {
     padding: 0;
     width: 50%;
     min-width: 200px;
@@ -66,8 +67,7 @@ const HeaderText = styled.div`
 const Right = styled.div`
   flex: 100%;
   padding: 20px;
-
-  @media (min-width: 900px) {
+  @media (min-width: ${breakpoints.mobileMax}) {
     flex: 45%;
     height: auto;
     padding-right: 0;
