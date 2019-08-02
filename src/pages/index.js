@@ -91,7 +91,7 @@ const ProjectRow = styled.div`
 const Project = styled.div`
   width: 100%;
   height: 450px;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
 
   :nth-child(1) {
     margin-right: 0;

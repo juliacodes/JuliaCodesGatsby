@@ -21,8 +21,12 @@ const FooterCont = styled.div`
   margin: 100px 0 0 0;
 
   a {
-    text-align: right;
+    text-align: left;
     color: black;
+
+    @media (min-width: ${breakpoints.tabletMin}) {
+      text-align: right;
+    }
   }
 
   @media (min-width: ${breakpoints.tabletMin}) {
@@ -83,7 +87,13 @@ const InstagramCTA = styled.div`
   justify-content: space-between;
   height: auto;
   width: 100%;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
 `;
+
 const LeftGrid = styled.div`
   flex: 100%;
   flex-wrap: wrap;
@@ -93,6 +103,7 @@ const LeftGrid = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "Left Left centertop Right Right" "Left Left centerbot Right Right";
   grid-gap: 20px;
+
   @media (min-width: ${breakpoints.mobileMax}) {
     flex: 70%;
   }
@@ -141,21 +152,25 @@ const GridRight = styled.div`
   height: 320px;
   background-image: url(${ipad});
   border-radius: 4px;
-
   background-size: cover;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     height: 320px;
   }
 `;
+
 const RightGrid = styled.div`
   flex: 100%;
   padding: 0px;
+  margin-top: 40px;
   align-items: center;
   display: flex;
+  max-width: 100%;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex: 30%;
+    margin-top: 0px;
+
     max-width: 200px;
     margin-left: 200px;
   }
@@ -175,9 +190,14 @@ const CTAText = styled.div`
     font-size: 25px;
     line-height: 129.69%;
     /* or 32px */
-    text-align: right;
-    max-width: 200px;
+    text-align: left;
+    max-width: 100%;
     letter-spacing: 0.03em;
+
+    @media (min-width: ${breakpoints.mobileMax}) {
+      max-width: 200px;
+      text-align: right;
+    }
   }
 `;
 
@@ -188,10 +208,14 @@ const ProjectLink = styled(Paragraph)`
   display: inline;
   color: black;
   letter-spacing: 0.03em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    text-align: right;
+  }
 
   :hover {
     border-bottom: 2px solid black;
