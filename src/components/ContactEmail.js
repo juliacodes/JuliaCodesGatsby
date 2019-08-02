@@ -8,6 +8,11 @@ const Email = styled.div`
   padding-bottom: 5px;
   border-bottom: 2px solid black;
   display: inline-block;
+  transition: border-bottom 0.2s;
+
+  :hover {
+    border-bottom: 2px solid white;
+  }
 `;
 
 function ContactEmail() {

@@ -13,6 +13,11 @@ const Layout = styled.div`
   padding: 20px;
   margin: 25px auto;
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   @media (min-width: ${breakpoints.tabletMin}) {
     max-width: 940px;
     padding: 20px;
@@ -73,17 +78,19 @@ const HeadingImage = styled.div`
 const ProjectRow = styled.div`
   display: flex;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 0px;
   flex-wrap: wrap;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
+    margin-bottom: 70px;
   }
 `;
 
 const Project = styled.div`
   width: 100%;
   height: 450px;
+  margin-bottom: 30px;
 
   :nth-child(1) {
     margin-right: 0;
@@ -95,6 +102,7 @@ const Project = styled.div`
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
+    margin-bottom: 0px;
   }
 `;
 
@@ -119,6 +127,36 @@ const SubParagraph = styled(Paragraph)`
   }
 `;
 
+const ProjectParagraph = styled(Paragraph)`
+  margin-top: 10px;
+  max-width: unset;
+  margin-bottom: 20px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    max-width: 60%;
+  }
+`;
+
+const ProjectLink = styled(Paragraph)`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 163.19%;
+  display: inline;
+  color: black;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  transition: border-bottom 0.2s;
+
+  :hover {
+    border-bottom: 2px solid black;
+  }
+
+  span {
+    font-size: 20px;
+  }
+`;
+
 const IndexPage = () => (
   <Layout>
     <Link to="/">
@@ -135,7 +173,7 @@ const IndexPage = () => (
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
           pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
           tempor iaculis turpis. Nunc venenatis nisi nec orci gravida consequat
-          vitae et risus.{" "}
+          vitae et risus.
         </Paragraph>
         <ContactEmail />
       </TextContent>
@@ -153,40 +191,38 @@ const IndexPage = () => (
     <SubContainer>
       <ProjectRow>
         <Project>
-          <ProjectImage />
-          <SubHeading>Forecast</SubHeading>
-          <SubParagraph>
+          <Link to="">
+            <ProjectImage />
+          </Link>
+          <Link to="">
+            <SubHeading>Forecast</SubHeading>
+          </Link>
+          <ProjectParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
             pretium magna.
-          </SubParagraph>
+          </ProjectParagraph>
+          <Link as="">
+            <ProjectLink>
+              VISIT PAGE <span>&#8250;</span>
+            </ProjectLink>
+          </Link>
         </Project>
         <Project>
-          <ProjectImage />
-          <SubHeading>Forecast</SubHeading>
-          <SubParagraph>
+          <Link to="">
+            <ProjectImage />
+          </Link>
+          <Link to="">
+            <SubHeading>Forecast</SubHeading>
+          </Link>
+          <ProjectParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
             pretium magna.
-          </SubParagraph>
-        </Project>
-      </ProjectRow>
-    </SubContainer>
-    <SubContainer>
-      <ProjectRow>
-        <Project>
-          <ProjectImage />
-          <SubHeading>Forecast</SubHeading>
-          <SubParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-            pretium magna.
-          </SubParagraph>
-        </Project>
-        <Project>
-          <ProjectImage />
-          <SubHeading>Forecast</SubHeading>
-          <SubParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-            pretium magna.
-          </SubParagraph>
+          </ProjectParagraph>
+          <Link as="">
+            <ProjectLink>
+              VISIT PAGE <span>&#8250;</span>
+            </ProjectLink>
+          </Link>
         </Project>
       </ProjectRow>
     </SubContainer>
