@@ -1,51 +1,105 @@
 import React from "react";
-import Button from "../../components/Button";
+import { Link } from "gatsby";
 import styled from "styled-components/macro";
+import Heading from "../Heading";
+import Paragraph from "../Paragraph";
+import Logo from "../Logo";
+
+import { breakpoints } from "../../../Media";
+import ContactEmail from "../ContactEmail";
 
 const FooterCont = styled.div`
   width: 100%;
-  padding: 80px;
-  background-color: white;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const CenterCTA = styled.div`
+  height: 100%;
+  background-color: #f5f5f5;
   padding: 0;
-  width: 100%;
-  flex: 1 0 auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-position: center center;
+  margin: 100px 0 0 0;
 
-  h3 {
-    text-align: center;
-    max-width: 250px;
-    margin: 30px auto 20px auto;
-    text-align: left;
-    font-family: "Lato", sans-serif;
-    font-size: 28px;
-    line-height: 128.95%;
-    font-weight: 800;
-    letter-spacing: -0.025em;
+  @media (min-width: ${breakpoints.tabletMin}) {
+    margin: 0;
   }
 `;
 
-const CenterButton = styled.div`
-  margin: 0 auto;
+const Layout = styled.div`
+  padding: 20px;
+  margin: 25px auto;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  @media (min-width: ${breakpoints.tabletMin}) {
+    max-width: 940px;
+    padding: 100px 0 0 0;
+    margin: 75px auto;
+  }
+
+  @media (min-width: ${breakpoints.desktopMin}) {
+    max-width: 1200px;
+    padding: 100px 0 0 0;
+    margin: 75px auto;
+  }
+`;
+
+const TextContent = styled.div`
+  max-width: 700px;
+`;
+
+const SubContainer = styled.div`
+  margin: 0px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
+`;
+
+const SubParagraph = styled(Paragraph)`
+  margin-top: 20px;
+  max-width: unset;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    max-width: 60%;
+  }
+`;
+
+const Container = styled.div`
+  margin: 100px 0 0 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
 `;
 
 function Footer() {
   return (
     <FooterCont>
-      <CenterCTA>
-        <h3>Want to learn more?</h3>
-        <CenterButton>
-          <Button>Let's Chat</Button>
-        </CenterButton>
-      </CenterCTA>
+      <Layout>
+        <SubContainer>
+          <TextContent>
+            <Heading>Let's Build Something Together</Heading>
+            <SubParagraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+              pretium magna.
+            </SubParagraph>
+            <ContactEmail />
+          </TextContent>
+        </SubContainer>
+        <Container>
+          <Link to="/">
+            <Logo />
+          </Link>
+        </Container>
+      </Layout>
     </FooterCont>
   );
 }

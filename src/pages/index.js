@@ -6,6 +6,7 @@ import Logo from "../components/Logo";
 import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
 import ContactEmail from "../components/ContactEmail";
+import Footer from "../components/footer";
 import "../index.css";
 
 const Layout = styled.div`
@@ -158,75 +159,78 @@ const ProjectLink = styled(Paragraph)`
 `;
 
 const IndexPage = () => (
-  <Layout>
-    <Link to="/">
-      <Logo />
-    </Link>
-    <Container>
-      <TextContent>
-        <Heading>
-          Hi there, I’m Julia. <br />
-          Front End <span>Developer</span>, <br />
-          Student and Minimalist
-        </Heading>
-        <Paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-          pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
-          tempor iaculis turpis. Nunc venenatis nisi nec orci gravida consequat
-          vitae et risus.
-        </Paragraph>
-        <ContactEmail />
-      </TextContent>
-      <HeadingImage />
-    </Container>
-    <SubContainer>
-      <TextContent>
-        <Heading>What I've been working on </Heading>
-        <SubParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-          pretium magna.
-        </SubParagraph>
-      </TextContent>
-    </SubContainer>
-    <SubContainer>
-      <ProjectRow>
-        <Project>
-          <Link to="">
-            <ProjectImage />
-          </Link>
-          <Link to="">
-            <SubHeading>Forecast</SubHeading>
-          </Link>
-          <ProjectParagraph>
+  <>
+    <Layout>
+      <Link to="/">
+        <Logo />
+      </Link>
+      <Container>
+        <TextContent>
+          <Heading>
+            Hi there, I’m Julia. <br />
+            Front End <span>Developer</span>, <br />
+            Student and Minimalist
+          </Heading>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+            pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
+            tempor iaculis turpis. Nunc venenatis nisi nec orci gravida
+            consequat vitae et risus.
+          </Paragraph>
+          <ContactEmail />
+        </TextContent>
+        <HeadingImage />
+      </Container>
+      <SubContainer>
+        <TextContent>
+          <Heading>What I've been working on </Heading>
+          <SubParagraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
             pretium magna.
-          </ProjectParagraph>
-          <Link as="">
-            <ProjectLink>
-              VISIT PAGE <span>&#8250;</span>
-            </ProjectLink>
-          </Link>
-        </Project>
-        <Project>
-          <Link to="">
-            <ProjectImage />
-          </Link>
-          <Link to="">
-            <SubHeading>Forecast</SubHeading>
-          </Link>
-          <ProjectParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-            pretium magna.
-          </ProjectParagraph>
-          <Link as="">
-            <ProjectLink>
-              VISIT PAGE <span>&#8250;</span>
-            </ProjectLink>
-          </Link>
-        </Project>
-      </ProjectRow>
-    </SubContainer>
-  </Layout>
+          </SubParagraph>
+        </TextContent>
+      </SubContainer>
+      <SubContainer>
+        <ProjectRow>
+          <Project>
+            <Link to="">
+              <ProjectImage />
+            </Link>
+            <Link to="">
+              <SubHeading>Forecast</SubHeading>
+            </Link>
+            <ProjectParagraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+              pretium magna.
+            </ProjectParagraph>
+            <Link as="">
+              <ProjectLink>
+                VISIT PAGE <span>&#8250;</span>
+              </ProjectLink>
+            </Link>
+          </Project>
+          <Project>
+            <Link to="">
+              <ProjectImage />
+            </Link>
+            <Link to="">
+              <SubHeading>Forecast</SubHeading>
+            </Link>
+            <ProjectParagraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+              pretium magna.
+            </ProjectParagraph>
+            <Link as="">
+              <ProjectLink>
+                VISIT PAGE <span>&#8250;</span>
+              </ProjectLink>
+            </Link>
+          </Project>
+        </ProjectRow>
+      </SubContainer>
+    </Layout>
+    <Footer />
+  </>
 );
 
 export default IndexPage;
