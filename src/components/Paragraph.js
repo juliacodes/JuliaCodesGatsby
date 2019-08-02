@@ -1,12 +1,14 @@
 import styled from "styled-components/macro";
 
 const Paragraph = styled.p`
-  margin: 30px 0;
+  margin: 50px 0;
+  color: #696969;
   width: 100%;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 156.19%;
-  color: #5e5e5e;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 184.69%;
+  /* or 30px */
   letter-spacing: 0.03em;
 `;
 

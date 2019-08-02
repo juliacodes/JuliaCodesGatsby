@@ -9,16 +9,30 @@ import ContactEmail from "../components/ContactEmail";
 import "../index.css";
 
 const Layout = styled.div`
-  max-width: 1200px;
   min-height: 100vh;
-  padding: 0;
+  padding: 20px;
   margin: 75px auto;
+
+  @media (min-width: ${breakpoints.tabletMin}) {
+    max-width: 1000px;
+    padding: 0px;
+  }
+
+  @media (min-width: ${breakpoints.desktopMin}) {
+    max-width: 1200px;
+    padding: 0px;
+  }
 `;
 
-const Landing = styled.div`
-  margin-top: 100px;
+const Container = styled.div`
+  margin: 150px 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
 `;
 
 const TextContent = styled.div`
@@ -26,10 +40,18 @@ const TextContent = styled.div`
 `;
 
 const HeadingImage = styled.div`
-  margin-left: 100px;
-  width: 50%;
-  height: 400px;
+  margin-left: 0px;
+  margin-top: 50px;
+  width: 100%;
+  border-radius: 4px;
+  height: 600px;
   background-color: #f5f5f5;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 50px;
+  }
 `;
 
 const IndexPage = () => (
@@ -37,7 +59,7 @@ const IndexPage = () => (
     <Link to="/">
       <Logo />
     </Link>
-    <Landing>
+    <Container>
       <TextContent>
         <Heading>
           Hi there, I’m Julia. <br />
@@ -53,7 +75,16 @@ const IndexPage = () => (
         <ContactEmail />
       </TextContent>
       <HeadingImage />
-    </Landing>
+    </Container>
+    <Container>
+      <TextContent>
+        <Heading>What I've been working on </Heading>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+          pretium magna.{" "}
+        </Paragraph>
+      </TextContent>
+    </Container>
   </Layout>
 );
 
