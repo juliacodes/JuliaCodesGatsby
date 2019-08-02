@@ -11,21 +11,37 @@ import "../index.css";
 const Layout = styled.div`
   min-height: 100vh;
   padding: 20px;
-  margin: 75px auto;
+  margin: 25px auto;
 
   @media (min-width: ${breakpoints.tabletMin}) {
-    max-width: 1000px;
-    padding: 0px;
+    max-width: 940px;
+    padding: 20px;
+    margin: 75px auto;
   }
 
   @media (min-width: ${breakpoints.desktopMin}) {
     max-width: 1200px;
-    padding: 0px;
+    padding: 20px;
+    margin: 75px auto;
   }
 `;
 
 const Container = styled.div`
-  margin: 150px 0;
+  margin: 100px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
+`;
+
+const SubContainer = styled.div`
+  margin: 0px 0;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -54,6 +70,55 @@ const HeadingImage = styled.div`
   }
 `;
 
+const ProjectRow = styled.div`
+  display: flex;
+  width: 100%;
+  margin-bottom: 70px;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
+`;
+
+const Project = styled.div`
+  width: 100%;
+  height: 450px;
+
+  :nth-child(1) {
+    margin-right: 0;
+
+    @media (min-width: ${breakpoints.mobileMax}) {
+      margin-right: 10%;
+    }
+  }
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 45%;
+  }
+`;
+
+const ProjectImage = styled.div`
+  width: 100%;
+  height: 300px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+`;
+
+const SubHeading = styled(Heading)`
+  font-size: 30px;
+  margin-bottom: 0;
+`;
+
+const SubParagraph = styled(Paragraph)`
+  margin-top: 10px;
+  max-width: unset;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    max-width: 60%;
+  }
+`;
+
 const IndexPage = () => (
   <Layout>
     <Link to="/">
@@ -76,15 +141,55 @@ const IndexPage = () => (
       </TextContent>
       <HeadingImage />
     </Container>
-    <Container>
+    <SubContainer>
       <TextContent>
         <Heading>What I've been working on </Heading>
-        <Paragraph>
+        <SubParagraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-          pretium magna.{" "}
-        </Paragraph>
+          pretium magna.
+        </SubParagraph>
       </TextContent>
-    </Container>
+    </SubContainer>
+    <SubContainer>
+      <ProjectRow>
+        <Project>
+          <ProjectImage />
+          <SubHeading>Forecast</SubHeading>
+          <SubParagraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+            pretium magna.
+          </SubParagraph>
+        </Project>
+        <Project>
+          <ProjectImage />
+          <SubHeading>Forecast</SubHeading>
+          <SubParagraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+            pretium magna.
+          </SubParagraph>
+        </Project>
+      </ProjectRow>
+    </SubContainer>
+    <SubContainer>
+      <ProjectRow>
+        <Project>
+          <ProjectImage />
+          <SubHeading>Forecast</SubHeading>
+          <SubParagraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+            pretium magna.
+          </SubParagraph>
+        </Project>
+        <Project>
+          <ProjectImage />
+          <SubHeading>Forecast</SubHeading>
+          <SubParagraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
+            pretium magna.
+          </SubParagraph>
+        </Project>
+      </ProjectRow>
+    </SubContainer>
   </Layout>
 );
 
