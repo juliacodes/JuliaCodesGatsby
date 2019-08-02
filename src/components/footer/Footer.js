@@ -5,6 +5,11 @@ import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import Logo from "../Logo";
 
+import coffee from "../../images/About/coffee.png";
+import ipad from "../../images/About/ipad.png";
+import sticker from "../../images/About/sticker.png";
+import comp from "../../images/About/comp.png";
+
 import { breakpoints } from "../../../Media";
 import ContactEmail from "../ContactEmail";
 
@@ -14,6 +19,11 @@ const FooterCont = styled.div`
   background-color: #f5f5f5;
   padding: 0;
   margin: 100px 0 0 0;
+
+  a {
+    text-align: right;
+    color: black;
+  }
 
   @media (min-width: ${breakpoints.tabletMin}) {
     margin: 0;
@@ -67,6 +77,131 @@ const SubParagraph = styled(Paragraph)`
   }
 `;
 
+const InstagramCTA = styled.div`
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+`;
+const LeftGrid = styled.div`
+  flex: 100%;
+  flex-wrap: wrap;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Left Left centertop Right Right" "Left Left centerbot Right Right";
+  grid-gap: 20px;
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex: 70%;
+  }
+  * {
+    position: relative;
+    height: 200px;
+  }
+`;
+
+const GridLeft = styled.div`
+  grid-area: Left;
+  height: 320px;
+  background-image: url(${comp});
+  background-size: cover;
+  border-radius: 4px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: 320px;
+  }
+`;
+const CenterTop = styled.div`
+  grid-area: centertop;
+  background-image: url(${sticker});
+  background-size: cover;
+  border-radius: 4px;
+
+  height: 150px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: unset;
+  }
+`;
+const CenterBot = styled.div`
+  grid-area: centerbot;
+  background-image: url(${coffee});
+  border-radius: 4px;
+  background-size: cover;
+  height: 150px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: unset;
+  }
+`;
+const GridRight = styled.div`
+  grid-area: Right;
+  height: 320px;
+  background-image: url(${ipad});
+  border-radius: 4px;
+
+  background-size: cover;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: 320px;
+  }
+`;
+const RightGrid = styled.div`
+  flex: 100%;
+  padding: 0px;
+  align-items: center;
+  display: flex;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex: 30%;
+    max-width: 200px;
+    margin-left: 200px;
+  }
+`;
+
+const CTAText = styled.div`
+  flex: 1 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-position: center center;
+
+  ${Heading} {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 129.69%;
+    /* or 32px */
+    text-align: right;
+    max-width: 200px;
+    letter-spacing: 0.03em;
+  }
+`;
+
+const ProjectLink = styled(Paragraph)`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 163.19%;
+  display: inline;
+  color: black;
+  letter-spacing: 0.03em;
+  text-align: right;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+
+  :hover {
+    border-bottom: 2px solid black;
+  }
+
+  span {
+    font-size: 20px;
+  }
+`;
+
 const Container = styled.div`
   margin: 100px 0 0 0;
   width: 100%;
@@ -94,6 +229,24 @@ function Footer() {
             <ContactEmail />
           </TextContent>
         </SubContainer>
+        <InstagramCTA>
+          <LeftGrid>
+            <GridLeft></GridLeft>
+            <CenterTop></CenterTop>
+            <CenterBot></CenterBot>
+            <GridRight></GridRight>
+          </LeftGrid>
+          <RightGrid>
+            <CTAText>
+              <Heading>I'm a lot cooler on instagram</Heading>
+              <Link as="">
+                <ProjectLink>
+                  See More <span>&#8250;</span>
+                </ProjectLink>
+              </Link>
+            </CTAText>
+          </RightGrid>
+        </InstagramCTA>
         <Container>
           <Link to="/">
             <Logo />

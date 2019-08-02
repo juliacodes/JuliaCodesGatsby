@@ -205,7 +205,7 @@ const IndexPage = () => (
             </ProjectParagraph>
             <Link as="">
               <ProjectLink>
-                VISIT PAGE <span>&#8250;</span>
+                Read Explanation <span>&#8250;</span>
               </ProjectLink>
             </Link>
           </Project>
@@ -222,7 +222,7 @@ const IndexPage = () => (
             </ProjectParagraph>
             <Link as="">
               <ProjectLink>
-                VISIT PAGE <span>&#8250;</span>
+                Read Explanation <span>&#8250;</span>
               </ProjectLink>
             </Link>
           </Project>
