@@ -7,6 +7,7 @@ import Logo from "../Logo";
 import { breakpoints } from "../Media";
 import ContactEmail from "../ContactEmail";
 import InstagramGrid from "../InstagramGrid";
+import ProjectRow from "../ProjectRow";
 
 const FooterCont = styled.div`
   width: 100%;
@@ -18,15 +19,15 @@ const FooterCont = styled.div`
   a {
     text-align: left;
     color: black;
-
-    @media (min-width: ${breakpoints.tabletMin}) {
-      text-align: right;
-    }
   }
 
   @media (min-width: ${breakpoints.tabletMin}) {
     margin: 0;
   }
+`;
+
+const Variable = styled.div`
+  display: ${props => props.projectDisplay || "none"};
 `;
 
 const Layout = styled.div`
@@ -64,6 +65,7 @@ const SubContainer = styled.div`
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
+    margin-bottom: 50px;
   }
 `;
 
@@ -89,10 +91,16 @@ const Container = styled.div`
   }
 `;
 
-function Footer() {
+function Footer(props) {
   return (
     <FooterCont>
       <Layout>
+        <Variable projectDisplay={props.projectDisplay}>
+          <Heading>Other Projects</Heading>
+          <SubContainer>
+            <ProjectRow />
+          </SubContainer>
+        </Variable>
         <SubContainer>
           <TextContent>
             <Heading>Let's Build Something Together</Heading>
@@ -103,7 +111,7 @@ function Footer() {
             <ContactEmail />
           </TextContent>
         </SubContainer>
-        <InstagramGrid />
+        <InstagramGrid instagramDisplay={props.instagramDisplay} />
         <Container>
           <Link to="/">
             <Logo />

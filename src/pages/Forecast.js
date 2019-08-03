@@ -155,7 +155,7 @@ const ProjectLink = styled(Paragraph)`
   }
 `;
 
-function Forecast() {
+function Forecast(props) {
   return (
     <>
       <Layout>
@@ -276,7 +276,7 @@ function Forecast() {
           </TextContent>
         </Container>
       </Layout>
-      <Footer />
+      <Footer projectDisplay="block" />
     </>
   );
 }

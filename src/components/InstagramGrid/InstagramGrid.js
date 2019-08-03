@@ -11,7 +11,7 @@ import comp from "../../images/comp.png";
 
 const InstagramCTA = styled.div`
   margin-top: 100px;
-  display: flex;
+  display: ${props => props.instagramDisplay || "none"};
   justify-content: space-between;
   height: auto;
   width: 100%;
@@ -154,9 +154,9 @@ const ProjectLink = styled(Paragraph)`
   }
 `;
 
-function InstagramGrid() {
+function InstagramGrid(props) {
   return (
-    <InstagramCTA>
+    <InstagramCTA instagramDisplay={props.instagramDisplay}>
       <LeftGrid>
         <GridLeft></GridLeft>
         <CenterTop></CenterTop>
