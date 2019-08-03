@@ -69,16 +69,19 @@ const SubParagraph = styled(Paragraph)`
   max-width: unset;
 
   @media (min-width: ${breakpoints.mobileMax}) {
-    max-width: 60%;
+    max-width: 70%;
   }
 `;
 
 class IndexPage extends React.Component {
   constructor() {
+    window.scrollTo(0, 0); // scroll to top on reload
+    document.body.style.overflow = "hidden"; // disable scroll during loading
     super();
     this.state = { loaded: false };
     setTimeout(() => {
       this.setState({ loaded: true });
+      document.body.style.overflow = "scroll"; // enable scroll
     }, 3200);
   }
 
