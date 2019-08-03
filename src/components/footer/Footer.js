@@ -6,6 +6,7 @@ import Paragraph from "../Paragraph";
 import Logo from "../Logo";
 import { breakpoints } from "../../../Media";
 import ContactEmail from "../ContactEmail";
+import InstagramGrid from "../InstagramGrid";
 
 const FooterCont = styled.div`
   width: 100%;
@@ -102,6 +103,7 @@ function Footer() {
             <ContactEmail />
           </TextContent>
         </SubContainer>
+        <InstagramGrid />
         <Container>
           <Link to="/">
             <Logo />

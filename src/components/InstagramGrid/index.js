@@ -1,1 +1,1 @@
-export { Container } from "./InstagramGrid";
+export { default } from "./InstagramGrid";
