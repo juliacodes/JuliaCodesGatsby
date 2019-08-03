@@ -25,7 +25,7 @@ const Container = styled.div`
 
 const TextContent = styled.div`
   max-width: 800px;
-
+  margin-top: 100px;
   :nth-child(1) {
     ${Heading} {
       font-size: 60px;
@@ -202,13 +202,12 @@ function Forecast(props) {
           <TextContent>
             <Heading>Forecast</Heading>
             <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-              pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
-              tempor iaculis turpis. Nunc venenatis nisi nec orci gravida
-              consequat vitae et risus. Mauris lorem tortor, consectetur vitae
-              tellus vel, tempor iaculis turpis. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Duis ac pretium magna. Mauris lorem
-              tortor, consectetur vitae tellus vel, tempor iaculis turpis.
+              Forecast is a project I put together after learning the basics of
+              GraphQL. This application was the perfect way to improve my
+              undertanding of making queries and managing larger sets of data.
+              In this project, I utilized OpenWeatherMap API to gather the
+              weather data and ingected this data based on the user's zip code
+              input.
             </Paragraph>
             <ProjectTable>
               <tr>
@@ -241,13 +240,13 @@ function Forecast(props) {
           <TextContent>
             <Heading>Project Purpose and Goal</Heading>
             <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-              pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
-              tempor iaculis turpis. Nunc venenatis nisi nec orci gravida
-              consequat vitae et risus. Mauris lorem tortor, consectetur vitae
-              tellus vel, tempor iaculis turpis. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Duis ac pretium magna. Mauris lorem
-              tortor, consectetur vitae tellus vel, tempor iaculis turpis.
+              As the main purpose of this project was to improve my
+              comprehension of GraphQL and APIs in general, I spend a good
+              amount of time making sure I was using the best practices of state
+              management and data manipulation. Besides this, I also wanted to
+              make this a weather application that I would enjoy using, meaning
+              it had to be visually pleasing and allow the user to see their
+              weather status at a quick glance.
             </Paragraph>
           </TextContent>
           <WebStack>
@@ -255,16 +254,18 @@ function Forecast(props) {
             <RightContent>
               <Heading>Web Stack and Explanation</Heading>
               <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-                pretium magna. Mauris lorem tortor, consectetur vitae tellus
-                vel, tempor iaculis turpis. Nunc venenatis nisi nec orci gravida
-                consequat vitae et risus.
+                For this project I used React, but many different Javascript
+                libraries could've been used, and even vanilla Javascript could
+                have been easily implemented. I choce to use React because of
+                its ease of use and the ability to smoothly manipulate states
+                without having to re-render the pages.
               </Paragraph>
               <Paragraph>
-                lorem tortor, consectetur vitae tellus vel, tempor iaculis
-                turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis ac pretium magna. Mauris lorem tortor, consectetur vitae
-                tellus vel, tempor iaculis turpis.
+                GraphQL was mainly chosen because I wanted to improve my
+                abilities with it, but also because their server performance is
+                extremely fast, and I knew there wouldn't be any wait time. To
+                publish the application, I hosted it through Netlify, because
+                its easy, free and how I've hosted many of my projects.
               </Paragraph>
             </RightContent>
           </WebStack>

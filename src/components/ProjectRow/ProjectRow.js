@@ -69,12 +69,12 @@ const Project = styled.div`
     margin-right: 0;
 
     @media (min-width: ${breakpoints.mobileMax}) {
-      margin-right: 7%;
+      margin-right: 10%;
     }
   }
 
   @media (min-width: ${breakpoints.mobileMax}) {
-    width: 47.5%;
+    width: 45%;
     margin-bottom: 0px;
   }
 
