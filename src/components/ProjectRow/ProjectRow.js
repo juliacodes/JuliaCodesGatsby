@@ -5,6 +5,7 @@ import { breakpoints } from "../Media";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import ForecastThumb from "../../images/ForecastThumb.png";
+import AwkwardThumb from "../../images/AwkwardThumb.png";
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -82,6 +83,16 @@ const Project = styled.div`
       background-image: url(${ForecastThumb});
       background-size: cover;
       background-position-x: center;
+      background-position-y: center;
+    }
+  }
+
+  :nth-child(2) {
+    ${ProjectImage} {
+      background-image: url(${AwkwardThumb});
+      background-size: cover;
+      background-position-x: center;
+      background-position-y: center;
     }
   }
 `;
@@ -126,7 +137,7 @@ function ProjectRow() {
           <ProjectImage />
         </Link>
         <Link to="">
-          <SubHeading>Forecast</SubHeading>
+          <SubHeading>Working at Awkward</SubHeading>
         </Link>
         <ProjectParagraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac

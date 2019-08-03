@@ -9,6 +9,8 @@ import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
 import Footer from "../components/footer";
 import "../index.css";
+import Forecast1 from "../images/Forecast1.png";
+import Problem from "../images/problem.png";
 import ForecastStack from "../images/ForecastStack.svg";
 
 const Container = styled.div`
@@ -63,12 +65,15 @@ const Bold = styled.td`
 const Image = styled.div`
   margin: 50px 0;
   width: 100%;
-  height: 350px;
+  height: 400px;
   border-radius: 4px;
-  background-color: #f5f5f5;
+  background-image: url(${Forecast1});
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
-    height: 650px;
+    height: 700px;
     margin: 100px 0 50px 0;
   }
 `;
@@ -115,10 +120,13 @@ const DuoImages = styled.div`
 
 const LeftImage = styled.div`
   width: 100%;
-  background-color: #f5f5f5;
   height: 350px;
   margin-right: 0;
   margin-bottom: 50px;
+  background-image: url(${Problem});
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
@@ -128,9 +136,12 @@ const LeftImage = styled.div`
 `;
 const RightImage = styled.div`
   width: 100%;
-  background-color: #f5f5f5;
   height: 350px;
   margin-bottom: 50px;
+  background-image: url(${Problem});
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
