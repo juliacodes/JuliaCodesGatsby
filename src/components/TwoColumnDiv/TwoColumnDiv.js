@@ -4,7 +4,6 @@ import Paragraph from "../../components/Paragraph";
 import Heading from "../../components/Heading";
 import styled from "styled-components/macro";
 import { breakpoints } from "../../../Media";
-import Button from "../../components/Button";
 
 const FlexContainer = styled(Container)`
   display: flex;
@@ -56,7 +55,6 @@ function TwoColumnDiv() {
           </strong>
           , learn all about my skills and interests here
         </Paragraph>
-        <Button>Read About Me</Button>
       </RightColumn>
     </FlexContainer>
   );
