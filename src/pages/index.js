@@ -10,6 +10,7 @@ import Paragraph from "../components/Paragraph";
 import ContactEmail from "../components/ContactEmail";
 import Footer from "../components/footer";
 import ProjectRow from "../components/ProjectRow";
+import Loading from "../components/Loading";
 import "../index.css";
 
 const Container = styled.div`
@@ -65,49 +66,67 @@ const SubParagraph = styled(Paragraph)`
   }
 `;
 
-const IndexPage = props => (
-  <>
-    <Layout>
-      <Link to="/">
-        <Logo />
-      </Link>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Julia Johnson | Front End Developer</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
-      <Container>
-        <TextContent>
-          <Heading>
-            Hi there, I’m Julia. <br />
-            Front End <span>Developer</span>, <br />
-            Student and Minimalist
-          </Heading>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-            pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
-            tempor iaculis turpis. Nunc venenatis nisi nec orci gravida
-            consequat vitae et risus.
-          </Paragraph>
-          <ContactEmail />
-        </TextContent>
-        <HeadingImage />
-      </Container>
-      <SubContainer>
-        <TextContent>
-          <Heading>What I've been working on </Heading>
-          <SubParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-            pretium magna.
-          </SubParagraph>
-        </TextContent>
-      </SubContainer>
-      <SubContainer>
-        <ProjectRow />
-      </SubContainer>
-    </Layout>
-    <Footer instagramDisplay="flex" />
-  </>
-);
+class IndexPage extends React.Component {
+  constructor() {
+    super();
+    this.state = { loaded: false };
+    setTimeout(() => {
+      this.setState({ loaded: true });
+    }, 3200);
+  }
+
+  render() {
+    return (
+      <>
+        {!this.state.loaded && <Loading />}
+        <>
+          <Layout>
+            <Link to="/">
+              <Logo />
+            </Link>
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Julia Johnson | Front End Developer</title>
+              <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+            <Container>
+              <TextContent>
+                <Heading>
+                  Hi there, I’m Julia. <br />
+                  Front End <span>Developer</span>, <br />
+                  Student and Minimalist
+                </Heading>
+                <Paragraph>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac pretium magna. Mauris lorem tortor, consectetur vitae
+                  tellus vel, tempor iaculis turpis. Nunc venenatis nisi nec
+                  orci gravida consequat vitae et risus.
+                </Paragraph>
+                <ContactEmail />
+              </TextContent>
+              <HeadingImage />
+            </Container>
+            <SubContainer>
+              <TextContent>
+                <Heading>What I've been working on </Heading>
+                <SubParagraph>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  ac pretium magna.
+                </SubParagraph>
+              </TextContent>
+            </SubContainer>
+            <SubContainer>
+              <ProjectRow />
+            </SubContainer>
+            <SubContainer>
+              <ProjectRow />
+            </SubContainer>
+          </Layout>
+          <Footer instagramDisplay="flex" />
+        </>
+      </>
+    );
+  }
+}
 
 export default IndexPage;
