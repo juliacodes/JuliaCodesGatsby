@@ -69,7 +69,7 @@ const Image = styled.div`
 
   @media (min-width: ${breakpoints.mobileMax}) {
     height: 650px;
-    margin: 100px 0;
+    margin: 100px 0 50px 0;
   }
 `;
 

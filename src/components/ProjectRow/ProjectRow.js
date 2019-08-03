@@ -10,10 +10,12 @@ const ProjectContainer = styled.div`
   width: 100%;
   margin-bottom: 0px;
   flex-wrap: wrap;
+  margin-top: 0px;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
     margin-bottom: 70px;
+    margin-top: 40px;
   }
 `;
 

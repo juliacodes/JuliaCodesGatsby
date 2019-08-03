@@ -28,6 +28,7 @@ const FooterCont = styled.div`
 
 const Variable = styled.div`
   display: ${props => props.projectDisplay || "none"};
+  margin-bottom: 100px;
 `;
 
 const Layout = styled.div`
