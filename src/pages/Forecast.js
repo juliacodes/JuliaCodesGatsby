@@ -61,7 +61,7 @@ const Bold = styled.td`
 `;
 
 const Image = styled.div`
-  margin: 100px 0;
+  margin: 50px 0;
   width: 100%;
   height: 350px;
   border-radius: 4px;
@@ -69,6 +69,7 @@ const Image = styled.div`
 
   @media (min-width: ${breakpoints.mobileMax}) {
     height: 650px;
+    margin: 100px 0;
   }
 `;
 

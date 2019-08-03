@@ -13,9 +13,10 @@ const InstagramCTA = styled.div`
   margin-top: 100px;
   display: ${props => props.instagramDisplay || "none"};
   justify-content: space-between;
+  align-items: center;
   height: auto;
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
@@ -23,6 +24,67 @@ const InstagramCTA = styled.div`
 `;
 
 const LeftGrid = styled.div`
+  flex: 100%;
+  padding: 0px;
+  margin-top: 40px;
+  align-items: left;
+  display: flex;
+  max-width: 100%;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex: 30%;
+    margin-top: 0px;
+    max-width: 200px;
+    margin-right: 200px;
+  }
+`;
+
+const GridLeft = styled.div`
+  grid-area: Left;
+  height: 220px;
+  background-image: url(${comp});
+  background-size: cover;
+  border-radius: 4px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: 300px;
+  }
+`;
+const CenterTop = styled.div`
+  grid-area: centertop;
+  background-image: url(${sticker});
+  background-size: cover;
+  border-radius: 4px;
+  height: 100px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: unset;
+  }
+`;
+const CenterBot = styled.div`
+  grid-area: centerbot;
+  background-image: url(${coffee});
+  border-radius: 4px;
+  background-size: cover;
+  height: 100px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: unset;
+  }
+`;
+const GridRight = styled.div`
+  grid-area: Right;
+  height: 220px;
+  background-image: url(${ipad});
+  border-radius: 4px;
+  background-size: cover;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: 300px;
+  }
+`;
+
+const RightGrid = styled.div`
   flex: 100%;
   flex-wrap: wrap;
   padding: 0px;
@@ -37,70 +99,6 @@ const LeftGrid = styled.div`
   }
   * {
     position: relative;
-    height: 200px;
-  }
-`;
-
-const GridLeft = styled.div`
-  grid-area: Left;
-  height: 320px;
-  background-image: url(${comp});
-  background-size: cover;
-  border-radius: 4px;
-
-  @media (min-width: ${breakpoints.mobileMax}) {
-    height: 320px;
-  }
-`;
-const CenterTop = styled.div`
-  grid-area: centertop;
-  background-image: url(${sticker});
-  background-size: cover;
-  border-radius: 4px;
-
-  height: 150px;
-
-  @media (min-width: ${breakpoints.mobileMax}) {
-    height: unset;
-  }
-`;
-const CenterBot = styled.div`
-  grid-area: centerbot;
-  background-image: url(${coffee});
-  border-radius: 4px;
-  background-size: cover;
-  height: 150px;
-
-  @media (min-width: ${breakpoints.mobileMax}) {
-    height: unset;
-  }
-`;
-const GridRight = styled.div`
-  grid-area: Right;
-  height: 320px;
-  background-image: url(${ipad});
-  border-radius: 4px;
-  background-size: cover;
-
-  @media (min-width: ${breakpoints.mobileMax}) {
-    height: 320px;
-  }
-`;
-
-const RightGrid = styled.div`
-  flex: 100%;
-  padding: 0px;
-  margin-top: 40px;
-  align-items: center;
-  display: flex;
-  max-width: 100%;
-
-  @media (min-width: ${breakpoints.mobileMax}) {
-    flex: 30%;
-    margin-top: 0px;
-
-    max-width: 200px;
-    margin-left: 200px;
   }
 `;
 
@@ -124,7 +122,7 @@ const CTAText = styled.div`
 
     @media (min-width: ${breakpoints.mobileMax}) {
       max-width: 200px;
-      text-align: right;
+      text-align: left;
     }
   }
 `;
@@ -158,12 +156,6 @@ function InstagramGrid(props) {
   return (
     <InstagramCTA instagramDisplay={props.instagramDisplay}>
       <LeftGrid>
-        <GridLeft></GridLeft>
-        <CenterTop></CenterTop>
-        <CenterBot></CenterBot>
-        <GridRight></GridRight>
-      </LeftGrid>
-      <RightGrid>
         <CTAText>
           <Heading>I'm a lot cooler on instagram</Heading>
           <Link as="">
@@ -172,6 +164,12 @@ function InstagramGrid(props) {
             </ProjectLink>
           </Link>
         </CTAText>
+      </LeftGrid>
+      <RightGrid>
+        <GridLeft></GridLeft>
+        <CenterTop></CenterTop>
+        <CenterBot></CenterBot>
+        <GridRight></GridRight>
       </RightGrid>
     </InstagramCTA>
   );
