@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
+import Layout from "../components/Layout";
 import styled from "styled-components";
 import { breakpoints } from "../components/Media";
 import Logo from "../components/Logo";
@@ -9,29 +10,6 @@ import Paragraph from "../components/Paragraph";
 import ContactEmail from "../components/ContactEmail";
 import Footer from "../components/footer";
 import "../index.css";
-
-const Layout = styled.div`
-  min-height: 100vh;
-  padding: 20px;
-  margin: 25px auto;
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  @media (min-width: ${breakpoints.tabletMin}) {
-    max-width: 940px;
-    padding: 20px;
-    margin: 75px auto;
-  }
-
-  @media (min-width: ${breakpoints.desktopMin}) {
-    max-width: 1200px;
-    padding: 20px;
-    margin: 75px auto;
-  }
-`;
 
 const Container = styled.div`
   margin: 100px 0;
