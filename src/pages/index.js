@@ -122,8 +122,8 @@ class IndexPage extends React.Component {
                 <Heading>What I've been working on </Heading>
                 <SubParagraph>
                   I like to stay busy and always have a project in the works.
-                  Take a look at some of the projects, articles and companies
-                  I've dedicated my time to.
+                  Take a look at some of the applications, articles and
+                  companies I've dedicated my time to.
                 </SubParagraph>
               </TextContent>
             </SubContainer>

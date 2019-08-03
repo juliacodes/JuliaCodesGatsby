@@ -106,8 +106,8 @@ function Footer(props) {
           <TextContent>
             <Heading>Let's Build Something Together</Heading>
             <SubParagraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-              pretium magna.
+              Feel free to reach out if you're looking for a developer, have a
+              question, or just want to connect.
             </SubParagraph>
             <ContactEmail />
           </TextContent>
