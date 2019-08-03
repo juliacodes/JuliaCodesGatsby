@@ -5,7 +5,7 @@ import { breakpoints } from "../Media";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import MediumPost from "../../images/MediumPost.png";
-import AwkwardThumb from "../../images/AwkwardThumb.png";
+import StresserThumbnail from "../../images/StressorThumbnail.png";
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -41,6 +41,14 @@ const ProjectLink = styled(Paragraph)`
   }
 `;
 
+const ProjectLinkSoon = styled(ProjectLink)`
+  color: gray;
+
+  :hover {
+    border-bottom: 2px solid transparent !important;
+  }
+`;
+
 const ProjectImage = styled.div`
   width: 100%;
   height: 300px;
@@ -62,6 +70,10 @@ const Project = styled.div`
 
     ${ProjectLink} {
       border-bottom: 2px solid black;
+    }
+
+    ${ProjectLinkSoon} {
+      border-bottom: 2px solid transparent;
     }
   }
 
@@ -89,7 +101,7 @@ const Project = styled.div`
 
   :nth-child(2) {
     ${ProjectImage} {
-      background-image: url(${AwkwardThumb});
+      background-image: url(${StresserThumbnail});
       background-size: cover;
       background-position-x: center;
       background-position-y: center;
@@ -108,7 +120,7 @@ const ProjectParagraph = styled(Paragraph)`
   margin-bottom: 20px;
 
   @media (min-width: ${breakpoints.mobileMax}) {
-    max-width: 60%;
+    max-width: 70%;
   }
 `;
 
@@ -128,7 +140,7 @@ function ProjectRow() {
         </ProjectParagraph>
         <Link to="/Forecast">
           <ProjectLink>
-            Read Explanation <span>&#8250;</span>
+            Read Article <span>&#8250;</span>
           </ProjectLink>
         </Link>
       </Project>
@@ -137,17 +149,15 @@ function ProjectRow() {
           <ProjectImage />
         </Link>
         <Link to="">
-          <SubHeading>Working at Awkward</SubHeading>
+          <SubHeading>Stressor</SubHeading>
         </Link>
         <ProjectParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-          pretium magna.
+          My current work in progress, a Chrome extension that helps students
+          organize work.
         </ProjectParagraph>
-        <Link as="">
-          <ProjectLink>
-            Read Explanation <span>&#8250;</span>
-          </ProjectLink>
-        </Link>
+        <>
+          <ProjectLinkSoon>Coming Soon</ProjectLinkSoon>
+        </>
       </Project>
     </ProjectContainer>
   );

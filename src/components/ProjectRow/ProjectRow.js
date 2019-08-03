@@ -108,7 +108,7 @@ const ProjectParagraph = styled(Paragraph)`
   margin-bottom: 20px;
 
   @media (min-width: ${breakpoints.mobileMax}) {
-    max-width: 60%;
+    max-width: 70%;
   }
 `;
 
@@ -123,8 +123,8 @@ function ProjectRow() {
           <SubHeading>Forecast</SubHeading>
         </Link>
         <ProjectParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-          pretium magna.
+          A 7 day weather application that sets weather data based on user
+          input.
         </ProjectParagraph>
         <Link to="/Forecast">
           <ProjectLink>
@@ -140,12 +140,12 @@ function ProjectRow() {
           <SubHeading>Working at Awkward</SubHeading>
         </Link>
         <ProjectParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-          pretium magna.
+          Read about my experience as an intern at Awkward, a digital design
+          agency.
         </ProjectParagraph>
         <Link as="">
           <ProjectLink>
-            Read Explanation <span>&#8250;</span>
+            Read Story <span>&#8250;</span>
           </ProjectLink>
         </Link>
       </Project>
