@@ -18,7 +18,7 @@ const Email = styled.div`
 function ContactEmail() {
   return (
     <>
-      <Link to="mailto:">
+      <Link to="mailto: juliajohnson@purdue.edu">
         <Email>juliajohnson@purdue.edu</Email>
       </Link>
     </>

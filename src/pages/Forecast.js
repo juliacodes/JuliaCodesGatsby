@@ -16,20 +16,32 @@ import ForecastComp from "../images/ForecastComp.png";
 import ForecastStack from "../images/ForecastStack.svg";
 
 const Container = styled.div`
-  margin: 100px 0;
+  margin: 50px 0;
   width: 100%;
   height: auto;
   align-items: center;
+
   h1 {
     font-size: 30px;
+  }
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    margin: 100px 0;
   }
 `;
 
 const TextContent = styled.div`
   max-width: 800px;
-  margin-top: 100px;
-  :nth-child(1) {
-    ${Heading} {
+  margin-top: 40px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    margin-top: 100px;
+  }
+
+  :nth-child(1) > ${Heading} {
+    font-size: 40px;
+
+    @media (min-width: ${breakpoints.mobileMax}) {
       font-size: 60px;
     }
   }
@@ -50,22 +62,31 @@ const ProjectTable = styled.table`
   }
 
   td {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 184.69%;
     letter-spacing: 0.03em;
   }
 `;
 
 const Bold = styled.td`
-  font-size: 16px;
-  line-height: 184.69%;
-  letter-spacing: 0.03em;
-  font-weight: 900;
-  color: #dd7834;
+  a {
+    font-size: 16px;
+    line-height: 184.69%;
+    letter-spacing: 0.03em;
+    font-weight: 900;
+    color: #dd7834;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    padding-bottom: 3px;
+
+    :hover {
+      border-bottom: 2px solid #dd7834;
+    }
+  }
 `;
 
 const Image = styled.img`
-  margin: 50px 0;
+  margin: 50px 0 20px 0;
   width: 105%;
   transform: translatex(-2.5%);
   height: auto;
@@ -80,6 +101,7 @@ const Image = styled.img`
 const WebStack = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin: 30px 0;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
@@ -119,7 +141,7 @@ const DuoImages = styled.div`
 
 const LeftImage = styled.div`
   width: 100%;
-  height: 350px;
+  height: 250px;
   margin-right: 0;
   margin-bottom: 50px;
   background-image: url(${ForecastLogic});
@@ -131,12 +153,13 @@ const LeftImage = styled.div`
     width: 45%;
     margin-bottom: 0px;
     margin-right: 10%;
+    height: 350px;
   }
 `;
 const RightImage = styled.div`
   width: 100%;
   height: 350px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   background-image: url(${ForecastComp});
   background-size: contain;
   background-position-x: right;
@@ -144,7 +167,6 @@ const RightImage = styled.div`
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
-    margin-bottom: 0;
   }
 `;
 
@@ -162,13 +184,29 @@ const CenterText = styled.div`
 const DuoLinks = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 150px;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+    width: 60%;
+  }
 `;
 
-const LinkLeft = styled.div``;
-const LinkRight = styled.div``;
+const LinkLeft = styled.div`
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: unset;
+    text-align: left;
+    margin: unset;
+  }
+`;
+const LinkRight = styled(LinkLeft)``;
 
 const ProjectLink = styled(Paragraph)`
   font-weight: 700;
@@ -218,8 +256,20 @@ function Forecast(props) {
               <tr>
                 <td>Personal</td>
                 <td>React</td>
-                <Bold>Repository</Bold>
-                <Bold>View Site</Bold>
+
+                <Bold>
+                  <a href="https://github.com/juliajohnson18/react-weather-api">
+                    Repository
+                  </a>
+                </Bold>
+
+                <a href="">
+                  <Bold>
+                    <a href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB">
+                      View Site
+                    </a>
+                  </Bold>
+                </a>
               </tr>
               <tr>
                 <td></td>
@@ -290,18 +340,18 @@ function Forecast(props) {
           <Image src={Forecast2} />
           <DuoLinks>
             <LinkLeft>
-              <Link as="">
+              <a href="https://github.com/juliajohnson18/react-weather-api">
                 <ProjectLink>
                   View Code <span>&#8250;</span>
                 </ProjectLink>
-              </Link>
+              </a>
             </LinkLeft>
             <LinkRight>
-              <Link as="">
+              <a href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB">
                 <ProjectLink>
                   Live Site <span>&#8250;</span>
                 </ProjectLink>
-              </Link>
+              </a>
             </LinkRight>
           </DuoLinks>
           <TextContent>

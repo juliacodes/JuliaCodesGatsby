@@ -100,6 +100,7 @@ const Project = styled.div`
 const SubHeading = styled(Heading)`
   font-size: 30px;
   margin-bottom: 0;
+  margin-top: 30px;
 `;
 
 const ProjectParagraph = styled(Paragraph)`

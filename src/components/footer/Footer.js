@@ -14,7 +14,7 @@ const FooterCont = styled.div`
   height: 100%;
   background-color: #fbfbfb;
   padding: 40px 0 0 0;
-  margin: 100px 0 0 0;
+  margin: 50px 0 0 0;
 
   a {
     text-align: left;
@@ -23,6 +23,7 @@ const FooterCont = styled.div`
 
   @media (min-width: ${breakpoints.tabletMin}) {
     padding: 0;
+    margin: 100px 0 0 0;
   }
 `;
 
@@ -58,7 +59,7 @@ const TextContent = styled.div`
 `;
 
 const SubContainer = styled.div`
-  margin: 0px 0;
+  margin: 60px 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -72,7 +73,6 @@ const SubContainer = styled.div`
 
 const SubParagraph = styled(Paragraph)`
   margin-top: 20px;
-  max-width: unset;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     max-width: 60%;

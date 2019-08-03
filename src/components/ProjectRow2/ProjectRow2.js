@@ -119,6 +119,7 @@ const ProjectSoon = styled(Project)`
 const SubHeading = styled(Heading)`
   font-size: 30px;
   margin-bottom: 0;
+  margin-top: 30px;
 `;
 
 const ProjectParagraph = styled(Paragraph)`
@@ -135,29 +136,25 @@ function ProjectRow() {
   return (
     <ProjectContainer>
       <Project>
-        <Link to="/Forecast">
+        <a href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce">
           <ProjectImage />
-        </Link>
-        <Link to="/Forecast">
+        </a>
+        <a href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce">
           <SubHeading>Managing Your Time</SubHeading>
-        </Link>
+        </a>
         <ProjectParagraph>
           A brief Medium article I wrote to help young programmers manage their
           time.
         </ProjectParagraph>
-        <Link to="/Forecast">
+        <a href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce">
           <ProjectLink>
             Read Article <span>&#8250;</span>
           </ProjectLink>
-        </Link>
+        </a>
       </Project>
       <ProjectSoon>
-        <Link to="">
-          <ProjectImage />
-        </Link>
-        <Link to="">
-          <SubHeading>Stressor</SubHeading>
-        </Link>
+        <ProjectImage />
+        <SubHeading>Stressor</SubHeading>
         <ProjectParagraph>
           My current work in progress, a Chrome extension that helps students
           organize work.
