@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { breakpoints } from "../Media";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
+import ForecastThumb from "../../images/ForecastThumb.png";
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -17,6 +18,13 @@ const ProjectContainer = styled.div`
     margin-bottom: 70px;
     margin-top: 40px;
   }
+`;
+
+const ProjectImage = styled.div`
+  width: 100%;
+  height: 300px;
+  background-color: gray;
+  border-radius: 4px;
 `;
 
 const Project = styled.div`
@@ -36,13 +44,13 @@ const Project = styled.div`
     width: 45%;
     margin-bottom: 0px;
   }
-`;
 
-const ProjectImage = styled.div`
-  width: 100%;
-  height: 300px;
-  background-color: gray;
-  border-radius: 4px;
+  :nth-child(1) {
+    ${ProjectImage} {
+      background-image: url(${ForecastThumb});
+      background-size: cover;
+    }
+  }
 `;
 
 const SubHeading = styled(Heading)`

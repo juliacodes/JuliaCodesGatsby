@@ -11,6 +11,8 @@ import ContactEmail from "../components/ContactEmail";
 import Footer from "../components/footer";
 import ProjectRow from "../components/ProjectRow";
 import Loading from "../components/Loading";
+import LandingImage from "../images/LandingImage.png";
+
 import "../index.css";
 
 const Container = styled.div`
@@ -47,13 +49,18 @@ const HeadingImage = styled.div`
   margin-top: 50px;
   width: 100%;
   border-radius: 4px;
-  height: 600px;
+  height: 300px;
+  background-size: cover;
+  background-image: url(${LandingImage});
   background-color: #f5f5f5;
+  background-position-y: center;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 50%;
+    height: 600px;
     margin-left: 100px;
     margin-top: 50px;
+    background-position-y: unset;
   }
 `;
 

@@ -46,10 +46,14 @@ const LogoLarge = styled.div`
   position: relative;
   background-image: url(${logosvg});
   width: 240px;
-  transform: scale(1);
+  transform: scale(0.7);
   height: 220px;
   background-repeat: no-repeat;
   animation: ${Pulse} 1.1s 2 ease-in-out;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    transform: scale(1);
+  }
 `;
 
 function Loading() {
