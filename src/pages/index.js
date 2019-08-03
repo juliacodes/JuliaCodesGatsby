@@ -1,7 +1,8 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { breakpoints } from "../../Media";
+import { breakpoints } from "../components/Media";
 import Logo from "../components/Logo";
 import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
@@ -164,6 +165,11 @@ const IndexPage = () => (
       <Link to="/">
         <Logo />
       </Link>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Julia Johnson | Front End Developer</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Container>
         <TextContent>
           <Heading>

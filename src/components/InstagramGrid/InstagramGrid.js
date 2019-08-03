@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components/macro";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
-import { breakpoints } from "../../../Media";
+import { breakpoints } from "../Media";
 import coffee from "../../images/coffee.png";
 import ipad from "../../images/ipad.png";
 import sticker from "../../images/sticker.png";

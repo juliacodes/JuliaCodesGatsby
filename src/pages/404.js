@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { breakpoints } from "../../Media";
+import { breakpoints } from "../components/Media";
 
 const Layout = styled.div`
   display: flex;
