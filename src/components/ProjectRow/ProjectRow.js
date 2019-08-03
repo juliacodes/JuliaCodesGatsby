@@ -133,17 +133,17 @@ function ProjectRow() {
         </Link>
       </Project>
       <Project>
-        <Link to="">
+        <Link to="/Awkward">
           <ProjectImage />
         </Link>
-        <Link to="">
+        <Link to="/Awkward">
           <SubHeading>Working at Awkward</SubHeading>
         </Link>
         <ProjectParagraph>
           Read about my experience as an intern at Awkward, a digital design
           agency.
         </ProjectParagraph>
-        <Link as="">
+        <Link as="/Awkward">
           <ProjectLink>
             Read Story <span>&#8250;</span>
           </ProjectLink>

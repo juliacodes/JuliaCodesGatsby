@@ -9,8 +9,9 @@ import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
 import Footer from "../components/footer";
 import "../index.css";
-import Forecast1 from "../images/Forecast1.png";
-import Forecast2 from "../images/Forecast2.png";
+import Awkward1 from "../images/Awkward1.png";
+import Awkward2 from "../images/Awkward2.png";
+import Awkward3 from "../images/Awkward3.png";
 import ForecastLogic from "../images/ForecastLogic.png";
 import ForecastComp from "../images/ForecastComp.png";
 import ForecastStack from "../images/ForecastStack.svg";
@@ -35,27 +36,6 @@ const TextContent = styled.div`
   }
 `;
 
-const ProjectTable = styled.table`
-  width: 100%;
-  text-align: left;
-
-  th {
-    font-style: normal;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 129.69%;
-    letter-spacing: 0.03em;
-    padding-bottom: 20px;
-  }
-
-  td {
-    font-size: 16px;
-    line-height: 184.69%;
-    letter-spacing: 0.03em;
-  }
-`;
-
 const Bold = styled.td`
   font-size: 16px;
   line-height: 184.69%;
@@ -66,14 +46,10 @@ const Bold = styled.td`
 
 const Image = styled.img`
   margin: 50px 0;
-  width: 105%;
-  transform: translatex(-2.5%);
+  width: 100%;
+  /* transform: translatex(-2.5%); */
   height: auto;
   border-radius: 4px;
-  /* background-image: url(${Forecast1});
-  background-size: contain;
-  background-position-x: center;
-  background-repeat: no-repeat; */
 
   @media (min-width: ${breakpoints.mobileMax}) {
     height: auto;
@@ -123,10 +99,10 @@ const DuoImages = styled.div`
 
 const LeftImage = styled.div`
   width: 100%;
-  height: 350px;
+  height: 650px;
   margin-right: 0;
   margin-bottom: 50px;
-  background-image: url(${ForecastLogic});
+  background-image: url(${Awkward2});
   background-size: contain;
   background-position-x: left;
   background-repeat: no-repeat;
@@ -139,9 +115,9 @@ const LeftImage = styled.div`
 `;
 const RightImage = styled.div`
   width: 100%;
-  height: 350px;
+  height: 650px;
   margin-bottom: 50px;
-  background-image: url(${ForecastComp});
+  background-image: url(${Awkward3});
   background-size: contain;
   background-position-x: right;
   background-repeat: no-repeat;
@@ -154,8 +130,12 @@ const RightImage = styled.div`
 
 const CenterText = styled.div`
   width: 100%;
-  padding-bottom: 50px;
+  padding-top: 120px;
   text-align: center;
+
+  ${Heading} {
+    font-size: 40px;
+  }
 
   ${Paragraph} {
     max-width: 700px;
@@ -203,7 +183,7 @@ function Forecast(props) {
         </Link>
         <Container>
           <TextContent>
-            <Heading>Forecast</Heading>
+            <Heading>Working at Awkward</Heading>
             <Paragraph>
               Forecast is a project I put together after learning the basics of
               GraphQL. This application was the perfect way to improve my
@@ -212,36 +192,10 @@ function Forecast(props) {
               weather data and injected this data based on the user's zip code
               input.
             </Paragraph>
-            <ProjectTable>
-              <tr>
-                <th>Type</th>
-                <th>Stack</th>
-                <th>Code</th>
-                <th>Live</th>
-              </tr>
-              <tr>
-                <td>Personal</td>
-                <td>React</td>
-                <Bold>Repository</Bold>
-                <Bold>View Site</Bold>
-              </tr>
-              <tr>
-                <td></td>
-                <td>GraphQL</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Netlify</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </ProjectTable>
           </TextContent>
-          <Image src={Forecast1} />
+          <Image src={Awkward1} />
           <TextContent>
-            <Heading>Project Purpose and Goal</Heading>
+            <Heading>Goal of Internship</Heading>
             <Paragraph>
               As the main purpose of this project was to improve my
               comprehension of GraphQL and APIs in general, I spend a good
@@ -255,7 +209,7 @@ function Forecast(props) {
           <WebStack>
             <LeftContent></LeftContent>
             <RightContent>
-              <Heading>Web Stack and Explanation</Heading>
+              <Heading>Concepts Learned</Heading>
               <Paragraph>
                 For this project I used React, but many different Javascript
                 libraries could've been used, and even vanilla Javascript could
@@ -277,21 +231,15 @@ function Forecast(props) {
             <RightImage></RightImage>
           </DuoImages>
           <CenterText>
-            <Heading>Problems and Thought Process</Heading>
+            <Heading>Coffee By Benjamin</Heading>
             <Paragraph>
               I normally work through coding projects and logic by creating
               lists like above. Here I've written down some necessary elements
               that my program needs to find a solution for. I also note a few
-              complications that arose once my app was up and running. <br />{" "}
-              <br /> In this case, I noticed that it would grow tedious for a
-              user to have to enter and re-enter their zip code over and over,
-              so I saved their first entry to Localhost. Another small problem
-              was making the proper icon render, as the data I was pulling had
-              no quick numerical reference for the icons, I was forced to have
-              the icons render based on the object that described the weather.
+              complications that arose once my app was up and running.
             </Paragraph>
           </CenterText>
-          <Image src={Forecast2} />
+          <Image src={Awkward1} />
           <DuoLinks>
             <LinkLeft>
               <Link as="">
@@ -309,7 +257,45 @@ function Forecast(props) {
             </LinkRight>
           </DuoLinks>
           <TextContent>
-            <Heading>Future Improvements</Heading>
+            <Heading>My Contributions</Heading>
+            <Paragraph>
+              I still have a few features I would love to implement with this
+              project. I'd really like to update the background images so that
+              they display based on what the weather status currently is, so
+              that the application has the feel of the weather they're currently
+              experiencing. I also have plans to create secondary zip-codes, so
+              the user can click back and forth between two locations and
+              compare the weather.
+            </Paragraph>
+          </TextContent>
+          <CenterText>
+            <Heading>Walter Note</Heading>
+            <Paragraph>
+              I normally work through coding projects and logic by creating
+              lists like above. Here I've written down some necessary elements
+              that my program needs to find a solution for. I also note a few
+              complications that arose once my app was up and running.
+            </Paragraph>
+          </CenterText>
+          <Image src={Awkward1} />
+          <DuoLinks>
+            <LinkLeft>
+              <Link as="">
+                <ProjectLink>
+                  View Code <span>&#8250;</span>
+                </ProjectLink>
+              </Link>
+            </LinkLeft>
+            <LinkRight>
+              <Link as="">
+                <ProjectLink>
+                  Live Site <span>&#8250;</span>
+                </ProjectLink>
+              </Link>
+            </LinkRight>
+          </DuoLinks>
+          <TextContent>
+            <Heading>My Contributions</Heading>
             <Paragraph>
               I still have a few features I would love to implement with this
               project. I'd really like to update the background images so that
