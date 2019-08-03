@@ -10,7 +10,8 @@ import Paragraph from "../components/Paragraph";
 import Footer from "../components/footer";
 import "../index.css";
 import Forecast1 from "../images/Forecast1.png";
-import Problem from "../images/problem.png";
+import ForecastLogic from "../images/ForecastLogic.png";
+import ForecastComp from "../images/ForecastComp.png";
 import ForecastStack from "../images/ForecastStack.svg";
 
 const Container = styled.div`
@@ -123,9 +124,9 @@ const LeftImage = styled.div`
   height: 350px;
   margin-right: 0;
   margin-bottom: 50px;
-  background-image: url(${Problem});
+  background-image: url(${ForecastLogic});
   background-size: contain;
-  background-position-x: center;
+  background-position-x: left;
   background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
@@ -138,9 +139,9 @@ const RightImage = styled.div`
   width: 100%;
   height: 350px;
   margin-bottom: 50px;
-  background-image: url(${Problem});
+  background-image: url(${ForecastComp});
   background-size: contain;
-  background-position-x: center;
+  background-position-x: right;
   background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
@@ -204,9 +205,9 @@ function Forecast(props) {
             <Paragraph>
               Forecast is a project I put together after learning the basics of
               GraphQL. This application was the perfect way to improve my
-              undertanding of making queries and managing larger sets of data.
+              understanding of making queries and managing larger sets of data.
               In this project, I utilized OpenWeatherMap API to gather the
-              weather data and ingected this data based on the user's zip code
+              weather data and injected this data based on the user's zip code
               input.
             </Paragraph>
             <ProjectTable>
@@ -256,7 +257,7 @@ function Forecast(props) {
               <Paragraph>
                 For this project I used React, but many different Javascript
                 libraries could've been used, and even vanilla Javascript could
-                have been easily implemented. I choce to use React because of
+                have been easily implemented. I chose to use React because of
                 its ease of use and the ability to smoothly manipulate states
                 without having to re-render the pages.
               </Paragraph>
@@ -276,10 +277,16 @@ function Forecast(props) {
           <CenterText>
             <Heading>Problems and Thought Process</Heading>
             <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-              pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
-              tempor iaculis turpis. Nunc venenatis nisi nec orci gravida
-              consequat vitae et risus.
+              I normally work through coding projects and logic by creating
+              lists like above. Here I've written down some necessary elements
+              that my program needs to find a solution for. I also note a few
+              complications that arose once my app was up and running. <br />{" "}
+              <br /> In this case, I noticed that it would grow tedious for a
+              user to have to enter and re-enter their zip code over and over,
+              so I saved their first entry to Localhost. Another small problem
+              was making the proper icon render, as the data I was pulling had
+              no quick numerical reference for the icons, I was forced to have
+              the icons render based on the object that described the weather.
             </Paragraph>
           </CenterText>
           <Image />
@@ -302,13 +309,13 @@ function Forecast(props) {
           <TextContent>
             <Heading>Future Improvements</Heading>
             <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
-              pretium magna. Mauris lorem tortor, consectetur vitae tellus vel,
-              tempor iaculis turpis. Nunc venenatis nisi nec orci gravida
-              consequat vitae et risus. Mauris lorem tortor, consectetur vitae
-              tellus vel, tempor iaculis turpis. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Duis ac pretium magna. Mauris lorem
-              tortor, consectetur vitae tellus vel, tempor iaculis turpis.
+              I still have a few features I would love to implement with this
+              project. I'd really like to update the background images so that
+              they display based on what the weather status currently is, so
+              that the application has the feel of the weather they're currently
+              experiencing. I also have plans to create secondary zip-codes, so
+              the user can click back and forth between two locations and
+              compare the weather.
             </Paragraph>
           </TextContent>
         </Container>
