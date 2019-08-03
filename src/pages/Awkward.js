@@ -15,37 +15,40 @@ import Awkward3 from "../images/Awkward3.png";
 import AwkwardStack from "../images/AwkwardStack.svg";
 
 const Container = styled.div`
-  margin: 100px 0;
+  margin: 50px 0;
   width: 100%;
   height: auto;
   align-items: center;
   h1 {
     font-size: 30px;
   }
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    margin: 100px 0;
+  }
 `;
 
 const TextContent = styled.div`
   max-width: 800px;
-  margin-top: 100px;
+  margin-top: 40px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    margin-top: 100px;
+  }
   :nth-child(1) {
     ${Heading} {
-      font-size: 60px;
+      font-size: 40px;
+
+      @media (min-width: ${breakpoints.mobileMax}) {
+        font-size: 60px;
+      }
     }
   }
 `;
 
-const Bold = styled.td`
-  font-size: 16px;
-  line-height: 184.69%;
-  letter-spacing: 0.03em;
-  font-weight: 900;
-  color: #dd7834;
-`;
-
 const Image = styled.img`
-  margin: 50px 0;
+  margin: 50px 0 20px 0;
   width: 100%;
-  /* transform: translatex(-2.5%); */
   height: auto;
   border-radius: 4px;
 
@@ -65,6 +68,7 @@ const WebStack = styled.div`
     margin: 100px 0;
   }
 `;
+
 const LeftContent = styled.div`
   width: 100%;
   height: 300px;
@@ -97,39 +101,49 @@ const DuoImages = styled.div`
 
 const LeftImage = styled.div`
   width: 100%;
-  height: 650px;
+  height: 450px;
   margin-right: 0;
   margin-bottom: 50px;
   background-image: url(${Awkward2});
   background-size: contain;
-  background-position-x: left;
+  background-position-x: center;
   background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
     margin-bottom: 0px;
     margin-right: 10%;
+    height: 650px;
+    background-position-x: left;
   }
 `;
 const RightImage = styled.div`
   width: 100%;
-  height: 650px;
+  height: 450px;
   margin-bottom: 50px;
   background-image: url(${Awkward3});
   background-size: contain;
-  background-position-x: right;
+  background-position-x: center;
+
   background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
     margin-bottom: 0;
+    background-position-x: right;
+
+    height: 650px;
   }
 `;
 
 const CenterText = styled.div`
   width: 100%;
-  padding-top: 120px;
+  padding-top: 30px;
   text-align: center;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    padding-top: 120px;
+  }
 
   ${Heading} {
     font-size: 40px;
@@ -144,13 +158,31 @@ const CenterText = styled.div`
 const DuoLinks = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+    margin-bottom: 150px;
+
+    width: 60%;
+  }
 `;
 
-const LinkLeft = styled.div``;
-const LinkRight = styled.div``;
+const LinkLeft = styled.div`
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: unset;
+    text-align: left;
+    margin: unset;
+  }
+`;
+const LinkRight = styled(LinkLeft)``;
 
 const ProjectLink = styled(Paragraph)`
   font-weight: 700;

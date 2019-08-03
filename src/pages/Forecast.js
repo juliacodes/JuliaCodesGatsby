@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { breakpoints } from "../components/Media";
