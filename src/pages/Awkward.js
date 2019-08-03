@@ -12,9 +12,7 @@ import "../index.css";
 import Awkward1 from "../images/Awkward1.png";
 import Awkward2 from "../images/Awkward2.png";
 import Awkward3 from "../images/Awkward3.png";
-import ForecastLogic from "../images/ForecastLogic.png";
-import ForecastComp from "../images/ForecastComp.png";
-import ForecastStack from "../images/ForecastStack.svg";
+import AwkwardStack from "../images/AwkwardStack.svg";
 
 const Container = styled.div`
   margin: 100px 0;
@@ -70,7 +68,7 @@ const WebStack = styled.div`
 const LeftContent = styled.div`
   width: 100%;
   height: 300px;
-  background-image: url(${ForecastStack});
+  background-image: url(${AwkwardStack});
   background-repeat: no-repeat;
   background-position: center;
 

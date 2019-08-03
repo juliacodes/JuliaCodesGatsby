@@ -70,10 +70,6 @@ const Image = styled.img`
   transform: translatex(-2.5%);
   height: auto;
   border-radius: 4px;
-  /* background-image: url(${Forecast1});
-  background-size: contain;
-  background-position-x: center;
-  background-repeat: no-repeat; */
 
   @media (min-width: ${breakpoints.mobileMax}) {
     height: auto;
