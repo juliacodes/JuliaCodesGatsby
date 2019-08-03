@@ -11,7 +11,7 @@ const Email = styled.div`
   transition: border-bottom 0.2s;
 
   :hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid transparent;
   }
 `;
 
