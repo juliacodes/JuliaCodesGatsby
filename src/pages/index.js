@@ -177,17 +177,17 @@ const IndexPage = () => (
       <SubContainer>
         <ProjectRow>
           <Project>
-            <Link to="">
+            <Link to="/Forecast">
               <ProjectImage />
             </Link>
-            <Link to="">
+            <Link to="/Forecast">
               <SubHeading>Forecast</SubHeading>
             </Link>
             <ProjectParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac
               pretium magna.
             </ProjectParagraph>
-            <Link as="">
+            <Link to="/Forecast">
               <ProjectLink>
                 Read Explanation <span>&#8250;</span>
               </ProjectLink>
