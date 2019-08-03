@@ -10,6 +10,7 @@ import Paragraph from "../components/Paragraph";
 import ContactEmail from "../components/ContactEmail";
 import Footer from "../components/footer";
 import ProjectRow from "../components/ProjectRow";
+import ProjectRow2 from "../components/ProjectRow2";
 import Loading from "../components/Loading";
 import LandingImage from "../images/LandingImage.png";
 
@@ -120,8 +121,9 @@ class IndexPage extends React.Component {
               <TextContent>
                 <Heading>What I've been working on </Heading>
                 <SubParagraph>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  ac pretium magna.
+                  I like to stay busy and always have a project in the works.
+                  Take a look at some of the projects, articles and companies
+                  I've dedicated my time to.
                 </SubParagraph>
               </TextContent>
             </SubContainer>
@@ -129,7 +131,7 @@ class IndexPage extends React.Component {
               <ProjectRow />
             </SubContainer>
             <SubContainer>
-              <ProjectRow />
+              <ProjectRow2 />
             </SubContainer>
           </Layout>
           <Footer instagramDisplay="flex" />
