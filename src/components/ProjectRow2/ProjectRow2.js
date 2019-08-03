@@ -71,10 +71,6 @@ const Project = styled.div`
     ${ProjectLink} {
       border-bottom: 2px solid black;
     }
-
-    ${ProjectLinkSoon} {
-      border-bottom: 2px solid transparent;
-    }
   }
 
   :nth-child(1) {
@@ -105,6 +101,17 @@ const Project = styled.div`
       background-size: cover;
       background-position-x: center;
       background-position-y: center;
+    }
+  }
+`;
+
+const ProjectSoon = styled(Project)`
+  :hover {
+    ${ProjectImage} {
+      transform: scale(1);
+    }
+    ${ProjectLinkSoon} {
+      border-bottom: 2px solid transparent;
     }
   }
 `;
@@ -144,7 +151,7 @@ function ProjectRow() {
           </ProjectLink>
         </Link>
       </Project>
-      <Project>
+      <ProjectSoon>
         <Link to="">
           <ProjectImage />
         </Link>
@@ -158,7 +165,7 @@ function ProjectRow() {
         <>
           <ProjectLinkSoon>Coming Soon</ProjectLinkSoon>
         </>
-      </Project>
+      </ProjectSoon>
     </ProjectContainer>
   );
 }
