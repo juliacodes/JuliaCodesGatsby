@@ -7,7 +7,6 @@ import { breakpoints } from "../components/Media";
 import Logo from "../components/Logo";
 import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
-import ContactEmail from "../components/ContactEmail";
 import Footer from "../components/footer";
 import "../index.css";
 import ForecastStack from "../images/ForecastStack.svg";
@@ -64,9 +63,13 @@ const Bold = styled.td`
 const Image = styled.div`
   margin: 100px 0;
   width: 100%;
-  height: 650px;
+  height: 350px;
   border-radius: 4px;
   background-color: #f5f5f5;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    height: 650px;
+  }
 `;
 
 const WebStack = styled.div`
@@ -80,14 +83,22 @@ const WebStack = styled.div`
   }
 `;
 const LeftContent = styled.div`
-  width: 55%;
+  width: 100%;
   height: 300px;
   background-image: url(${ForecastStack});
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 55%;
+  }
 `;
 const RightContent = styled.div`
-  width: 45%;
+  width: 100%;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 45%;
+  }
 `;
 
 const DuoImages = styled.div`
@@ -102,15 +113,28 @@ const DuoImages = styled.div`
 `;
 
 const LeftImage = styled.div`
-  width: 45%;
+  width: 100%;
   background-color: #f5f5f5;
   height: 350px;
-  margin-right: 10%;
+  margin-right: 0;
+  margin-bottom: 50px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 45%;
+    margin-bottom: 0px;
+    margin-right: 10%;
+  }
 `;
 const RightImage = styled.div`
-  width: 45%;
+  width: 100%;
   background-color: #f5f5f5;
   height: 350px;
+  margin-bottom: 50px;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 45%;
+    margin-bottom: 0;
+  }
 `;
 
 const CenterText = styled.div`
