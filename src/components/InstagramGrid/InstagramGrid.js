@@ -117,7 +117,7 @@ const CTAText = styled.div`
     line-height: 129.69%;
     /* or 32px */
     text-align: left;
-    max-width: 100%;
+    max-width: 90%;
     letter-spacing: 0.03em;
 
     @media (min-width: ${breakpoints.mobileMax}) {

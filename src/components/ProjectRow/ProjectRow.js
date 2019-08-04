@@ -13,11 +13,12 @@ const ProjectContainer = styled.div`
   margin-bottom: 0px;
   flex-wrap: wrap;
   margin-top: 0px;
-
+  height: unset;
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
     margin-bottom: 70px;
     margin-top: 40px;
+    height: 500px;
   }
 `;
 

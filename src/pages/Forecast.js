@@ -140,18 +140,20 @@ const DuoImages = styled.div`
 
 const LeftImage = styled.div`
   width: 100%;
-  height: 250px;
+  height: 350px;
   margin-right: 0;
   margin-bottom: 50px;
   background-image: url(${ForecastLogic});
   background-size: contain;
-  background-position-x: left;
+  background-position-x: center;
   background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
     margin-bottom: 0px;
     margin-right: 10%;
+    background-position-x: left;
+
     height: 350px;
   }
 `;
@@ -161,11 +163,12 @@ const RightImage = styled.div`
   margin-bottom: 0px;
   background-image: url(${ForecastComp});
   background-size: contain;
-  background-position-x: right;
+  background-position-x: center;
   background-repeat: no-repeat;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 45%;
+    background-position-x: right;
   }
 `;
 
