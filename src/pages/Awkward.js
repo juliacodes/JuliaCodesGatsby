@@ -8,7 +8,7 @@ import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
 import Footer from "../components/footer";
 import "../index.css";
-import Awkward1 from "../images/Awkward1.png";
+import Awkward1 from "../images/Awkward1.jpg";
 import Awkward2 from "../images/Awkward2.png";
 import Awkward3 from "../images/Awkward3.png";
 import AwkwardStack from "../images/AwkwardStack.svg";

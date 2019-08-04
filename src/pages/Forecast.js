@@ -8,10 +8,10 @@ import Heading from "../components/Heading";
 import Paragraph from "../components/Paragraph";
 import Footer from "../components/footer";
 import "../index.css";
-import Forecast1 from "../images/Forecast1.png";
-import Forecast2 from "../images/Forecast2.png";
-import ForecastLogic from "../images/ForecastLogic.png";
-import ForecastComp from "../images/ForecastComp.png";
+import Forecast1 from "../images/Forecast1.jpg";
+import Forecast2 from "../images/Forecast2.jpg";
+import ForecastLogic from "../images/ForecastLogic.jpg";
+import ForecastComp from "../images/ForecastComp.jpg";
 import ForecastStack from "../images/ForecastStack.svg";
 
 const Container = styled.div`
