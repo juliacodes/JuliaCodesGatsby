@@ -45,7 +45,6 @@ const ProjectLink = styled(Paragraph)`
 const ProjectImage = styled.div`
   width: 100%;
   height: 300px;
-  background-color: gray;
   border-radius: 4px;
   transition-duration: 0.3s;
 `;
