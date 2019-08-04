@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { breakpoints } from "../components/Media";
@@ -204,7 +203,7 @@ const ProjectLink = styled(Paragraph)`
   }
 `;
 
-function Forecast(props) {
+function Forecast() {
   return (
     <>
       <Layout>
@@ -272,18 +271,18 @@ function Forecast(props) {
           <Image src={Awkward1} />
           <DuoLinks>
             <LinkLeft>
-              <Link as="">
+              <a href="https://github.com/juliajohnson18">
                 <ProjectLink>
                   View Code <span>&#8250;</span>
                 </ProjectLink>
-              </Link>
+              </a>
             </LinkLeft>
             <LinkRight>
-              <Link as="">
+              <a href="https://github.com/juliajohnson18">
                 <ProjectLink>
                   Live Site <span>&#8250;</span>
                 </ProjectLink>
-              </Link>
+              </a>
             </LinkRight>
           </DuoLinks>
           <TextContent>
@@ -310,18 +309,18 @@ function Forecast(props) {
           <Image src={Awkward1} />
           <DuoLinks>
             <LinkLeft>
-              <Link as="">
+              <a href="https://github.com/juliajohnson18">
                 <ProjectLink>
                   View Code <span>&#8250;</span>
                 </ProjectLink>
-              </Link>
+              </a>
             </LinkLeft>
             <LinkRight>
-              <Link as="">
+              <a href="https://github.com/juliajohnson18">
                 <ProjectLink>
                   Live Site <span>&#8250;</span>
                 </ProjectLink>
-              </Link>
+              </a>
             </LinkRight>
           </DuoLinks>
           <TextContent>

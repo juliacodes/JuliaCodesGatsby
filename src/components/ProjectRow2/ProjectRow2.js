@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "gatsby";
+import React from "react";
 import styled from "styled-components";
 import { breakpoints } from "../Media";
 import Heading from "../Heading";

@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components/macro";
-import { Link } from "gatsby";
 
 const Email = styled.div`
   color: black;
@@ -18,9 +17,9 @@ const Email = styled.div`
 function ContactEmail() {
   return (
     <>
-      <Link to="mailto: juliajohnson@purdue.edu">
+      <a href="mailto: juliajohnson@purdue.edu">
         <Email>juliajohnson@purdue.edu</Email>
-      </Link>
+      </a>
     </>
   );
 }

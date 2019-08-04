@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components/macro";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
@@ -115,7 +114,6 @@ const CTAText = styled.div`
     font-weight: 900;
     font-size: 25px;
     line-height: 129.69%;
-    /* or 32px */
     text-align: left;
     max-width: 90%;
     letter-spacing: 0.03em;

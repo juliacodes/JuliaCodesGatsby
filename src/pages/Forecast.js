@@ -249,42 +249,42 @@ function Forecast(props) {
               input.
             </Paragraph>
             <ProjectTable>
-              <tr>
-                <th>Type</th>
-                <th>Stack</th>
-                <th>Code</th>
-                <th>Live</th>
-              </tr>
-              <tr>
-                <td>Personal</td>
-                <td>React</td>
+              <tbody>
+                <tr>
+                  <th>Type</th>
+                  <th>Stack</th>
+                  <th>Code</th>
+                  <th>Live</th>
+                </tr>
+                <tr>
+                  <td>Personal</td>
+                  <td>React</td>
 
-                <Bold>
-                  <a href="https://github.com/juliajohnson18/react-weather-api">
-                    Repository
-                  </a>
-                </Bold>
+                  <Bold>
+                    <a href="https://github.com/juliajohnson18/react-weather-api">
+                      Repository
+                    </a>
+                  </Bold>
 
-                <a href="">
                   <Bold>
                     <a href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB">
                       View Site
                     </a>
                   </Bold>
-                </a>
-              </tr>
-              <tr>
-                <td></td>
-                <td>GraphQL</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Netlify</td>
-                <td></td>
-                <td></td>
-              </tr>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>GraphQL</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Netlify</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
             </ProjectTable>
           </TextContent>
           <Image src={Forecast1} />

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { breakpoints } from "../Media";
@@ -145,7 +145,7 @@ function ProjectRow() {
           Read about my experience as an intern at Awkward, a digital design
           agency.
         </ProjectParagraph>
-        <Link as="/Awkward">
+        <Link to="/Awkward">
           <ProjectLink>
             Read Story <span>&#8250;</span>
           </ProjectLink>
