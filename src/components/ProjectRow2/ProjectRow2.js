@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { breakpoints } from "../Media";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
-import MediumPost from "../../images/MediumPost.png";
-import StresserThumbnail from "../../images/StressorThumbnail.png";
+import MediumPost from "../../images/MediumPost.jpg";
+import StresserThumbnail from "../../images/StressorThumb.jpg";
 
 const ProjectContainer = styled.div`
   display: flex;
