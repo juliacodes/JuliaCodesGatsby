@@ -12,7 +12,7 @@ import Footer from "../components/footer";
 import ProjectRow from "../components/ProjectRow";
 import ProjectRow2 from "../components/ProjectRow2";
 import Loading from "../components/Loading";
-import LandingImage from "../images/LandingImage.png";
+import LandingImage from "../images/LandingImage.jpg";
 
 import "../index.css";
 

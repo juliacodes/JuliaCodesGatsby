@@ -3,10 +3,10 @@ import styled from "styled-components/macro";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import { breakpoints } from "../Media";
-import coffee from "../../images/coffee.png";
-import ipad from "../../images/ipad.png";
-import sticker from "../../images/sticker.png";
-import comp from "../../images/comp.png";
+import coffee from "../../images/coffee.jpg";
+import ipad from "../../images/ipad.jpg";
+import sticker from "../../images/sticker.jpg";
+import comp from "../../images/comp.jpg";
 
 const InstagramCTA = styled.div`
   margin-top: 100px;
