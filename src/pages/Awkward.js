@@ -216,7 +216,9 @@ function Forecast() {
             content: "Julia Johnson - JuliaCodes - Front End Developer"
           }
         ]}
-      ></Helmet>
+      >
+        <html lang="en" />
+      </Helmet>
       <Layout>
         <Link to="/">
           <Logo />
