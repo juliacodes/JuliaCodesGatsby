@@ -95,9 +95,17 @@ class IndexPage extends React.Component {
             <Link to="/">
               <Logo />
             </Link>
-            <Helmet>
-              <meta charSet="utf-8" />
-              <title>Julia Johnson | Front End Developer</title>
+            <Helmet
+              title="Julia Johnson - Front End Developer"
+              meta={[
+                { name: "Julia Johnson", content: "Portfolio - Julia Codes" },
+                {
+                  name: "Julia Johnson",
+                  content: "Julia Johnson - JuliaCodes - Front End Developer"
+                }
+              ]}
+            >
+              <html lang="en" />
             </Helmet>
             <Container>
               <TextContent>

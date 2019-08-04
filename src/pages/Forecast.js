@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 import styled from "styled-components";
@@ -233,6 +234,16 @@ const ProjectLink = styled(Paragraph)`
 function Forecast(props) {
   return (
     <>
+      <Helmet
+        title="Julia Johnson - Forecast"
+        meta={[
+          { name: "Julia Johnson", content: "Portfolio - Julia Codes" },
+          {
+            name: "Julia Johnson",
+            content: "Julia Johnson - JuliaCodes - Front End Developer"
+          }
+        ]}
+      ></Helmet>
       <Layout>
         <Link to="/">
           <Logo />
@@ -287,7 +298,7 @@ function Forecast(props) {
               </tbody>
             </ProjectTable>
           </TextContent>
-          <Image src={Forecast1} />
+          <Image src={Forecast1} alt="Forecast Application Work in Progress" />
           <TextContent>
             <Heading>Project Purpose and Goal</Heading>
             <Paragraph>
@@ -339,7 +350,10 @@ function Forecast(props) {
               the icons render based on the object that described the weather.
             </Paragraph>
           </CenterText>
-          <Image src={Forecast2} />
+          <Image
+            src={Forecast2}
+            alt="Forecast image with differing weather information"
+          />
           <DuoLinks>
             <LinkLeft>
               <a href="https://github.com/juliajohnson18/react-weather-api">

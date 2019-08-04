@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 import styled from "styled-components";
@@ -206,6 +207,16 @@ const ProjectLink = styled(Paragraph)`
 function Forecast() {
   return (
     <>
+      <Helmet
+        title="Julia Johnson - Awkward"
+        meta={[
+          { name: "Julia Johnson", content: "Portfolio - Julia Codes" },
+          {
+            name: "Julia Johnson",
+            content: "Julia Johnson - JuliaCodes - Front End Developer"
+          }
+        ]}
+      ></Helmet>
       <Layout>
         <Link to="/">
           <Logo />
@@ -222,7 +233,7 @@ function Forecast() {
               input.
             </Paragraph>
           </TextContent>
-          <Image src={Awkward1} />
+          <Image src={Awkward1} alt="Awkward's Office" />
           <TextContent>
             <Heading>Goal of Internship</Heading>
             <Paragraph>
@@ -268,7 +279,7 @@ function Forecast() {
               complications that arose once my app was up and running.
             </Paragraph>
           </CenterText>
-          <Image src={Awkward1} />
+          <Image src={Awkward1} alt="Coffee By Benjamin Project" />
           <DuoLinks>
             <LinkLeft>
               <a href="https://github.com/juliajohnson18">
@@ -306,7 +317,7 @@ function Forecast() {
               complications that arose once my app was up and running.
             </Paragraph>
           </CenterText>
-          <Image src={Awkward1} />
+          <Image src={Awkward1} alt="Walter Note Application" />
           <DuoLinks>
             <LinkLeft>
               <a href="https://github.com/juliajohnson18">
