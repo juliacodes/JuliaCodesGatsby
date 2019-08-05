@@ -74,10 +74,14 @@ const SubParagraph = styled(Paragraph)`
   }
 `;
 
+function isServer() {
+  return !(typeof window != "undefined" && window.document);
+}
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    if (sessionStorage && sessionStorage.getItem("hideLoadingScreen")) {
+    if (!isServer() && sessionStorage.getItem("hideLoadingScreen")) {
       this.state = { loaded: true };
     } else {
       this.state = { loaded: false };
