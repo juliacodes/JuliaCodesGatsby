@@ -275,13 +275,19 @@ function Forecast(props) {
                   <td>React</td>
 
                   <Bold>
-                    <a href="https://github.com/juliajohnson18/react-weather-api">
+                    <a
+                      target="_blank"
+                      href="https://github.com/juliajohnson18/react-weather-api"
+                    >
                       Repository
                     </a>
                   </Bold>
 
                   <Bold>
-                    <a href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB">
+                    <a
+                      target="_blank"
+                      href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB"
+                    >
                       View Site
                     </a>
                   </Bold>
@@ -359,14 +365,20 @@ function Forecast(props) {
           />
           <DuoLinks>
             <LinkLeft>
-              <a href="https://github.com/juliajohnson18/react-weather-api">
+              <a
+                target="_blank"
+                href="https://github.com/juliajohnson18/react-weather-api"
+              >
                 <ProjectLink>
                   View Code <span>&#8250;</span>
                 </ProjectLink>
               </a>
             </LinkLeft>
             <LinkRight>
-              <a href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB">
+              <a
+                target="_blank"
+                href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB"
+              >
                 <ProjectLink>
                   Live Site <span>&#8250;</span>
                 </ProjectLink>

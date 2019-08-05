@@ -134,17 +134,26 @@ function ProjectRow() {
   return (
     <ProjectContainer>
       <Project>
-        <a href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce">
+        <a
+          target="_blank"
+          href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce"
+        >
           <ProjectImage />
         </a>
-        <a href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce">
+        <a
+          target="_blank"
+          href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce"
+        >
           <SubHeading>Managing Your Time</SubHeading>
         </a>
         <ProjectParagraph>
           A brief Medium article I wrote to help young programmers manage their
           time.
         </ProjectParagraph>
-        <a href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce">
+        <a
+          target="_blank"
+          href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce"
+        >
           <ProjectLink>
             Read Article <span>&#8250;</span>
           </ProjectLink>

@@ -156,7 +156,7 @@ function InstagramGrid(props) {
       <LeftGrid>
         <CTAText>
           <Heading>I'm a lot cooler on instagram</Heading>
-          <a href="https://www.instagram.com/juliacodes/">
+          <a target="_blank" href="https://www.instagram.com/juliacodes/">
             <ProjectLink>
               See More <span>&#8250;</span>
             </ProjectLink>
