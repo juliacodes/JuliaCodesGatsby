@@ -117,34 +117,35 @@ function ProjectRow() {
   return (
     <ProjectContainer>
       <Project>
-        <Link to="/Forecast">
+        <Link title="Forecast Project" to="/Forecast">
           <ProjectImage />
         </Link>
-        <Link to="/Forecast">
+        <Link title="Forecast Project" to="/Forecast">
           <SubHeading>Forecast</SubHeading>
         </Link>
         <ProjectParagraph>
           A 7 day weather application that sets weather data based on user
           input.
         </ProjectParagraph>
-        <Link to="/Forecast">
+
+        <Link title="Forecast Project" to="/Forecast">
           <ProjectLink>
             Read Explanation <span>&#8250;</span>
           </ProjectLink>
         </Link>
       </Project>
       <Project>
-        <Link to="/Awkward">
+        <Link title="Awkward - Internship" to="/Awkward">
           <ProjectImage />
         </Link>
-        <Link to="/Awkward">
+        <Link title="Awkward - Internship" to="/Awkward">
           <SubHeading>Working at Awkward</SubHeading>
         </Link>
         <ProjectParagraph>
           Read about my experience as an intern at Awkward, a digital design
           agency.
         </ProjectParagraph>
-        <Link to="/Awkward">
+        <Link title="Awkward - Internship" to="/Awkward">
           <ProjectLink>
             Read Story <span>&#8250;</span>
           </ProjectLink>

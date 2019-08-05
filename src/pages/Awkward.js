@@ -284,14 +284,22 @@ function Forecast() {
           <Image src={Awkward1} alt="Coffee By Benjamin Project" />
           <DuoLinks>
             <LinkLeft>
-              <a target="_blank" href="https://github.com/juliajohnson18">
+              <a
+                target="_blank"
+                title="Github Code"
+                href="https://github.com/juliajohnson18"
+              >
                 <ProjectLink>
                   View Code <span>&#8250;</span>
                 </ProjectLink>
               </a>
             </LinkLeft>
             <LinkRight>
-              <a target="_blank" href="https://github.com/juliajohnson18">
+              <a
+                target="_blank"
+                title="Github Code"
+                href="https://github.com/juliajohnson18"
+              >
                 <ProjectLink>
                   Live Site <span>&#8250;</span>
                 </ProjectLink>
@@ -322,14 +330,22 @@ function Forecast() {
           <Image src={Awkward1} alt="Walter Note Application" />
           <DuoLinks>
             <LinkLeft>
-              <a target="_blank" href="https://github.com/juliajohnson18">
+              <a
+                target="_blank"
+                title="Github Code"
+                href="https://github.com/juliajohnson18"
+              >
                 <ProjectLink>
                   View Code <span>&#8250;</span>
                 </ProjectLink>
               </a>
             </LinkLeft>
             <LinkRight>
-              <a target="_blank" href="https://github.com/juliajohnson18">
+              <a
+                target="_blank"
+                title="Github Code"
+                href="https://github.com/juliajohnson18"
+              >
                 <ProjectLink>
                   Live Site <span>&#8250;</span>
                 </ProjectLink>

@@ -108,7 +108,7 @@ class IndexPage extends React.Component {
         {!this.state.ssrDone || (this.state.showLoadingScreen && <Loading />)}
         <>
           <Layout>
-            <Link to="/">
+            <Link title="Home" to="/">
               <Logo />
             </Link>
             <Helmet
