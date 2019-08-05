@@ -83,7 +83,7 @@ class IndexPage extends React.Component {
     setTimeout(() => {
       this.setState({ loaded: true });
       // document.body.style.overflow = "scroll"; // enable scroll
-    }, 3200);
+    }, 3300);
   }
 
   render() {
