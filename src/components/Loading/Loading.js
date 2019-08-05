@@ -38,7 +38,7 @@ const Panel = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ${FlyOut} 2s 1.3s ease-in;
+  animation: ${FlyOut} 2s 1.3s ease-in forwards;
 `;
 
 const LogoLarge = styled.div`
