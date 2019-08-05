@@ -75,18 +75,17 @@ const SubParagraph = styled(Paragraph)`
 `;
 
 class IndexPage extends React.Component {
-  constructor() {
-    super();
+  componentWillMount() {
     if (sessionStorage.getItem("hideLoadingScreen")) {
       this.state = { loaded: true };
     } else {
       this.state = { loaded: false };
     }
   }
-
   componentDidMount() {
     if (sessionStorage.getItem("hideLoadingScreen")) {
       console.log("already loaded");
+      this.state = { loaded: true };
     } else {
       this.state = { loaded: false };
       window.scrollTo(0, 0); // scroll to top on reload
