@@ -61,6 +61,7 @@ const HeadingImage = styled.div`
     height: 600px;
     margin-left: 100px;
     margin-top: 50px;
+    background-position-x: right;
     background-position-y: unset;
   }
 `;
@@ -74,36 +75,37 @@ const SubParagraph = styled(Paragraph)`
   }
 `;
 
-function isServer() {
-  return !(typeof window != "undefined" && window.document);
-}
-
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    if (!isServer() && sessionStorage.getItem("hideLoadingScreen")) {
-      this.state = { loaded: true };
-    } else {
-      this.state = { loaded: false };
-    }
+    this.state = {
+      ssrDone: false
+    };
   }
 
   componentDidMount() {
-    if (!this.state.loaded) {
+    this.setState({
+      ssrDone: true,
+      showLoadingScreen: sessionStorage.getItem("showLoadingScreen") !== "false"
+    });
+  }
+
+  componentDidUpdate() {
+    if (this.state.showLoadingScreen) {
       window.scrollTo(0, 0); // scroll to top on reload
       document.body.style.overflow = "hidden"; // disable scroll during loading
       setTimeout(() => {
-        this.setState({ loaded: true });
+        this.setState({ showLoadingScreen: false });
         document.body.style.overflow = "scroll"; // enable scroll
       }, 2000);
-      sessionStorage.setItem("hideLoadingScreen", true);
+      sessionStorage.setItem("showLoadingScreen", false);
     }
   }
 
   render() {
     return (
       <>
-        {!this.state.loaded && <Loading />}
+        {!this.state.ssrDone || (this.state.showLoadingScreen && <Loading />)}
         <>
           <Layout>
             <Link to="/">
