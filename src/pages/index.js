@@ -77,17 +77,26 @@ const SubParagraph = styled(Paragraph)`
 class IndexPage extends React.Component {
   constructor() {
     super();
-    this.state = { loaded: false };
+    if (sessionStorage.getItem("hideLoadingScreen")) {
+      this.state = { loaded: true };
+    } else {
+      this.state = { loaded: false };
+    }
   }
 
   componentDidMount() {
-    this.state = { loaded: false };
-    window.scrollTo(0, 0); // scroll to top on reload
-    document.body.style.overflow = "hidden"; // disable scroll during loading
-    setTimeout(() => {
-      this.setState({ loaded: true });
-      document.body.style.overflow = "scroll"; // enable scroll
-    }, 3000);
+    if (sessionStorage.getItem("hideLoadingScreen")) {
+      console.log("already loaded");
+    } else {
+      this.state = { loaded: false };
+      window.scrollTo(0, 0); // scroll to top on reload
+      document.body.style.overflow = "hidden"; // disable scroll during loading
+      setTimeout(() => {
+        this.setState({ loaded: true });
+        document.body.style.overflow = "scroll"; // enable scroll
+      }, 2000);
+      sessionStorage.setItem("hideLoadingScreen", true);
+    }
   }
 
   render() {

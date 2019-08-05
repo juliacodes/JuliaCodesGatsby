@@ -38,7 +38,7 @@ const Panel = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ${FlyOut} 2s 1.3s ease-in forwards;
+  animation: ${FlyOut} 1s 1s ease-in forwards;
 `;
 
 const LogoLarge = styled.div`
@@ -49,7 +49,7 @@ const LogoLarge = styled.div`
   transform: scale(0.5);
   height: 220px;
   background-repeat: no-repeat;
-  animation: ${Pulse} 1.1s 2 ease-in-out;
+  animation: ${Pulse} 0.8s 3 ease-in-out;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     transform: scale(0.7);
