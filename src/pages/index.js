@@ -75,19 +75,17 @@ const SubParagraph = styled(Paragraph)`
 `;
 
 class IndexPage extends React.Component {
-  componentWillMount() {
-    if (sessionStorage.getItem("hideLoadingScreen")) {
+  constructor(props) {
+    super(props);
+    if (sessionStorage && sessionStorage.getItem("hideLoadingScreen")) {
       this.state = { loaded: true };
     } else {
       this.state = { loaded: false };
     }
   }
+
   componentDidMount() {
-    if (sessionStorage.getItem("hideLoadingScreen")) {
-      console.log("already loaded");
-      this.state = { loaded: true };
-    } else {
-      this.state = { loaded: false };
+    if (!this.state.loaded) {
       window.scrollTo(0, 0); // scroll to top on reload
       document.body.style.overflow = "hidden"; // disable scroll during loading
       setTimeout(() => {
