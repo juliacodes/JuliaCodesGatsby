@@ -76,10 +76,14 @@ const SubParagraph = styled(Paragraph)`
 
 class IndexPage extends React.Component {
   constructor() {
-    window.scrollTo(0, 0); // scroll to top on reload
-    document.body.style.overflow = "hidden"; // disable scroll during loading
     super();
     this.state = { loaded: false };
+  }
+
+  componentDidMount() {
+    this.state = { loaded: false };
+    window.scrollTo(0, 0); // scroll to top on reload
+    document.body.style.overflow = "hidden"; // disable scroll during loading
     setTimeout(() => {
       this.setState({ loaded: true });
       document.body.style.overflow = "scroll"; // enable scroll
