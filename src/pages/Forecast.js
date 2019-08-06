@@ -278,6 +278,7 @@ function Forecast(props) {
                     <a
                       title="React Weather API"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://github.com/juliajohnson18/react-weather-api"
                     >
                       Repository
@@ -288,6 +289,7 @@ function Forecast(props) {
                     <a
                       title="React Weather API"
                       target="_blank"
+                      rel="noreferrer"
                       href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB"
                     >
                       View Site
@@ -370,6 +372,7 @@ function Forecast(props) {
               <a
                 title="React Weather API"
                 target="_blank"
+                rel="noreferrer"
                 href="https://github.com/juliajohnson18/react-weather-api"
               >
                 <ProjectLink>
@@ -381,6 +384,7 @@ function Forecast(props) {
               <a
                 title="React Weather API"
                 target="_blank"
+                rel="noreferrer"
                 href="https://juliacodes-react-weather-api.netlify.com/?_ga=2.21680952.2095234260.1564771306-1974042282.1561901389&_gac=1.15529028.1561901389.Cj0KCQjwu-HoBRD5ARIsAPIPencUBnLPuagkqomokcwvip05K7oU4TtFiMIosaNakqNaPUKbB9ocHWIaAvfyEALw_wcB"
               >
                 <ProjectLink>

@@ -158,6 +158,7 @@ function InstagramGrid(props) {
           <Heading>I'm a lot cooler on instagram</Heading>
           <a
             target="_blank"
+            rel="noreferrer"
             title="Instagram - JuliaCodes"
             href="https://www.instagram.com/juliacodes/"
           >

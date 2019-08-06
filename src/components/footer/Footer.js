@@ -114,7 +114,7 @@ function Footer(props) {
         </SubContainer>
         <InstagramGrid instagramDisplay={props.instagramDisplay} />
         <Container>
-          <Link to="/">
+          <Link title="Home - Julia Johnson" to="/">
             <Logo />
           </Link>
         </Container>

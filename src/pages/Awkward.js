@@ -286,6 +286,7 @@ function Forecast() {
             <LinkLeft>
               <a
                 target="_blank"
+                rel="noreferrer"
                 title="Github Code"
                 href="https://github.com/juliajohnson18"
               >
@@ -297,6 +298,7 @@ function Forecast() {
             <LinkRight>
               <a
                 target="_blank"
+                rel="noreferrer"
                 title="Github Code"
                 href="https://github.com/juliajohnson18"
               >
@@ -332,6 +334,7 @@ function Forecast() {
             <LinkLeft>
               <a
                 target="_blank"
+                rel="noreferrer"
                 title="Github Code"
                 href="https://github.com/juliajohnson18"
               >
@@ -343,6 +346,7 @@ function Forecast() {
             <LinkRight>
               <a
                 target="_blank"
+                rel="noreferrer"
                 title="Github Code"
                 href="https://github.com/juliajohnson18"
               >

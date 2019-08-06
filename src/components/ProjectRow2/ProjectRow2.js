@@ -41,7 +41,7 @@ const ProjectLink = styled(Paragraph)`
 `;
 
 const ProjectLinkSoon = styled(ProjectLink)`
-  color: gray;
+  color: darkgray;
 
   :hover {
     border-bottom: 2px solid transparent !important;
@@ -137,12 +137,14 @@ function ProjectRow() {
         <a
           target="_blank"
           title="Medium Post - Manage Time"
+          rel="noreferrer"
           href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce"
         >
           <ProjectImage />
         </a>
         <a
           target="_blank"
+          rel="noreferrer"
           title="Medium Post - Manage Time"
           href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce"
         >
@@ -154,6 +156,7 @@ function ProjectRow() {
         </ProjectParagraph>
         <a
           target="_blank"
+          rel="noreferrer"
           title="Medium Post - Manage Time"
           href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce"
         >
