@@ -58,7 +58,7 @@ const HeadingImage = styled.div`
 
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 50%;
-    height: 600px;
+    height: 650px;
     margin-left: 100px;
     margin-top: 50px;
     background-position-x: right;
@@ -117,9 +117,7 @@ class IndexPage extends React.Component {
                 { name: "Julia Johnson", content: "Portfolio - Julia Codes" },
                 {
                   name: "Julia Johnson",
-                  content: "Julia Johnson - JuliaCodes - Front End Developer",
-                  description:
-                    "Julia Codes - Front End Developer - Student at Purdue University."
+                  content: "Julia Johnson - JuliaCodes - Front End Developer"
                 }
               ]}
             >
@@ -133,9 +131,18 @@ class IndexPage extends React.Component {
                   Student and Minimalist
                 </Heading>
                 <Paragraph>
-                  I began coding as a curious teenager who wanted to be apart of
-                  the exciting and new world of coding, what started off as a
-                  love for technology, has blossomed into
+                  Technology has always been at the very core of my interests.
+                  From a young age, I've loved the idea of being able to build
+                  something new that people around the world can experience and
+                  interact with.
+                  <br />
+                  <br /> As I've grown as a developer, I've worked alongside
+                  senior designers and developers who have raised my standards
+                  for whats expected of any web application. Through these
+                  experiences, I've had the opportunity to create memorable
+                  products that are not only enjoyable to use, but are written
+                  in code thats maintainable and easy to understand.
+                  <br />
                 </Paragraph>
                 <ContactEmail />
               </TextContent>
