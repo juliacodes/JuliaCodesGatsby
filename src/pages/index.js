@@ -117,7 +117,9 @@ class IndexPage extends React.Component {
                 { name: "Julia Johnson", content: "Portfolio - Julia Codes" },
                 {
                   name: "Julia Johnson",
-                  content: "Julia Johnson - JuliaCodes - Front End Developer"
+                  content: "Julia Johnson - JuliaCodes - Front End Developer",
+                  description:
+                    "Julia Codes - Front End Developer - Student at Purdue University."
                 }
               ]}
             >
@@ -131,10 +133,9 @@ class IndexPage extends React.Component {
                   Student and Minimalist
                 </Heading>
                 <Paragraph>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  ac pretium magna. Mauris lorem tortor, consectetur vitae
-                  tellus vel, tempor iaculis turpis. Nunc venenatis nisi nec
-                  orci gravida consequat vitae et risus.
+                  I began coding as a curious teenager who wanted to be apart of
+                  the exciting and new world of coding, what started off as a
+                  love for technology, has blossomed into
                 </Paragraph>
                 <ContactEmail />
               </TextContent>
