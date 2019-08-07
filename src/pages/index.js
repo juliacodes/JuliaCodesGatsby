@@ -106,67 +106,93 @@ class IndexPage extends React.Component {
     return (
       <>
         {!this.state.ssrDone || (this.state.showLoadingScreen && <Loading />)}
-        <>
-          <Layout>
-            <Link title="Home - Julia Johnson" to="/">
-              <Logo />
-            </Link>
-            <Helmet
-              title="Julia Johnson - Front End Developer"
-              meta={[
-                { name: "Julia Johnson", content: "Portfolio - Julia Codes" },
-                {
-                  name: "Julia Johnson",
-                  content: "Julia Johnson - JuliaCodes - Front End Developer"
-                }
-              ]}
-            >
-              <html lang="en" />
-            </Helmet>
-            <Container>
-              <TextContent>
-                <Heading>
-                  Hi there, I’m Julia. <br />
-                  Front End <span>Developer</span>, <br />
-                  Student and Minimalist
-                </Heading>
-                <Paragraph>
-                  Technology has always been at the very core of my interests.
-                  From a young age, I've loved the idea of being able to build
-                  something new that people around the world can experience and
-                  interact with.
-                  <br />
-                  <br /> As I've grown as a developer, I've worked alongside
-                  senior designers and developers who have raised my standards
-                  for whats expected of any web application. Through these
-                  experiences, I've had the opportunity to create memorable
-                  products that are not only enjoyable to use, but are written
-                  in code thats maintainable and easy to understand.
-                  <br />
-                </Paragraph>
-                <ContactEmail />
-              </TextContent>
-              <HeadingImage />
-            </Container>
-            <SubContainer>
-              <TextContent>
-                <Heading>What I've been working on </Heading>
-                <SubParagraph>
-                  I like to stay busy and always have a project in the works.
-                  Take a look at some of the applications, articles and
-                  companies I've dedicated my time to.
-                </SubParagraph>
-              </TextContent>
-            </SubContainer>
-            <SubContainer>
-              <ProjectRow />
-            </SubContainer>
-            <SubContainer>
-              <ProjectRow2 />
-            </SubContainer>
-          </Layout>
-          <Footer instagramDisplay="flex" />
-        </>
+        <Layout>
+          <Link title="Home - Julia Johnson" to="/">
+            <Logo />
+          </Link>
+          <Helmet>
+            <title>Julia Johnson - Front End Developer - JuliaCodes</title>
+            <meta
+              name="title"
+              content="Julia Johnson - Front End Developer - JuliaCodes"
+            />
+            <meta
+              name="description"
+              content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
+            />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://juliacodes.com/" />
+            <meta
+              property="og:title"
+              content="Julia Johnson - Front End Developer - JuliaCodes"
+            />
+            <meta
+              property="og:description"
+              content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
+            />
+            <meta
+              property="og:image"
+              content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+            />
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content="https://juliacodes.com/" />
+            <meta
+              property="twitter:title"
+              content="Julia Johnson - Front End Developer - JuliaCodes"
+            />
+            <meta
+              property="twitter:description"
+              content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
+            />
+            <meta
+              property="twitter:image"
+              content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+            />
+            <html lang="en" />
+          </Helmet>
+          <Container>
+            <TextContent>
+              <Heading>
+                Hi there, I’m Julia. <br />
+                Front End <span>Developer</span>, <br />
+                Student and Minimalist
+              </Heading>
+              <Paragraph>
+                Technology has always been at the very core of my interests.
+                From a young age, I've loved the idea of being able to build
+                something new that people around the world can experience and
+                interact with.
+                <br />
+                <br /> As I've grown as a developer, I've worked alongside
+                senior designers and developers who have raised my standards for
+                whats expected of any web application. Through these
+                experiences, I've had the opportunity to create memorable
+                products that are not only enjoyable to use, but are written in
+                code thats maintainable and easy to understand.
+                <br />
+              </Paragraph>
+              <ContactEmail />
+            </TextContent>
+            <HeadingImage />
+          </Container>
+          <SubContainer>
+            <TextContent>
+              <Heading>What I've been working on </Heading>
+              <SubParagraph>
+                I like to stay busy and always have a project in the works. Take
+                a look at some of the applications, articles and companies I've
+                dedicated my time to.
+              </SubParagraph>
+            </TextContent>
+          </SubContainer>
+          <SubContainer>
+            <ProjectRow />
+          </SubContainer>
+          <SubContainer>
+            <ProjectRow2 />
+          </SubContainer>
+        </Layout>
+        <Footer instagramDisplay="flex" />
       </>
     );
   }
