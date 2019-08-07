@@ -100,6 +100,16 @@ class IndexPage extends React.Component {
       }, 2000);
       sessionStorage.setItem("showLoadingScreen", false);
     }
+
+    console.log(`
+    #     #      #######                             ### 
+    #     # #       #    #    # ###### #####  ###### ### 
+    #     # #       #    #    # #      #    # #      ### 
+    ####### #       #    ###### #####  #    # #####   #  
+    #     # #       #    #    # #      #####  #          
+    #     # #       #    #    # #      #   #  #      ### 
+    #     # #       #    #    # ###### #    # ###### ### `);
+    console.log("This website was designed and built by Julia Johnson ");
   }
 
   render() {
