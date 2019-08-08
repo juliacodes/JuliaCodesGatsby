@@ -78,15 +78,19 @@ const SubParagraph = styled(Paragraph)`
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
+    this.handleScroll = this.handleScroll.bind(this);
     this.state = {
       ssrDone: false
     };
   }
 
   componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
     this.setState({
       ssrDone: true,
-      showLoadingScreen: sessionStorage.getItem("showLoadingScreen") !== "false"
+      showLoadingScreen:
+        sessionStorage.getItem("showLoadingScreen") !== "false",
+      hitBottom: sessionStorage.getItem("hitBottom") !== "false"
     });
     console.log(`
     #     #      #######                             ### 
@@ -113,7 +117,7 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         {!this.state.ssrDone || (this.state.showLoadingScreen && <Loading />)}
         <Layout>
           <Link title="Home - Julia Johnson" to="/">
@@ -201,8 +205,8 @@ class IndexPage extends React.Component {
             <ProjectRow2 />
           </SubContainer>
         </Layout>
-        <Footer instagramDisplay="flex" />
-      </>
+        <FooterStyled instagramDisplay="flex" />
+      </div>
     );
   }
 }
