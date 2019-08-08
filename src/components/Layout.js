@@ -1,10 +1,22 @@
-import styled from "styled-components/macro";
+import styled, { keyframes } from "styled-components/macro";
 import { breakpoints } from "../components/Media";
+
+const FadeOut = keyframes`
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+`;
 
 const Layout = styled.div`
   min-height: 100vh;
   padding: 20px;
   margin: 25px auto;
+  opacity: 0;
+  animation: ${FadeOut} 0.6s 0.3s ease-in-out forwards;
 
   a {
     text-decoration: none;
