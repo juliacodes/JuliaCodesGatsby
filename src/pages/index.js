@@ -17,7 +17,7 @@ import LandingImage from "../images/LandingImage.jpg";
 import "../index.css";
 
 const Container = styled.div`
-  margin: 100px 0;
+  margin: 100px 0 200px 0;
   width: 100%;
   height: auto;
   display: flex;
@@ -78,19 +78,15 @@ const SubParagraph = styled(Paragraph)`
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    this.handleScroll = this.handleScroll.bind(this);
     this.state = {
       ssrDone: false
     };
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
     this.setState({
       ssrDone: true,
-      showLoadingScreen:
-        sessionStorage.getItem("showLoadingScreen") !== "false",
-      hitBottom: sessionStorage.getItem("hitBottom") !== "false"
+      showLoadingScreen: sessionStorage.getItem("showLoadingScreen") !== "false"
     });
     console.log(`
     #     #      #######                             ### 
@@ -201,11 +197,11 @@ class IndexPage extends React.Component {
           <SubContainer>
             <ProjectRow />
           </SubContainer>
-          <SubContainer>
+          <SubContainer style={{ marginBottom: 75 }}>
             <ProjectRow2 />
           </SubContainer>
         </Layout>
-        <FooterStyled instagramDisplay="flex" />
+        <Footer instagramDisplay="flex" />
       </div>
     );
   }
