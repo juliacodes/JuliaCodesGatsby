@@ -84,11 +84,25 @@ const Container = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
+  }
+`;
+
+const Social = styled.div`
+  a {
+    margin: 0 0 0 30px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    padding-bottom: 3px;
+
+    :hover {
+      border-bottom: 2px solid black;
+    }
   }
 `;
 
@@ -117,6 +131,24 @@ function Footer(props) {
           <Link title="Home - Julia Johnson" to="/">
             <Logo />
           </Link>
+          <Social>
+            <a
+              title="Github Repository"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/juliajohnson18"
+            >
+              github
+            </a>
+            <a
+              title="Instagram - Juliacodes"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/juliacodes/"
+            >
+              instagram
+            </a>
+          </Social>
         </Container>
       </Layout>
     </FooterCont>
