@@ -139,10 +139,7 @@ class IndexPage extends React.Component {
               property="og:description"
               content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
             />
-            <meta
-              property="og:image"
-              content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
-            />
+            <meta property="og:image" content={LandingImage} />
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content="https://juliacodes.com/" />
             <meta
@@ -153,10 +150,7 @@ class IndexPage extends React.Component {
               property="twitter:description"
               content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
             />
-            <meta
-              property="twitter:image"
-              content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
-            />
+            <meta property="twitter:image" content={LandingImage} />
             <html lang="en" />
           </Helmet>
           <Container>
