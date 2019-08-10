@@ -15,6 +15,7 @@ import Loading from "../components/Loading";
 import LandingImage from "../images/LandingImage.jpg";
 
 import "../index.css";
+import { italic } from "ansi-colors";
 
 const Container = styled.div`
   margin: 100px 0 200px 0;
@@ -26,6 +27,30 @@ const Container = styled.div`
 
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
+  }
+`;
+
+const SkillTable = styled.div`
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
+
+  p {
+    color: black;
+    font-weight: 700;
+    min-width: 200px;
+    margin: 20px 0 0 0;
+
+    @media (min-width: ${breakpoints.mobileMax}) {
+      min-width: unset;
+      margin: 30px 0;
+    }
   }
 `;
 
@@ -43,6 +68,19 @@ const SubContainer = styled.div`
 
 const TextContent = styled.div`
   max-width: 700px;
+
+  a {
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+
+    :hover {
+      border-bottom: 2px solid black;
+    }
+  }
+`;
+
+const SkillContent = styled.div`
+  width: 100%;
 `;
 
 const HeadingImage = styled.div`
@@ -161,22 +199,99 @@ class IndexPage extends React.Component {
                 Student and Minimalist
               </Heading>
               <Paragraph>
-                Technology has always been at the very core of my interests.
-                From a young age, I've loved the idea of being able to build
-                something new that people around the world can experience and
-                interact with.
+                I'm a 20 year old student at <strong>Purdue University</strong>{" "}
+                currently studying web development and design. Technology has
+                always been at the very core of my interests. From a young age,
+                I've loved the idea of being able to build something new that
+                people around the world can experience and interact with.
                 <br />
-                <br /> As I've grown as a developer, I've worked alongside
-                senior designers and developers who have raised my standards for
-                whats expected of any web application. Through these
-                experiences, I've had the opportunity to create memorable
-                products that are not only enjoyable to use, but are written in
-                code thats maintainable and easy to understand.
+                <br />
+                As I've grown as a developer, I've worked alongside senior
+                designers and developers who have raised my standards for whats
+                expected of any web application. Through these experiences, I've
+                had the opportunity to create memorable products that are not
+                only enjoyable to use, but are written in code thats
+                maintainable and easy to understand.
                 <br />
               </Paragraph>
               <ContactEmail />
             </TextContent>
             <HeadingImage />
+          </Container>
+          <Container>
+            <SubContainer>
+              <SkillContent>
+                <TextContent>
+                  <Heading>My Skills</Heading>
+                  <Paragraph>
+                    Apart from the courses included in my degree, I've taken a
+                    number of online courses such as{" "}
+                    <a
+                      title="The Complete Javascript Course"
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.udemy.com/the-complete-javascript-course/"
+                    >
+                      The Complete Javascript Course
+                    </a>
+                    ,{" "}
+                    <a
+                      title="Advanced CSS & Sass"
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.udemy.com/advanced-css-and-sass/"
+                    >
+                      Advanced CSS & Sass
+                    </a>
+                    ,{" "}
+                    <a
+                      title="React: The Complete Guide"
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.udemy.com/react-the-complete-guide-incl-redux/"
+                    >
+                      React: the Complete Guide
+                    </a>
+                    ,{" "}
+                    <a
+                      title="Javascript 30"
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://javascript30.com/"
+                    >
+                      Javascript 30
+                    </a>
+                    , and I'm currently taking{" "}
+                    <a
+                      title="ES6 For Everyone"
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://es6.io/"
+                    >
+                      ES6 for Everyone
+                    </a>
+                  </Paragraph>
+                </TextContent>
+                <SkillTable>
+                  <row>
+                    <Paragraph>HTML5</Paragraph>
+                    <Paragraph>CSS3</Paragraph>
+                  </row>
+                  <row>
+                    <Paragraph>Javascript ES6</Paragraph>
+                    <Paragraph>React</Paragraph>
+                  </row>
+                  <row>
+                    <Paragraph>React Native</Paragraph>
+                    <Paragraph>Styled-Components</Paragraph>
+                  </row>
+                  <row>
+                    <Paragraph>Git</Paragraph>
+                    <Paragraph>PHP & SQL</Paragraph>
+                  </row>
+                </SkillTable>
+              </SkillContent>
+            </SubContainer>
           </Container>
           <SubContainer>
             <TextContent>
