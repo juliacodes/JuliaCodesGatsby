@@ -227,25 +227,24 @@ function Forecast() {
           <TextContent>
             <Heading>Working at Awkward</Heading>
             <Paragraph>
-              Forecast is a project I put together after learning the basics of
-              GraphQL. This application was the perfect way to improve my
-              understanding of making queries and managing larger sets of data.
-              In this project, I utilized OpenWeatherMap API to gather the
-              weather data and injected this data based on the user's zip code
-              input.
+              I had the opportunity to work at{" "}
+              <a href="https://awkward.co">Awkward</a>, a digital product agency
+              in The Netherlands for my 2019 Summer Internship. This was an
+              amazing experience where I was able to work alongside senior
+              Developers and experienced Designers to build multiple powerful
+              client facing products. <br /> <br />
+              Throughout the summer I was pushed and challenged in every aspect
+              of my skills and walked away as a much more refined developer.
             </Paragraph>
           </TextContent>
           <Image src={Awkward1} alt="Awkward's Office" />
           <TextContent>
             <Heading>Goal of Internship</Heading>
             <Paragraph>
-              As the main purpose of this project was to improve my
-              comprehension of GraphQL and APIs in general, I spend a good
-              amount of time making sure I was using the best practices of state
-              management and data manipulation. Besides this, I also wanted to
-              make this a weather application that I would enjoy using, meaning
-              it had to be visually pleasing and allow the user to see their
-              weather status at a quick glance.
+              Prior to arriving at Awkward, I set some personal goals for myself
+              so that I had clear objectives on what I wanted to improve on and
+              accomplish. Of these goals, my main priority involved improving my
+              abilities with React.
             </Paragraph>
           </TextContent>
           <WebStack>
