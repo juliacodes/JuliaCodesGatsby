@@ -10,6 +10,15 @@ const Paragraph = styled.p`
   line-height: 184.69%;
   /* or 30px */
   letter-spacing: 0.03em;
+
+  a {
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+
+    :hover {
+      border-bottom: 2px solid black;
+    }
+  }
 `;
 
 export default Paragraph;
