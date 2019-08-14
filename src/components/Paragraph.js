@@ -8,7 +8,6 @@ const Paragraph = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 184.69%;
-  /* or 30px */
   letter-spacing: 0.03em;
 
   a {
