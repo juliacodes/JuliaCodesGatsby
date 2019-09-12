@@ -59,10 +59,42 @@ const Image = styled.img`
   width: 100%;
   height: auto;
   border-radius: 4px;
-
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
   @media (min-width: ${breakpoints.mobileMax}) {
     height: auto;
     margin: 100px 0 50px 0;
+  }
+`;
+
+const ProjectLink = styled(Paragraph)`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 163.19%;
+  display: inline;
+  color: black;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  transition: border-bottom 0.3s ease-in-out;
+
+  :hover {
+    border-bottom: 2px solid black;
+  }
+
+  span {
+    font-size: 20px;
+  }
+`;
+
+const LinkSet = styled.div`
+  :hover {
+    ${Image} {
+      transform: scale(1.02);
+    }
+    ${ProjectLink} {
+      border-bottom: 2px solid black;
+    }
   }
 `;
 
@@ -289,26 +321,6 @@ const LinkLeft = styled.div`
 `;
 const LinkRight = styled(LinkLeft)``;
 
-const ProjectLink = styled(Paragraph)`
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 163.19%;
-  display: inline;
-  color: black;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  border-bottom: 2px solid white;
-  transition: border-bottom 0.2s;
-
-  :hover {
-    border-bottom: 2px solid black;
-  }
-
-  span {
-    font-size: 20px;
-  }
-`;
-
 function Forecast() {
   return (
     <>
@@ -393,21 +405,25 @@ function Forecast() {
               explanation on it linked below.
             </Paragraph>
           </CenterText>
-          <Image src={CoffeeThumb} alt="Coffee By Benjamin Project" />
-          <DuoLinks>
-            <LinkLeft>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                title="Github Code"
-                href="/Coffee"
-              >
-                <ProjectLink>
-                  Read in depth explanation <span>&#8250;</span>
-                </ProjectLink>
-              </a>
-            </LinkLeft>
-          </DuoLinks>
+          <LinkSet>
+            <Link title="Coffee Project" to="/Coffee">
+              <Image src={CoffeeThumb} alt="Coffee By Benjamin Project" />
+              <DuoLinks>
+                <LinkLeft>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Github Code"
+                    href="/Coffee"
+                  >
+                    <ProjectLink>
+                      Read in depth explanation <span>&#8250;</span>
+                    </ProjectLink>
+                  </a>
+                </LinkLeft>
+              </DuoLinks>
+            </Link>
+          </LinkSet>
           <TextContent>
             <Heading>My Contributions</Heading>
             <Paragraph>
