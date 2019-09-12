@@ -13,6 +13,7 @@ import ProjectRow from "../components/ProjectRow";
 import ProjectRow2 from "../components/ProjectRow2";
 import Loading from "../components/Loading";
 import LandingImage from "../images/LandingImage.jpg";
+import "../index.css";
 
 const Container = styled.div`
   margin: 100px 0 200px 0;
