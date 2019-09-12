@@ -234,6 +234,8 @@ const CenterText = styled.div`
 `;
 
 const CenterTextAlt = styled(CenterText)`
+  width: 90%;
+  padding: 10px;
   @media (min-width: ${breakpoints.mobileMax}) {
     padding: 30px;
   }
@@ -460,7 +462,7 @@ function Forecast() {
           want to thank everyone at Awkward for the time they took teaching me
           so many new lessons and giving me such an amazing experience. An extra
           big thank you to{" "}
-          <a href="https://www.linkedin.com/in/stijnhanegraaf/">
+          <a href="https://www.linkedin.com/in/johnvandewater1/">
             John Van De Water
           </a>
           , who spent countless hours explaining React concepts to me, and to{" "}
