@@ -14,9 +14,6 @@ import ProjectRow2 from "../components/ProjectRow2";
 import Loading from "../components/Loading";
 import LandingImage from "../images/LandingImage.jpg";
 
-import "../index.css";
-import { italic } from "ansi-colors";
-
 const Container = styled.div`
   margin: 100px 0 200px 0;
   width: 100%;
@@ -51,6 +48,12 @@ const SkillTable = styled.div`
       min-width: unset;
       margin: 30px 0;
     }
+
+    span {
+      font-size: 20px;
+      margin-right: 5px;
+      color: #b4e1e7;
+    }
   }
 `;
 
@@ -68,13 +71,14 @@ const SubContainer = styled.div`
 
 const TextContent = styled.div`
   max-width: 700px;
+  .Paragraph {
+    a {
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
 
-  a {
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
-
-    :hover {
-      border-bottom: 2px solid black;
+      :hover {
+        border-bottom: 2px solid black;
+      }
     }
   }
 `;
@@ -113,7 +117,7 @@ const SubParagraph = styled(Paragraph)`
   }
 `;
 
-class IndexPage extends React.Component {
+class Page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -274,20 +278,36 @@ class IndexPage extends React.Component {
                 </TextContent>
                 <SkillTable>
                   <row>
-                    <Paragraph>HTML5</Paragraph>
-                    <Paragraph>CSS3</Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> HTML5
+                    </Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> CSS3
+                    </Paragraph>
                   </row>
                   <row>
-                    <Paragraph>Javascript ES6</Paragraph>
-                    <Paragraph>React</Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> Javascript ES6
+                    </Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> React
+                    </Paragraph>
                   </row>
                   <row>
-                    <Paragraph>React Native</Paragraph>
-                    <Paragraph>Styled-Components</Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> React Native
+                    </Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> Styled-Components
+                    </Paragraph>
                   </row>
                   <row>
-                    <Paragraph>Git</Paragraph>
-                    <Paragraph>PHP & SQL</Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> Git
+                    </Paragraph>
+                    <Paragraph>
+                      <span>&#9675;</span> PHP & SQL
+                    </Paragraph>
                   </row>
                 </SkillTable>
               </SkillContent>
@@ -316,4 +336,4 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage;
+export default Page;
