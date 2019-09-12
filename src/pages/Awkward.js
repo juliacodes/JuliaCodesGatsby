@@ -364,10 +364,10 @@ function Forecast() {
             <RightContent>
               <Heading>Personal Challenges and Growth</Heading>
               <Paragraph>
-                This summer was one of the most challenging and rewording
-                experiences I've ever had. Travelling overseas and experiencing
-                a completely new team taught me so much about myself and about
-                the professional I want to be.
+                This summer was one of the most challenging and rewarding
+                experiences I've ever had. Traveling overseas and experiencing a
+                completely new team taught me so much about myself and about the
+                professional I want to be.
               </Paragraph>
               <Paragraph>
                 At Awkward, I learned a ton about React, React Native,
@@ -416,10 +416,10 @@ function Forecast() {
               experience for the user to introduce them to the roasting process
               of coffee.
               <br /> <br />
-              This was one of my first large project with React, here I was able
-              to use GraphQL, Shopify API's, and React Hooks to creating an
-              e-commerce site thats easy to use, yet modern and pleasing to look
-              at.
+              This was one of my first large projects with React, here I was
+              able to use GraphQL, Shopify API's, and React Hooks to creating an
+              e-commerce site that's easy to use, yet modern and pleasing to
+              look at.
             </Paragraph>
           </TextContent>
           <DuoText>
@@ -443,13 +443,13 @@ function Forecast() {
             <LeftText>
               <Heading>Contributions</Heading>
               <Paragraph>
-                For this project I built out a handful of components such as the
-                search result interface, and the gallery view. I was really
-                amazed with how easily one can transition from React to React
-                Native, and loved the use of FlexBox across all of the interface
-                designs. <br /> <br />
+                For this project, I built out a handful of components such as
+                the search result interface, and the gallery view. I was amazed
+                by how easily one can transition from React to React Native, and
+                loved the use of FlexBox across all of the interface designs.{" "}
+                <br /> <br />
                 The components I developed will be used in The Netherlands by
-                many people who are looking to buy homes,
+                many people who are looking to buy homes.
               </Paragraph>
             </LeftText>
           </DuoTextAlt>
@@ -465,7 +465,7 @@ function Forecast() {
           <a href="https://www.linkedin.com/in/johnvandewater1/">
             John Van De Water
           </a>
-          , who spent countless hours explaining React concepts to me, and to{" "}
+          , who spent countless hours explaining React concepts to me, and{" "}
           <a href="https://www.linkedin.com/in/stijnhanegraaf/">
             Stijn Hanegraaf
           </a>
