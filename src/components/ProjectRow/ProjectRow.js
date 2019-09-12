@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { breakpoints } from "../Media";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
+import CoffeeThumb from "../../images/CoffeeThumb.jpg";
 import ForecastThumb from "../../images/ForecastThumb.jpg";
 import AwkwardThumb from "../../images/AwkwardThumb.jpg";
 
@@ -80,7 +81,7 @@ const Project = styled.div`
 
   :nth-child(1) {
     ${ProjectImage} {
-      background-image: url(${ForecastThumb});
+      background-image: url(${CoffeeThumb});
       background-size: cover;
       background-position-x: center;
       background-position-y: center;
@@ -117,20 +118,20 @@ function ProjectRow() {
   return (
     <ProjectContainer>
       <Project>
-        <Link title="Forecast Project" to="/Forecast">
+        <Link title="Coffee Project" to="/Coffee">
           <ProjectImage />
         </Link>
-        <Link title="Forecast Project" to="/Forecast">
-          <SubHeading>Forecast</SubHeading>
+        <Link title="Coffee Project" to="/Coffee">
+          <SubHeading>Coffee By Benjamin</SubHeading>
         </Link>
         <ProjectParagraph>
-          A 7 day weather application that sets weather data based on user
-          input.
+          Developed a shopify e-commerce application with React for a coffee
+          roasting company
         </ProjectParagraph>
 
-        <Link title="Forecast Project" to="/Forecast">
+        <Link title="Coffee Project" to="/Coffee">
           <ProjectLink>
-            Read Explanation <span>&#8250;</span>
+            View Project <span>&#8250;</span>
           </ProjectLink>
         </Link>
       </Project>

@@ -49,8 +49,8 @@ const Layout = styled.div`
 
   @media (min-width: ${breakpoints.desktopMin}) {
     max-width: 1200px;
-    padding: 100px 0 0 0;
-    margin: 75px auto;
+    padding: 100px 0 75px 0;
+    margin: 75px auto 0 auto;
   }
 `;
 

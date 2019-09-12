@@ -7,6 +7,7 @@ exports.components = {
   "component---src-pages-awkward-js": () => import("/Users/juliajohnson/JuliaCodesGatsby/src/pages/Awkward.js" /* webpackChunkName: "component---src-pages-awkward-js" */),
   "component---src-pages-cgt-270-js": () => import("/Users/juliajohnson/JuliaCodesGatsby/src/pages/CGT270.js" /* webpackChunkName: "component---src-pages-cgt-270-js" */),
   "component---src-pages-forecast-js": () => import("/Users/juliajohnson/JuliaCodesGatsby/src/pages/Forecast.js" /* webpackChunkName: "component---src-pages-forecast-js" */),
-  "component---src-pages-index-js": () => import("/Users/juliajohnson/JuliaCodesGatsby/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */)
+  "component---src-pages-index-js": () => import("/Users/juliajohnson/JuliaCodesGatsby/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
+  "component---src-pages-coffee-js": () => import("/Users/juliajohnson/JuliaCodesGatsby/src/pages/Coffee.js" /* webpackChunkName: "component---src-pages-coffee-js" */)
 }
 

@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { breakpoints } from "../Media";
 import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import MediumPost from "../../images/MediumPost.jpg";
-import StresserThumbnail from "../../images/StressorThumb.jpg";
+import ForecastThumb from "../../images/ForecastThumb.jpg";
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -86,7 +87,7 @@ const Project = styled.div`
 
   :nth-child(1) {
     ${ProjectImage} {
-      background-image: url(${MediumPost});
+      background-image: url(${ForecastThumb});
       background-size: cover;
       background-position-x: center;
       background-position-y: center;
@@ -95,7 +96,7 @@ const Project = styled.div`
 
   :nth-child(2) {
     ${ProjectImage} {
-      background-image: url(${StresserThumbnail});
+      background-image: url(${MediumPost});
       background-size: cover;
       background-position-x: center;
       background-position-y: center;
@@ -134,6 +135,24 @@ function ProjectRow() {
   return (
     <ProjectContainer>
       <Project>
+        <Link title="Forecast Project" to="/Forecast">
+          <ProjectImage />
+        </Link>
+        <Link title="Forecast Project" to="/Forecast">
+          <SubHeading>Forecast</SubHeading>
+        </Link>
+        <ProjectParagraph>
+          A 7 day weather application that sets weather data based on user
+          input.
+        </ProjectParagraph>
+
+        <Link title="Forecast Project" to="/Forecast">
+          <ProjectLink>
+            Read Explanation <span>&#8250;</span>
+          </ProjectLink>
+        </Link>
+      </Project>
+      <Project>
         <a
           target="_blank"
           title="Medium Post - Manage Time"
@@ -165,17 +184,6 @@ function ProjectRow() {
           </ProjectLink>
         </a>
       </Project>
-      <ProjectSoon>
-        <ProjectImage />
-        <SubHeading>Stressor</SubHeading>
-        <ProjectParagraph>
-          My current work in progress, a Chrome extension that helps students
-          organize work.
-        </ProjectParagraph>
-        <>
-          <ProjectLinkSoon>Coming Soon</ProjectLinkSoon>
-        </>
-      </ProjectSoon>
     </ProjectContainer>
   );
 }
