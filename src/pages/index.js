@@ -329,7 +329,7 @@ class Page extends React.Component {
           <SubContainer>
             <ProjectRow />
           </SubContainer>
-          <SubContainer style={{ marginBottom: 75 }}>
+          <SubContainer>
             <ProjectRow2 />
           </SubContainer>
           <SubContainer style={{ marginBottom: 75 }}>
