@@ -11,6 +11,8 @@ import ContactEmail from "../components/ContactEmail";
 import Footer from "../components/footer";
 import ProjectRow from "../components/ProjectRow";
 import ProjectRow2 from "../components/ProjectRow2";
+import FullProjectRow from "../components/FullProjectRow";
+
 import Loading from "../components/Loading";
 import LandingImage from "../images/LandingImage.jpg";
 import "../index.css";
@@ -329,6 +331,9 @@ class Page extends React.Component {
           </SubContainer>
           <SubContainer style={{ marginBottom: 75 }}>
             <ProjectRow2 />
+          </SubContainer>
+          <SubContainer style={{ marginBottom: 75 }}>
+            <FullProjectRow />
           </SubContainer>
         </Layout>
         <Footer instagramDisplay="flex" />
