@@ -38,8 +38,7 @@ const loader = new _loader.ProdLoader(_asyncRequires.default, _matchPaths.defaul
 loader.setApiRunner(_apiRunnerBrowser.apiRunner);
 window.asyncRequires = _asyncRequires.default;
 window.___emitter = _emitter.default;
-window.___loader = loader;
-window.___webpackCompilationHash = window.webpackCompilationHash;
+window.___loader = _loader.publicLoader;
 (0, _navigation.init)();
 (0, _apiRunnerBrowser.apiRunnerAsync)(`onClientEntry`).then(() => {
   // Let plugins register a service worker. The plugin just needs
@@ -65,7 +64,7 @@ window.___webpackCompilationHash = window.webpackCompilationHash;
 
   class LocationHandler extends _react.default.Component {
     render() {
-      let {
+      const {
         location
       } = this.props;
       return _react.default.createElement(_ensureResources.default, {
@@ -109,10 +108,12 @@ window.___webpackCompilationHash = window.webpackCompilationHash;
     });
   }
 
-  loader.loadPage(browserLoc.pathname).then(page => {
+  _loader.publicLoader.loadPage(browserLoc.pathname).then(page => {
     if (!page || page.status === `error`) {
       throw new Error(`page resources for ${browserLoc.pathname} not found. Not rendering React`);
     }
+
+    window.___webpackCompilationHash = page.page.webpackCompilationHash;
 
     const Root = () => _react.default.createElement(_router.Location, null, locationContext => _react.default.createElement(LocationHandler, locationContext));
 
