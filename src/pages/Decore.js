@@ -15,7 +15,7 @@ import decore3 from '../images/decore3.jpg';
 
 import ForecastLogic from '../images/ForecastLogic.jpg';
 import ForecastComp from '../images/ForecastComp.jpg';
-import ForecastStack from '../images/ForecastStack.svg';
+import decoreStack from '../images/decoreStack.jpg';
 
 const Container = styled.div`
     margin: 50px 0;
@@ -115,7 +115,7 @@ const WebStack = styled.div`
 const LeftContent = styled.div`
     width: 100%;
     height: 300px;
-    background-image: url(${ForecastStack});
+    background-image: url(${decoreStack});
     background-repeat: no-repeat;
     background-position: center;
 
