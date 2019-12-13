@@ -9,30 +9,26 @@ import Heading from '../components/Heading';
 import Paragraph from '../components/Paragraph';
 import Footer from '../components/footer';
 import '../index.css';
-import Awkward1 from '../images/Awkward1.jpg';
-import CoffeeThumb from '../images/CoffeeThumb.jpg';
-import Walter1 from '../images/Walter1.jpg';
-import Walter2 from '../images/Walter2.jpg';
+import decore1 from '../images/decore1.jpg';
+import decore2 from '../images/decore2.jpg';
+import decore3 from '../images/decore3.jpg';
 
-import Awkward2 from '../images/Awkward2.png';
-import Awkward3 from '../images/Awkward3.png';
-import AwkwardStack from '../images/AwkwardStack.svg';
-
-const LayoutAlt = styled(Layout)`
-    margin-bottom: 0;
-`;
+import ForecastLogic from '../images/ForecastLogic.jpg';
+import ForecastComp from '../images/ForecastComp.jpg';
+import ForecastStack from '../images/ForecastStack.svg';
 
 const Container = styled.div`
-    margin: 50px 0 0 0;
+    margin: 50px 0;
     width: 100%;
     height: auto;
     align-items: center;
+
     h1 {
         font-size: 30px;
     }
 
     @media (min-width: ${breakpoints.mobileMax}) {
-        margin: 100px 0 0 0;
+        margin: 100px 0;
     }
 `;
 
@@ -43,64 +39,72 @@ const TextContent = styled.div`
     @media (min-width: ${breakpoints.mobileMax}) {
         margin-top: 100px;
     }
-    :nth-child(1) {
-        ${Heading} {
-            font-size: 40px;
 
-            @media (min-width: ${breakpoints.mobileMax}) {
-                font-size: 60px;
-            }
+    :nth-child(1) > ${Heading} {
+        font-size: 40px;
+
+        @media (min-width: ${breakpoints.mobileMax}) {
+            font-size: 60px;
+        }
+    }
+`;
+
+const ProjectTable = styled.table`
+    width: 100%;
+    text-align: left;
+
+    th {
+        font-style: normal;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 129.69%;
+        letter-spacing: 0.03em;
+        padding-bottom: 20px;
+    }
+
+    td {
+        width: 100px;
+        font-size: 14px;
+        line-height: 184.69%;
+        letter-spacing: 0.03em;
+    }
+`;
+
+const Bold = styled.td`
+    a {
+        font-size: 16px;
+        line-height: 184.69%;
+        letter-spacing: 0.03em;
+        font-weight: 900;
+        color: #dd7834;
+        border-bottom: 2px solid transparent;
+        transition: 0.3s;
+        padding-bottom: 3px;
+
+        :hover {
+            border-bottom: 2px solid #dd7834;
         }
     }
 `;
 
 const Image = styled.img`
     margin: 50px 0 20px 0;
-    width: 100%;
+    width: 105%;
+    transform: translatex(-2.5%);
     height: auto;
     border-radius: 4px;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+
     @media (min-width: ${breakpoints.mobileMax}) {
         height: auto;
-        margin: 100px 0 50px 0;
-    }
-`;
-
-const ProjectLink = styled(Paragraph)`
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 163.19%;
-    display: inline;
-    color: black;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    border-bottom: 2px solid white;
-    transition: border-bottom 0.3s ease-in-out;
-
-    :hover {
-        border-bottom: 2px solid black;
-    }
-
-    span {
-        font-size: 20px;
-    }
-`;
-
-const LinkSet = styled.div`
-    :hover {
-        ${Image} {
-            transform: scale(1.02);
-        }
-        ${ProjectLink} {
-            border-bottom: 2px solid black;
-        }
+        margin: 50px 0 50px 0;
     }
 `;
 
 const WebStack = styled.div`
     display: flex;
     flex-wrap: wrap;
+    margin: 30px 0;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         flex-wrap: nowrap;
@@ -108,11 +112,10 @@ const WebStack = styled.div`
         margin: 100px 0;
     }
 `;
-
 const LeftContent = styled.div`
     width: 100%;
     height: 300px;
-    background-image: url(${AwkwardStack});
+    background-image: url(${ForecastStack});
     background-repeat: no-repeat;
     background-position: center;
 
@@ -141,10 +144,10 @@ const DuoImages = styled.div`
 
 const LeftImage = styled.div`
     width: 100%;
-    height: 450px;
+    height: 350px;
     margin-right: 0;
     margin-bottom: 50px;
-    background-image: url(${Awkward2});
+    background-image: url(${ForecastLogic});
     background-size: contain;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -153,142 +156,34 @@ const LeftImage = styled.div`
         width: 45%;
         margin-bottom: 0px;
         margin-right: 10%;
-        height: 650px;
         background-position-x: left;
+
+        height: 350px;
     }
 `;
 const RightImage = styled.div`
     width: 100%;
-    height: 450px;
-    margin-bottom: 50px;
-    background-image: url(${Awkward3});
+    height: 350px;
+    margin-bottom: 0px;
+    background-image: url(${ForecastComp});
     background-size: contain;
     background-position-x: center;
-
     background-repeat: no-repeat;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         width: 45%;
-        margin-bottom: 0;
         background-position-x: right;
-
-        height: 650px;
-    }
-`;
-
-const DuoText = styled.div`
-    display: flex;
-    flex-wrap: nowrap;
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        flex-wrap: nowrap;
-        align-items: center;
-        margin: 300px 0 0 0;
-    }
-`;
-
-const DuoTextAlt = styled.div`
-    display: flex;
-    flex-wrap: nowrap;
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        flex-wrap: nowrap;
-        align-items: center;
-        margin: 100px 0 0 0;
-    }
-`;
-
-const LeftText = styled.div`
-    width: 100%;
-    height: 650px;
-    margin-right: 0;
-    margin-bottom: 50px;
-    background-size: contain;
-    background-position-x: center;
-    background-repeat: no-repeat;
-
-    ${Heading} {
-        font-size: 40px;
-    }
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        width: 45%;
-        margin-bottom: 0px;
-        margin-right: 10%;
-        height: 650px;
-        background-position-x: left;
-    }
-`;
-const RightText = styled.div`
-    width: 50%;
-    height: 450px;
-    margin-bottom: 50px;
-    background-image: url(${Walter1});
-    background-size: contain;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    transform: translateY(50px);
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        width: 45%;
-        margin-bottom: 0;
-        background-position-x: right;
-        height: 650px;
-        transform: translateY(-100px);
-    }
-`;
-
-const RightTextAlt = styled(RightText)`
-    background-image: url(${Walter2});
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        background-position-x: left;
     }
 `;
 
 const CenterText = styled.div`
     width: 100%;
-    padding-top: 30px;
+    padding: 50px 0;
     text-align: center;
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        padding-top: 120px;
-    }
-
-    ${Heading} {
-        font-size: 40px;
-    }
 
     ${Paragraph} {
         max-width: 700px;
         margin: 30px auto;
-    }
-`;
-
-const CenterTextAlt = styled(CenterText)`
-    width: 90%;
-    padding: 10px;
-    @media (min-width: ${breakpoints.mobileMax}) {
-        padding: 30px;
-    }
-    a {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 163.19%;
-        display: inline;
-        color: black;
-        text-decoration: none;
-        letter-spacing: 0.03em;
-        border-bottom: 2px solid transparent;
-        transition: border-bottom 0.3s;
-
-        :hover {
-            border-bottom: 2px solid black;
-        }
-
-        span {
-            font-size: 20px;
-        }
     }
 `;
 
@@ -297,13 +192,11 @@ const DuoLinks = styled.div`
     justify-content: space-evenly;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     flex-wrap: wrap;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         flex-wrap: nowrap;
-        margin-bottom: 150px;
-
         width: 60%;
     }
 `;
@@ -321,11 +214,31 @@ const LinkLeft = styled.div`
 `;
 const LinkRight = styled(LinkLeft)``;
 
+const ProjectLink = styled(Paragraph)`
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 163.19%;
+    display: inline;
+    color: black;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    transition: border-bottom 0.2s;
+
+    :hover {
+        border-bottom: 2px solid black;
+    }
+
+    span {
+        font-size: 20px;
+    }
+`;
+
 function Decore() {
     return (
         <>
             <Helmet
-                title='Julia Johnson - Awkward'
+                title='Julia Johnson - Coffee By Benjamin'
                 meta={[
                     {
                         name: 'Julia Johnson',
@@ -338,9 +251,10 @@ function Decore() {
                     }
                 ]}
             >
+                {' '}
                 <html lang='en' />
             </Helmet>
-            <LayoutAlt>
+            <Layout>
                 <Link to='/'>
                     <Logo />
                 </Link>
@@ -348,171 +262,132 @@ function Decore() {
                     <TextContent>
                         <Heading>Decore</Heading>
                         <Paragraph>
-                            I had the opportunity to work at{' '}
-                            <a href='https://awkward.co'>Awkward</a>, a digital
-                            product agency in The Netherlands for my 2019 Summer
-                            Internship. This was an amazing experience where I
-                            was able to work alongside senior Developers and
-                            experienced Designers to build multiple powerful
-                            client facing products. <br /> <br />
-                            Throughout the summer I was pushed and challenged in
-                            every aspect of my skills and walked away as a much
-                            more refined developer.
+                            Decore is a project I built alongside{' '}
+                            <a
+                                style={{
+                                    color: '#DD7834',
+                                    fontWeight: '900'
+                                }}
+                                href='https://github.com/imtrent'
+                            >
+                                Ian Trent
+                            </a>{' '}
+                            for a class project. We decided to create a react
+                            web application that would help other developers get
+                            started with their web projects. Decore allows users
+                            to customize a layout setup that will generate
+                            custom html and css code that can be used as a
+                            starter template for any website.
                         </Paragraph>
+                        <ProjectTable>
+                            <tbody>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Stack</th>
+                                    <th>Code</th>
+                                    <th>Live</th>
+                                </tr>
+                                <tr>
+                                    <td>Team Project</td>
+                                    <td>React</td>
+
+                                    <Bold>
+                                        <a href='https://github.com/juliajohnson18/Interactive-Site-Builder'>
+                                            Repository
+                                        </a>
+                                    </Bold>
+                                    <Bold>
+                                        <a href='https://site-builder.netlify.com/'>
+                                            View Site
+                                        </a>
+                                    </Bold>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Styled-Components</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Netlify</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </ProjectTable>
                     </TextContent>
-                    <Image src={Awkward1} alt="Awkward's Office" />
+                    <Image
+                        src={decore1}
+                        alt='Forecast Application Work in Progress'
+                    />
                     <TextContent>
-                        <Heading>Goal of Internship</Heading>
+                        <Heading>Project Purpose and Goal</Heading>
                         <Paragraph>
-                            Prior to arriving at Awkward, I set some personal
-                            goals for myself so that I had clear objectives on
-                            what I wanted to improve on and accomplish. Of these
-                            goals, my main priority involved improving my
-                            abilities with React, more specifically, my
-                            comprehension of React Hooks.
-                            <br /> <br />
-                            Another specific goal I had for my summer in The
-                            Netherlands was improving my abilities as a member
-                            of a team. I wanted to understand how every phase of
-                            the development process works, from ideation to
-                            launch. This included grasping more advanced
-                            concepts of git, such as rebasing, checkouts, and
-                            reverting.
+                            We built this project because we know how tedious
+                            and repetitive starting a new project from scratch
+                            can be, and we wanted to build something that we
+                            would also use ourselves. <br />
+                            <br />
+                            We had a timeframe of a little over a month to build
+                            out this project, and our goal was to have the
+                            application fully functioning by the end of that
+                            timeframe.
                         </Paragraph>
                     </TextContent>
                     <WebStack>
                         <LeftContent></LeftContent>
                         <RightContent>
-                            <Heading>Personal Challenges and Growth</Heading>
+                            <Heading>Web Stack and Explanation</Heading>
                             <Paragraph>
-                                This summer was one of the most challenging and
-                                rewarding experiences I've ever had. Traveling
-                                overseas and experiencing a completely new team
-                                taught me so much about myself and about the
-                                professional I want to be.
+                                React was the clear choice for this project,
+                                because of its ease of state management and the
+                                amount of packages available. We also utilized
+                                Netlify as a server to host Decore, because it
+                                allows live updates alongside github.
                             </Paragraph>
                             <Paragraph>
-                                At Awkward, I learned a ton about React, React
-                                Native, Styled-Components, Git, you name it, but
-                                I also learned so much about how to be a
-                                developer with integrity and a valuable member
-                                of a team. Working alongside extremely talented
-                                developers inspired me and pushed my bounds of
-                                what I believed any developer can do.
+                                In the future, we hope to add Redux to this
+                                project to clean up the states a bit, and we
+                                also are looking into a backend that can allow
+                                writing to files so users can download the code
+                                right to their computer.
                             </Paragraph>
                         </RightContent>
                     </WebStack>
-                    <DuoImages>
-                        <LeftImage></LeftImage>
-                        <RightImage></RightImage>
-                    </DuoImages>
+                    <Image
+                        src={decore2}
+                        alt='Forecast image with differing weather information'
+                    />
                     <CenterText>
-                        <Heading>Coffee By Benjamin</Heading>
+                        <Heading>Problems and Thought Process</Heading>
                         <Paragraph>
-                            A project I built from the ground up, with React,
-                            Styled-components, Shopify, and Netlify. This
-                            website was built for a coffee roasting company that
-                            is launching soon. If you'd like to learn more about
-                            this project, I have an entire explanation on it
-                            linked below.
+                            Processing the necessary code into the editor was
+                            the most complex part of this process, we needed to
+                            update the object listing of the elements everytime
+                            a user added, removed, or reordered any element.
+                            This required complex state management in order to
+                            display the proper html and css when exporting.
                         </Paragraph>
                     </CenterText>
-                    <LinkSet>
-                        <Link title='Coffee Project' to='/Coffee'>
-                            <Image
-                                src={CoffeeThumb}
-                                alt='Coffee By Benjamin Project'
-                            />
-                            <DuoLinks>
-                                <LinkLeft>
-                                    <a
-                                        target='_blank'
-                                        rel='noreferrer'
-                                        title='Github Code'
-                                        href='/Coffee'
-                                    >
-                                        <ProjectLink>
-                                            Read in depth explanation{' '}
-                                            <span>&#8250;</span>
-                                        </ProjectLink>
-                                    </a>
-                                </LinkLeft>
-                            </DuoLinks>
-                        </Link>
-                    </LinkSet>
+                    <Image
+                        src={decore3}
+                        alt='Forecast image with differing weather information'
+                    />
                     <TextContent>
-                        <Heading>My Contributions</Heading>
+                        <Heading>Lessons Learned</Heading>
                         <Paragraph>
-                            This was the project I spent the majority of my
-                            summer working on. I worked alongside a designer and
-                            app developer, to create a full experience for the
-                            user to introduce them to the roasting process of
-                            coffee.
-                            <br /> <br />
-                            This was one of my first large projects with React,
-                            here I was able to use GraphQL, Shopify API's, and
-                            React Hooks to creating an e-commerce site that's
-                            easy to use, yet modern and pleasing to look at.
+                            This project helped to solidify a lot my React
+                            knowledge, such as using hooks or updating the
+                            states. I also got a lot of great practice using
+                            ES6+ syntax across the entirety of the project. This
+                            was a large code base to manage across a team, and
+                            we all got some more great experience with version
+                            control and reviewing each others code.
                         </Paragraph>
                     </TextContent>
-                    <DuoText>
-                        <LeftText>
-                            <Heading>Walter Note</Heading>
-                            <Paragraph>
-                                Another project I worked on was Walter Note, an
-                                iPhone & Android Application built with React
-                                Native. This project was for a company that
-                                worked to help users discover homes in their
-                                area.
-                                <br /> <br />I was able to gain some valuable
-                                experience with React Native during this
-                                project, and was able to work in a pair-coding
-                                environment, where I wrote code alongside more
-                                experienced developers. I also had the
-                                opportunity to discuss changes and planning
-                                directly with the Clients.
-                            </Paragraph>
-                        </LeftText>
-                        <RightText></RightText>
-                    </DuoText>
-                    <DuoTextAlt>
-                        <RightTextAlt></RightTextAlt>
-                        <LeftText>
-                            <Heading>Contributions</Heading>
-                            <Paragraph>
-                                For this project, I built out a handful of
-                                components such as the search result interface,
-                                and the gallery view. I was amazed by how easily
-                                one can transition from React to React Native,
-                                and loved the use of FlexBox across all of the
-                                interface designs. <br /> <br />
-                                The components I developed will be used in The
-                                Netherlands by many people who are looking to
-                                buy homes.
-                            </Paragraph>
-                        </LeftText>
-                    </DuoTextAlt>
                 </Container>
-            </LayoutAlt>
-            <CenterTextAlt>
-                <Heading>Overview</Heading>
-                <Paragraph>
-                    My experience at Awkward will be something I remember
-                    forever, and I want to thank everyone at Awkward for the
-                    time they took teaching me so many new lessons and giving me
-                    such an amazing experience. An extra big thank you to{' '}
-                    <a href='https://www.linkedin.com/in/johnvandewater1/'>
-                        John Van De Water
-                    </a>
-                    , who spent countless hours explaining React concepts to me,
-                    and{' '}
-                    <a href='https://www.linkedin.com/in/stijnhanegraaf/'>
-                        Stijn Hanegraaf
-                    </a>
-                    , for his incredible help with the design of this very
-                    portfolio.
-                </Paragraph>
-            </CenterTextAlt>
+            </Layout>
             <Footer projectDisplay='block' />
         </>
     );
