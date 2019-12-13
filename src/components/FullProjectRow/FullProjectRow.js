@@ -26,7 +26,7 @@ const ProjectLink = styled(Paragraph)`
     font-size: 14px;
     line-height: 163.19%;
     display: inline;
-    color: black;
+    color: gray;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
@@ -39,7 +39,7 @@ const ProjectLink = styled(Paragraph)`
     }
 
     :hover {
-        border-bottom: 2px solid black;
+        /* border-bottom: 2px solid black; */
     }
 
     span {
@@ -60,7 +60,7 @@ const Project = styled.div`
     margin-bottom: 90px;
     transition-duration: 0.3s;
 
-    :hover {
+    /* :hover {
         ${ProjectImage} {
             transform: scale(1.03);
         }
@@ -68,7 +68,7 @@ const Project = styled.div`
         ${ProjectLink} {
             border-bottom: 2px solid black;
         }
-    }
+    } */
 
     :nth-child(1) {
         margin-right: 0;
@@ -125,22 +125,14 @@ function FullProjectRow() {
     return (
         <ProjectContainer>
             <Project>
-                <Link title='Coffee Chemistry' to='/Chemistry'>
-                    <ProjectImage />
-                </Link>
-                <Link title='Coffee Chemistry' to='/Chemistry'>
-                    <SubHeading>Coffee Chemistry</SubHeading>
-                </Link>
+                <ProjectImage />
+                <SubHeading>Coffee Chemistry</SubHeading>
                 <ProjectParagraph>
-                    My newest completed project, a web application that helps
+                    My current work in progress, a web application that helps
                     you brew the perfect cup of coffee.
                 </ProjectParagraph>
 
-                <Link title='Coffee Chemistry' to='/Chemistry'>
-                    <ProjectLink>
-                        View Project <span>&#8250;</span>
-                    </ProjectLink>
-                </Link>
+                <ProjectLink>COMING SOON</ProjectLink>
             </Project>
         </ProjectContainer>
     );
