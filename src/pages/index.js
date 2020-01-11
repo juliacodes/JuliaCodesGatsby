@@ -72,12 +72,12 @@ const Social = styled.div`
 
 const MaxHeading = styled(Heading)`
     font-weight: 900;
-    font-size: 60px;
+    font-size: 35px;
     line-height: 129.69%;
     /* or 78px */
     letter-spacing: 0.03em;
     margin-bottom: 0;
-    margin-left: 50px;
+    margin-left: 0px;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         font-size: 60px;
@@ -156,6 +156,27 @@ const TextContent = styled.div`
     }
 `;
 
+const TextContentWrap = styled(TextContent)`
+    width: 100%;
+
+    ${Paragraph} {
+        margin: 40px 0px;
+    }
+    :nth-child(2) {
+        ${Paragraph} {
+            margin: 0px 0px;
+
+            @media (min-width: ${breakpoints.mobileMax}) {
+                margin: 40px 0;
+            }
+        }
+    }
+
+    @media (min-width: ${breakpoints.mobileMax}) {
+        width: 45%;
+    }
+`;
+
 const SkillContent = styled.div`
     width: 100%;
 `;
@@ -169,13 +190,13 @@ const HeadingImage = styled.div`
     background-size: cover;
     background-image: url(${LandingImage});
     background-color: #f5f5f5;
-    background-position-y: center;
+    background-position: center;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         width: 100%;
         height: 400px;
         background-position-x: right;
-        background-position-y: unset;
+        background-position-y: center;
     }
 `;
 
@@ -325,7 +346,7 @@ class Page extends React.Component {
                             justifyContent: 'space-between'
                         }}
                     >
-                        <TextContent style={{ width: '45%' }}>
+                        <TextContentWrap>
                             <Paragraph>
                                 I'm a 20 year old student at Purdue University
                                 currently studying web development and design.
@@ -336,8 +357,8 @@ class Page extends React.Component {
                                 have raised my standards for whats expected of
                                 any web application.
                             </Paragraph>
-                        </TextContent>
-                        <TextContent style={{ width: '45%' }}>
+                        </TextContentWrap>
+                        <TextContentWrap>
                             <Paragraph>
                                 Through these experiences, I've had the
                                 opportunity to create memorable products that
@@ -345,7 +366,7 @@ class Page extends React.Component {
                                 in code thats maintainable and easy to
                                 understand.
                             </Paragraph>
-                        </TextContent>
+                        </TextContentWrap>
                     </Container>
                     <Container>
                         <SubContainer>
