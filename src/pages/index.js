@@ -12,10 +12,80 @@ import Footer from '../components/footer';
 import ProjectRow from '../components/ProjectRow';
 import ProjectRow2 from '../components/ProjectRow2';
 import FullProjectRow from '../components/FullProjectRow';
-
+import quotation from '../images/quotation.png';
 import Loading from '../components/Loading';
 import LandingImage from '../images/LandingImage.jpg';
+import insta from '../images/social/insta.jpg';
+import twitter from '../images/social/twitter.jpg';
+import git from '../images/social/git.jpg';
 import '../index.css';
+
+const HeadingWrap = styled.div`
+    background-image: url(${quotation});
+    padding-top: 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+`;
+
+const HeadingElements = styled.div`
+    display: flex;
+    align-items: center;
+`;
+const Line = styled.div`
+    height: 2px;
+    background-color: black;
+    width: 200px;
+`;
+
+const SocialCont = styled.div`
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-left: 20px;
+
+    & .git {
+        background-image: url(${git});
+    }
+
+    & .insta {
+        background-image: url(${insta});
+    }
+
+    & .twitter {
+        background-image: url(${twitter});
+    }
+`;
+const Social = styled.div`
+    width: 27px;
+    height: 27px;
+    background-color: blue;
+    margin: 0 15px;
+    background-repeat: no-repeat;
+    background-size: 27px 27px;
+    background-position: center center;
+    transition-duration: 2s;
+
+    :hover {
+        background-size: 30px;
+    }
+`;
+
+const MaxHeading = styled(Heading)`
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 129.69%;
+    /* or 78px */
+    letter-spacing: 0.03em;
+    margin-bottom: 0;
+    margin-left: 50px;
+
+    @media (min-width: ${breakpoints.mobileMax}) {
+        font-size: 60px;
+        transform: scale(1);
+        margin-bottom: 0;
+        margin-left: 50px;
+    }
+`;
 
 const Container = styled.div`
     margin: 100px 0 200px 0;
@@ -92,7 +162,7 @@ const SkillContent = styled.div`
 
 const HeadingImage = styled.div`
     margin-left: 0px;
-    margin-top: 50px;
+    margin-top: 0px;
     width: 100%;
     border-radius: 4px;
     height: 300px;
@@ -102,10 +172,8 @@ const HeadingImage = styled.div`
     background-position-y: center;
 
     @media (min-width: ${breakpoints.mobileMax}) {
-        width: 50%;
-        height: 650px;
-        margin-left: 100px;
-        margin-top: 50px;
+        width: 100%;
+        height: 400px;
         background-position-x: right;
         background-position-y: unset;
     }
@@ -211,37 +279,73 @@ class Page extends React.Component {
                         <meta property='twitter:image' content={LandingImage} />
                         <html lang='en' />
                     </Helmet>
-                    <Container>
-                        <TextContent>
-                            <Heading>
+                    <Container style={{ marginTop: 80, marginBottom: 100 }}>
+                        <HeadingWrap>
+                            <HeadingElements>
+                                <Line />
+                                <SocialCont>
+                                    <a
+                                        title='Github Repository'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        href='https://github.com/juliajcodes'
+                                    >
+                                        <Social className='twitter'></Social>
+                                    </a>
+                                    <a
+                                        title='Github Repository'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        href='https://github.com/juliajcodes'
+                                    >
+                                        <Social className='git'></Social>
+                                    </a>
+                                    <a
+                                        title='Instagram - Juliacodes'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        href='https://www.instagram.com/juliacodes/'
+                                    >
+                                        <Social className='insta'></Social>
+                                    </a>
+                                </SocialCont>
+                            </HeadingElements>
+                            <MaxHeading>
                                 Hi there, I’m Julia. <br />
                                 Front End <span>Developer</span>, <br />
                                 Student and Minimalist
-                            </Heading>
+                            </MaxHeading>
+                        </HeadingWrap>
+                    </Container>
+                    <HeadingImage />
+                    <Container
+                        style={{
+                            alignItems: 'start',
+                            margin: 0,
+                            justifyContent: 'space-between'
+                        }}
+                    >
+                        <TextContent style={{ width: '45%' }}>
                             <Paragraph>
-                                I'm a 20 year old student at{' '}
-                                <strong>Purdue University</strong> currently
-                                studying web development and design. Technology
-                                has always been at the very core of my
-                                interests. From a young age, I've loved the idea
-                                of being able to build something new that people
-                                around the world can experience and interact
-                                with.
+                                I'm a 20 year old student at Purdue University
+                                currently studying web development and design.
                                 <br />
                                 <br />
                                 As I've grown as a developer, I've worked
                                 alongside senior designers and developers who
                                 have raised my standards for whats expected of
-                                any web application. Through these experiences,
-                                I've had the opportunity to create memorable
-                                products that are not only enjoyable to use, but
-                                are written in code thats maintainable and easy
-                                to understand.
-                                <br />
+                                any web application.
                             </Paragraph>
-                            <ContactEmail />
                         </TextContent>
-                        <HeadingImage />
+                        <TextContent style={{ width: '45%' }}>
+                            <Paragraph>
+                                Through these experiences, I've had the
+                                opportunity to create memorable products that
+                                are not only enjoyable to use, but are written
+                                in code thats maintainable and easy to
+                                understand.
+                            </Paragraph>
+                        </TextContent>
                     </Container>
                     <Container>
                         <SubContainer>
