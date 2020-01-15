@@ -15,9 +15,9 @@ import FullProjectRow from '../components/FullProjectRow';
 import quotation from '../images/quotation.png';
 import Loading from '../components/Loading';
 import LandingImage from '../images/LandingImage.jpg';
-import insta from '../images/social/insta.jpg';
-import twitter from '../images/social/twitter.jpg';
-import git from '../images/social/git.jpg';
+import insta from '../images/social/insta.png';
+import twitter from '../images/social/twitter.png';
+import git from '../images/social/git.png';
 import '../index.css';
 
 const HeadingWrap = styled.div`
@@ -62,7 +62,6 @@ const SocialCont = styled.div`
 const Social = styled.div`
     width: 27px;
     height: 27px;
-    background-color: blue;
     margin: 0 15px;
     background-repeat: no-repeat;
     background-size: 27px 27px;
@@ -188,7 +187,6 @@ const SkillContent = styled.div`
 const HeadingImage = styled.div`
     margin-left: 0px;
     margin-right: 0px;
-
     margin-top: 0px;
     width: 100%;
     border-radius: 4px;
