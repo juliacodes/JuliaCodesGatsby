@@ -34,7 +34,11 @@ const HeadingElements = styled.div`
 const Line = styled.div`
     height: 2px;
     background-color: black;
-    width: 200px;
+    width: 100px;
+
+    @media (min-width: ${breakpoints.mobileMax}) {
+        width: 200px;
+    }
 `;
 
 const SocialCont = styled.div`
@@ -72,7 +76,7 @@ const Social = styled.div`
 
 const MaxHeading = styled(Heading)`
     font-weight: 900;
-    font-size: 35px;
+    font-size: 7vw;
     line-height: 129.69%;
     /* or 78px */
     letter-spacing: 0.03em;
@@ -183,6 +187,8 @@ const SkillContent = styled.div`
 
 const HeadingImage = styled.div`
     margin-left: 0px;
+    margin-right: 0px;
+
     margin-top: 0px;
     width: 100%;
     border-radius: 4px;
