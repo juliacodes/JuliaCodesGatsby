@@ -136,7 +136,7 @@ function Footer(props) {
                             title='Github Repository'
                             target='_blank'
                             rel='noreferrer'
-                            href='https://github.com/juliajohnson18'
+                            href='https://github.com/juliajcodes'
                         >
                             github
                         </a>
