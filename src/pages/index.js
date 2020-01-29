@@ -310,13 +310,14 @@ class Page extends React.Component {
                                 <Line />
                                 <SocialCont>
                                     <a
-                                        title='Github Repository'
+                                        title='Instagram - Juliacodes'
                                         target='_blank'
                                         rel='noreferrer'
-                                        href='https://github.com/juliajcodes'
+                                        href='https://www.instagram.com/juliacodes/'
                                     >
-                                        <Social className='twitter'></Social>
+                                        <Social className='insta'></Social>
                                     </a>
+
                                     <a
                                         title='Github Repository'
                                         target='_blank'
@@ -326,12 +327,12 @@ class Page extends React.Component {
                                         <Social className='git'></Social>
                                     </a>
                                     <a
-                                        title='Instagram - Juliacodes'
+                                        title='Twitter'
                                         target='_blank'
                                         rel='noreferrer'
-                                        href='https://www.instagram.com/juliacodes/'
+                                        href='https://twitter.com/julia_codes'
                                     >
-                                        <Social className='insta'></Social>
+                                        <Social className='twitter'></Social>
                                     </a>
                                 </SocialCont>
                             </HeadingElements>
