@@ -216,17 +216,9 @@ const SubParagraph = styled(Paragraph)`
 class Page extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            ssrDone: false
-        };
     }
 
     componentDidMount() {
-        this.setState({
-            ssrDone: true,
-            showLoadingScreen:
-                sessionStorage.getItem('showLoadingScreen') !== 'false'
-        });
         console.log(`
     #     #      #######                             ### 
     #     # #       #    #    # ###### #####  ###### ### 
@@ -238,23 +230,9 @@ class Page extends React.Component {
         console.log('This website was designed and built by Julia Johnson ');
     }
 
-    componentDidUpdate() {
-        if (this.state.showLoadingScreen) {
-            window.scrollTo(0, 0); // scroll to top on reload
-            document.body.style.overflow = 'hidden'; // disable scroll during loading
-            setTimeout(() => {
-                this.setState({ showLoadingScreen: false });
-                document.body.style.overflow = 'scroll'; // enable scroll
-            }, 2000);
-            sessionStorage.setItem('showLoadingScreen', false);
-        }
-    }
-
     render() {
         return (
             <div>
-                {!this.state.ssrDone ||
-                    (this.state.showLoadingScreen && <Loading />)}
                 <Layout>
                     <Link title='Home - Julia Johnson' to='/'>
                         <Logo />
