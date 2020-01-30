@@ -1,22 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
-import Inner from '../Styling';
+import Layout from '../components/Layout';
 import styled from 'styled-components';
 import { breakpoints } from '../components/Media';
 import Logo from '../components/Logo';
 import Heading from '../components/Heading';
 import Paragraph from '../components/Paragraph';
+import ContactEmail from '../components/ContactEmail';
 import Footer from '../components/footer';
 import ProjectRow from '../components/ProjectRow';
 import ProjectRow2 from '../components/ProjectRow2';
 import FullProjectRow from '../components/FullProjectRow';
 import quotation from '../images/quotation.png';
+import Loading from '../components/Loading';
 import LandingImage from '../images/LandingImage.jpg';
 import insta from '../images/social/insta.png';
 import twitter from '../images/social/twitter.png';
 import git from '../images/social/git.png';
 import '../index.css';
-import MetaContent from '../Storage/Meta';
 
 const HeadingWrap = styled.div`
     background-image: url(${quotation});
@@ -230,12 +232,56 @@ class Page extends React.Component {
 
     render() {
         return (
-            <>
-                <Inner>
+            <div>
+                <Layout>
                     <Link title='Home - Julia Johnson' to='/'>
                         <Logo />
                     </Link>
-                    <MetaContent />
+                    <Helmet>
+                        <title>
+                            Julia Johnson - Front End Developer - JuliaCodes
+                        </title>
+                        <meta
+                            name='title'
+                            content='Julia Johnson - Front End Developer - JuliaCodes'
+                        />
+                        <meta
+                            name='description'
+                            content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
+                        />
+                        <meta property='og:type' content='website' />
+                        <meta
+                            property='og:url'
+                            content='https://juliacodes.com/'
+                        />
+                        <meta
+                            property='og:title'
+                            content='Julia Johnson - Front End Developer - JuliaCodes'
+                        />
+                        <meta
+                            property='og:description'
+                            content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
+                        />
+                        <meta property='og:image' content={LandingImage} />
+                        <meta
+                            property='twitter:card'
+                            content='summary_large_image'
+                        />
+                        <meta
+                            property='twitter:url'
+                            content='https://juliacodes.com/'
+                        />
+                        <meta
+                            property='twitter:title'
+                            content='Julia Johnson - Front End Developer - JuliaCodes'
+                        />
+                        <meta
+                            property='twitter:description'
+                            content="Technology has always been at the very core of my interests. From a young age, I've loved the idea of being able to build something new that people around the world can experience and interact with."
+                        />
+                        <meta property='twitter:image' content={LandingImage} />
+                        <html lang='en' />
+                    </Helmet>
                     <Container style={{ marginTop: 80, marginBottom: 100 }}>
                         <HeadingWrap>
                             <HeadingElements>
@@ -418,9 +464,9 @@ class Page extends React.Component {
                     <SubContainer style={{ marginBottom: 75 }}>
                         <ProjectRow2 />
                     </SubContainer>
-                </Inner>
+                </Layout>
                 <Footer instagramDisplay='flex' />
-            </>
+            </div>
         );
     }
 }
