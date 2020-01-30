@@ -1,0 +1,1 @@
+export { Inner } from './styles';
