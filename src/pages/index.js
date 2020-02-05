@@ -1,8 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-import styled from 'styled-components';
 import { breakpoints } from '../components/Media';
 import Logo from '../components/Logo';
 import Heading from '../components/Heading';

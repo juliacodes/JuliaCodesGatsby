@@ -4,10 +4,11 @@ import {
     HeadingElements,
     Line,
     SocialCont,
-    Social,
-    MaxHeading
+    Social
 } from './styles';
 import { Container } from '../container';
+import { HeadingMain } from '../../styles/';
+
 function HeadingWrap() {
     return (
         <Container>
@@ -42,11 +43,11 @@ function HeadingWrap() {
                         </a>
                     </SocialCont>
                 </HeadingElements>
-                <MaxHeading>
+                <HeadingMain>
                     Hi there, I’m Julia. <br />
                     Front End <span>Developer</span>, <br />
                     Student and Minimalist
-                </MaxHeading>
+                </HeadingMain>
             </HeadingWrapCont>
         </Container>
     );

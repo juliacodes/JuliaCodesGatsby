@@ -60,19 +60,3 @@ export const Social = styled.div`
         background-size: 30px;
     }
 `;
-
-export const MaxHeading = styled(Heading)`
-    font-weight: 900;
-    font-size: 7vw;
-    line-height: 129.69%;
-    letter-spacing: 0.03em;
-    margin-bottom: 0;
-    margin-left: 0px;
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        font-size: 60px;
-        transform: scale(1);
-        margin-bottom: 0;
-        margin-left: 50px;
-    }
-`;
