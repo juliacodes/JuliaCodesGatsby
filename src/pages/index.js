@@ -1,94 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-import styled from 'styled-components';
 import { breakpoints } from '../components/Media';
 import Logo from '../components/Logo';
 import Heading from '../components/Heading';
 import Paragraph from '../components/Paragraph';
-import ContactEmail from '../components/ContactEmail';
 import Footer from '../components/footer';
 import ProjectRow from '../components/ProjectRow';
 import ProjectRow2 from '../components/ProjectRow2';
 import FullProjectRow from '../components/FullProjectRow';
-import quotation from '../images/quotation.png';
-import Loading from '../components/Loading';
 import LandingImage from '../images/LandingImage.jpg';
-import insta from '../images/social/insta.png';
-import twitter from '../images/social/twitter.png';
-import git from '../images/social/git.png';
+import HeadingWrap from '../components/HeadingWrap';
 import '../index.css';
-
-const HeadingWrap = styled.div`
-    background-image: url(${quotation});
-    padding-top: 40px;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-`;
-
-const HeadingElements = styled.div`
-    display: flex;
-    align-items: center;
-`;
-const Line = styled.div`
-    height: 2px;
-    background-color: black;
-    width: 100px;
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        width: 200px;
-    }
-`;
-
-const SocialCont = styled.div`
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-left: 20px;
-
-    & .git {
-        background-image: url(${git});
-    }
-
-    & .insta {
-        background-image: url(${insta});
-    }
-
-    & .twitter {
-        background-image: url(${twitter});
-    }
-`;
-const Social = styled.div`
-    width: 27px;
-    height: 27px;
-    margin: 0 15px;
-    background-repeat: no-repeat;
-    background-size: 27px 27px;
-    background-position: center center;
-    transition-duration: 2s;
-
-    :hover {
-        background-size: 30px;
-    }
-`;
-
-const MaxHeading = styled(Heading)`
-    font-weight: 900;
-    font-size: 7vw;
-    line-height: 129.69%;
-    /* or 78px */
-    letter-spacing: 0.03em;
-    margin-bottom: 0;
-    margin-left: 0px;
-
-    @media (min-width: ${breakpoints.mobileMax}) {
-        font-size: 60px;
-        transform: scale(1);
-        margin-bottom: 0;
-        margin-left: 50px;
-    }
-`;
 
 const Container = styled.div`
     margin: 100px 0 200px 0;
@@ -232,7 +157,7 @@ class Page extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 <Layout>
                     <Link title='Home - Julia Johnson' to='/'>
                         <Logo />
@@ -282,45 +207,7 @@ class Page extends React.Component {
                         <meta property='twitter:image' content={LandingImage} />
                         <html lang='en' />
                     </Helmet>
-                    <Container style={{ marginTop: 80, marginBottom: 100 }}>
-                        <HeadingWrap>
-                            <HeadingElements>
-                                <Line />
-                                <SocialCont>
-                                    <a
-                                        title='Instagram - Juliacodes'
-                                        target='_blank'
-                                        rel='noreferrer'
-                                        href='https://www.instagram.com/juliacodes/'
-                                    >
-                                        <Social className='insta'></Social>
-                                    </a>
-
-                                    <a
-                                        title='Github Repository'
-                                        target='_blank'
-                                        rel='noreferrer'
-                                        href='https://github.com/juliajcodes'
-                                    >
-                                        <Social className='git'></Social>
-                                    </a>
-                                    <a
-                                        title='Twitter'
-                                        target='_blank'
-                                        rel='noreferrer'
-                                        href='https://twitter.com/julia_codes'
-                                    >
-                                        <Social className='twitter'></Social>
-                                    </a>
-                                </SocialCont>
-                            </HeadingElements>
-                            <MaxHeading>
-                                Hi there, I’m Julia. <br />
-                                Front End <span>Developer</span>, <br />
-                                Student and Minimalist
-                            </MaxHeading>
-                        </HeadingWrap>
-                    </Container>
+                    <HeadingWrap />
                     <HeadingImage />
                     <Container
                         style={{
@@ -466,7 +353,7 @@ class Page extends React.Component {
                     </SubContainer>
                 </Layout>
                 <Footer instagramDisplay='flex' />
-            </div>
+            </>
         );
     }
 }
