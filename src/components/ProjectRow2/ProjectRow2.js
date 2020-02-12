@@ -14,6 +14,7 @@ const ProjectContainer = styled.div`
     margin-bottom: 0px;
     flex-wrap: wrap;
     margin-top: 0px;
+    height: unset;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         flex-wrap: nowrap;
@@ -59,7 +60,7 @@ const ProjectImage = styled.div`
 
 const Project = styled.div`
     width: 100%;
-    height: 450px;
+    height: auto;
     margin-bottom: 90px;
     transition-duration: 0.3s;
 

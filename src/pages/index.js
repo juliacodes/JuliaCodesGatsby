@@ -343,13 +343,13 @@ class Page extends React.Component {
                         </TextContent>
                     </SubContainer>
                     <SubContainer>
-                        <FullProjectRow />
-                    </SubContainer>
-                    <SubContainer>
                         <ProjectRow />
                     </SubContainer>
-                    <SubContainer style={{ marginBottom: 75 }}>
+                    <SubContainer>
                         <ProjectRow2 />
+                    </SubContainer>
+                    <SubContainer>
+                        <FullProjectRow />
                     </SubContainer>
                 </Layout>
                 <Footer instagramDisplay='flex' />
