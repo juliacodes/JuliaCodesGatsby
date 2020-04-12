@@ -34,19 +34,8 @@ export const SocialCont = styled.div`
     height: auto;
     display: flex;
     margin-left: 20px;
-
-    & .git {
-        background-image: url(${git});
-    }
-
-    & .insta {
-        background-image: url(${insta});
-    }
-
-    & .twitter {
-        background-image: url(${twitter});
-    }
 `;
+
 export const Social = styled.div`
     width: 27px;
     height: 27px;
@@ -54,9 +43,38 @@ export const Social = styled.div`
     background-repeat: no-repeat;
     background-size: 27px 27px;
     background-position: center center;
-    transition-duration: 2s;
+    transition-duration: 0.2s;
+    opacity: 1;
+
+    .insta,
+    .twitter,
+    .git {
+        path {
+            transition-duration: 0.5s;
+        }
+    }
 
     :hover {
-        background-size: 30px;
+        .insta {
+            path {
+                fill: #dc297b;
+            }
+        }
+    }
+
+    :hover {
+        .twitter {
+            path {
+                fill: #00acee;
+            }
+        }
+    }
+
+    :hover {
+        .git {
+            path {
+                fill: black;
+            }
+        }
     }
 `;
