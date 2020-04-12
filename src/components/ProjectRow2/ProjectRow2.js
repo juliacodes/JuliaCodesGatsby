@@ -138,7 +138,7 @@ function ProjectRow() {
         <ProjectContainer>
             <Project>
                 <Link title='Awkward - Internship' to='/Awkward'>
-                    <ProjectImage />
+                    <ProjectImage style={{ backgroundPosition: 'right' }} />
                 </Link>
                 <Link title='Awkward - Internship' to='/Awkward'>
                     <SubHeading>Working at Awkward</SubHeading>
