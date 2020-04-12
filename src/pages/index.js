@@ -14,6 +14,7 @@ import FullProjectRow from '../components/FullProjectRow';
 import LandingImage from '../images/LandingImage.jpg';
 import HeadingWrap from '../components/HeadingWrap';
 import '../index.css';
+import { Float } from '../styles';
 
 const Container = styled.div`
     margin: 100px 0 200px 0;
@@ -120,6 +121,9 @@ const HeadingImage = styled.div`
     background-image: url(${LandingImage});
     background-color: #f5f5f5;
     background-position: center;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: ${Float} 1s 0.6s forwards;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         width: 100%;
@@ -213,7 +217,7 @@ class Page extends React.Component {
                         style={{
                             alignItems: 'start',
                             margin: 0,
-                            justifyContent: 'space-between',
+                            justifyContent: 'space-between'
                         }}
                     >
                         <TextContentWrap>

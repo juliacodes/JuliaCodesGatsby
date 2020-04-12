@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 import { breakpoints } from '../../components/Media';
-import Heading from '../../components/Heading';
-import Container from '../../components/container';
-import insta from '../../images/social/insta.png';
-import twitter from '../../images/social/twitter.png';
-import git from '../../images/social/git.png';
 import quotation from '../../images/quotation.png';
 
 export const HeadingWrapCont = styled.div`
@@ -21,7 +16,7 @@ export const HeadingElements = styled.div`
 
 export const Line = styled.div`
     height: 2px;
-    background-color: black;
+    background-color: gray;
     width: 100px;
 
     @media (min-width: ${breakpoints.mobileMax}) {
