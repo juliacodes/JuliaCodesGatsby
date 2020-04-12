@@ -148,6 +148,14 @@ function Footer(props) {
                         >
                             instagram
                         </a>
+                        <a
+                            title='Twitter - julia_codes'
+                            target='_blank'
+                            rel='noreferrer'
+                            href='https://twitter.com/julia_codes'
+                        >
+                            twitter
+                        </a>
                     </Social>
                 </Container>
             </Layout>

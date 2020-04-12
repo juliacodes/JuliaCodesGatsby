@@ -54,6 +54,7 @@ const ProjectTable = styled.table`
     text-align: left;
 
     th {
+        width: 33%;
         font-style: normal;
         font-weight: 900;
         text-transform: uppercase;
@@ -61,6 +62,10 @@ const ProjectTable = styled.table`
         line-height: 129.69%;
         letter-spacing: 0.03em;
         padding-bottom: 20px;
+
+        @media (min-width: ${breakpoints.mobileMax}) {
+            width: auto;
+        }
     }
 
     td {

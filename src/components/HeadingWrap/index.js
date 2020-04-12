@@ -93,7 +93,7 @@ function HeadingWrap() {
                 <HeadingMain>
                     Hi there, I’m Julia. <br />
                     Front End <span>Developer</span>, <br />
-                    Student, and Minimalist
+                    Student, and intern at IBM.
                 </HeadingMain>
             </HeadingWrapCont>
         </Container>
