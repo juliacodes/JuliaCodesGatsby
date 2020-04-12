@@ -124,12 +124,12 @@ function ProjectRow() {
                     <SubHeading>Decore</SubHeading>
                 </Link>
                 <ProjectParagraph>
-                    A web application that builds custom starter layouts for
-                    developers
+                    A tool design to help web developers build live, custom
+                    templates & export code
                 </ProjectParagraph>
                 <Link title='Decore' to='/Decore'>
                     <ProjectLink>
-                        View Project<span>&#8250;</span>
+                        View Project <span>&#8250;</span>
                     </ProjectLink>
                 </Link>
             </Project>
@@ -141,7 +141,7 @@ function ProjectRow() {
                     <SubHeading>Coffee By Benjamin</SubHeading>
                 </Link>
                 <ProjectParagraph>
-                    Developed a shopify e-commerce application with React for a
+                    An e-commerce application built with React & Shopify for a
                     coffee roasting company
                 </ProjectParagraph>
 

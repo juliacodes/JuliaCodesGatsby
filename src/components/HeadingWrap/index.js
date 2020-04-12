@@ -4,7 +4,7 @@ import {
     HeadingElements,
     Line,
     SocialCont,
-    Social
+    Social,
 } from './styles';
 import { Container } from '../container';
 import { HeadingMain } from '../../styles/';
@@ -46,7 +46,7 @@ function HeadingWrap() {
                 <HeadingMain>
                     Hi there, I’m Julia. <br />
                     Front End <span>Developer</span>, <br />
-                    Student and Minimalist
+                    Student, and Minimalist
                 </HeadingMain>
             </HeadingWrapCont>
         </Container>

@@ -213,12 +213,12 @@ class Page extends React.Component {
                         style={{
                             alignItems: 'start',
                             margin: 0,
-                            justifyContent: 'space-between'
+                            justifyContent: 'space-between',
                         }}
                     >
                         <TextContentWrap>
                             <Paragraph>
-                                I'm a 20 year old student at Purdue University
+                                I'm a 21-year-old student at Purdue University
                                 currently studying web development and design.
                                 <br />
                                 <br />
@@ -232,9 +232,8 @@ class Page extends React.Component {
                             <Paragraph>
                                 Through these experiences, I've had the
                                 opportunity to create memorable products that
-                                are not only enjoyable to use, but are written
-                                in code thats maintainable and easy to
-                                understand.
+                                are not only enjoyable to use but are written in
+                                code that's maintainable and easy to understand.
                             </Paragraph>
                         </TextContentWrap>
                     </Container>
@@ -244,70 +243,29 @@ class Page extends React.Component {
                                 <TextContent>
                                     <Heading>My Skills</Heading>
                                     <Paragraph>
-                                        Apart from the courses included in my
-                                        degree, I've taken a number of online
-                                        courses such as{' '}
-                                        <a
-                                            title='The Complete Javascript Course'
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            href='https://www.udemy.com/the-complete-javascript-course/'
-                                        >
-                                            The Complete Javascript Course
-                                        </a>
-                                        ,{' '}
-                                        <a
-                                            title='Advanced CSS & Sass'
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            href='https://www.udemy.com/advanced-css-and-sass/'
-                                        >
-                                            Advanced CSS & Sass
-                                        </a>
-                                        ,{' '}
-                                        <a
-                                            title='React: The Complete Guide'
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            href='https://www.udemy.com/react-the-complete-guide-incl-redux/'
-                                        >
-                                            React: the Complete Guide
-                                        </a>
-                                        ,{' '}
-                                        <a
-                                            title='Javascript 30'
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            href='https://javascript30.com/'
-                                        >
-                                            Javascript 30
-                                        </a>
-                                        , and I'm currently taking{' '}
-                                        <a
-                                            title='ES6 For Everyone'
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            href='https://es6.io/'
-                                        >
-                                            ES6 for Everyone
-                                        </a>
+                                        Through my studies, I've gained a solid
+                                        understanding of computer science and
+                                        web development concepts, and have
+                                        dedicated a lot of my free time to apply
+                                        these concepts to real-world scenarios
+                                        and applications.
                                     </Paragraph>
                                 </TextContent>
                                 <SkillTable>
                                     <row>
                                         <Paragraph>
-                                            <span>&#9675;</span> HTML5
+                                            <span>&#9675;</span> Javascript ES6
                                         </Paragraph>
                                         <Paragraph>
-                                            <span>&#9675;</span> CSS3
+                                            <span>&#9675;</span> HTML & CSS
                                         </Paragraph>
                                     </row>
                                     <row>
                                         <Paragraph>
-                                            <span>&#9675;</span> Javascript ES6
+                                            <span>&#9675;</span> React
                                         </Paragraph>
                                         <Paragraph>
-                                            <span>&#9675;</span> React
+                                            <span>&#9675;</span> SASS
                                         </Paragraph>
                                     </row>
                                     <row>
@@ -334,12 +292,12 @@ class Page extends React.Component {
                     <SubContainer>
                         <TextContent>
                             <Heading>What I've been working on </Heading>
-                            <SubParagraph>
+                            <Paragraph>
                                 I like to stay busy and always have a project in
                                 the works. Take a look at some of the
-                                applications, articles and companies I've
+                                applications, articles, and companies I've
                                 dedicated my time to.
-                            </SubParagraph>
+                            </Paragraph>
                         </TextContent>
                     </SubContainer>
                     <SubContainer>
