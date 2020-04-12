@@ -1,23 +1,33 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
 const Paragraph = styled.p`
-  margin: 50px 0;
-  color: #696969;
-  width: 100%;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 184.69%;
-  letter-spacing: 0.03em;
+    margin: 50px 0;
+    color: #696969;
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 184.69%;
+    letter-spacing: 0.03em;
 
-  a {
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
+    a {
+        border-bottom: 2px solid transparent;
+        transition: 0.3s;
 
-    :hover {
-      border-bottom: 2px solid black;
+        :hover {
+            border-bottom: 2px solid black;
+        }
     }
-  }
 `;
+
+// const float = keyframes`
+//   from {
+//     transform: translateY(-20px);
+//   }
+
+//   to {
+//     transform: rotate(360deg);
+//   }
+// `;
 
 export default Paragraph;

@@ -1,1 +1,1 @@
-export { QUERIES, Paragraph, HeadingMain, HeadingSec } from './styles';
+export { QUERIES, Paragraph, HeadingMain, HeadingSec, Float } from './styles';

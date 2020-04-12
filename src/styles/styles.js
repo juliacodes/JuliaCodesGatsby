@@ -26,6 +26,18 @@ export const Paragraph = styled.p`
     }
 `;
 
+export const Float = keyframes`
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
 export const HeadingMain = styled.h1`
     font-weight: 900;
     font-size: 7vw;
@@ -40,8 +52,26 @@ export const HeadingMain = styled.h1`
         margin-left: 50px;
     }
 
-    > span {
+    .blue {
         color: #b4e0e8;
+    }
+
+    > span {
+        display: inline-block;
+        transform: translateY(30px);
+        opacity: 0;
+        animation: ${Float} 1s 0.2s forwards;
+    }
+
+    > span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    > span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    > span:nth-child(3) {
+        animation-delay: 0.4s;
     }
 `;
 
