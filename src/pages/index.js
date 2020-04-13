@@ -304,14 +304,16 @@ class Page extends React.Component {
                             </Paragraph>
                         </TextContent>
                     </SubContainer>
+                    <SubContainer
+                        style={{ width: '120%', transform: 'translateX(-8%)' }}
+                    >
+                        <FullProjectRow />
+                    </SubContainer>
                     <SubContainer>
                         <ProjectRow />
                     </SubContainer>
                     <SubContainer>
                         <ProjectRow2 />
-                    </SubContainer>
-                    <SubContainer>
-                        <FullProjectRow />
                     </SubContainer>
                 </Layout>
                 <Footer instagramDisplay='flex' />

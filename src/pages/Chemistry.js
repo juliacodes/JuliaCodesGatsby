@@ -13,7 +13,6 @@ import Awkward1 from '../images/Awkward1.jpg';
 import CoffeeThumb from '../images/CoffeeThumb.jpg';
 import Walter1 from '../images/Walter1.jpg';
 import Walter2 from '../images/Walter2.jpg';
-
 import Awkward2 from '../images/Awkward2.png';
 import Awkward3 from '../images/Awkward3.png';
 import AwkwardStack from '../images/AwkwardStack.svg';
