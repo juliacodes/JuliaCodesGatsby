@@ -1,17 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Muli:400,700,900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700,800,900&display=swap');
 
 body {
-  box-sizing: border-box;
-  font-family: "Muli", sans-serif;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 .long {
-  transform: translateY(5px);
+    transform: translateY(5px);
 }
 
 h1 {
-  font-weight: 900;
+    font-weight: 700;
 }
