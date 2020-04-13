@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { breakpoints } from '../../components/Media';
 import quotation from '../../images/quotation.png';
 
@@ -14,13 +14,26 @@ export const HeadingElements = styled.div`
     align-items: center;
 `;
 
+export const drawLine = keyframes`
+    from {
+        width: 0px;
+        opacity: 0;
+    } 
+
+    to{
+        width: 200px;
+        opacity: 1;
+    }
+`;
+
 export const Line = styled.div`
     height: 2px;
     background-color: gray;
-    width: 100px;
+    width: 0px;
+    animation: ${drawLine} 1s forwards;
 
     @media (min-width: ${breakpoints.mobileMax}) {
-        width: 200px;
+        width: 0;
     }
 `;
 

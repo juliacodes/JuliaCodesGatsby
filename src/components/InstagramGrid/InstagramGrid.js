@@ -10,7 +10,7 @@ import comp from '../../images/comp.jpg';
 
 const InstagramCTA = styled.div`
     margin-top: 100px;
-    display: ${(props) => props.instagramDisplay || 'none'};
+    display: ${props => props.instagramDisplay || 'none'};
     justify-content: space-between;
     align-items: center;
     height: auto;
@@ -116,7 +116,7 @@ const CTAText = styled.div`
 
     ${Heading} {
         font-style: normal;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 25px;
         line-height: 129.69%;
         text-align: left;

@@ -226,7 +226,7 @@ const ProjectLink = styled(Paragraph)`
     transition: border-bottom 0.2s;
 
     :hover {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid orange;
     }
 
     span {

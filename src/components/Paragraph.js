@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { Float } from '../styles';
 
 const Paragraph = styled.p`
     margin: 50px 0;
@@ -19,15 +20,5 @@ const Paragraph = styled.p`
         }
     }
 `;
-
-// const float = keyframes`
-//   from {
-//     transform: translateY(-20px);
-//   }
-
-//   to {
-//     transform: rotate(360deg);
-//   }
-// `;
 
 export default Paragraph;
