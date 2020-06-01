@@ -8,10 +8,6 @@ body {
     margin: 0;
 }
 
-.long {
-    transform: translateY(5px);
-}
-
 h1 {
     font-weight: 700;
 }
