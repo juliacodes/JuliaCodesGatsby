@@ -1,14 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import { GlobalStyles } from '../reset.css.js';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '../theme';
+import Layout from '../components/layout';
+const App = () => {
+    const [theme, setTheme] = useState('light');
 
-class Page extends React.Component {
-    render() {
-        return (
-            <>
-                <h1>hello world</h1>
-            </>
-        );
+    function toggleTheme() {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
     }
-}
 
-export default Page;
+    return (
+        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+            <GlobalStyles />
+            <Layout>main</Layout>
+        </ThemeProvider>
+    );
+};
+
+export default App;
