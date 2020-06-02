@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
 import { GlobalStyles } from '../reset.css.js';
-import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from '../theme';
+import { ThemeContext, themes } from '../theming/themeContext';
 import Layout from '../components/layout';
-const App = () => {
-    const [theme, setTheme] = useState('light');
 
-    function toggleTheme() {
-        if (theme === 'light') {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggleTheme = () => {
+            this.setState((state) => ({
+                theme: state.theme === themes.dark ? themes.light : themes.dark,
+            }));
+        };
+
+        this.state = {
+            theme: themes.light,
+            toggleTheme: this.toggleTheme,
+        };
     }
-
-    return (
-        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-            <GlobalStyles />
-            <Layout>main</Layout>
-        </ThemeProvider>
-    );
-};
+    render() {
+        return (
+            <ThemeContext.Provider value={this.state}>
+                <GlobalStyles />
+                <Layout>main</Layout>
+            </ThemeContext.Provider>
+        );
+    }
+}
 
 export default App;
