@@ -3,11 +3,11 @@ import { NavCont } from './styles';
 import Logo from '../logo';
 import Switch from '../switch';
 
-const Nav = () => {
+const Nav = (props) => {
     return (
         <NavCont>
             <Logo />
-            <Switch />
+            <Switch onClick={props.changeTheme} />
         </NavCont>
     );
 };

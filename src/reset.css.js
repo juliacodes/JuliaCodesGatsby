@@ -33,8 +33,6 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background-color:  ${({ theme }) => theme.main};
-    color: ${({ theme }) => theme.heading};
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
     font-family: 'Spartan', sans-serif;
@@ -51,11 +49,16 @@ export const GlobalStyles = createGlobalStyle`
   main{
     width: 100vw;
     height: 100vh;
+    background-color: ${{theme.lines}};
+  }
+
+  .inner{
     max-width: 1437px;
+    width: 100vw;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: ${({ theme }) => theme.main};
 
     > *{
         width: 100%;
