@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     return (
         <ThemeContext.Consumer>
             {({ theme }) => (
-                <main style={{ backgroundColor: theme.lines }}>
+                <main>
                     <div className='inner'>
                         <Nav />
                         <section>{children}</section>
