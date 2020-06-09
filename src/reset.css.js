@@ -49,7 +49,6 @@ export const GlobalStyles = createGlobalStyle`
   main{
     width: 100vw;
     height: 100vh;
-    background-color: ${{theme.lines}};
   }
 
   .inner{
