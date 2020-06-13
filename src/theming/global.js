@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-
 export const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap');
     * {
@@ -46,30 +45,5 @@ export const GlobalStyles = createGlobalStyle`
   }
   a:hover {
     cursor: pointer;
-  }
-
-  main{
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .inner{
-    max-width: 1437px;
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-
-    > *{
-        width: 100%;
-    }
-  }
-
-  h1{
-    font-size: 55px;
-    line-height: 129.69%;
-    font-weight: 600;
-    color: ${({ theme }) => theme.heading};
   }
 `;

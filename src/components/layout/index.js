@@ -1,16 +1,16 @@
 import React from 'react';
+import { Main } from '../../theming/styles';
 import Nav from '../../components/nav';
 import Foot from '../../components/foot';
+import Content from '../../components/content';
 
 const Layout = ({ toggleTheme, theme }) => {
     return (
-        <main>
-            <div className='inner'>
-                <Nav theme={theme} toggleTheme={toggleTheme} />
-                <section></section>
-                <Foot />
-            </div>
-        </main>
+        <Main>
+            <Nav theme={theme} toggleTheme={toggleTheme} />
+            <Content />
+            <Foot />
+        </Main>
     );
 };
 

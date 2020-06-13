@@ -1,10 +1,16 @@
 import styled from 'styled-components';
+import { QUERIES } from '../../theming/styles';
 
 export const NavCont = styled.nav`
-    width: 100%;
-    padding: 0 87px;
+    width: auto;
+    padding: 0;
+    margin: 0;
     display: flex;
-    margin: 130px 0 0 0;
     justify-content: space-between;
     align-items: center;
+
+    @media (${QUERIES.large}) {
+        margin: 100px 0 0 0;
+        padding: 0 87px;
+    }
 `;
