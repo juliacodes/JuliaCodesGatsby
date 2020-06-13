@@ -18,7 +18,7 @@ const DevPageRenderer = ({
 }) => {
   const pageResources = _loader.default.loadPageSync(location.pathname);
 
-  return _react.default.createElement(_queryResultStore.PageQueryStore, {
+  return /*#__PURE__*/_react.default.createElement(_queryResultStore.PageQueryStore, {
     location,
     pageResources
   });

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Paragraph, Heading } from '../../theming/styles';
-import Button from '../../components/Button';
+import ButtonA from '../../components/Button';
 import { SplitCont } from './styles';
 import Odometer from 'react-odometerjs';
 import '../../theming/odometer.css';
@@ -24,7 +24,7 @@ const Split = () => {
                     understand. I've had the opportunity to create memorable{' '}
                 </Paragraph>
                 <a href='/about'>
-                    <Button title='About Me' />
+                    <ButtonA title='About Me' />
                 </a>
             </div>
             <div className='right'>

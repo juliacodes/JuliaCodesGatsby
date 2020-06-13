@@ -11,14 +11,6 @@ export const SplitCont = styled.div`
     .left {
         width: 100%;
 
-        ${Paragraph} {
-            font-size: 19px;
-
-            @media (${QUERIES.large}) {
-                font-size: 25px;
-            }
-        }
-
         @media (${QUERIES.large}) {
             width: 60%;
         }
@@ -37,17 +29,16 @@ export const SplitCont = styled.div`
         }
 
         .leftInner {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
 
         ${Paragraph} {
             max-width: 200px;
-            line-height: 20px;
-            font-size: 15px;
-
+            font-size: 18px;
+            line-height: 30px;
+            color: ${({ theme }) => theme.textLight};
             @media (${QUERIES.large}) {
                 font-size: 20px;
-                line-height: 25px;
             }
         }
     }
@@ -60,6 +51,7 @@ export const SplitCont = styled.div`
         margin: 0;
         line-height: 1.1em;
         padding: 0;
+        color: ${({ theme }) => theme.textMain};
 
         @media (${QUERIES.large}) {
             font-size: 90px;

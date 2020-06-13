@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const QUERIES = {
-    large: `min-width: 1300px`,
+    large: `min-width: 1200px`,
     medium: `min-width: 870px`,
     small: `min-width: 660px`,
     maxWidth: `1500px`,
@@ -41,6 +41,12 @@ export const Paragraph = styled.p`
     font-size: 20px;
     line-height: 184.69%;
     letter-spacing: 0.03em;
+    font-weight: 400;
+    color: ${({ theme }) => theme.textMain};
+
+    @media (${QUERIES.large}) {
+        font-size: 25px;
+    }
 `;
 
 export const Main = styled.main`
