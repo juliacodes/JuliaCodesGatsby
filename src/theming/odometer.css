@@ -1,0 +1,267 @@
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-default .odometer-digit {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+    text-align: left;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
+    display: block;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+    display: block;
+    -webkit-backface-visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value {
+    display: block;
+    -webkit-transform: translateZ(0);
+}
+.odometer.odometer-auto-theme
+    .odometer-digit
+    .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default
+    .odometer-digit
+    .odometer-value.odometer-last-value {
+    position: absolute;
+}
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+    -webkit-transition: -webkit-transform 2s;
+    -moz-transition: -moz-transform 2s;
+    -ms-transition: -ms-transform 2s;
+    -o-transition: -o-transform 2s;
+    transition: transform 2s;
+}
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating
+    .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up.odometer-animating
+    .odometer-ribbon-inner {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down
+    .odometer-ribbon-inner {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating
+    .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down.odometer-animating
+    .odometer-ribbon-inner {
+    -webkit-transition: -webkit-transform 2s;
+    -moz-transition: -moz-transform 2s;
+    -ms-transition: -ms-transform 2s;
+    -o-transition: -o-transform 2s;
+    transition: transform 2s;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: 'Michroma', sans-serif;
+    font-size: 26px;
+    line-height: 117%;
+    letter-spacing: 0.2em;
+    line-height: 1.1em;
+    margin: 20px 0 35px 0;
+}
+
+form > span {
+    font-family: 'Michroma', sans-serif;
+    font-size: 26px;
+    line-height: 117%;
+    letter-spacing: 0.2em;
+    line-height: 1.1em;
+    margin: 20px 0 35px 0;
+}
+.odometer.odometer-auto-theme .odometer-value,
+.odometer.odometer-theme-default .odometer-value {
+    text-align: center;
+    border: none;
+}
+
+.rc-input-number {
+    margin: 10px 0 30px 0;
+    padding: 0 0px;
+    line-height: 26px;
+    font-size: 12px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    transition: all 0.3s;
+    width: 70px !important;
+    border: none;
+}
+
+.rc-input-number-handler {
+    text-align: center;
+    line-height: 12px;
+    height: 12px;
+    overflow: hidden;
+    display: block;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.rc-input-number-handler-up-inner,
+.rc-input-number-handler-down-inner {
+    color: black;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    border: none;
+}
+.rc-input-number:hover {
+    border-color: transparent;
+}
+.rc-input-number:hover .rc-input-number-handler-up,
+.rc-input-number:hover .rc-input-number-handler-wrap {
+    border-color: transparent;
+    border: none;
+}
+.rc-input-number-disabled:hover {
+    border-color: transparent;
+    border: none;
+}
+.rc-input-number-disabled:hover .rc-input-number-handler-up,
+.rc-input-number-disabled:hover .rc-input-number-handler-wrap {
+    border-color: transparent;
+    border: none;
+}
+.rc-input-number-input-wrap {
+    overflow: hidden;
+    height: 100%;
+    border: none;
+}
+.rc-input-number-input {
+    width: 100%;
+    text-align: left;
+    outline: 0;
+    -moz-appearance: textfield;
+    line-height: 26px;
+    height: 100%;
+    transition: all 0.3s ease;
+    color: #666666;
+    border-radius: 4px;
+    padding: 0;
+    transition: all 0.3s;
+    font-family: 'Michroma', sans-serif;
+    font-size: 26px;
+    line-height: auto;
+    letter-spacing: 0.2em;
+    border: none;
+    color: black;
+    outline: none;
+    width: 50px;
+    overflow: visible;
+    border: none;
+}
+.rc-input-number-handler-wrap {
+    float: right;
+    width: 20px;
+    height: 100%;
+    padding-top: 15px;
+    transition: all 0.3s;
+    border: none;
+}
+.rc-input-number-handler-up {
+    padding-top: 1px;
+    transition: all 0.3s;
+    transform: scale(1.5);
+    border: none;
+    background-color: transparent;
+}
+
+.rc-input-number-focused {
+    border: none;
+    box-shadow: none;
+}
+
+.rc-input-number-handler-up-inner:after {
+    content: '+';
+    border: none;
+}
+.rc-input-number-handler-down {
+    transition: all 0.3s;
+    transform: scale(1.5);
+    border: none;
+    background-color: transparent;
+}
+.rc-input-number-handler-down-inner:after {
+    content: '-';
+    border: none;
+}
+.rc-input-number-handler-down-disabled,
+.rc-input-number-handler-up-disabled {
+    opacity: 0.72;
+    border: none;
+}
+.rc-input-number-handler-down-disabled:hover,
+.rc-input-number-handler-up-disabled:hover {
+    color: black;
+    border-color: transparent;
+    border: none;
+}
+.rc-input-number-disabled .rc-input-number-input {
+    opacity: 0.72;
+    cursor: not-allowed;
+    background-color: transparent;
+    border: none;
+}
+.rc-input-number-disabled .rc-input-number-handler {
+    opacity: 0.72;
+    border: none;
+}
+.rc-input-number-disabled .rc-input-number-handler:hover {
+    color: #999;
+    border-color: transparent;
+}

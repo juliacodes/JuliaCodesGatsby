@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Paragraph, Heading } from '../../theming/styles';
 import Button from '../../components/Button';
 import { SplitCont } from './styles';
+import Odometer from 'react-odometerjs';
+import '../../theming/odometer.css';
+
 const Split = () => {
+    const [project, setProject] = useState(0);
+    const [internship, setInternship] = useState(0);
+
+    useEffect(() => {
+        setProject(22);
+        setInternship(5);
+    }, []);
+
     return (
         <SplitCont>
             <div className='left'>
@@ -17,11 +28,16 @@ const Split = () => {
                 </a>
             </div>
             <div className='right'>
-                <Heading>21</Heading>
-                <Paragraph>projects & applications</Paragraph>
-                <br />
-                <Heading>5</Heading>
-                <Paragraph>internships completed</Paragraph>
+                <div className='leftInner'>
+                    <Odometer format='d' duration={500} value={project} />
+                    <Heading>21</Heading>
+                    <Paragraph>projects & applications</Paragraph>
+                </div>
+                <div className='rightInner'>
+                    <Odometer format='d' duration={500} value={internship} />
+                    <Heading>5</Heading>
+                    <Paragraph>internships completed</Paragraph>
+                </div>
             </div>
         </SplitCont>
     );
