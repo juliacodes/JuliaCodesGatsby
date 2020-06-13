@@ -10,11 +10,12 @@ export const QUERIES = {
 export const Midi = styled.div`
     width: 100%;
     height: auto;
-    margin: 140px auto 0 auto;
+    margin: 70px auto 70px auto;
     padding: 30px;
 
     @media (${QUERIES.large}) {
-        margin: 210px auto 0 auto;
+        margin: 170px auto 180px auto;
+        padding: 0px;
     }
 `;
 
@@ -44,9 +45,13 @@ export const Main = styled.main`
 export const Full = styled.main`
     width: 100%;
     height: 100vh;
-    padding: 30px;
-    max-width: 1400px;
+    padding: 0px;
+    max-width: 1500px;
     margin: 0 auto;
+
+    @media (${QUERIES.large}) {
+        padding: 30px;
+    }
 `;
 
 export const Inner = styled.div`
@@ -64,7 +69,14 @@ export const Inner = styled.div`
     }
 `;
 
-export const Image = styled.img`
+export const Image = styled.div`
     width: 100%;
-    height: auto;
+    height: 500px;
+    border-radius: 0px;
+    background-position: center center;
+    background-size: cover;
+
+    @media (${QUERIES.large}) {
+        border-radius: 6px;
+    }
 `;

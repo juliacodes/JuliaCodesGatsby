@@ -11,7 +11,7 @@ const Content = () => {
                 </Heading>
             </Midi>
             <Full>
-                <Image src={Awk1} />
+                <Image style={{ backgroundImage: `url(${Awk1})` }} />
             </Full>
         </>
     );
