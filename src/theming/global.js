@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700;900&display=swap');
     * {
     border: 0;
     box-sizing: inherit;
