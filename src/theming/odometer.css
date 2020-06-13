@@ -105,20 +105,20 @@ input[type='number']::-webkit-inner-spin-button {
 }
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Spartan', sans-serif;
     font-size: 26px;
-    line-height: 117%;
+    line-height: 100%;
     letter-spacing: 0.2em;
-    line-height: 1.1em;
+    line-height: 1.4em;
     margin: 20px 0 35px 0;
 }
 
 form > span {
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Spartan', sans-serif;
     font-size: 26px;
     line-height: 117%;
     letter-spacing: 0.2em;
-    line-height: 1.1em;
+    line-height: 1em;
     margin: 20px 0 35px 0;
 }
 .odometer.odometer-auto-theme .odometer-value,
@@ -179,7 +179,7 @@ form > span {
 }
 .rc-input-number-input-wrap {
     overflow: hidden;
-    height: 100%;
+    height: 110%;
     border: none;
 }
 .rc-input-number-input {
@@ -187,16 +187,15 @@ form > span {
     text-align: left;
     outline: 0;
     -moz-appearance: textfield;
-    line-height: 26px;
+    line-height: 28px;
     height: 100%;
     transition: all 0.3s ease;
     color: #666666;
     border-radius: 4px;
     padding: 0;
     transition: all 0.3s;
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Spartan', sans-serif;
     font-size: 26px;
-    line-height: auto;
     letter-spacing: 0.2em;
     border: none;
     color: black;

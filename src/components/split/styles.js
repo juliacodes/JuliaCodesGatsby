@@ -52,9 +52,14 @@ export const SplitCont = styled.div`
         }
     }
 
-    ${Heading} {
+    .odometer.odometer-auto-theme,
+    .odometer.odometer-theme-default {
         font-weight: 900;
         font-size: 60px;
+        letter-spacing: 4px;
+        margin: 0;
+        line-height: 1.1em;
+        padding: 0;
 
         @media (${QUERIES.large}) {
             font-size: 90px;
