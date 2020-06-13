@@ -30,12 +30,10 @@ const Split = () => {
             <div className='right'>
                 <div className='leftInner'>
                     <Odometer format='d' duration={500} value={project} />
-                    <Heading>21</Heading>
                     <Paragraph>projects & applications</Paragraph>
                 </div>
                 <div className='rightInner'>
                     <Odometer format='d' duration={500} value={internship} />
-                    <Heading>5</Heading>
                     <Paragraph>internships completed</Paragraph>
                 </div>
             </div>
