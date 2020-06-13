@@ -5,8 +5,8 @@ export const SwitchBtn = styled.button`
     height: 45px;
     border-radius: 100px;
     display: block;
-    background-color: blue;
-    /* box-shadow: ${({ theme }) => theme.shadow}; */
+    background-color: ${({ theme }) => theme.togglerFill};
+    box-shadow: ${({ theme }) => theme.shadow};
     transition: transform 0.2s ease-in-out;
     background-color: ${({ theme }) => theme.heading};
 

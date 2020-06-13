@@ -1,75 +1,75 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  *,
-  *::after,
-  *::before {
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap');
+    * {
+    border: 0;
+    box-sizing: inherit;
+    -webkit-font-smoothing: auto;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  html {
+    display: flex;
+    min-height: 100%;
+    width: 100%;
     box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: 'Spartan', sans-serif;
   }
 
   body {
     background: ${({ theme }) => theme.main};
     color: ${({ theme }) => theme.heading};
-    font-weight: 400;
-  }
-
-  h1, h2, h3, h4{
-    font-weight: 900;
-    font-size: 32px;
-    margin-top: 55px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.01em;
-    padding: 0;
-    color: ${({ theme }) => theme.heading};
-  }
-
-  h2{
-    font-size: 32px;
-    margin-top: unset;
-  }
-
-  h3{
-    font-size: 17px;
-    margin-top: unset;
-
-  }
-
-  h4{
-    font-size: 23px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-
-  p{
-    color: ${({ theme }) => theme.paragraph};
-    font-size: 14px;
-    margin: 10px 0;
-    line-height: 15px;
-    letter-spacing: 0.01em;
-    align-self: center;
-  }
-
-  em{
-    display: block;
-    font-weight: 900;
-    font-size: 12px;
-    line-height: 10px;
-    letter-spacing: 0.01em;
-    color: ${({ theme }) => theme.paragraph};
-    text-transform: uppercase;
-    font-style: normal;
-  }
-
-  hr{
-    background-color: ${({ theme }) => theme.lines};
-    height: 2px;
-    border: none;
-    margin: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Spartan', sans-serif;
   }
 
   a {
-      text-decoration: none;
+    color: currentColor;
+    text-decoration: none;
+  }
+  a:hover {
+    cursor: pointer;
   }
 
+  main{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .inner{
+    max-width: 1437px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    > *{
+        width: 100%;
+    }
+  }
+
+  h1{
+    font-size: 55px;
+    line-height: 129.69%;
+    font-weight: 600;
+    color: ${({ theme }) => theme.heading};
+  }
 `;

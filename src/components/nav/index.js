@@ -3,11 +3,11 @@ import { NavCont } from './styles';
 import Logo from '../logo';
 import Switch from '../switch';
 
-const Nav = ({ toggleTheme }) => {
+const Nav = ({ toggleTheme, theme }) => {
     return (
         <NavCont>
             <Logo />
-            <Switch toggleTheme={toggleTheme} />
+            <Switch theme={theme} toggleTheme={toggleTheme} />
         </NavCont>
     );
 };
