@@ -1,29 +1,21 @@
-import React from 'react';
-
-export const themes = {
-    light: {
-        main: '#FFFFFF',
-        alt: '#F8F8F8',
-        heading: '#000000',
-        paragraph: '#9D9D9D',
-        lines: '#EAEAEA',
-        search: '#000000',
-        shadow: '0px 0px 20px rgba(116, 116, 116, 0.17);',
-        filter: '#B1B1B1',
-    },
-    dark: {
-        main: '#1A181F',
-        alt: '#201E26',
-        heading: '#FFFFFF',
-        paragraph: '#9D9D9D',
-        lines: '#34373C',
-        search: '#FFFFFF',
-        shadow: 'none',
-        filter: '#FFFFFF',
-    },
+export const lightTheme = {
+    main: '#FAFAFA',
+    overlay: '#FFFFFF',
+    heading: '#000000',
+    paragraph: '#9D9D9D',
+    lines: '#EAEAEA',
+    search: '#000000',
+    shadow: '0px 0px 16.1621px rgba(0, 0, 0, 0.1)',
+    filter: '#B1B1B1',
 };
 
-export const ThemeContext = React.createContext({
-    theme: themes.light,
-    toggleTheme: () => {},
-});
+export const darkTheme = {
+    main: '#212429',
+    overlay: '#2A2D32',
+    heading: '#FFFFFF',
+    paragraph: '#9D9D9D',
+    lines: '#34373C',
+    search: '#FFFFFF',
+    shadow: '0px 0px 16.1679px rgba(0, 0, 0, 0.27)',
+    filter: '#FFFFFF',
+};
