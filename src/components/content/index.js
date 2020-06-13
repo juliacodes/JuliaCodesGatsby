@@ -1,5 +1,6 @@
 import React from 'react';
 import { Midi, Heading, Full, Inner, Image } from '../../theming/styles';
+import Split from '../../components/split';
 import Awk1 from '../../images/Awkward1.jpg';
 const Content = () => {
     return (
@@ -13,6 +14,9 @@ const Content = () => {
             <Full>
                 <Image style={{ backgroundImage: `url(${Awk1})` }} />
             </Full>
+            <Midi>
+                <Split />
+            </Midi>
         </>
     );
 };
