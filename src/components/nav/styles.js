@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { QUERIES } from '../../theming/styles';
+import QUERIES from '../../theming/styles';
 
 export const NavCont = styled.nav`
     width: auto;

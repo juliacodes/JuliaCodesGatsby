@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const QUERIES = {
+const QUERIES = {
     large: `min-width: 1200px`,
     medium: `min-width: 870px`,
     small: `min-width: 660px`,
@@ -92,3 +92,5 @@ export const Image = styled.div`
         border-radius: 6px;
     }
 `;
+
+export default QUERIES;
