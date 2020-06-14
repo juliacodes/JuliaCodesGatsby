@@ -27,6 +27,7 @@ export const Heading = styled.h1`
     margin: 0 auto;
     width: 100%;
     color: ${({ theme }) => theme.textMain};
+    transition: all 0.3s ease-in-out;
 
     alt {
         color: ${({ theme }) => theme.accent};

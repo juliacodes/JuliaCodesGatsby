@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { Heading } from '../theming/styles';
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700;900&display=swap');
     * {
@@ -45,6 +46,10 @@ const GlobalStyles = createGlobalStyle`
   }
   a:hover {
     cursor: pointer;
+    
+    ${Heading}{
+      color: ${({ theme }) => theme.accent};
+    }
   }
 `;
 

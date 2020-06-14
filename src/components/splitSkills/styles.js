@@ -33,7 +33,7 @@ export const SplitCont = styled.div`
         flex-wrap: wrap;
 
         @media (${QUERIES.large}) {
-            width: 30%;
+            width: 33%;
             flex-direction: column;
             margin-top: 0px;
         }

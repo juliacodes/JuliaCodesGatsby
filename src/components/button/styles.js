@@ -34,3 +34,18 @@ export const ButtonCont = styled.p`
         }
     }
 `;
+
+export const ButtonContMini = styled(ButtonCont)`
+    font-size: 18px;
+    margin-top: 45px;
+
+    :hover {
+        svg {
+            transform: translate(25px, 4px);
+        }
+    }
+
+    svg {
+        transform: translate(20px, 5px);
+    }
+`;
