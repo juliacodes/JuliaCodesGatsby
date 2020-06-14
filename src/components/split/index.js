@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Paragraph } from '../../theming/styles';
+import { Paragraph, Heading } from '../../theming/styles';
 import ButtonA from '../button';
 import { SplitCont } from './styles';
 // import Odometer from 'react-odometerjs';
@@ -28,14 +28,15 @@ const Split = () => {
                 </a>
             </div>
             <div className='right'>
-                {/* <div className='leftInner'>
-                    <Odometer format='d' duration={500} value={project} />
+                <div className='leftInner'>
+                    <Heading>22</Heading>
                     <Paragraph>projects & applications</Paragraph>
                 </div>
                 <div className='rightInner'>
-                    <Odometer format='d' duration={500} value={internship} />
+                    <Heading>5</Heading>
+
                     <Paragraph>internships completed</Paragraph>
-                </div> */}
+                </div>
             </div>
         </SplitCont>
     );

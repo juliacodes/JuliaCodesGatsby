@@ -43,8 +43,7 @@ export const SplitCont = styled.div`
         }
     }
 
-    .odometer.odometer-auto-theme,
-    .odometer.odometer-theme-default {
+    ${Heading} {
         font-weight: 900;
         font-size: 60px;
         letter-spacing: 4px;
