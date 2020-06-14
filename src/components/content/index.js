@@ -1,6 +1,8 @@
 import React from 'react';
 import { Midi, Heading, Full, Inner, Image } from '../../theming/styles';
 import Split from '../../components/split';
+import Cards from '../cards';
+
 import Awk1 from '../../images/Awkward1.jpg';
 const Content = () => {
     return (
@@ -17,6 +19,9 @@ const Content = () => {
             <Midi>
                 <Split />
             </Midi>
+            <Full>
+                <Cards />
+            </Full>
         </>
     );
 };
