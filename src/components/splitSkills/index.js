@@ -21,6 +21,22 @@ const SplitSkills = () => {
                     skill='React'
                     description='this is a description, I will need to write more later'
                 />
+                <SkillDrop
+                    skill='HTML & CSS'
+                    description='this is a description, I will need to write more later'
+                />
+                <SkillDrop
+                    skill='React Native'
+                    description='this is a description, I will need to write more later'
+                />
+                <SkillDrop
+                    skill='Git'
+                    description='this is a description, I will need to write more later'
+                />
+                <SkillDrop
+                    skill='PHP & SQL'
+                    description='this is a description, I will need to write more later'
+                />
             </div>
         </SplitCont>
     );
