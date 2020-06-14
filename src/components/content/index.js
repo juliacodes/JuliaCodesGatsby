@@ -1,10 +1,10 @@
 import React from 'react';
-import { Midi, Heading, Full, Inner, Image } from '../../theming/styles';
+import { Midi, Heading, Full, Image } from '../../theming/styles';
 import Split from '../../components/split';
 import Cards from '../cards';
 import SplitSkills from '../../components/splitSkills';
-
 import Awk1 from '../../images/Awkward1.jpg';
+
 const Content = () => {
     return (
         <>
