@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "babel-plugin-styled-components": "^1.10.7",
         "gatsby": "^2.23.3",
         "gatsby-cli": "^2.12.45",
         "gatsby-plugin-react-helmet": "^3.3.4",
