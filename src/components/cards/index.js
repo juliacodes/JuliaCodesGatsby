@@ -5,7 +5,7 @@ import ibmWhite from '../../images/comps/ibm-white.png';
 import awkWhite from '../../images/comps/awk-white.png';
 import proofWhite from '../../images/comps/proof-white.png';
 
-const Cards = (props) => {
+const Cards = () => {
     return (
         <CardWrapper>
             <Card
