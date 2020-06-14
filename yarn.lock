@@ -6713,7 +6713,7 @@ gatsby-admin@^0.1.67:
     urql "^1.9.7"
     yup "^0.29.1"
 
-gatsby-cli@^2.12.45, gatsby-cli@^2.7.21:
+gatsby-cli@^2.12.45:
   version "2.12.45"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.45.tgz#5f99e8ea96264c55e981d13147c1a387c9bf1164"
   integrity sha512-CY0ltZ5DvrSo30MkPcU2FFGiCrQUjirXAY7TdFEhc8IeV5Gj9E2AFmUF1FO4Dna6yv47WBBaHKFpsiKc5Iq0XA==
