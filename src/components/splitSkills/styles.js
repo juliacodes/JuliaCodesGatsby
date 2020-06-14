@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import QUERIES, { Heading, Paragraph } from '../../theming/styles';
+import QUERIES from '../../theming/styles';
 
 export const SplitCont = styled.div`
     display: flex;

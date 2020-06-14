@@ -1,17 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Paragraph, Heading } from '../../theming/styles';
 import ButtonA from '../button';
 import { SplitCont } from './styles';
 
 const Split = () => {
-    const [project, setProject] = useState(0);
-    const [internship, setInternship] = useState(0);
-
-    useEffect(() => {
-        setProject(22);
-        setInternship(5);
-    }, []);
-
     return (
         <SplitCont>
             <div className='left'>
