@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Paragraph, Heading } from '../../theming/styles';
-import ButtonA from '../../components/Button';
+import { Paragraph } from '../../theming/styles';
+import ButtonA from '../button';
 import { SplitCont } from './styles';
 import Odometer from 'react-odometerjs';
 import '../../theming/odometer.css';
