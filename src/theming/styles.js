@@ -15,7 +15,7 @@ export const Midi = styled.div`
     max-width: 1090px;
 
     @media (${QUERIES.large}) {
-        margin: 170px auto 180px auto;
+        margin: 220px auto 220px auto;
         padding: 0px;
     }
 `;
