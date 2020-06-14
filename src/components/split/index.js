@@ -34,7 +34,6 @@ const Split = () => {
                 </div>
                 <div className='rightInner'>
                     <Heading>5</Heading>
-
                     <Paragraph>internships completed</Paragraph>
                 </div>
             </div>

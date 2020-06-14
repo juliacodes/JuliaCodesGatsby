@@ -13,7 +13,11 @@ export const SplitCont = styled.div`
 
         * {
             font-weight: 600;
-            font-size: 22px;
+            font-size: 19px;
+
+            @media (${QUERIES.large}) {
+                font-size: 22px;
+            }
         }
 
         @media (${QUERIES.large}) {
@@ -25,7 +29,8 @@ export const SplitCont = styled.div`
         width: 100%;
         display: flex;
         flex-direction: row;
-        margin-top: 30px;
+        margin-top: 50px;
+        flex-wrap: wrap;
 
         @media (${QUERIES.large}) {
             width: 35%;
