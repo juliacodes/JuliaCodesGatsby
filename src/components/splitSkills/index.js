@@ -16,7 +16,7 @@ const SplitSkills = () => {
             <div className='right'>
                 <SkillDrop
                     skill='Javascript'
-                    description='this is a description, I will need to write more later'
+                    description='Through these experiences, Ive had the opportunity to create memorable products that are not only enjoyable to use, but are written in code thats maintainable and easy to understand.  Ive had the opportunity to create memorable'
                 />
                 <SkillDrop
                     skill='React'
