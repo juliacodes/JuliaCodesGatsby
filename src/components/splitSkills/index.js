@@ -2,7 +2,6 @@ import React from 'react';
 import { Paragraph } from '../../theming/styles';
 import { SplitCont } from './styles';
 import SkillDrop from '../skillDrop';
-import '../../theming/odometer.css';
 
 const SplitSkills = () => {
     return (

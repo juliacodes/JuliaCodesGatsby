@@ -28,6 +28,7 @@ export const SkillCont = styled.div`
 
     p {
         transition: all 0.3s ease-in-out;
+        color: ${({ theme }) => theme.textMain};
     }
 `;
 
