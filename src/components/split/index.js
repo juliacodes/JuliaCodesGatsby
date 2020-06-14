@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Paragraph } from '../../theming/styles';
 import ButtonA from '../button';
 import { SplitCont } from './styles';
-import Odometer from 'react-odometerjs';
-import '../../theming/odometer.css';
+// import Odometer from 'react-odometerjs';
+// import '../../theming/odometer.css';
 
 const Split = () => {
     const [project, setProject] = useState(0);
@@ -28,14 +28,14 @@ const Split = () => {
                 </a>
             </div>
             <div className='right'>
-                <div className='leftInner'>
+                {/* <div className='leftInner'>
                     <Odometer format='d' duration={500} value={project} />
                     <Paragraph>projects & applications</Paragraph>
                 </div>
                 <div className='rightInner'>
                     <Odometer format='d' duration={500} value={internship} />
                     <Paragraph>internships completed</Paragraph>
-                </div>
+                </div> */}
             </div>
         </SplitCont>
     );

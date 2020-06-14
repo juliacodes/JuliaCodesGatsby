@@ -1,4 +1,4 @@
-export const lightTheme = {
+const lightTheme = {
     main: '#FFFFFF',
     alt: '#F8F8F8',
     altWhite: '#FFFFFF',
@@ -21,3 +21,5 @@ export const darkTheme = {
     altShadow: 'none',
     togglerFill: '#34313D',
 };
+
+export default lightTheme;
