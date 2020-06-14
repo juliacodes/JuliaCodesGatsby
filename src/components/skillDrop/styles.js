@@ -35,6 +35,7 @@ export const Flip = styled.div`
     width: 100%;
     display: flex;
     cursor: pointer;
+    color: ${({ theme }) => theme.textMain};
 
     :hover {
         h1 {
