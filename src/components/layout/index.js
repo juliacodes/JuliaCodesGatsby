@@ -8,7 +8,7 @@ const Layout = ({ toggleTheme, theme }) => {
     return (
         <Main>
             <Nav theme={theme} toggleTheme={toggleTheme} />
-            <Content />
+            <Content theme={theme} />
             <Foot />
         </Main>
     );

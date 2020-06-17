@@ -1,22 +1,31 @@
 import styled from 'styled-components';
-import QUERIES, { Heading, Paragraph } from '../../theming/styles';
+import QUERIES, { Midi, Heading, Paragraph } from '../../theming/styles';
 import GitscapeCover from '../../images/projs/gitscape-cover.png';
 
 export const ProjContainer = styled.div`
-    width: 100%;
-    height: 800px;
-    border-radius: 6px;
-    background-color: ${({ theme }) => theme.alt};
+    height: auto;
+    border-radius: 60px;
+    background-color: #eef4e8;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
+    padding: 0;
 
     @media (${QUERIES.large}) {
         flex-direction: row;
         justify-content: space-evenly;
-        padding: 0;
+        padding: 80px 0;
+    }
+
+    ${Midi} {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        flex: 1 0 30%;
+        flex-flow: row wrap;
     }
 `;
 
