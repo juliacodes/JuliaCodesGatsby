@@ -27,8 +27,8 @@ export const CompLogo = styled.div`
     background-position: center center;
 
     @media (${QUERIES.large}) {
-        width: 104px;
-        height: 104px;
+        width: 94px;
+        height: 94px;
     }
 `;
 

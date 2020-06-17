@@ -6,7 +6,7 @@ import SplitSkills from '../../components/splitSkills';
 import Awk1 from '../../images/Awkward1.jpg';
 import FullWidthProj from '../../components/fullWidthProj';
 
-const Content = () => {
+const Content = ({ theme }) => {
     return (
         <>
             <Midi>
@@ -22,7 +22,7 @@ const Content = () => {
                 <Split />
             </Midi>
             <Full>
-                <Cards />
+                <Cards theme={theme} />
             </Full>
             <Midi>
                 <SplitSkills />
