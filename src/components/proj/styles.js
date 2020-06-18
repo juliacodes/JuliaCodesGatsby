@@ -45,7 +45,7 @@ export const ProjCont = styled.div`
         }
 
         ${ProjImage} {
-            transform: translateY(-110px);
+            transform: translateY(-110px) scale(1.01);
         }
     }
 
