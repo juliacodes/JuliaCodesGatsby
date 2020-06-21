@@ -3,6 +3,8 @@ import { ProjContainer } from './styles';
 import { Midi } from '../../theming/styles';
 import Proj from '../proj';
 import cbbCover from '../../images/projs/cbb-cover.png';
+import gitscapeCover from '../../images/projs/gitscape-cover.png';
+import ccCover from '../../images/projs/cc-cover.png';
 
 const FullWidthProj = () => {
     return (
@@ -17,16 +19,19 @@ const FullWidthProj = () => {
                     netlify='netlify'
                 />
                 <Proj
+                    img={gitscapeCover}
                     title='Project Title'
                     description='this is a project description'
                     react='react'
                     sc='styled-components'
                 />
                 <Proj
+                    img={gitscapeCover}
                     title='Project Title'
                     description='this is a project description'
                 />
                 <Proj
+                    img={ccCover}
                     title='Project Title'
                     description='this is a project description'
                 />
