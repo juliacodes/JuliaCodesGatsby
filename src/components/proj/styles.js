@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import QUERIES, { Heading, Paragraph } from '../../theming/styles';
 
 export const ProjImageCont = styled.div`
@@ -12,10 +12,20 @@ export const ProjImageCont = styled.div`
     z-index: 0;
     border-radius: 14px 14px 0 0;
     transition: 0.3s ease-in-out;
+    overflow: visible;
+`;
+
+const translateDown = keyframes`
+    0%   {  
+        transform: translateY(-110px) scale(1.01); 
+    }
+    100% {     
+        transform: translateY(0) scale(1); 
+    }
 `;
 
 export const ProjImage = styled.img`
-    width: 80%;
+    width: 90%;
     margin: 40px auto;
     display: block;
     border-radius: 14px 14px 0 0;
@@ -23,6 +33,58 @@ export const ProjImage = styled.img`
     transition: all 0.3s ease-in-out;
     z-index: 0;
     position: relative;
+    animation: none;
+    transform: translateY(0) scale(1);
+    animation: ${translateDown} 0.4s;
+`;
+
+const translateUp = keyframes`
+    0%    {  
+        transform: translateY(0); 
+    }
+    100% {      
+        transform: translateY(-110px);
+    }
+`;
+
+const scaleUp = keyframes`
+    0%{ 
+        transform: scale(1);
+    }
+
+    30%{
+
+        transform: scale(1.017);
+    }
+
+    100%{
+        transform: scale(1.01);
+    }
+`;
+
+const scaleUpAlt = keyframes`
+    0%{ 
+        transform: scale(1) translateY(120px);
+    }
+
+    30%{
+
+        transform: scale(1.017) translateY(120px);
+    }
+
+    100%{
+        transform: scale(1.01) translateY(120px);
+    }
+`;
+
+const scaleDown = keyframes`
+    0%{ 
+        transform: scale(1.01);
+    }
+
+    100%{
+        transform: scale(1);
+    }
 `;
 
 export const ProjCont = styled.div`
@@ -32,20 +94,19 @@ export const ProjCont = styled.div`
     border-radius: 14px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
     margin-bottom: 40px;
-    transition: 0.3s ease-in-out;
+    animation: ${scaleDown} cubic-bezier(0.24, 0.63, 0.86, 0.43);
 
     :hover {
         box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.21);
         transform: scale(1.01);
+        animation-name: ${scaleUp};
+        animation-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
+        animation-duration: 0.5s;
         cursor: pointer;
 
-        ${ProjImageCont} {
-            overflow: visible;
-            height: calc(65% - 40px);
-        }
-
         ${ProjImage} {
-            transform: translateY(-110px) scale(1.01);
+            transform: translateY(-110px);
+            animation: ${translateUp} 0.4s;
         }
     }
 
@@ -53,17 +114,25 @@ export const ProjCont = styled.div`
         margin-bottom: 0px;
         height: 620px;
     }
+
     :nth-child(even) {
         transform: translateY(0px);
 
+        :hover {
+            animation-name: ${scaleUpAlt};
+            animation-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
+            animation-duration: 0.5s;
+            transform: scale(1.01) translateY(190px);
+        }
+
         @media (${QUERIES.large}) {
-            transform: translateY(100px);
-            margin-bottom: 60px;
+            transform: translateY(190px);
+            margin-bottom: 80px;
         }
     }
 
     :last-child {
-        margin-bottom: 100px;
+        margin-bottom: 190px;
     }
 
     ${Heading} {
