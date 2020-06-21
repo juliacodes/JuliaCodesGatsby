@@ -5,6 +5,9 @@ import Proj from '../proj';
 import cbbCover from '../../images/projs/cbb-cover.png';
 import gitscapeCover from '../../images/projs/gitscape-cover.png';
 import ccCover from '../../images/projs/cc-cover.png';
+import decoreCover1 from '../../images/projs/decore-cover1.png';
+import decoreCover2 from '../../images/projs/decore-cover2.png';
+import decoreCover3 from '../../images/projs/decore-cover3.png';
 
 const FullWidthProj = () => {
     return (
@@ -12,7 +15,7 @@ const FullWidthProj = () => {
             <Midi>
                 <Proj
                     img={cbbCover}
-                    title='Project Title'
+                    title='Coffee by Benjamin'
                     description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
                     react='react'
                     reactHooks='react-hooks'
@@ -20,20 +23,26 @@ const FullWidthProj = () => {
                 />
                 <Proj
                     img={gitscapeCover}
-                    title='Project Title'
-                    description='this is a project description'
+                    title='Gitscape'
+                    description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
                     react='react'
                     sc='styled-components'
                 />
                 <Proj
-                    img={gitscapeCover}
-                    title='Project Title'
-                    description='this is a project description'
+                    img={ccCover}
+                    title='Coffee Chemistry'
+                    react='react'
+                    sc='styled-components'
+                    description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
                 />
                 <Proj
-                    img={ccCover}
-                    title='Project Title'
-                    description='this is a project description'
+                    img={decoreCover1}
+                    img2={decoreCover2}
+                    img3={decoreCover3}
+                    title='Decore'
+                    react='react'
+                    sc='styled-components'
+                    description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
                 />
             </Midi>
         </ProjContainer>
