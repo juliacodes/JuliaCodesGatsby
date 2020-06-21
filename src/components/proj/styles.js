@@ -1,5 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 import QUERIES, { Heading, Paragraph } from '../../theming/styles';
+import {
+    translateDown,
+    translateUp,
+    scaleUp,
+    scaleUpAlt,
+    scaleDown,
+    cardSpread1,
+    cardSpread1Rev,
+    cardSpread2,
+    cardSpread2Rev,
+} from '../../theming/animate';
 
 export const ProjImageCont = styled.div`
     width: 100%;
@@ -13,15 +24,6 @@ export const ProjImageCont = styled.div`
     border-radius: 14px 14px 0 0;
     transition: 0.3s ease-in-out;
     overflow: visible;
-`;
-
-const translateDown = keyframes`
-    0%   {  
-        transform: translateY(-110px) scale(1.01); 
-    }
-    100% {     
-        transform: translateY(0) scale(1); 
-    }
 `;
 
 export const ProjImage = styled.img`
@@ -38,52 +40,32 @@ export const ProjImage = styled.img`
     animation: ${translateDown} 0.4s;
 `;
 
-const translateUp = keyframes`
-    0%    {  
-        transform: translateY(0); 
-    }
-    100% {      
-        transform: translateY(-110px);
-    }
-`;
+export const TriProjDiv = styled.div`
+    width: 100%;
+    height: 100%;
+    position: relative;
 
-const scaleUp = keyframes`
-    0%{ 
-        transform: scale(1);
-    }
-
-    30%{
-
-        transform: scale(1.017);
+    ${ProjImage} {
+        position: absolute;
+        top: 5%;
+        width: 90%;
+        left: 5%;
+        margin: 0 auto;
     }
 
-    100%{
-        transform: scale(1.01);
-    }
-`;
-
-const scaleUpAlt = keyframes`
-    0%{ 
-        transform: scale(1) translateY(120px);
+    .img1 {
+        animation: ${cardSpread1Rev} 0.4s;
+        transform: scale(1) translateY(-20px);
     }
 
-    30%{
-
-        transform: scale(1.017) translateY(120px);
+    .img2 {
+        transform: scale(0.9) translateY(20px);
+        animation: ${cardSpread2Rev} 0.4s;
     }
 
-    100%{
-        transform: scale(1.01) translateY(120px);
-    }
-`;
-
-const scaleDown = keyframes`
-    0%{ 
-        transform: scale(1.01);
-    }
-
-    100%{
-        transform: scale(1);
+    .img3 {
+        transform: scale(0.8) translateY(70px);
+        animation: none;
     }
 `;
 
@@ -95,6 +77,8 @@ export const ProjCont = styled.div`
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
     margin-bottom: 40px;
     animation: ${scaleDown} cubic-bezier(0.24, 0.63, 0.86, 0.43);
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
 
     :hover {
         box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.21);
@@ -105,14 +89,33 @@ export const ProjCont = styled.div`
         cursor: pointer;
 
         ${ProjImage} {
-            transform: translateY(-110px);
+            transform: translateY(-80px);
             animation: ${translateUp} 0.4s;
+        }
+
+        ${TriProjDiv} {
+            ${ProjImage} {
+                animation: none;
+            }
+            .img1 {
+                transform: translateY(-80px);
+                animation: ${cardSpread1} 0.4s;
+            }
+
+            .img2 {
+                transform: scale(0.9) translateY(-10px);
+                animation: ${cardSpread2} 0.4s;
+            }
+
+            .img3 {
+                transform: scale(0.8) translateY(70px);
+            }
         }
     }
 
     @media (${QUERIES.large}) {
         margin-bottom: 0px;
-        height: 620px;
+        height: 640px;
     }
 
     :nth-child(even) {
@@ -149,7 +152,7 @@ export const ProjCont = styled.div`
 export const DescCont = styled.div`
     position: relative;
 
-    height: calc(35% - 40px);
+    height: calc(35% - 25px);
     margin: 0 20px 20px 20px;
     padding-top: 20px;
     display: flex;

@@ -5,14 +5,23 @@ import {
     ProjImage,
     DescCont,
     TypeCont,
+    TriProjDiv,
 } from './styles';
 import { Heading, Paragraph } from '../../theming/styles';
 
 const Proj = (props) => {
     return (
         <ProjCont>
-            <ProjImageCont>
-                <ProjImage src={props.img} />
+            <ProjImageCont style={props.img2 ? { marginTop: 40 } : null}>
+                {props.img2 ? (
+                    <TriProjDiv>
+                        <ProjImage className='img3' src={props.img3} />
+                        <ProjImage className='img2' src={props.img2} />
+                        <ProjImage className='img1' src={props.img} />
+                    </TriProjDiv>
+                ) : (
+                    <ProjImage src={props.img} />
+                )}
             </ProjImageCont>
             <DescCont>
                 <TypeCont>
