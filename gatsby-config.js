@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: `Julia Johnson - Front End Developer`,
         description: `Portfolio of Julia Johnson - JuliaCodes - Front End Web Developer`,
-        author: `@juliajohnson`
+        author: `@juliajohnson`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -10,8 +10,8 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/src/images`
-            }
+                path: `${__dirname}/src/images`,
+            },
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
@@ -25,11 +25,11 @@ module.exports = {
                 background_color: `#663399`,
                 theme_color: `#663399`,
                 display: `minimal-ui`, // This path is relative to the root of the site.
-                icon: `src/images/Icon.png`
-            }
-        }
+                icon: `src/images/Icon.png`,
+            },
+        },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
-    ]
+    ],
 };
