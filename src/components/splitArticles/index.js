@@ -15,7 +15,7 @@ const SplitArticles = () => {
             <Article>
                 <Date>Oct 7</Date>
                 <a href=''>
-                    <Heading>Working at Awkward, Front End Internship</Heading>
+                    <Heading>Managing Time as a Programming Student</Heading>
                 </a>
             </Article>
         </ArticleCont>
