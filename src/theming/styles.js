@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SpreadWhiteAnim, SpreadBlackAnim } from './animate';
+import { SpreadWhiteAnim, SpreadBlackAnim, fadeIn } from './animate';
 
 const QUERIES = {
     large: `min-width: 1200px`,
@@ -30,6 +30,8 @@ export const Heading = styled.h1`
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
     user-select: none;
+    opacity: 0;
+    animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
         font-size: 60px;
@@ -96,6 +98,8 @@ export const Image = styled.div`
     border-radius: 0px;
     background-position: center center;
     background-size: cover;
+    opacity: 0;
+    animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
         border-radius: 6px;
