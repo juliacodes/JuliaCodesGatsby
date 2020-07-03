@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { SpreadWhiteAnim, SpreadBlackAnim } from './animate';
 
 const QUERIES = {
     large: `min-width: 1200px`,
     medium: `min-width: 870px`,
     small: `min-width: 660px`,
-    maxWidth: `1500px`,
+    maxWidth: `1500px`
 };
 
 export const Midi = styled.div`
@@ -26,12 +27,9 @@ export const Heading = styled.h1`
     font-weight: 600;
     margin: 0 auto;
     width: 100%;
-    color: ${({ theme }) => theme.textMain};
+    color: white;
     transition: all 0.3s ease-in-out;
-
-    alt {
-        color: ${({ theme }) => theme.accent};
-    }
+    user-select: none;
 
     @media (${QUERIES.large}) {
         font-size: 60px;
@@ -53,6 +51,15 @@ export const Paragraph = styled.p`
 export const Main = styled.main`
     width: 100%;
     height: 100%;
+    background-color: ${({ theme }) => theme.main};
+
+    > .growBlack {
+        animation: ${SpreadBlackAnim} 2s forwards;
+    }
+
+    > .growWhite {
+        animation: ${SpreadWhiteAnim} 2s forwards;
+    }
 `;
 
 export const Full = styled.main`

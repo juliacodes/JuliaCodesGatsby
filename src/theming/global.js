@@ -14,6 +14,8 @@ const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-appearance: none;
     -moz-appearance: none;
+    z-index: 99;
+    position:relative;
   }
   html {
     display: flex;

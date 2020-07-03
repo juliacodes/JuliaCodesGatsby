@@ -108,3 +108,36 @@ export const cardSpread2Rev = keyframes`
     transform: scale(0.9) translateY(20px);
   }
 `;
+
+export const SpreadBlackAnim = keyframes`
+0%{
+    width: 0;
+    height: 0;
+    top: 0px;
+    right: 0px;
+    background-color: #1a181f;
+}
+100%{
+    width: 400vmax;
+    height: 400vmax;
+    top: calc(-250vmax + 3rem);
+    right: calc(-250vmax + 3rem);
+    background-color: #1a181f;
+}`;
+
+export const SpreadWhiteAnim = keyframes`
+  0%{
+    background-color: white;
+    width: 0;
+    height: 0;
+    top: 0px;
+    right: 0px;
+  }
+  100%{
+    background-color: white;
+    width: 400vmax;
+    height: 400vmax;
+    top: calc(-250vmax + 3rem);
+    right: calc(-250vmax + 3rem);
+  }
+`;

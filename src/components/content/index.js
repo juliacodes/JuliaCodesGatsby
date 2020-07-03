@@ -6,14 +6,16 @@ import SplitSkills from '../../components/splitSkills';
 import Awk1 from '../../images/Awkward1.jpg';
 import FullWidthProj from '../../components/fullWidthProj';
 import SplitArticles from '../../components/splitArticles';
-
 const Content = ({ theme }) => {
     return (
         <>
-            <Midi>
-                <Heading>
-                    Hi, I'm <alt>Julia.</alt> Front End Developer, and Intern at
-                    IBM.
+            <Midi style={{ mixBlendMode: 'difference' }}>
+                <Heading
+                    style={{
+                        mixBlendMode: 'difference'
+                    }}
+                >
+                    Hi, I'm Julia. Front End Developer, and Intern at IBM.
                 </Heading>
             </Midi>
             <Full>
