@@ -1,7 +1,7 @@
 import React from 'react';
 import { SwitchBtn } from './styles';
 
-const Switch = ({ toggleTheme, theme }) => {
+const Switch = ({ toggleTheme, theme, spread }) => {
     return (
         <SwitchBtn onClick={toggleTheme}>
             {theme === 'light' ? (
@@ -29,23 +29,23 @@ const Switch = ({ toggleTheme, theme }) => {
                 >
                     <path
                         d='M5.82949 9.99984C5.82949 12.3007 7.70116 14.1723 10.002 14.1723C12.3028 14.1723 14.1745 12.3007 14.1745 9.99984C14.1745 7.699 12.3028 5.82734 10.002 5.82734C7.70116 5.82734 5.82949 7.699 5.82949 9.99984ZM9.16699 15.8332H10.8337V18.3332H9.16699V15.8332ZM9.16699 1.6665H10.8337V4.1665H9.16699V1.6665ZM1.66699 9.1665H4.16699V10.8332H1.66699V9.1665ZM15.8337 9.1665H18.3337V10.8332H15.8337V9.1665Z'
-                        fill='white'
+                        fill='black'
                     />
                     <path
                         d='M4.69738 16.4817L3.51904 15.3034L5.28654 13.5359L6.46488 14.7142L4.69738 16.4817Z'
-                        fill='white'
+                        fill='black'
                     />
                     <path
                         d='M13.5352 5.28664L15.3035 3.51831L16.4818 4.69664L14.7135 6.46498L13.5352 5.28664Z'
-                        fill='white'
+                        fill='black'
                     />
                     <path
                         d='M5.28654 6.46595L3.51904 4.69762L4.69821 3.51929L6.46488 5.28762L5.28654 6.46595Z'
-                        fill='white'
+                        fill='black'
                     />
                     <path
                         d='M16.4818 15.3032L15.3035 16.4816L13.5352 14.7132L14.7135 13.5349L16.4818 15.3032Z'
-                        fill='white'
+                        fill='black'
                     />
                 </svg>
             )}

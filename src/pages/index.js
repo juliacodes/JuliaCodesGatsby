@@ -3,22 +3,30 @@ import GlobalStyles from '../theming/global';
 import Layout from '../components/layout';
 import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from '../theming/themeContext';
+import disableScroll from 'disable-scroll';
 
 const App = () => {
     const [theme, setTheme] = useState('light');
+    const [spread, setSpread] = useState(false);
 
     function toggleTheme() {
         if (theme === 'light') {
-            setTheme('dark');
+            setSpread('first');
+            setTimeout(() => {
+                setTheme('dark');
+            }, 2000);
         } else {
-            setTheme('light');
+            setSpread('second');
+            setTimeout(() => {
+                setTheme('light');
+            }, 2000);
         }
     }
 
     return (
         <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
             <GlobalStyles />
-            <Layout theme={theme} toggleTheme={toggleTheme} />
+            <Layout spread={spread} theme={theme} toggleTheme={toggleTheme} />
         </ThemeProvider>
     );
 };

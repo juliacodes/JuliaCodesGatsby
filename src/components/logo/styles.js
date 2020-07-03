@@ -5,8 +5,8 @@ export const LogoSvg = styled.svg`
     transform: scale(0.7);
 
     * {
-        fill: ${({ theme }) => theme.textMain};
-        stroke: ${({ theme }) => theme.textMain};
+        fill: white;
+        stroke: white;
     }
 
     @media (${QUERIES.large}) {
