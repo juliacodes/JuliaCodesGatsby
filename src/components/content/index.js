@@ -6,8 +6,6 @@ import SplitSkills from '../../components/splitSkills';
 import Awk1 from '../../images/Awkward1.jpg';
 import FullWidthProj from '../../components/fullWidthProj';
 import SplitArticles from '../../components/splitArticles';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 const Content = ({ theme }) => {
     return (
         <>
@@ -22,13 +20,7 @@ const Content = ({ theme }) => {
                 </Heading>
             </Midi>
             <Full>
-                <LazyLoadImage
-                    height={'500px'}
-                    width={'100%'}
-                    alt={Awk1}
-                    src={Awk1}
-                    effect='blur'
-                />
+                <Image style={{ backgroundImage: `url(${Awk1})` }} />
             </Full>
             <Midi>
                 <Split />
