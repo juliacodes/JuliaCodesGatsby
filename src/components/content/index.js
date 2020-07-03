@@ -12,7 +12,8 @@ const Content = ({ theme }) => {
             <Midi style={{ mixBlendMode: 'difference' }}>
                 <Heading
                     style={{
-                        mixBlendMode: 'difference'
+                        mixBlendMode: 'difference',
+                        color: 'white'
                     }}
                 >
                     Hi, I'm Julia. Front End Developer, and Intern at IBM.

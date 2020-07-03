@@ -27,7 +27,7 @@ export const Heading = styled.h1`
     font-weight: 600;
     margin: 0 auto;
     width: 100%;
-    color: white;
+    color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
     user-select: none;
 
@@ -52,6 +52,7 @@ export const Main = styled.main`
     width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.main};
+    overflow: hidden;
 
     > .growBlack {
         animation: ${SpreadBlackAnim} 2s forwards;

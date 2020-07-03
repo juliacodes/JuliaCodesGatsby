@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Heading } from '../../theming/styles';
+import QUERIES, { Heading } from '../../theming/styles';
 
 export const ArticleCont = styled.div`
     width: 100%;
@@ -20,7 +20,6 @@ export const Article = styled.div`
         width: 500px;
         margin: 0;
         margin-left: 100px;
-
         transition: all 0.5s ease-in-out;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;

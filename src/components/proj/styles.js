@@ -14,7 +14,7 @@ import {
 
 export const ProjImageCont = styled.div`
     width: 100%;
-    height: calc(65% - 40px);
+    height: 45%;
     background-image: ${({ theme }) => theme.gradient};
     background-repeat: repeat;
     background-size: contain;
@@ -24,6 +24,10 @@ export const ProjImageCont = styled.div`
     border-radius: 14px 14px 0 0;
     transition: 0.3s ease-in-out;
     overflow: visible;
+
+    @media (${QUERIES.large}) {
+        height: calc(65% - 40px);
+    }
 `;
 
 export const ProjImage = styled.img`
@@ -71,7 +75,7 @@ export const TriProjDiv = styled.div`
 
 export const ProjCont = styled.div`
     width: 520px;
-    height: 720px;
+    height: 500px;
     background-color: ${({ theme }) => theme.altWhite};
     border-radius: 14px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
@@ -80,54 +84,57 @@ export const ProjCont = styled.div`
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
 
-    :hover {
-        box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.21);
-        transform: scale(1.01);
-        animation-name: ${scaleUp};
-        animation-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
-        animation-duration: 0.5s;
-        cursor: pointer;
-
-        ${ProjImage} {
-            transform: translateY(-80px);
-            animation: ${translateUp} 0.4s;
-        }
-
-        ${TriProjDiv} {
-            ${ProjImage} {
-                animation: none;
-            }
-            .img1 {
-                transform: translateY(-80px);
-                animation: ${cardSpread1} 0.4s;
-            }
-
-            .img2 {
-                transform: scale(0.9) translateY(-10px);
-                animation: ${cardSpread2} 0.4s;
-            }
-
-            .img3 {
-                transform: scale(0.8) translateY(70px);
-            }
-        }
-    }
-
     @media (${QUERIES.large}) {
         margin-bottom: 0px;
         height: 640px;
     }
 
+    :hover {
+        @media (${QUERIES.large}) {
+            box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.21);
+            transform: scale(1.01);
+            animation-name: ${scaleUp};
+            animation-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
+            animation-duration: 0.5s;
+            cursor: pointer;
+
+            ${ProjImage} {
+                transform: translateY(-80px);
+                animation: ${translateUp} 0.4s;
+            }
+
+            ${TriProjDiv} {
+                ${ProjImage} {
+                    animation: none;
+                }
+                .img1 {
+                    transform: translateY(-80px);
+                    animation: ${cardSpread1} 0.4s;
+                }
+
+                .img2 {
+                    transform: scale(0.9) translateY(-10px);
+                    animation: ${cardSpread2} 0.4s;
+                }
+
+                .img3 {
+                    transform: scale(0.8) translateY(70px);
+                }
+            }
+        }
+    }
+
     :nth-child(even) {
         transform: translateY(0px);
 
-        :hover {
-            animation-name: ${scaleUpAlt};
-            animation-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
-            animation-duration: 0.5s;
-            transform: scale(1.01) translateY(190px);
+        @media (${QUERIES.large}) {
+            :hover {
+                animation-name: ${scaleUpAlt};
+                animation-timing-function: cubic-bezier(0.05, 0.63, 0.8, 0.58);
+                animation-duration: 0.5s;
+                transform: scale(1.01) translateY(190px);
+            }
         }
-
         @media (${QUERIES.large}) {
             transform: translateY(190px);
             margin-bottom: 80px;
@@ -139,7 +146,11 @@ export const ProjCont = styled.div`
     }
 
     ${Heading} {
-        font-size: 40px;
+        font-size: 25px;
+
+        @media (${QUERIES.large}) {
+            font-size: 40px;
+        }
     }
 
     ${Paragraph} {
@@ -151,15 +162,20 @@ export const ProjCont = styled.div`
 
 export const DescCont = styled.div`
     position: relative;
-
-    height: calc(35% - 25px);
-    margin: 0 20px 20px 20px;
-    padding-top: 20px;
+    height: 50%;
+    padding: 0 10px 0 10px;
+    border-radius: 0 0 14px 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 99;
     background-color: ${({ theme }) => theme.altWhite};
+
+    @media (${QUERIES.large}) {
+        height: calc(35% - 25px);
+        margin: 0 20px 20px 20px;
+        padding: 20px 0 0 0;
+    }
 
     * {
         margin: 10px;
