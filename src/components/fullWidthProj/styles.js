@@ -4,7 +4,7 @@ import GitscapeCover from '../../images/projs/gitscape-cover.png';
 
 export const ProjContainer = styled.div`
     height: auto;
-    border-radius: 60px;
+    border-radius: 0px;
     background-color: #eef4e8;
     display: flex;
     flex-direction: column-reverse;
@@ -16,6 +16,7 @@ export const ProjContainer = styled.div`
         flex-direction: row;
         justify-content: space-evenly;
         padding: 80px 0;
+        border-radius: 60px;
     }
 
     ${Midi} {

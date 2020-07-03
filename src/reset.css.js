@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-appearance: none;
     -moz-appearance: none;
+    overflow: hidden;
   }
   html {
     display: flex;
@@ -30,10 +31,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    overflow: hidden;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
     font-family: 'Spartan', sans-serif;
   }
