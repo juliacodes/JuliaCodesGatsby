@@ -11,7 +11,8 @@ export const CardContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 580px;
 
     @media (${QUERIES.large}) {
         width: 31%;
@@ -20,8 +21,8 @@ export const CardContainer = styled.div`
 `;
 
 export const CompLogo = styled.div`
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     display: block;
     background-size: cover;
     background-position: center center;

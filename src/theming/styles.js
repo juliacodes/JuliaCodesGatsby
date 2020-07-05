@@ -17,7 +17,7 @@ export const Midi = styled.div`
 
     @media (${QUERIES.large}) {
         margin: 220px auto 220px auto;
-        padding: 0px;
+        padding: 0px; 
     }
 `;
 
