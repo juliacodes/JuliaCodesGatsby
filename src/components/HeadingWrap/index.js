@@ -43,7 +43,7 @@ function HeadingWrap() {
                             title='Github Repository'
                             target='_blank'
                             rel='noreferrer'
-                            href='https://github.com/juliajcodes'
+                            href='https://github.com/juliacodes'
                         >
                             <Social>
                                 <svg
