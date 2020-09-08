@@ -28,7 +28,7 @@ const FooterCont = styled.div`
 `;
 
 const Variable = styled.div`
-    display: ${props => props.projectDisplay || 'none'};
+    display: ${(props) => props.projectDisplay || 'none'};
     margin-bottom: 100px;
 `;
 
@@ -136,7 +136,7 @@ function Footer(props) {
                             title='Github Repository'
                             target='_blank'
                             rel='noreferrer'
-                            href='https://github.com/juliajcodes'
+                            href='https://github.com/juliacodes'
                         >
                             github
                         </a>
