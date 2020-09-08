@@ -4,7 +4,7 @@ import {
     HeadingElements,
     Line,
     SocialCont,
-    Social
+    Social,
 } from './styles';
 import { Container } from '../container';
 import { HeadingMain } from '../../styles/';
@@ -43,7 +43,7 @@ function HeadingWrap() {
                             title='Github Repository'
                             target='_blank'
                             rel='noreferrer'
-                            href='https://github.com/juliajcodes'
+                            href='https://github.com/juliacodes'
                         >
                             <Social>
                                 <svg

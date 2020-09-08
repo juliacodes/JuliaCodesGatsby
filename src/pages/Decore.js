@@ -242,13 +242,13 @@ function Decore() {
                 meta={[
                     {
                         name: 'Julia Johnson',
-                        content: 'Portfolio - Julia Codes'
+                        content: 'Portfolio - Julia Codes',
                     },
                     {
                         name: 'Julia Johnson',
                         content:
-                            'Julia Johnson - JuliaCodes - Front End Developer'
-                    }
+                            'Julia Johnson - JuliaCodes - Front End Developer',
+                    },
                 ]}
             >
                 {' '}
@@ -266,7 +266,7 @@ function Decore() {
                             <a
                                 style={{
                                     color: '#DD7834',
-                                    fontWeight: '900'
+                                    fontWeight: '900',
                                 }}
                                 href='https://github.com/imtrent'
                             >
@@ -292,12 +292,12 @@ function Decore() {
                                     <td>React</td>
 
                                     <Bold>
-                                        <a href='https://github.com/juliajohnson18/Interactive-Site-Builder'>
+                                        <a href='https://github.com/juliacodes/decore'>
                                             Repository
                                         </a>
                                     </Bold>
                                     <Bold>
-                                        <a href='https://site-builder.netlify.com/'>
+                                        <a href='https://de-core.netlify.app/'>
                                             View Site
                                         </a>
                                     </Bold>

@@ -239,13 +239,13 @@ function Forecast(props) {
                 meta={[
                     {
                         name: 'Julia Johnson',
-                        content: 'Portfolio - Julia Codes'
+                        content: 'Portfolio - Julia Codes',
                     },
                     {
                         name: 'Julia Johnson',
                         content:
-                            'Julia Johnson - JuliaCodes - Front End Developer'
-                    }
+                            'Julia Johnson - JuliaCodes - Front End Developer',
+                    },
                 ]}
             >
                 {' '}
@@ -284,7 +284,7 @@ function Forecast(props) {
                                             title='React Weather API'
                                             target='_blank'
                                             rel='noreferrer'
-                                            href='https://github.com/juliajohnson18/react-weather-api'
+                                            href='https://github.com/juliacodes/react-weather-api'
                                         >
                                             Repository
                                         </a>
@@ -389,7 +389,7 @@ function Forecast(props) {
                                 title='React Weather API'
                                 target='_blank'
                                 rel='noreferrer'
-                                href='https://github.com/juliajohnson18/react-weather-api'
+                                href='https://github.com/juliacodes/react-weather-api'
                             >
                                 <ProjectLink>
                                     View Code <span>&#8250;</span>

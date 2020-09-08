@@ -25,7 +25,9 @@ var _ensureResources = _interopRequireDefault(require("./ensure-resources"));
 
 var _errorOverlayHandler = require("./error-overlay-handler");
 
-if (window.__webpack_hot_middleware_reporter__ !== undefined) {
+// TODO: Remove entire block when we make fast-refresh the default
+// In fast-refresh, this logic is all moved into the `error-overlay-handler`
+if (window.__webpack_hot_middleware_reporter__ !== undefined && process.env.GATSBY_HOT_LOADER !== `fast-refresh`) {
   const overlayErrorID = `webpack`; // Report build errors
 
   window.__webpack_hot_middleware_reporter__.useCustomOverlay({
@@ -54,32 +56,32 @@ if (window.__webpack_hot_middleware_reporter__ !== undefined) {
 // to not introduce breaking change.
 // Remove this in v3
 
-const RouteHandler = props => _react.default.createElement(_router.BaseContext.Provider, {
+const RouteHandler = props => /*#__PURE__*/_react.default.createElement(_router.BaseContext.Provider, {
   value: {
     baseuri: `/`,
     basepath: `/`
   }
-}, _react.default.createElement(_queryResultStore.PageQueryStore, props));
+}, /*#__PURE__*/_react.default.createElement(_queryResultStore.PageQueryStore, props));
 
 class LocationHandler extends _react.default.Component {
   render() {
-    let {
+    const {
       location
     } = this.props;
 
     if (!_loader.default.isPageNotFound(location.pathname)) {
-      return _react.default.createElement(_ensureResources.default, {
+      return /*#__PURE__*/_react.default.createElement(_ensureResources.default, {
         location: location
-      }, locationAndPageResources => _react.default.createElement(_navigation.RouteUpdates, {
+      }, locationAndPageResources => /*#__PURE__*/_react.default.createElement(_navigation.RouteUpdates, {
         location: location
-      }, _react.default.createElement(_gatsbyReactRouterScroll.ScrollContext, {
+      }, /*#__PURE__*/_react.default.createElement(_gatsbyReactRouterScroll.ScrollContext, {
         location: location,
         shouldUpdateScroll: _navigation.shouldUpdateScroll
-      }, _react.default.createElement(_router.Router, {
+      }, /*#__PURE__*/_react.default.createElement(_router.Router, {
         basepath: __BASE_PATH__,
         location: location,
         id: "gatsby-focus-wrapper"
-      }, _react.default.createElement(RouteHandler, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(RouteHandler, (0, _extends2.default)({
         path: encodeURI(locationAndPageResources.pageResources.page.matchPath || locationAndPageResources.pageResources.page.path)
       }, this.props, locationAndPageResources))))));
     }
@@ -91,18 +93,18 @@ class LocationHandler extends _react.default.Component {
     let custom404;
 
     if (real404PageResources) {
-      custom404 = _react.default.createElement(_queryResultStore.PageQueryStore, (0, _extends2.default)({}, this.props, {
+      custom404 = /*#__PURE__*/_react.default.createElement(_queryResultStore.PageQueryStore, (0, _extends2.default)({}, this.props, {
         pageResources: real404PageResources
       }));
     }
 
-    return _react.default.createElement(_navigation.RouteUpdates, {
+    return /*#__PURE__*/_react.default.createElement(_navigation.RouteUpdates, {
       location: location
-    }, _react.default.createElement(_router.Router, {
+    }, /*#__PURE__*/_react.default.createElement(_router.Router, {
       basepath: __BASE_PATH__,
       location: location,
       id: "gatsby-focus-wrapper"
-    }, _react.default.createElement(RouteHandler, {
+    }, /*#__PURE__*/_react.default.createElement(RouteHandler, {
       path: location.pathname,
       location: location,
       pageResources: dev404PageResources,
@@ -112,12 +114,12 @@ class LocationHandler extends _react.default.Component {
 
 }
 
-const Root = () => _react.default.createElement(_router.Location, null, locationContext => _react.default.createElement(LocationHandler, locationContext)); // Let site, plugins wrap the site e.g. for Redux.
+const Root = () => /*#__PURE__*/_react.default.createElement(_router.Location, null, locationContext => /*#__PURE__*/_react.default.createElement(LocationHandler, locationContext)); // Let site, plugins wrap the site e.g. for Redux.
 
 
 const WrappedRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
-  element: _react.default.createElement(Root, null)
-}, _react.default.createElement(Root, null), ({
+  element: /*#__PURE__*/_react.default.createElement(Root, null)
+}, /*#__PURE__*/_react.default.createElement(Root, null), ({
   result,
   plugin
 }) => {
@@ -126,6 +128,6 @@ const WrappedRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
   };
 }).pop();
 
-var _default = () => _react.default.createElement(_queryResultStore.StaticQueryStore, null, WrappedRoot);
+var _default = () => /*#__PURE__*/_react.default.createElement(_queryResultStore.StaticQueryStore, null, WrappedRoot);
 
 exports.default = _default;
