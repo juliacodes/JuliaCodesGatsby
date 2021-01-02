@@ -1,10 +1,10 @@
 import React from 'react';
 import { SwitchBtn } from './styles';
 
-const Switch = ({ toggleTheme, theme, spread }) => {
+const Switch = ({ toggleDarkMode, darkMode, spread }) => {
     return (
-        <SwitchBtn onClick={toggleTheme}>
-            {theme === 'light' ? (
+        <SwitchBtn onClick={toggleDarkMode}>
+            {!darkMode ? (
                 <svg
                     width='14'
                     height='14'
@@ -13,8 +13,8 @@ const Switch = ({ toggleTheme, theme, spread }) => {
                     xmlns='http://www.w3.org/2000/svg'
                 >
                     <path
-                        fill-rule='evenodd'
-                        clip-rule='evenodd'
+                        fillRule='evenodd'
+                        clipRule='evenodd'
                         d='M-7.82013e-05 9.058C1.26554 9.54903 2.64663 9.66146 3.975 9.38159C5.30338 9.10172 6.52171 8.44163 7.48163 7.48171C8.44155 6.52179 9.10164 5.30345 9.38151 3.97508C9.66138 2.64671 9.54895 1.26562 9.05792 0C10.5781 0.592448 11.8438 1.69712 12.6363 3.12328C13.4289 4.54945 13.6986 6.20759 13.3989 7.81141C13.0992 9.41523 12.2489 10.8641 10.9948 11.9078C9.74067 12.9515 8.16151 13.5245 6.52992 13.528C5.11765 13.5284 3.73828 13.1017 2.5729 12.3039C1.40753 11.5062 0.510612 10.3747 -7.82013e-05 9.058Z'
                         fill='black'
                     />

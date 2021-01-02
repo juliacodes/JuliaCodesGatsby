@@ -2,21 +2,23 @@ import React from 'react';
 import { Midi, Heading, Full, Image } from '../../theming/styles';
 import Split from '../../components/split';
 import Cards from '../cards';
-import SplitSkills from '../../components/splitSkills';
+import SplitPartner from '../../components/split/splitPartner';
 import Awk1 from '../../images/Awkward1.jpg';
 import FullWidthProj from '../../components/fullWidthProj';
 import SplitArticles from '../../components/splitArticles';
-const Content = ({ theme }) => {
+
+const Content = ({ darkMode }) => {
     return (
         <>
             <Midi style={{ mixBlendMode: 'difference' }}>
                 <Heading
                     style={{
                         mixBlendMode: 'difference',
-                        color: 'white'
+                        color: 'white',
+                        maxWidth: '90%',
                     }}
                 >
-                    Hi, I'm Julia. Front End Developer, and Intern at IBM.
+                    Hi, I'm Julia. Software Developer & Content Creator
                 </Heading>
             </Midi>
             <Full>
@@ -25,11 +27,9 @@ const Content = ({ theme }) => {
             <Midi>
                 <Split />
             </Midi>
-            <Full>
-                <Cards theme={theme} />
-            </Full>
-            <Midi>
-                <SplitSkills />
+            <Cards darkMode={darkMode} />
+            <Midi style={{ marginTop: 90 }}>
+                <SplitPartner />
             </Midi>
             <Full>
                 <FullWidthProj />

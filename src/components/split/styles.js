@@ -8,6 +8,21 @@ export const SplitCont = styled.div`
     align-items: center;
     flex-wrap: wrap;
 
+    .left-small {
+        width: 100%;
+
+        @media (${QUERIES.large}) {
+            width: 45%;
+        }
+    }
+    .right-large {
+        width: 100%;
+
+        @media (${QUERIES.large}) {
+            width: 45%;
+        }
+    }
+
     .left {
         width: 100%;
 

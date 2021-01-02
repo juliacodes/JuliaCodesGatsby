@@ -11,25 +11,23 @@ export const CardContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin: 20px auto;
+    margin: 90px 30px 40px 30px;
     max-width: 580px;
 
     @media (${QUERIES.large}) {
-        width: 31%;
-        height: 200px;
+        width: 350px;
+        height: 170px;
     }
 `;
 
-export const CompLogo = styled.div`
-    width: 90px;
-    height: 90px;
+export const CompLogo = styled.img`
+    width: auto;
+    height: auto;
     display: block;
-    background-size: cover;
-    background-position: center center;
 
     @media (${QUERIES.large}) {
-        width: 94px;
-        height: 94px;
+        width: auto;
+        height: 150px;
     }
 `;
 
