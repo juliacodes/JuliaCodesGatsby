@@ -8,7 +8,7 @@ const App = () => {
     const storedDarkMode = localStorage.getItem('DARK_MODE');
 
     const [darkMode, setDarkMode] = useState(
-        localStorage.getItem('DARK_MODE') ? storedDarkMode : ''
+        window.localStorage ? storedDarkMode : ''
     );
     const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
     // const theming = localStorage.getItem('THEMING');
