@@ -5,7 +5,11 @@ import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from '../theming/themeContext';
 
 const App = () => {
-    const storedDarkMode = localStorage.getItem('DARK_MODE');
+    if (window.localStorage) {
+        const storedDarkMode = localStorage.getItem('DARK_MODE');
+    } else {
+        const storedDarkMode = false;
+    }
 
     const [darkMode, setDarkMode] = useState(
         window.localStorage ? storedDarkMode : ''
