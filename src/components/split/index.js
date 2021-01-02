@@ -11,20 +11,23 @@ const Split = () => {
                     Through these experiences, I've had the opportunity to
                     create memorable products that are not only enjoyable to
                     use, but are written in code thats maintainable and easy to
-                    understand. I've had the opportunity to create memorable{' '}
+                    understand.
+                    <br />
+                    <br />
+                    I've had the opportunity to create memorable{' '}
                 </Paragraph>
-                <a href='/about'>
+                {/* <a href='/about'>
                     <ButtonA title='About Me' />
-                </a>
+                </a> */}
             </div>
             <div className='right'>
                 <div className='leftInner'>
-                    <Heading>22</Heading>
-                    <Paragraph>projects & applications</Paragraph>
+                    <Heading>47k</Heading>
+                    <Paragraph>instagram followers</Paragraph>
                 </div>
                 <div className='rightInner'>
-                    <Heading>5</Heading>
-                    <Paragraph>internships completed</Paragraph>
+                    <Heading>400</Heading>
+                    <Paragraph>github followers</Paragraph>
                 </div>
             </div>
         </SplitCont>

@@ -8,23 +8,24 @@ import ccCover from '../../images/projs/cc-cover.png';
 import decoreCover1 from '../../images/projs/decore-cover1.png';
 import decoreCover2 from '../../images/projs/decore-cover2.png';
 import decoreCover3 from '../../images/projs/decore-cover3.png';
+import setup from '../../images/setup.png';
 
 const FullWidthProj = () => {
     return (
         <ProjContainer>
             <Midi>
                 <Proj
-                    img={cbbCover}
-                    title='Coffee by Benjamin'
-                    description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
+                    img={setup}
+                    title='Setup & Products'
+                    description='Explore links to every product I use daily'
                     react='react'
                     reactHooks='react-hooks'
                     netlify='netlify'
                 />
                 <Proj
                     img={gitscapeCover}
-                    title='Gitscape'
-                    description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
+                    title='Uses'
+                    description='All my themes, VSCode settings, apps used, and notion templates'
                     react='react'
                     sc='styled-components'
                 />

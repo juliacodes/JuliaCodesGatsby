@@ -9,6 +9,7 @@
         "gatsby-plugin-styled-components": "^3.3.4",
         "gatsby-source-filesystem": "^2.3.11",
         "gatsby-transformer-sharp": "^2.5.5",
+        "react-marquee-slider": "^1.1.2",
         "styled-components": "^5.1.1"
     }
 }

@@ -4,29 +4,29 @@ import { Inner } from '../../theming/styles';
 import Logo from '../logo';
 import Switch from '../switch';
 
-const Nav = ({ toggleTheme, theme, spread }) => {
+const Nav = ({ toggleDarkMode, darkMode, spread }) => {
     return (
         <Inner
             style={{
-                mixBlendMode: 'difference'
+                mixBlendMode: 'difference',
             }}
         >
             <NavCont
                 style={{
-                    mixBlendMode: 'difference'
+                    mixBlendMode: 'difference',
                 }}
             >
                 <Logo
                     style={{
                         position: 'relative',
                         display: 'block',
-                        zIndex: 2
+                        zIndex: 2,
                     }}
                 />
                 <Switch
                     spread={spread}
-                    theme={theme}
-                    toggleTheme={toggleTheme}
+                    darkMode={darkMode}
+                    toggleDarkMode={toggleDarkMode}
                 />
             </NavCont>
         </Inner>

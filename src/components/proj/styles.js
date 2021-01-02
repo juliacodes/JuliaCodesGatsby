@@ -9,7 +9,7 @@ import {
     cardSpread1,
     cardSpread1Rev,
     cardSpread2,
-    cardSpread2Rev
+    cardSpread2Rev,
 } from '../../theming/animate';
 
 export const ProjImageCont = styled.div`
