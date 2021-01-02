@@ -6,7 +6,10 @@ import lightTheme, { darkTheme } from '../theming/themeContext';
 
 const App = () => {
     const storedDarkMode = localStorage.getItem('DARK_MODE');
-    const [darkMode, setDarkMode] = useState(storedDarkMode);
+
+    const [darkMode, setDarkMode] = useState(
+        localStorage.getItem('DARK_MODE') ? storedDarkMode : ''
+    );
     const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
     // const theming = localStorage.getItem('THEMING');
     // console.log(localStorage.getItem('THEMING'));
