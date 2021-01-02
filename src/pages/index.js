@@ -5,15 +5,11 @@ import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from '../theming/themeContext';
 
 const App = () => {
-    if (localStorage) {
+    const [darkMode, setDarkMode] = useState(undefined);
+    useEffect(() => {
         const storedDarkMode = localStorage.getItem('DARK_MODE');
-    } else {
-        const storedDarkMode = false;
-    }
-
-    const [darkMode, setDarkMode] = useState(
-        localStorage ? storedDarkMode : ''
-    );
+        setDarkMode(storedDarkMode);
+    }, []);
     const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
     // const theming = localStorage.getItem('THEMING');
     // console.log(localStorage.getItem('THEMING'));
@@ -22,9 +18,7 @@ const App = () => {
 
     useEffect(() => {
         console.log(`is in dark mode? ${darkMode}`);
-        if (localStorage) {
-            localStorage.setItem('DARK_MODE', darkMode);
-        }
+        localStorage.setItem('DARK_MODE', darkMode);
     }, [darkMode]);
     // useEffect(() => {
     //     console.log(`CURRENT MODE:  ${theme}`);
