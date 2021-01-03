@@ -3,15 +3,23 @@ import { useEffect, useState } from 'react';
 
 export const useDarkMode = () => {
     const [mode, setMode] = useState('light');
+    const [spread, setSpread] = useState(''); // will use when fixing spread
+
     const [componentMounted, setComponentMounted] = useState(false);
 
     const toggleMode = () => {
         if (mode === 'light') {
-            window.localStorage.setItem('MODE', 'dark');
-            setMode('dark');
+            setSpread('first');
+            setTimeout(() => {
+                window.localStorage.setItem('MODE', 'dark');
+                setMode('dark');
+            }, 2000);
         } else {
-            window.localStorage.setItem('MODE', 'light');
-            setMode('light');
+            setSpread('second');
+            setTimeout(() => {
+                window.localStorage.setItem('MODE', 'light');
+                setMode('light');
+            }, 2000);
         }
 
         console.log(window.localStorage.getItem('MODE'));
@@ -28,5 +36,5 @@ export const useDarkMode = () => {
         setComponentMounted(true);
     }, []);
 
-    return [mode, toggleMode, componentMounted];
+    return [mode, toggleMode, spread, componentMounted];
 };

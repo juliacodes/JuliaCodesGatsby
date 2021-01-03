@@ -6,7 +6,7 @@ export const Spread = styled.div`
     display: block;
     top: 20px;
     z-index: -5;
-    background-color: white;
+    background-color: ${({ theme }) => theme.main};
     width: 400vmax;
     height: 400vmax;
     top: calc(-250vmax + 3rem);
@@ -25,6 +25,9 @@ export const SwitchBtn = styled.button`
     transition: transform 0.2s ease-in-out;
     background-color: white;
 
+    :hover {
+        cursor: pointer;
+    }
     @media (${QUERIES.large}) {
         transform: scale(1);
     }
