@@ -4,7 +4,7 @@ import { Inner } from '../../theming/styles';
 import Logo from '../logo';
 import Switch from '../switch';
 
-const Nav = ({ toggleDarkMode, darkMode, spread }) => {
+const Nav = ({ toggleMode, mode, spread }) => {
     return (
         <Inner
             style={{
@@ -23,11 +23,7 @@ const Nav = ({ toggleDarkMode, darkMode, spread }) => {
                         zIndex: 2,
                     }}
                 />
-                <Switch
-                    spread={spread}
-                    darkMode={darkMode}
-                    toggleDarkMode={toggleDarkMode}
-                />
+                <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
             </NavCont>
         </Inner>
     );

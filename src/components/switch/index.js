@@ -1,10 +1,10 @@
 import React from 'react';
 import { SwitchBtn } from './styles';
 
-const Switch = ({ toggleDarkMode, darkMode, spread }) => {
+const Switch = ({ toggleMode, mode, spread }) => {
     return (
-        <SwitchBtn onClick={toggleDarkMode}>
-            {!darkMode ? (
+        <SwitchBtn onClick={toggleMode}>
+            {mode === 'light' ? (
                 <svg
                     width='14'
                     height='14'

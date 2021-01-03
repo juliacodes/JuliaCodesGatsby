@@ -1,52 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import GlobalStyles from '../theming/global';
 import Layout from '../components/layout';
+import { useDarkMode } from '../hooks/useDarkMode';
 import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from '../theming/themeContext';
 
 const App = () => {
-    const [darkMode, setDarkMode] = useState(undefined);
-    useEffect(() => {
-        const storedDarkMode = localStorage.getItem('DARK_MODE');
-        setDarkMode(storedDarkMode);
-    }, []);
-    const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
-    // const theming = localStorage.getItem('THEMING');
-    // console.log(localStorage.getItem('THEMING'));
-    // const [theme, setTheme] = useState(theming);
-    const [spread, setSpread] = useState(false);
+    const [mode, toggleMode, componentMounted] = useDarkMode();
+    const [spread, setSpread] = useState(true); // will use when fixing spread
 
-    useEffect(() => {
-        console.log(`is in dark mode? ${darkMode}`);
-        localStorage.setItem('DARK_MODE', darkMode);
-    }, [darkMode]);
-    // useEffect(() => {
-    //     console.log(`CURRENT MODE:  ${theme}`);
-    //     localStorage.setItem('theme', theme);
-    // }, [theme]);
-
-    // function toggleTheme() {
-    //     if (theme === 'light') {
-    //         setSpread('first');
-    //         setTimeout(() => {
-    //             setTheme('dark');
-    //         }, 2000);
-    //     } else {
-    //         setSpread('second');
-    //         setTimeout(() => {
-    //             setTheme('light');
-    //         }, 2000);
-    //     }
-    // }
-
+    if (!componentMounted) {
+        return <div />;
+    }
     return (
-        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <ThemeProvider theme={mode === 'light' ? lightTheme : darkTheme}>
             <GlobalStyles />
-            <Layout
-                spread={spread}
-                darkMode={darkMode}
-                toggleDarkMode={toggleDarkMode}
-            />
+            <Layout spread={spread} mode={mode} toggleMode={toggleMode} />
         </ThemeProvider>
     );
 };
