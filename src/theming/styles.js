@@ -5,7 +5,7 @@ const QUERIES = {
     large: `min-width: 1200px`,
     medium: `min-width: 870px`,
     small: `min-width: 660px`,
-    maxWidth: `1500px`
+    maxWidth: `1500px`,
 };
 
 export const Midi = styled.div`
@@ -17,7 +17,7 @@ export const Midi = styled.div`
 
     @media (${QUERIES.large}) {
         margin: 220px auto 220px auto;
-        padding: 0px; 
+        padding: 0px;
     }
 `;
 

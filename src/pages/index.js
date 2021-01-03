@@ -6,8 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from '../theming/themeContext';
 
 const App = () => {
-    const [mode, toggleMode, componentMounted] = useDarkMode();
-    const [spread, setSpread] = useState(true); // will use when fixing spread
+    const [mode, toggleMode, spread, componentMounted] = useDarkMode();
 
     if (!componentMounted) {
         return <div />;
