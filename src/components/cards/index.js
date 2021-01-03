@@ -15,16 +15,16 @@ import paletteWhite from '../../images/comps/palette-white.png';
 import groveWhite from '../../images/comps/grove-white.png';
 import ableWhite from '../../images/comps/able-white.png';
 
-const Cards = ({ darkMode }) => {
+const Cards = ({ mode }) => {
     return (
         <>
             <Marquee style={{ height: 120, display: 'flex' }} velocity={30}>
-                <Card img={!darkMode ? brevite : breviteWhite} />
-                <Card img={!darkMode ? bose : boseWhite} />
-                <Card img={!darkMode ? hinge : hingeWhite} />
-                <Card img={!darkMode ? palette : paletteWhite} />
-                <Card img={!darkMode ? grove : groveWhite} />
-                <Card img={!darkMode ? able : ableWhite} />
+                <Card img={mode === 'light' ? brevite : breviteWhite} />
+                <Card img={mode === 'light' ? bose : boseWhite} />
+                <Card img={mode === 'light' ? hinge : hingeWhite} />
+                <Card img={mode === 'light' ? palette : paletteWhite} />
+                <Card img={mode === 'light' ? grove : groveWhite} />
+                <Card img={mode === 'light' ? able : ableWhite} />
             </Marquee>
             <CardWrapper></CardWrapper>
         </>

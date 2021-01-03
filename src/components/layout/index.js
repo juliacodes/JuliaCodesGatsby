@@ -7,8 +7,8 @@ import { Spread } from '../switch/styles';
 import ProjContent from '../content/ProjContent';
 
 const Layout = ({
-    toggleDarkMode,
-    darkMode,
+    toggleMode,
+    mode,
     spread,
     layoutType,
     heading,
@@ -25,7 +25,7 @@ const Layout = ({
                         : ''
                 }
             />
-            <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <Nav mode={mode} toggleMode={toggleMode} />
             {layoutType === 'proj' ? (
                 <ProjContent heading={heading} description={description} />
             ) : (
@@ -36,7 +36,7 @@ const Layout = ({
                         position: 'relative',
                         mixBlendMode: 'difference',
                     }}
-                    darkMode={darkMode}
+                    mode={mode}
                 />
             )}
 

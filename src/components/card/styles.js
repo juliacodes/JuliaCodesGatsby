@@ -11,7 +11,7 @@ export const CardContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin: 90px 30px 40px 30px;
+    margin: 30px 30px 120px 30px;
     max-width: 580px;
 
     @media (${QUERIES.large}) {

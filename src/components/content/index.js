@@ -7,7 +7,7 @@ import Awk1 from '../../images/Awkward1.jpg';
 import FullWidthProj from '../../components/fullWidthProj';
 import SplitArticles from '../../components/splitArticles';
 
-const Content = ({ darkMode }) => {
+const Content = ({ mode }) => {
     return (
         <>
             <Midi style={{ mixBlendMode: 'difference' }}>
@@ -27,16 +27,13 @@ const Content = ({ darkMode }) => {
             <Midi>
                 <Split />
             </Midi>
-            <Cards darkMode={darkMode} />
-            <Midi style={{ marginTop: 90 }}>
-                <SplitPartner />
-            </Midi>
             <Full>
                 <FullWidthProj />
             </Full>
-            <Midi>
-                <SplitArticles />
+            <Midi style={{ marginTop: 90, marginBottom: 55 }}>
+                <SplitPartner />
             </Midi>
+            <Cards mode={mode} />
         </>
     );
 };

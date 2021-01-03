@@ -5,7 +5,7 @@ import Button from '../button';
 const Foot = () => {
     return (
         <FootCont>
-            <Full>
+            <Full style={{ paddingLeft: '60px', paddingRight: '60px' }}>
                 <Heading>Let’s Build Something Together.</Heading>
                 <Paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -23,11 +23,11 @@ const Foot = () => {
                         >
                             <path
                                 d='M17.7771 37.4649V1H33.3557V21.1186C33.3557 31.1778 24.9672 36.2075 17.7771 37.4649Z'
-                                stroke-width='1.25741'
+                                strokeWidth='1.25741'
                             />
                             <path
                                 d='M1 38.6538H16.5786V55.0001C6.95946 52.4595 3.34397 49.1068 1 38.6538Z'
-                                stroke-width='1.25741'
+                                strokeWidth='1.25741'
                             />
                         </LogoSvg>
                         <Paragraph>
