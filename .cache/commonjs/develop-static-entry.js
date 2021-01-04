@@ -122,6 +122,10 @@ var _default = (pagePath, callback) => {
     bodyAttributes,
     preBodyComponents,
     postBodyComponents: postBodyComponents.concat([/*#__PURE__*/_react.default.createElement("script", {
+      key: `polyfill`,
+      src: "/polyfill.js",
+      noModule: true
+    }), /*#__PURE__*/_react.default.createElement("script", {
       key: `commons`,
       src: "/commons.js"
     })])
