@@ -3,10 +3,19 @@
     "develop": {
       "plugins": [
         {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
+        {
           "name": "babel-plugin-styled-components",
           "stage": "develop",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": false
           }
         },
@@ -27,7 +36,10 @@
         {
           "name": "/Users/juliajohnson/JuliaCodesGatsby/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
           }
         }
       ],
@@ -38,6 +50,10 @@
     },
     "develop-html": {
       "plugins": [
+        {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
         {
           "name": "/Users/juliajohnson/JuliaCodesGatsby/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
@@ -55,6 +71,11 @@
           "stage": "develop-html",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": false
           }
         }
@@ -63,7 +84,10 @@
         {
           "name": "/Users/juliajohnson/JuliaCodesGatsby/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
           }
         }
       ],
@@ -74,6 +98,10 @@
     },
     "build-html": {
       "plugins": [
+        {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
         {
           "name": "/Users/juliajohnson/JuliaCodesGatsby/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
@@ -91,6 +119,11 @@
           "stage": "build-html",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": true
           }
         }
@@ -99,7 +132,10 @@
         {
           "name": "/Users/juliajohnson/JuliaCodesGatsby/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
           }
         }
       ],
@@ -110,6 +146,10 @@
     },
     "build-javascript": {
       "plugins": [
+        {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
         {
           "name": "/Users/juliajohnson/JuliaCodesGatsby/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
@@ -127,6 +167,11 @@
           "stage": "build-javascript",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": true
           }
         }
@@ -135,7 +180,10 @@
         {
           "name": "/Users/juliajohnson/JuliaCodesGatsby/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
           }
         }
       ],

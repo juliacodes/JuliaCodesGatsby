@@ -16,13 +16,15 @@ var _gatsbyReactRouterScroll = require("gatsby-react-router-scroll");
 
 var _domready = _interopRequireDefault(require("@mikaelkristiansson/domready"));
 
+var _gatsby = require("gatsby");
+
 var _navigation = require("./navigation");
 
 var _emitter = _interopRequireDefault(require("./emitter"));
 
 var _pageRenderer = _interopRequireDefault(require("./page-renderer"));
 
-var _asyncRequires = _interopRequireDefault(require("./async-requires"));
+var _asyncRequires = _interopRequireDefault(require("$virtual/async-requires"));
 
 var _loader = require("./loader");
 
@@ -30,7 +32,7 @@ var _ensureResources = _interopRequireDefault(require("./ensure-resources"));
 
 var _stripPrefix = _interopRequireDefault(require("./strip-prefix"));
 
-var _matchPaths = _interopRequireDefault(require("./match-paths.json"));
+var _matchPaths = _interopRequireDefault(require("$virtual/match-paths.json"));
 
 // Generated during bootstrap
 const loader = new _loader.ProdLoader(_asyncRequires.default, _matchPaths.default);
@@ -62,14 +64,38 @@ window.___loader = _loader.publicLoader;
     }
   }, /*#__PURE__*/_react.default.createElement(_pageRenderer.default, props));
 
-  class LocationHandler extends _react.default.Component {
+  const DataContext = /*#__PURE__*/_react.default.createContext({});
+
+  class GatsbyRoot extends _react.default.Component {
     render() {
       const {
-        location
+        children
       } = this.props;
-      return /*#__PURE__*/_react.default.createElement(_ensureResources.default, {
+      return /*#__PURE__*/_react.default.createElement(_router.Location, null, ({
+        location
+      }) => /*#__PURE__*/_react.default.createElement(_ensureResources.default, {
         location: location
       }, ({
+        pageResources,
+        location
+      }) => {
+        const staticQueryResults = (0, _loader.getStaticQueryResults)();
+        return /*#__PURE__*/_react.default.createElement(_gatsby.StaticQueryContext.Provider, {
+          value: staticQueryResults
+        }, /*#__PURE__*/_react.default.createElement(DataContext.Provider, {
+          value: {
+            pageResources,
+            location
+          }
+        }, children));
+      }));
+    }
+
+  }
+
+  class LocationHandler extends _react.default.Component {
+    render() {
+      return /*#__PURE__*/_react.default.createElement(DataContext.Consumer, null, ({
         pageResources,
         location
       }) => /*#__PURE__*/_react.default.createElement(_navigation.RouteUpdates, {
@@ -114,12 +140,9 @@ window.___loader = _loader.publicLoader;
     }
 
     window.___webpackCompilationHash = page.page.webpackCompilationHash;
-
-    const Root = () => /*#__PURE__*/_react.default.createElement(_router.Location, null, locationContext => /*#__PURE__*/_react.default.createElement(LocationHandler, locationContext));
-
-    const WrappedRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
-      element: /*#__PURE__*/_react.default.createElement(Root, null)
-    }, /*#__PURE__*/_react.default.createElement(Root, null), ({
+    const SiteRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
+      element: /*#__PURE__*/_react.default.createElement(LocationHandler, null)
+    }, /*#__PURE__*/_react.default.createElement(LocationHandler, null), ({
       result
     }) => {
       return {
@@ -127,11 +150,11 @@ window.___loader = _loader.publicLoader;
       };
     }).pop();
 
-    const NewRoot = () => WrappedRoot;
+    const App = () => /*#__PURE__*/_react.default.createElement(GatsbyRoot, null, SiteRoot);
 
     const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, _reactDom.default.hydrate)[0];
     (0, _domready.default)(() => {
-      renderer( /*#__PURE__*/_react.default.createElement(NewRoot, null), typeof window !== `undefined` ? document.getElementById(`___gatsby`) : void 0, () => {
+      renderer( /*#__PURE__*/_react.default.createElement(App, null), typeof window !== `undefined` ? document.getElementById(`___gatsby`) : void 0, () => {
         (0, _apiRunnerBrowser.apiRunner)(`onInitialClientRender`);
       });
     });

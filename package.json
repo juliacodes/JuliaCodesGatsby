@@ -1,14 +1,17 @@
 {
     "dependencies": {
+        "@fontsource/spartan": "^4.1.0",
         "babel-plugin-styled-components": "^1.10.7",
         "gatsby": "^2.23.3",
         "gatsby-cli": "^2.12.45",
         "gatsby-plugin-manifest": "^2.4.11",
-        "gatsby-plugin-react-helmet": "^3.3.4",
+        "gatsby-plugin-react-helmet": "^3.7.0",
         "gatsby-plugin-sharp": "^2.6.11",
         "gatsby-plugin-styled-components": "^3.3.4",
         "gatsby-source-filesystem": "^2.3.11",
         "gatsby-transformer-sharp": "^2.5.5",
+        "react-dom": "^17.0.1",
+        "react-helmet": "^6.1.0",
         "react-marquee-slider": "^1.1.2",
         "styled-components": "^5.1.1"
     }

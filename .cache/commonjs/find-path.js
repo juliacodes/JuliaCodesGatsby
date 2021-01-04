@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.cleanPath = exports.findPath = exports.findMatchPath = exports.setMatchPaths = void 0;
+exports.cleanPath = exports.findPath = exports.grabMatchParams = exports.findMatchPath = exports.setMatchPaths = void 0;
 
 var _utils = require("@reach/router/lib/utils");
 
@@ -57,17 +57,54 @@ exports.setMatchPaths = setMatchPaths;
 
 const findMatchPath = rawPathname => {
   const trimmedPathname = cleanPath(rawPathname);
+  const pickPaths = matchPaths.map(({
+    path,
+    matchPath
+  }) => {
+    return {
+      path: matchPath,
+      originalPath: path
+    };
+  });
+  const path = (0, _utils.pick)(pickPaths, trimmedPathname);
 
-  for (const {
-    matchPath,
-    path
-  } of matchPaths) {
-    if ((0, _utils.match)(matchPath, trimmedPathname)) {
-      return (0, _normalizePagePath.default)(path);
-    }
+  if (path) {
+    return (0, _normalizePagePath.default)(path.route.originalPath);
   }
 
   return null;
+};
+/**
+ * Return a matchpath params from reach/router rules
+ * if `match-paths.json` contains `{ ":bar/*foo" }`, and the path is /baz/zaz/zoo
+ * then it returns
+ *  { bar: baz, foo: zaz/zoo }
+ *
+ * @param {string} rawPathname A raw pathname
+ * @return {object}
+ */
+
+
+exports.findMatchPath = findMatchPath;
+
+const grabMatchParams = rawPathname => {
+  const trimmedPathname = cleanPath(rawPathname);
+  const pickPaths = matchPaths.map(({
+    path,
+    matchPath
+  }) => {
+    return {
+      path: matchPath,
+      originalPath: path
+    };
+  });
+  const path = (0, _utils.pick)(pickPaths, trimmedPathname);
+
+  if (path) {
+    return path.params;
+  }
+
+  return {};
 }; // Given a raw URL path, returns the cleaned version of it (trim off
 // `#` and query params), or if it matches an entry in
 // `match-paths.json`, its matched path is returned
@@ -78,7 +115,7 @@ const findMatchPath = rawPathname => {
 // `/foo?bar=far` => `/page1`
 
 
-exports.findMatchPath = findMatchPath;
+exports.grabMatchParams = grabMatchParams;
 
 const findPath = rawPathname => {
   const trimmedPathname = trimPathname(absolutify(rawPathname));

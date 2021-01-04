@@ -1,7 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import { Heading } from '../theming/styles';
+import "@fontsource/spartan/400.css" // Weight 500.
+import "@fontsource/spartan/600.css" // Weight 500.
+import "@fontsource/spartan/700.css" // Weight 500.
+import "@fontsource/spartan/900.css" // Weight 500.
+
+
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700;900&display=swap');
+
     * {
     border: 0;
     box-sizing: inherit;
@@ -29,6 +35,8 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
 
   body {
@@ -40,6 +48,8 @@ const GlobalStyles = createGlobalStyle`
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
     font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
 
   a {

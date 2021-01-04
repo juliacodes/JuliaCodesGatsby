@@ -23,6 +23,10 @@ exports.replace = _gatsbyLink.replace;
 exports.navigateTo = _gatsbyLink.navigateTo;
 exports.parsePath = _gatsbyLink.parsePath;
 
+var _gatsbyReactRouterScroll = require("gatsby-react-router-scroll");
+
+exports.useScrollRestoration = _gatsbyReactRouterScroll.useScrollRestoration;
+
 var _publicPageRenderer = _interopRequireDefault(require("./public-page-renderer"));
 
 exports.PageRenderer = _publicPageRenderer.default;
@@ -32,7 +36,7 @@ var _loader = _interopRequireDefault(require("./loader"));
 const prefetchPathname = _loader.default.enqueue;
 exports.prefetchPathname = prefetchPathname;
 
-const StaticQueryContext = _react.default.createContext({});
+const StaticQueryContext = /*#__PURE__*/_react.default.createContext({});
 
 exports.StaticQueryContext = StaticQueryContext;
 
@@ -64,6 +68,8 @@ const StaticQuery = props => {
 exports.StaticQuery = StaticQuery;
 
 const useStaticQuery = query => {
+  var _context$query;
+
   if (typeof _react.default.useContext !== `function` && process.env.NODE_ENV === `development`) {
     throw new Error(`You're likely using a version of React that doesn't support Hooks\n` + `Please update React and ReactDOM to 16.8.0 or later to use the useStaticQuery hook.`);
   }
@@ -82,7 +88,7 @@ useStaticQuery(graphql\`${query}\`);
 `);
   }
 
-  if (context[query] && context[query].data) {
+  if ((_context$query = context[query]) === null || _context$query === void 0 ? void 0 : _context$query.data) {
     return context[query].data;
   } else {
     throw new Error(`The result of this StaticQuery could not be fetched.\n\n` + `This is likely a bug in Gatsby and if refreshing the page does not fix it, ` + `please open an issue in https://github.com/gatsbyjs/gatsby/issues`);
