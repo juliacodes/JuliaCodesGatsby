@@ -1,5 +1,5 @@
 import React from 'react';
-import { Midi, Heading, Full, Image } from '../../theming/styles';
+import { Midi, Heading, Full, Image, Paragraph } from '../../theming/styles';
 import Split from '../../components/split';
 import Cards from '../cards';
 import SplitPartner from '../../components/split/splitPartner';
@@ -11,15 +11,24 @@ const Content = ({ mode }) => {
     return (
         <>
             <Midi style={{ mixBlendMode: 'difference' }}>
-                <Heading
+                <Paragraph
                     style={{
                         mixBlendMode: 'difference',
                         color: 'white',
-                        maxWidth: '90%',
+                        maxWidth: '75%',
+                        fontWeight: '500',
                     }}
                 >
-                    Hi, I'm Julia. Software Developer & Content Creator
-                </Heading>
+                    Hi, I’m Julia and I’m a Software Developer at{' '}
+                    <a href=''>IBM</a> in Austin, TX. I recently graduated from
+                    Purdue University with a BS in Web Development & Design.{' '}
+                    <br />
+                    <br />
+                    Feel free to email me at <a href=''>
+                        julia@juliacodes.com
+                    </a>{' '}
+                    or explore my active projects on <a href=''>Github</a>
+                </Paragraph>
             </Midi>
             <Full>
                 <Image style={{ backgroundImage: `url(${Awk1})` }} />
@@ -30,10 +39,6 @@ const Content = ({ mode }) => {
             <Full>
                 <FullWidthProj />
             </Full>
-            <Midi style={{ marginTop: 90, marginBottom: 55 }}>
-                <SplitPartner />
-            </Midi>
-            <Cards mode={mode} />
         </>
     );
 };

@@ -1,7 +1,7 @@
 const lightTheme = {
     main: '#FFFFFF',
     inverse: '#1A181F',
-    alt: '#F4F4F4',
+    alt: '#FAFAFA',
     altWhite: '#FFFFFF',
     textMain: '#000000',
     textLight: '#606060',
@@ -9,7 +9,7 @@ const lightTheme = {
     shadow: '0px 0px 40.9182px rgba(0, 0, 0, 0.08)',
     altShadow: '0px 0px 39.221px rgba(0, 0, 0, 0.08)',
     togglerFill: '#FFFFFF',
-    gradient: 'linear-gradient(0deg, #f4f4f4 0%, #ffffff 30%)'
+    gradient: 'linear-gradient(0deg, #f4f4f4 0%, #ffffff 30%)',
 };
 
 export const darkTheme = {
@@ -23,7 +23,7 @@ export const darkTheme = {
     accent: '#C2E99C',
     shadow: 'none',
     altShadow: 'none',
-    togglerFill: '#34313D'
+    togglerFill: '#34313D',
 };
 
 export default lightTheme;
