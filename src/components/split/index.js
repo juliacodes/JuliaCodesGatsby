@@ -5,32 +5,21 @@ import { SplitCont } from './styles';
 
 const Split = () => {
     return (
-        <SplitCont>
-            <div className='left'>
-                <Paragraph>
-                    Through these experiences, I've had the opportunity to
-                    create memorable products that are not only enjoyable to
-                    use, but are written in code thats maintainable and easy to
-                    understand.
-                    <br />
-                    <br />
-                    I've had the opportunity to create memorable{' '}
-                </Paragraph>
-                {/* <a href='/about'>
+        <>
+            <Paragraph>
+                My background in both design and development has allowed me to
+                bridge the gap between designers and engineers to create and
+                implement beautiful designs with well architected front ends.
+            </Paragraph>
+            <div style={{ display: 'flex' }}>
+                <a style={{ marginRight: 30 }} href='/about'>
                     <ButtonA title='About Me' />
-                </a> */}
+                </a>
+                <a href='/about'>
+                    <ButtonA title='Resume' />
+                </a>
             </div>
-            <div className='right'>
-                <div className='leftInner'>
-                    <Heading>47k</Heading>
-                    <Paragraph>instagram followers</Paragraph>
-                </div>
-                <div className='rightInner'>
-                    <Heading>400</Heading>
-                    <Paragraph>github followers</Paragraph>
-                </div>
-            </div>
-        </SplitCont>
+        </>
     );
 };
 

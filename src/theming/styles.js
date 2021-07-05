@@ -11,7 +11,7 @@ const QUERIES = {
 export const Midi = styled.div`
     width: 100%;
     height: auto;
-    margin: 70px auto 70px auto;
+    margin: 50px auto 50px auto;
     padding: 30px;
     max-width: 1090px;
 
@@ -39,11 +39,19 @@ export const Heading = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-    font-size: 20px;
+    font-size: 23px;
     line-height: 184.69%;
     letter-spacing: 0.03em;
     font-weight: 400;
     color: ${({ theme }) => theme.textMain};
+
+    a {
+        text-decoration: underline;
+        transition-duration: 0.3s;
+        :hover {
+            text-decoration: none;
+        }
+    }
 
     @media (${QUERIES.large}) {
         font-size: 25px;
