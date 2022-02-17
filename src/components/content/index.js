@@ -19,10 +19,10 @@ const Content = ({ mode }) => {
                         fontWeight: '500',
                     }}
                 >
-                    Hi, I’m Julia and I’m a Software Developer at{' '}
-                    <a href=''>IBM</a> in Austin, TX. I recently graduated from
-                    Purdue University with a BS in Web Development & Design.{' '}
-                    <br />
+                    Hi, I’m Julia and I’m a UI Engineer at{' '}
+                    <a href='http://ibm.com/'>IBM</a> in Austin, TX. I recently
+                    graduated from Purdue University with a BS in Web
+                    Development & Design. <br />
                     <br />
                     Feel free to email me at <a href=''>
                         julia@juliacodes.com
