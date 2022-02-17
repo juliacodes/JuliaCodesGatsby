@@ -8,17 +8,9 @@ const Split = () => {
         <>
             <Paragraph>
                 My background in both design and development has allowed me to
-                bridge the gap between designers and engineers to create and
-                implement beautiful designs with well architected front ends.
+                bridge the gap between designers and engineers to engineer
+                beautiful user experiences.
             </Paragraph>
-            <div style={{ display: 'flex' }}>
-                <a style={{ marginRight: 30 }} href='/about'>
-                    <ButtonA title='About Me' />
-                </a>
-                <a href='/about'>
-                    <ButtonA title='Resume' />
-                </a>
-            </div>
         </>
     );
 };
