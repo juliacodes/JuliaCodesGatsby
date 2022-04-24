@@ -74,7 +74,7 @@ export const TriProjDiv = styled.div`
 `;
 
 export const ProjCont = styled.div`
-    width: 520px;
+    width: 430px;
     height: 500px;
     background-color: ${({ theme }) => theme.altWhite};
     border-radius: 14px;

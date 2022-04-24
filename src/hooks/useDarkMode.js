@@ -1,7 +1,7 @@
 // useDarkMode.js
 import { useEffect, useState } from 'react';
 
-export const useDarkMode = () => {
+const useDarkMode = () => {
     const [mode, setMode] = useState('light');
     const [spread, setSpread] = useState(''); // will use when fixing spread
 
@@ -38,3 +38,5 @@ export const useDarkMode = () => {
 
     return [mode, toggleMode, spread, componentMounted];
 };
+
+export { useDarkMode };

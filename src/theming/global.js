@@ -1,10 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import { Heading } from '../theming/styles';
-import "@fontsource/spartan/400.css" // Weight 500.
-import "@fontsource/spartan/600.css" // Weight 500.
-import "@fontsource/spartan/700.css" // Weight 500.
-import "@fontsource/spartan/900.css" // Weight 500.
-
+import '@fontsource/spartan/400.css'; // Weight 500.
+import '@fontsource/spartan/600.css'; // Weight 500.
+import '@fontsource/spartan/700.css'; // Weight 500.
+import '@fontsource/spartan/900.css'; // Weight 500.
 
 const GlobalStyles = createGlobalStyle`
 

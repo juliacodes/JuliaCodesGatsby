@@ -1,14 +1,13 @@
 import React from 'react';
 import { ProjContainer } from './styles';
 import { Midi } from '../../theming/styles';
-import Proj from '../proj';
-import cbbCover from '../../images/projs/cbb-cover.png';
-import gitscapeCover from '../../images/projs/gitscape-cover.png';
-import ccCover from '../../images/projs/cc-cover.png';
-import decoreCover1 from '../../images/projs/decore-cover1.png';
-import decoreCover2 from '../../images/projs/decore-cover2.png';
-import decoreCover3 from '../../images/projs/decore-cover3.png';
-import setup from '../../images/setup.png';
+import { Proj } from '../proj';
+import {
+    gitscapeCover,
+    ccCover,
+    decoreCover1,
+    setup,
+} from '../../images/projs';
 
 const FullWidthProj = () => {
     return (
@@ -16,16 +15,16 @@ const FullWidthProj = () => {
             <Midi>
                 <Proj
                     img={setup}
-                    title='Setup & Products'
-                    description='Explore links to every product I use daily'
+                    title='My Time at IBM'
+                    description="An overview of the work I've been doing with my team at IBM CIO"
                     react='react'
                     reactHooks='react-hooks'
                     netlify='netlify'
                 />
                 <Proj
                     img={gitscapeCover}
-                    title='Uses'
-                    description='All my themes, VSCode settings, apps used, and notion templates'
+                    title='Gitscape'
+                    description='React project that allows users to better find a github repo to contribute to'
                     react='react'
                     sc='styled-components'
                 />
@@ -34,20 +33,18 @@ const FullWidthProj = () => {
                     title='Coffee Chemistry'
                     react='react'
                     sc='styled-components'
-                    description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
+                    description='Built with React, Coffee Chemistry is an app that helps new coffee lovers brew the perfect cup'
                 />
                 <Proj
                     img={decoreCover1}
-                    img2={decoreCover2}
-                    img3={decoreCover3}
                     title='Decore'
                     react='react'
                     sc='styled-components'
-                    description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac pretium magna.'
+                    description='Decore allows users to drag and drop build their perfect starter HTML & CSS template'
                 />
             </Midi>
         </ProjContainer>
     );
 };
 
-export default FullWidthProj;
+export { FullWidthProj };

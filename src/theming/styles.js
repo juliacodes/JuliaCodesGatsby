@@ -8,19 +8,6 @@ const QUERIES = {
     maxWidth: `1500px`,
 };
 
-export const Midi = styled.div`
-    width: 100%;
-    height: auto;
-    margin: 50px auto 50px auto;
-    padding: 30px;
-    max-width: 1090px;
-
-    @media (${QUERIES.large}) {
-        margin: 220px auto 220px auto;
-        padding: 0px;
-    }
-`;
-
 export const Heading = styled.h1`
     font-size: 30px;
     line-height: 129.69%;
@@ -39,22 +26,14 @@ export const Heading = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-    font-size: 23px;
+    font-size: 20px;
     line-height: 184.69%;
     letter-spacing: 0.03em;
     font-weight: 400;
     color: ${({ theme }) => theme.textMain};
 
-    a {
-        text-decoration: underline;
-        transition-duration: 0.3s;
-        :hover {
-            text-decoration: none;
-        }
-    }
-
     @media (${QUERIES.large}) {
-        font-size: 25px;
+        font-size: 19px;
     }
 `;
 
@@ -82,6 +61,19 @@ export const Full = styled.main`
 
     @media (${QUERIES.large}) {
         padding: 30px;
+    }
+`;
+
+export const Midi = styled.div`
+    width: 100%;
+    height: auto;
+    margin: 70px auto 70px auto;
+    padding: 30px;
+    max-width: 910px;
+
+    @media (${QUERIES.large}) {
+        margin: 220px auto 220px auto;
+        padding: 0px;
     }
 `;
 

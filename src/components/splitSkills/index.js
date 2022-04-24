@@ -1,45 +1,28 @@
 import React from 'react';
-import { Paragraph } from '../../theming/styles';
 import { SplitCont } from './styles';
-import SkillDrop from '../skillDrop';
+import { SkillDrop } from '../skillDrop';
 
 const SplitSkills = () => {
     return (
         <SplitCont>
-            <div className='left'>
-                <Paragraph>
-                    Skills & languages solidified through real world projects,
-                    university courses, and online studies
-                </Paragraph>
-            </div>
-            <div className='right'>
-                <SkillDrop
-                    skill='Javascript'
-                    description='Through these experiences, Ive had the opportunity to create memorable products that are not only enjoyable to use, but are written in code thats maintainable and easy to understand.  Ive had the opportunity to create memorable'
-                />
-                <SkillDrop
-                    skill='React'
-                    description='this is a description, I will need to write more later'
-                />
-                <SkillDrop
-                    skill='HTML & CSS'
-                    description='this is a description, I will need to write more later'
-                />
-                <SkillDrop
-                    skill='React Native'
-                    description='this is a description, I will need to write more later'
-                />
-                <SkillDrop
-                    skill='Git'
-                    description='this is a description, I will need to write more later'
-                />
-                <SkillDrop
-                    skill='PHP & SQL'
-                    description='this is a description, I will need to write more later'
-                />
-            </div>
+            <SkillDrop
+                skill='React'
+                description='this is a description, I will need to write more later'
+            />
+            <SkillDrop
+                skill='Javascript & Typescript'
+                description='Through these experiences, Ive had the opportunity to create memorable products that are not only enjoyable to use, but are written in code thats maintainable and easy to understand.  Ive had the opportunity to create memorable'
+            />
+            <SkillDrop
+                skill='SCSS & Styled Components'
+                description='this is a description, I will need to write more later'
+            />
+            <SkillDrop
+                skill='Testing'
+                description='this is a description, I will need to write more later'
+            />
         </SplitCont>
     );
 };
 
-export default SplitSkills;
+export { SplitSkills };
