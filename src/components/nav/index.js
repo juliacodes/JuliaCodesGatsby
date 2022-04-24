@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavCont } from './styles';
 import { Inner } from '../../theming/styles';
-import Logo from '../logo';
-import Switch from '../switch';
+import { Logo } from '../logo';
+import { Switch } from '../switch';
 
 const Nav = ({ toggleMode, mode, spread }) => {
     return (
@@ -29,4 +29,4 @@ const Nav = ({ toggleMode, mode, spread }) => {
     );
 };
 
-export default Nav;
+export { Nav };

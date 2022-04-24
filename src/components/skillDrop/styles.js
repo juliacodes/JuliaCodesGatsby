@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import QUERIES from '../../theming/styles';
 
 export const SkillCont = styled.div`
+    justify-content: space-between;
     margin: 0 0 30px 0;
     max-height: 50px;
     overflow: hidden;
@@ -35,6 +36,8 @@ export const SkillCont = styled.div`
 export const Flip = styled.div`
     width: 100%;
     display: flex;
+    justify-content: space-between;
+
     cursor: pointer;
     color: ${({ theme }) => theme.textMain};
 

@@ -5,7 +5,7 @@ import { Heading, Paragraph } from '../../theming/styles';
 const Proj = (props) => {
     return (
         <ProjCont>
-            <ProjImageCont style={props.img2 ? { marginTop: 40 } : null}>
+            <ProjImageCont>
                 <ProjImage src={props.img} />
             </ProjImageCont>
             <DescCont>
@@ -16,4 +16,4 @@ const Proj = (props) => {
     );
 };
 
-export default Proj;
+export { Proj };

@@ -3,7 +3,6 @@ import QUERIES, { Full, Heading, Paragraph } from '../../theming/styles';
 
 export const FootCont = styled.footer`
     width: 100%;
-    background-color: ${({ theme }) => theme.alt};
 
     * {
         margin-bottom: 40px;
@@ -12,11 +11,10 @@ export const FootCont = styled.footer`
     ${Full} {
         margin-top: 0;
         margin-bottom: 0;
-        padding-top: 200px;
-        padding: 100px 30px 0 30px;
+        padding-top: 100px;
 
         @media (${QUERIES.large}) {
-            padding-top: 200px;
+            padding-top: 100px;
         }
     }
 
@@ -56,16 +54,12 @@ export const FootCont = styled.footer`
 export const FootFinal = styled.div`
     display: flex;
     width: 100%;
-    height: 130px;
     padding: 0;
-    margin: 150px 0 0 0;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     @media (${QUERIES.large}) {
         flex-wrap: nowrap;
-        margin: 250px 0 0 0;
-        height: 100px;
     }
 
     ${Paragraph} {

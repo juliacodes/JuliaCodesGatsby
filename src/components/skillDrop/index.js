@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Paragraph } from '../../theming/styles';
 import { SkillCont, Flip } from './styles';
 
 const SkillDrop = (props) => {
@@ -32,7 +33,7 @@ const SkillDrop = (props) => {
                     />
                 </svg>
             </Flip>
-            <p
+            <Paragraph
                 style={
                     expand
                         ? { lineHeight: '184.69%', opacity: 1 }
@@ -40,9 +41,9 @@ const SkillDrop = (props) => {
                 }
             >
                 {props.description}
-            </p>
+            </Paragraph>
         </SkillCont>
     );
 };
 
-export default SkillDrop;
+export { SkillDrop };

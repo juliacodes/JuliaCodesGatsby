@@ -1,18 +1,40 @@
 {
-    "dependencies": {
-        "@fontsource/spartan": "^4.1.0",
-        "babel-plugin-styled-components": "^1.10.7",
-        "gatsby": "^2.23.3",
-        "gatsby-cli": "^2.12.45",
-        "gatsby-plugin-manifest": "^2.4.11",
-        "gatsby-plugin-react-helmet": "^3.7.0",
-        "gatsby-plugin-sharp": "^2.6.11",
-        "gatsby-plugin-styled-components": "^3.3.4",
-        "gatsby-source-filesystem": "^2.3.11",
-        "gatsby-transformer-sharp": "^2.5.5",
-        "react-dom": "^17.0.1",
-        "react-helmet": "^6.1.0",
-        "react-marquee-slider": "^1.1.2",
-        "styled-components": "^5.1.1"
-    }
+  "name": "juliacodes-2022",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/spartan": "^4.5.8",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

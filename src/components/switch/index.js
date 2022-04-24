@@ -53,4 +53,4 @@ const Switch = ({ toggleMode, mode, spread }) => {
     );
 };
 
-export default Switch;
+export { Switch };

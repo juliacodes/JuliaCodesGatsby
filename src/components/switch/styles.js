@@ -13,6 +13,7 @@ export const Spread = styled.div`
     right: calc(-250vmax + 3rem);
     border-radius: 100%;
 `;
+
 export const SwitchBtn = styled.button`
     position: relative;
     z-index: -1;
