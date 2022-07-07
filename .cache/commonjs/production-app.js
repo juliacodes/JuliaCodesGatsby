@@ -8,13 +8,11 @@ var _apiRunnerBrowser = require("./api-runner-browser");
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactDom = _interopRequireDefault(require("react-dom"));
-
-var _router = require("@reach/router");
+var _reachRouter = require("@gatsbyjs/reach-router");
 
 var _gatsbyReactRouterScroll = require("gatsby-react-router-scroll");
 
-var _domready = _interopRequireDefault(require("@mikaelkristiansson/domready"));
+var _gatsby = require("gatsby");
 
 var _navigation = require("./navigation");
 
@@ -22,7 +20,7 @@ var _emitter = _interopRequireDefault(require("./emitter"));
 
 var _pageRenderer = _interopRequireDefault(require("./page-renderer"));
 
-var _asyncRequires = _interopRequireDefault(require("./async-requires"));
+var _asyncRequires = _interopRequireDefault(require("$virtual/async-requires"));
 
 var _loader = require("./loader");
 
@@ -30,20 +28,38 @@ var _ensureResources = _interopRequireDefault(require("./ensure-resources"));
 
 var _stripPrefix = _interopRequireDefault(require("./strip-prefix"));
 
-var _matchPaths = _interopRequireDefault(require("./match-paths.json"));
+var _matchPaths = _interopRequireDefault(require("$virtual/match-paths.json"));
 
+/* global HAS_REACT_18 */
 // Generated during bootstrap
-const loader = new _loader.ProdLoader(_asyncRequires.default, _matchPaths.default);
+const loader = new _loader.ProdLoader(_asyncRequires.default, _matchPaths.default, window.pageData);
 (0, _loader.setLoader)(loader);
 loader.setApiRunner(_apiRunnerBrowser.apiRunner);
+let reactHydrate;
+let reactRender;
+
+if (HAS_REACT_18) {
+  const reactDomClient = require(`react-dom/client`);
+
+  reactRender = (Component, el) => reactDomClient.createRoot(el).render(Component);
+
+  reactHydrate = (Component, el) => reactDomClient.hydrateRoot(el, Component);
+} else {
+  const reactDomClient = require(`react-dom`);
+
+  reactRender = reactDomClient.render;
+  reactHydrate = reactDomClient.hydrate;
+}
+
 window.asyncRequires = _asyncRequires.default;
 window.___emitter = _emitter.default;
 window.___loader = _loader.publicLoader;
 (0, _navigation.init)();
+const reloadStorageKey = `gatsby-reload-compilation-hash-match`;
 (0, _apiRunnerBrowser.apiRunnerAsync)(`onClientEntry`).then(() => {
   // Let plugins register a service worker. The plugin just needs
   // to return true.
-  if ((0, _apiRunnerBrowser.apiRunner)(`registerServiceWorker`).length > 0) {
+  if ((0, _apiRunnerBrowser.apiRunner)(`registerServiceWorker`).filter(Boolean).length > 0) {
     require(`./register-service-worker`);
   } // In gatsby v2 if Router is used in page using matchPaths
   // paths need to contain full path.
@@ -55,21 +71,45 @@ window.___loader = _loader.publicLoader;
   // Remove this in v3
 
 
-  const RouteHandler = props => /*#__PURE__*/_react.default.createElement(_router.BaseContext.Provider, {
+  const RouteHandler = props => /*#__PURE__*/_react.default.createElement(_reachRouter.BaseContext.Provider, {
     value: {
       baseuri: `/`,
       basepath: `/`
     }
   }, /*#__PURE__*/_react.default.createElement(_pageRenderer.default, props));
 
-  class LocationHandler extends _react.default.Component {
+  const DataContext = /*#__PURE__*/_react.default.createContext({});
+
+  class GatsbyRoot extends _react.default.Component {
     render() {
       const {
-        location
+        children
       } = this.props;
-      return /*#__PURE__*/_react.default.createElement(_ensureResources.default, {
+      return /*#__PURE__*/_react.default.createElement(_reachRouter.Location, null, ({
+        location
+      }) => /*#__PURE__*/_react.default.createElement(_ensureResources.default, {
         location: location
       }, ({
+        pageResources,
+        location
+      }) => {
+        const staticQueryResults = (0, _loader.getStaticQueryResults)();
+        return /*#__PURE__*/_react.default.createElement(_gatsby.StaticQueryContext.Provider, {
+          value: staticQueryResults
+        }, /*#__PURE__*/_react.default.createElement(DataContext.Provider, {
+          value: {
+            pageResources,
+            location
+          }
+        }, children));
+      }));
+    }
+
+  }
+
+  class LocationHandler extends _react.default.Component {
+    render() {
+      return /*#__PURE__*/_react.default.createElement(DataContext.Consumer, null, ({
         pageResources,
         location
       }) => /*#__PURE__*/_react.default.createElement(_navigation.RouteUpdates, {
@@ -77,12 +117,12 @@ window.___loader = _loader.publicLoader;
       }, /*#__PURE__*/_react.default.createElement(_gatsbyReactRouterScroll.ScrollContext, {
         location: location,
         shouldUpdateScroll: _navigation.shouldUpdateScroll
-      }, /*#__PURE__*/_react.default.createElement(_router.Router, {
+      }, /*#__PURE__*/_react.default.createElement(_reachRouter.Router, {
         basepath: __BASE_PATH__,
         location: location,
         id: "gatsby-focus-wrapper"
       }, /*#__PURE__*/_react.default.createElement(RouteHandler, (0, _extends2.default)({
-        path: pageResources.page.path === `/404.html` ? (0, _stripPrefix.default)(location.pathname, __BASE_PATH__) : encodeURI(pageResources.page.matchPath || pageResources.page.path)
+        path: pageResources.page.path === `/404.html` || pageResources.page.path === `/500.html` ? (0, _stripPrefix.default)(location.pathname, __BASE_PATH__) : encodeURI((pageResources.page.matchPath || pageResources.page.path).split(`?`)[0])
       }, this.props, {
         location: location,
         pageResources: pageResources
@@ -95,31 +135,79 @@ window.___loader = _loader.publicLoader;
     pagePath,
     location: browserLoc
   } = window; // Explicitly call navigate if the canonical path (window.pagePath)
-  // is different to the browser path (window.location.pathname). But
-  // only if NONE of the following conditions hold:
+  // is different to the browser path (window.location.pathname). SSR
+  // page paths might include search params, while SSG and DSG won't.
+  // If page path include search params we also compare query params.
+  // But only if NONE of the following conditions hold:
   //
   // - The url matches a client side route (page.matchPath)
   // - it's a 404 page
   // - it's the offline plugin shell (/offline-plugin-app-shell-fallback/)
 
-  if (pagePath && __BASE_PATH__ + pagePath !== browserLoc.pathname && !(loader.findMatchPath((0, _stripPrefix.default)(browserLoc.pathname, __BASE_PATH__)) || pagePath === `/404.html` || pagePath.match(/^\/404\/?$/) || pagePath.match(/^\/offline-plugin-app-shell-fallback\/?$/))) {
-    (0, _router.navigate)(__BASE_PATH__ + pagePath + browserLoc.search + browserLoc.hash, {
+  if (pagePath && __BASE_PATH__ + pagePath !== browserLoc.pathname + (pagePath.includes(`?`) ? browserLoc.search : ``) && !(loader.findMatchPath((0, _stripPrefix.default)(browserLoc.pathname, __BASE_PATH__)) || pagePath.match(/^\/(404|500)(\/?|.html)$/) || pagePath.match(/^\/offline-plugin-app-shell-fallback\/?$/))) {
+    (0, _reachRouter.navigate)(__BASE_PATH__ + pagePath + (!pagePath.includes(`?`) ? browserLoc.search : ``) + browserLoc.hash, {
       replace: true
     });
-  }
+  } // It's possible that sessionStorage can throw an exception if access is not granted, see https://github.com/gatsbyjs/gatsby/issues/34512
 
-  _loader.publicLoader.loadPage(browserLoc.pathname).then(page => {
-    if (!page || page.status === _loader.PageResourceStatus.Error) {
-      throw new Error(`page resources for ${browserLoc.pathname} not found. Not rendering React`);
+
+  const getSessionStorage = () => {
+    try {
+      return sessionStorage;
+    } catch {
+      return null;
+    }
+  };
+
+  _loader.publicLoader.loadPage(browserLoc.pathname + browserLoc.search).then(page => {
+    var _page$page;
+
+    const sessionStorage = getSessionStorage();
+
+    if (page !== null && page !== void 0 && (_page$page = page.page) !== null && _page$page !== void 0 && _page$page.webpackCompilationHash && page.page.webpackCompilationHash !== window.___webpackCompilationHash) {
+      // Purge plugin-offline cache
+      if (`serviceWorker` in navigator && navigator.serviceWorker.controller !== null && navigator.serviceWorker.controller.state === `activated`) {
+        navigator.serviceWorker.controller.postMessage({
+          gatsbyApi: `clearPathResources`
+        });
+      } // We have not matching html + js (inlined `window.___webpackCompilationHash`)
+      // with our data (coming from `app-data.json` file). This can cause issues such as
+      // errors trying to load static queries (as list of static queries is inside `page-data`
+      // which might not match to currently loaded `.js` scripts).
+      // We are making attempt to reload if hashes don't match, but we also have to handle case
+      // when reload doesn't fix it (possibly broken deploy) so we don't end up in infinite reload loop
+
+
+      if (sessionStorage) {
+        const isReloaded = sessionStorage.getItem(reloadStorageKey) === `1`;
+
+        if (!isReloaded) {
+          sessionStorage.setItem(reloadStorageKey, `1`);
+          window.location.reload(true);
+          return;
+        }
+      }
     }
 
-    window.___webpackCompilationHash = page.page.webpackCompilationHash;
+    if (sessionStorage) {
+      sessionStorage.removeItem(reloadStorageKey);
+    }
 
-    const Root = () => /*#__PURE__*/_react.default.createElement(_router.Location, null, locationContext => /*#__PURE__*/_react.default.createElement(LocationHandler, locationContext));
+    if (!page || page.status === _loader.PageResourceStatus.Error) {
+      const message = `page resources for ${browserLoc.pathname} not found. Not rendering React`; // if the chunk throws an error we want to capture the real error
+      // This should help with https://github.com/gatsbyjs/gatsby/issues/19618
 
-    const WrappedRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
-      element: /*#__PURE__*/_react.default.createElement(Root, null)
-    }, /*#__PURE__*/_react.default.createElement(Root, null), ({
+      if (page && page.error) {
+        console.error(message);
+        throw page.error;
+      }
+
+      throw new Error(message);
+    }
+
+    const SiteRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
+      element: /*#__PURE__*/_react.default.createElement(LocationHandler, null)
+    }, /*#__PURE__*/_react.default.createElement(LocationHandler, null), ({
       result
     }) => {
       return {
@@ -127,13 +215,57 @@ window.___loader = _loader.publicLoader;
       };
     }).pop();
 
-    const NewRoot = () => WrappedRoot;
+    const App = function App() {
+      const onClientEntryRanRef = _react.default.useRef(false);
 
-    const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, _reactDom.default.hydrate)[0];
-    (0, _domready.default)(() => {
-      renderer( /*#__PURE__*/_react.default.createElement(NewRoot, null), typeof window !== `undefined` ? document.getElementById(`___gatsby`) : void 0, () => {
-        (0, _apiRunnerBrowser.apiRunner)(`onInitialClientRender`);
-      });
-    });
+      _react.default.useEffect(() => {
+        if (!onClientEntryRanRef.current) {
+          onClientEntryRanRef.current = true;
+
+          if (performance.mark) {
+            performance.mark(`onInitialClientRender`);
+          }
+
+          (0, _apiRunnerBrowser.apiRunner)(`onInitialClientRender`);
+        }
+      }, []);
+
+      return /*#__PURE__*/_react.default.createElement(GatsbyRoot, null, SiteRoot);
+    };
+
+    const focusEl = document.getElementById(`gatsby-focus-wrapper`); // Client only pages have any empty body so we just do a normal
+    // render to avoid React complaining about hydration mis-matches.
+
+    let defaultRenderer = reactRender;
+
+    if (focusEl && focusEl.children.length) {
+      defaultRenderer = reactHydrate;
+    }
+
+    const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, defaultRenderer)[0];
+
+    function runRender() {
+      const rootElement = typeof window !== `undefined` ? document.getElementById(`___gatsby`) : null;
+      renderer( /*#__PURE__*/_react.default.createElement(App, null), rootElement);
+    } // https://github.com/madrobby/zepto/blob/b5ed8d607f67724788ec9ff492be297f64d47dfc/src/zepto.js#L439-L450
+    // TODO remove IE 10 support
+
+
+    const doc = document;
+
+    if (doc.readyState === `complete` || doc.readyState !== `loading` && !doc.documentElement.doScroll) {
+      setTimeout(function () {
+        runRender();
+      }, 0);
+    } else {
+      const handler = function () {
+        doc.removeEventListener(`DOMContentLoaded`, handler, false);
+        window.removeEventListener(`load`, handler, false);
+        runRender();
+      };
+
+      doc.addEventListener(`DOMContentLoaded`, handler, false);
+      window.addEventListener(`load`, handler, false);
+    }
   });
 });

@@ -9,7 +9,7 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _react = _interopRequireDefault(require("react"));
 
-var _router = require("@reach/router");
+var _reachRouter = require("@gatsbyjs/reach-router");
 
 var _gatsbyReactRouterScroll = require("gatsby-react-router-scroll");
 
@@ -23,31 +23,9 @@ var _queryResultStore = require("./query-result-store");
 
 var _ensureResources = _interopRequireDefault(require("./ensure-resources"));
 
-var _errorOverlayHandler = require("./error-overlay-handler");
+var _fastRefreshOverlay = _interopRequireDefault(require("./fast-refresh-overlay"));
 
-// TODO: Remove entire block when we make fast-refresh the default
-// In fast-refresh, this logic is all moved into the `error-overlay-handler`
-if (window.__webpack_hot_middleware_reporter__ !== undefined && process.env.GATSBY_HOT_LOADER !== `fast-refresh`) {
-  const overlayErrorID = `webpack`; // Report build errors
-
-  window.__webpack_hot_middleware_reporter__.useCustomOverlay({
-    showProblems(type, obj) {
-      if (type !== `errors`) {
-        (0, _errorOverlayHandler.clearError)(overlayErrorID);
-        return;
-      }
-
-      (0, _errorOverlayHandler.reportError)(overlayErrorID, obj[0]);
-    },
-
-    clear() {
-      (0, _errorOverlayHandler.clearError)(overlayErrorID);
-    }
-
-  });
-}
-
-(0, _navigation.init)(); // In gatsby v2 if Router is used in page using matchPaths
+// In gatsby v2 if Router is used in page using matchPaths
 // paths need to contain full path.
 // For example:
 //   - page have `/app/*` matchPath
@@ -55,8 +33,7 @@ if (window.__webpack_hot_middleware_reporter__ !== undefined && process.env.GATS
 // Resetting `basepath`/`baseuri` keeps current behaviour
 // to not introduce breaking change.
 // Remove this in v3
-
-const RouteHandler = props => /*#__PURE__*/_react.default.createElement(_router.BaseContext.Provider, {
+const RouteHandler = props => /*#__PURE__*/_react.default.createElement(_reachRouter.BaseContext.Provider, {
   value: {
     baseuri: `/`,
     basepath: `/`
@@ -69,7 +46,7 @@ class LocationHandler extends _react.default.Component {
       location
     } = this.props;
 
-    if (!_loader.default.isPageNotFound(location.pathname)) {
+    if (!_loader.default.isPageNotFound(location.pathname + location.search)) {
       return /*#__PURE__*/_react.default.createElement(_ensureResources.default, {
         location: location
       }, locationAndPageResources => /*#__PURE__*/_react.default.createElement(_navigation.RouteUpdates, {
@@ -77,12 +54,12 @@ class LocationHandler extends _react.default.Component {
       }, /*#__PURE__*/_react.default.createElement(_gatsbyReactRouterScroll.ScrollContext, {
         location: location,
         shouldUpdateScroll: _navigation.shouldUpdateScroll
-      }, /*#__PURE__*/_react.default.createElement(_router.Router, {
+      }, /*#__PURE__*/_react.default.createElement(_reachRouter.Router, {
         basepath: __BASE_PATH__,
         location: location,
         id: "gatsby-focus-wrapper"
       }, /*#__PURE__*/_react.default.createElement(RouteHandler, (0, _extends2.default)({
-        path: encodeURI(locationAndPageResources.pageResources.page.matchPath || locationAndPageResources.pageResources.page.path)
+        path: encodeURI((locationAndPageResources.pageResources.page.matchPath || locationAndPageResources.pageResources.page.path).split(`?`)[0])
       }, this.props, locationAndPageResources))))));
     }
 
@@ -100,7 +77,7 @@ class LocationHandler extends _react.default.Component {
 
     return /*#__PURE__*/_react.default.createElement(_navigation.RouteUpdates, {
       location: location
-    }, /*#__PURE__*/_react.default.createElement(_router.Router, {
+    }, /*#__PURE__*/_react.default.createElement(_reachRouter.Router, {
       basepath: __BASE_PATH__,
       location: location,
       id: "gatsby-focus-wrapper"
@@ -114,10 +91,10 @@ class LocationHandler extends _react.default.Component {
 
 }
 
-const Root = () => /*#__PURE__*/_react.default.createElement(_router.Location, null, locationContext => /*#__PURE__*/_react.default.createElement(LocationHandler, locationContext)); // Let site, plugins wrap the site e.g. for Redux.
+const Root = () => /*#__PURE__*/_react.default.createElement(_reachRouter.Location, null, locationContext => /*#__PURE__*/_react.default.createElement(LocationHandler, locationContext)); // Let site, plugins wrap the site e.g. for Redux.
 
 
-const WrappedRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
+const rootWrappedWithWrapRootElement = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
   element: /*#__PURE__*/_react.default.createElement(Root, null)
 }, /*#__PURE__*/_react.default.createElement(Root, null), ({
   result,
@@ -128,6 +105,9 @@ const WrappedRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
   };
 }).pop();
 
-var _default = () => /*#__PURE__*/_react.default.createElement(_queryResultStore.StaticQueryStore, null, WrappedRoot);
+function RootWrappedWithOverlayAndProvider() {
+  return /*#__PURE__*/_react.default.createElement(_fastRefreshOverlay.default, null, /*#__PURE__*/_react.default.createElement(_queryResultStore.StaticQueryStore, null, rootWrappedWithWrapRootElement));
+}
 
+var _default = RootWrappedWithOverlayAndProvider;
 exports.default = _default;
