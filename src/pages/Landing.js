@@ -83,9 +83,9 @@ const Landing = ({ toggleMode, mode, spread }) => {
             <Full
                 style={{ display: 'flex', flexDirection: 'column', gap: 160 }}
             >
-                <Project />
-                <Project />
-                <Project />
+                <Project name='Movie Theater Case Study' />
+                <Project name='IBM, Vulnerability Manager Case Study' />
+                <Project name='IBM, DevOps Dashboard' />
             </Full>
             <Foot />
         </Main>
