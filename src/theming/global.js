@@ -1,15 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import { Heading } from '../theming/styles';
-import '@fontsource/spartan/400.css'; // Weight 500.
-import '@fontsource/spartan/600.css'; // Weight 500.
-import '@fontsource/spartan/700.css'; // Weight 500.
-import '@fontsource/spartan/900.css'; // Weight 500.
 
 const GlobalStyles = createGlobalStyle`
-
     * {
     border: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
     -webkit-font-smoothing: auto;
     font-weight: inherit;
     margin: 0;
@@ -33,7 +28,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: 'Spartan', sans-serif;
     font-weight: 600;
     font-style: normal;
   }
@@ -46,8 +40,8 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
-    font-family: 'Spartan', sans-serif;
-    font-weight: 600;
+    font-family: 'FONTSPRING DEMO - TT Ramillas ExtraLight';
+    /* font-weight: 100; */
     font-style: normal;
   }
 

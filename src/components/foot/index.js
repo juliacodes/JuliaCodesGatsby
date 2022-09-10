@@ -29,9 +29,15 @@ const Foot = () => {
                         </Paragraph>
                     </FinalLeft>
                     <FinalRight>
-                        <Paragraph>github</Paragraph>
-                        <Paragraph>twitter</Paragraph>
-                        <Paragraph>instagram</Paragraph>
+                        <a href='https://github.com/juliacodes'>
+                            <Paragraph>GitHub</Paragraph>
+                        </a>
+                        <a href='https://github.com/juliacodes'>
+                            <Paragraph>LinkedIn</Paragraph>
+                        </a>
+                        <a href=''>
+                            <Paragraph>Email</Paragraph>
+                        </a>
                     </FinalRight>
                 </FootFinal>
             </Full>

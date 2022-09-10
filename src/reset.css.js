@@ -1,7 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700;900&display=swap');
+@import url('./Fontspring-DEMO-tt_ramillas_extralight_italic.otf');
+@import url('./Fontspring-DEMO-tt_ramillas_light_italic.otf');
+@import url('./Fontspring-DEMO-tt_ramillas_light.otf');
+@import url('./Fontspring-DEMO-tt_ramillas_medium.otf');
+@import url('./Fontspring-DEMO-tt_ramillas_extralight_italic.otf');
+@import url("@fontsource/spartan"); //
+
+
+
+/* @font-face {
+    font-family: FONTSPRING DEMO - TT Ramillas Light;
+    src: url("./Fontspring-DEMO-tt_ramillas_extralight_italic.otf") format("opentype");
+} */
+
     * {
     border: 0;
     box-sizing: inherit;
@@ -27,16 +40,15 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: 'Spartan', sans-serif;
   }
 
   body {
+    font-family: 'Montserrat';
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     -webkit-overflow-scrolling: touch;
-    font-family: 'Spartan', sans-serif;
   }
 
   a {

@@ -13,6 +13,6 @@ export const NavCont = styled.nav`
 
     @media (${QUERIES.large}) {
         margin: 100px 0 0 0;
-        padding: 0 60px;
+        padding: 0 0px;
     }
 `;

@@ -9,27 +9,31 @@ const QUERIES = {
 };
 
 export const Heading = styled.h1`
-    font-size: 30px;
-    line-height: 129.69%;
-    font-weight: 600;
+    font-size: 50px;
+    line-height: 49px;
+    font-weight: 500;
     margin: 0 auto;
     width: 100%;
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
     user-select: none;
     opacity: 0;
+    letter-spacing: -5%;
+    max-width: 700px;
+    text-align: center;
     animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
-        font-size: 60px;
+        font-size: 82px;
+        line-height: 82px;
     }
 `;
 
 export const Paragraph = styled.p`
-    font-size: 20px;
-    line-height: 184.69%;
-    letter-spacing: 0.03em;
+    font-family: 'Spartan', sans-serif;
     font-weight: 400;
+    letter-spacing: -3%;
+    line-height: 37.2px;
     color: ${({ theme }) => theme.textMain};
 
     @media (${QUERIES.large}) {
@@ -69,7 +73,7 @@ export const Midi = styled.div`
     height: auto;
     margin: 70px auto 70px auto;
     padding: 30px;
-    max-width: 910px;
+    max-width: 1110px;
 
     @media (${QUERIES.large}) {
         margin: 220px auto 220px auto;
