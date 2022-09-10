@@ -9,7 +9,7 @@ const Project = ({
     image = CoffeeChemistry,
 }) => {
     const ImageProj = styled.div`
-        margin: 50px 0;
+        margin: 100px 0;
         background-image: url(${image});
         width: 100%;
         height: 400px;
@@ -26,10 +26,19 @@ const Project = ({
         @media (${QUERIES.large}) {
             padding: 0;
         }
+        width: 100%;
     `;
     return (
         <Project>
-            <Heading style={{ textAlign: 'left', marginLeft: 0 }}>
+            <Heading
+                style={{
+                    textAlign: 'left',
+                    marginLeft: 0,
+                    marginRight: 0,
+                    width: '100%',
+                    maxWidth: 1000,
+                }}
+            >
                 {name}
             </Heading>
             <Paragraph style={{ maxWidth: 650, marginTop: 20 }}>
