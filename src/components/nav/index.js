@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavCont } from './styles';
-import { Inner } from '../../theming/styles';
+import { Full } from '../../theming/styles';
 import { Logo } from '../logo';
 import { Switch } from '../switch';
 
 const Nav = ({ toggleMode, mode, spread }) => {
     return (
-        <Inner
+        <Full
             style={{
                 mixBlendMode: 'difference',
             }}
@@ -25,7 +25,7 @@ const Nav = ({ toggleMode, mode, spread }) => {
                 />
                 <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
             </NavCont>
-        </Inner>
+        </Full>
     );
 };
 

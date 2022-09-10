@@ -3,11 +3,7 @@ import QUERIES, { Full, Heading, Paragraph } from '../../theming/styles';
 
 export const FootCont = styled.footer`
     width: 100%;
-
-    * {
-        margin-bottom: 40px;
-    }
-
+    margin-bottom: 20px;
     ${Full} {
         margin-top: 0;
         margin-bottom: 0;
@@ -33,33 +29,18 @@ export const FootCont = styled.footer`
             font-size: 20px;
         }
     }
-
-    a {
-        color: ${({ theme }) => theme.textMain};
-        font-size: 15px;
-        font-weight: 600;
-        padding-bottom: 10px;
-        border-bottom: 3px solid ${({ theme }) => theme.textMain};
-        transition: all 0.3s ease-in-out;
-        :hover {
-            border-bottom: 3px solid transparent;
-        }
-
-        @media (${QUERIES.large}) {
-            font-size: 20px;
-        }
-    }
 `;
 
 export const FootFinal = styled.div`
     display: flex;
     width: 100%;
-    padding: 0;
+    padding: 0 20px;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     @media (${QUERIES.large}) {
         flex-wrap: nowrap;
+        padding: 0;
     }
 
     ${Paragraph} {
@@ -84,13 +65,20 @@ export const FinalLeft = styled.div`
 
 export const FinalRight = styled(FinalLeft)`
     justify-content: flex-start;
+    gap: 30px;
+    margin-top: 40px;
+
     ${Paragraph} {
         margin-left: 0;
-        margin-right: 20px;
+        border-bottom: 1px solid transparent;
+        :hover {
+            border-bottom: 1px solid black;
+        }
     }
 
     @media (${QUERIES.large}) {
         justify-content: flex-end;
+        margin-top: 0px;
     }
 `;
 

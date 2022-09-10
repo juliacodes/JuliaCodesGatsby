@@ -1,9 +1,34 @@
 import React from 'react';
-import { Main, Midi, Heading, Full, Image } from '../theming/styles';
-
-import { Nav, Foot, Split, FullWidthProj, SplitSkills } from '../components';
+import QUERIES, {
+    Main,
+    Midi,
+    Heading,
+    Full,
+    Image,
+    Paragraph,
+} from '../theming/styles';
+import styled from 'styled-components';
+import { Nav, Foot, Project } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Awk1, Julia, computerImage } from '../images';
+import { Inner } from '../theming/styles';
+import { Awk1 } from '../images';
+
+const Split = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 200px auto;
+    flex-wrap: wrap;
+
+    > * {
+        width: 100%;
+
+        @media (${QUERIES.large}) {
+            width: calc(50% - 20px);
+        }
+    }
+`;
 
 const Landing = ({ toggleMode, mode, spread }) => {
     const spreadClass =
@@ -24,53 +49,43 @@ const Landing = ({ toggleMode, mode, spread }) => {
                         color: 'white',
                     }}
                 >
-                    Hi, I'm Julia.
-                    <br /> I'm a UI/UX Engineer at IBM
+                    <span style={{ fontWeight: 600 }}>UX Engineer</span>{' '}
+                    crafting beautiful
+                    <span style={{ fontStyle: 'italic' }}> digital</span> user
+                    experiences
                 </Heading>
             </Midi>
             <Full>
                 <Image style={{ backgroundImage: `url(${Awk1})` }} />
             </Full>
-            <Midi>
-                <Split
-                    paragraph={
-                        <>
-                            I'm a software engineer with 3+ years experience,
-                            specializing in UI design and development. I have a
-                            strong comprehension of design process and I'm
-                            well-versed in the best practices of web design and
-                            implementation.
-                            <br />
-                            <br />I have Experience as a UI/UX lead, where I
-                            implemented industry standard design principles and
-                            processes to improve customer experience. Looking to
-                            leverage my design and development expertise to
-                            transition into a lead UI Engineer role, where I can
-                            bridge the gap between engineers and designers.
-                        </>
-                    }
-                />
-            </Midi>
-            <Full style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Image
-                    style={{
-                        backgroundImage: `url(${computerImage})`,
-                        width: 'calc(40% - 30px)',
-                    }}
-                />
-                <Image
-                    style={{
-                        backgroundImage: `url(${Julia})`,
-                        width: '60%',
-                    }}
-                />
-            </Full>
-            <Midi>
-                <SplitSkills />
+            <Midi style={{ marginTop: 200, marginBottom: 200 }}>
+                <Split>
+                    <Heading style={{ textAlign: 'left', marginLeft: 0 }}>
+                        Engineer <br /> Turned <br />{' '}
+                        <span style={{ fontWeight: 600 }}>Designer.</span>
+                    </Heading>
+                    <Paragraph>
+                        I'm a software engineer with 3+ years experience,
+                        specializing in UI design and development. I have a
+                        strong comprehension of design process and I'm
+                        well-versed in the best practices of web design and
+                        implementation. I have Experience as a <br />
+                        <br /> UI/UX lead, where I implemented industry standard
+                        design principles and processes to improve customer
+                        experience. Looking to leverage my design and
+                        development expertise to transition into a lead UI
+                        Engineer role, where I can bridge the gap between
+                        engineers and designers more text here.
+                    </Paragraph>
+                </Split>
             </Midi>
 
-            <Full>
-                <FullWidthProj />
+            <Full
+                style={{ display: 'flex', flexDirection: 'column', gap: 160 }}
+            >
+                <Project />
+                <Project />
+                <Project />
             </Full>
             <Foot />
         </Main>

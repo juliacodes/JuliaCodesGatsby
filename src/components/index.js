@@ -7,6 +7,7 @@ import { SkillDrop } from './skillDrop';
 import { Split } from './split';
 import { SplitSkills } from './splitSkills';
 import { Switch } from './switch';
+import { Project } from './Project';
 
 export {
     Foot,
@@ -18,4 +19,5 @@ export {
     Split,
     SplitSkills,
     Switch,
+    Project,
 };
