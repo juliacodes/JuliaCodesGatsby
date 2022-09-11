@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from './theming/themeContext';
 import GlobalStyles from './theming/global';
 import { Landing } from './pages';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
     const [mode, toggleMode, spread, componentMounted] = useDarkMode();
@@ -13,7 +14,26 @@ const App = () => {
     return (
         <ThemeProvider theme={mode === 'light' ? lightTheme : darkTheme}>
             <GlobalStyles />
-            <Landing spread={spread} mode={mode} toggleMode={toggleMode} />
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        exact
+                        path='/'
+                        element={
+                            <Landing
+                                spread={spread}
+                                mode={mode}
+                                toggleMode={toggleMode}
+                            />
+                        }
+                    />
+                    <Route
+                        exact
+                        path='/project'
+                        element={<h1>project page</h1>}
+                    />
+                </Routes>
+            </BrowserRouter>
         </ThemeProvider>
     );
 };
