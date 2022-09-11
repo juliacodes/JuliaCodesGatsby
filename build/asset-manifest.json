@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/static/js/main.24e1b35f.js",
+    "static/js/496.bcf61a51.chunk.js": "/static/js/496.bcf61a51.chunk.js",
+    "static/media/julia.jpg": "/static/media/julia.9ecf39a59afd45452f9c.jpg",
+    "static/media/desk.JPG": "/static/media/desk.ac66adaaef410cabd66d.JPG",
+    "static/media/CoffeeChemistry.jpg": "/static/media/CoffeeChemistry.06e451981b1555ea7508.jpg",
+    "static/media/Awkward1.jpg": "/static/media/Awkward1.aec5dc0612dd2c012acf.jpg",
+    "static/media/setup.png": "/static/media/setup.863c0d3b703726dd74f2.png",
+    "static/media/gitscape-cover.png": "/static/media/gitscape-cover.3a606b57c56db8debebe.png",
+    "static/media/cc-cover.png": "/static/media/cc-cover.edb94c619f30c1a06640.png",
+    "static/media/decore-cover1.png": "/static/media/decore-cover1.a168ac387feef3881e29.png",
+    "static/media/decore-cover2.png": "/static/media/decore-cover2.8068e12426c6eeaca39b.png",
+    "static/media/decore-cover3.png": "/static/media/decore-cover3.dd1cd1804686d57dc378.png",
+    "index.html": "/index.html",
+    "main.24e1b35f.js.map": "/static/js/main.24e1b35f.js.map",
+    "496.bcf61a51.chunk.js.map": "/static/js/496.bcf61a51.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.24e1b35f.js"
+  ]
+}
