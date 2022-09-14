@@ -6,6 +6,7 @@
     "@fontsource/spartan": "^4.5.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^3.0.1"

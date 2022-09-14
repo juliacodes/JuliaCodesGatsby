@@ -16,6 +16,7 @@ export const Heading = styled.h1`
     width: 100%;
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
     user-select: none;
     opacity: 0;
     letter-spacing: -5%;
@@ -29,6 +30,23 @@ export const Heading = styled.h1`
     }
 `;
 
+export const Heading2 = styled.h1`
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 100;
+    color: ${({ theme }) => theme.textMain};
+    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    opacity: 0;
+    letter-spacing: -5%;
+    animation: ${fadeIn} 1s forwards;
+
+    @media (${QUERIES.large}) {
+        font-size: 55px;
+        line-height: 52px;
+    }
+`;
+
 export const Paragraph = styled.p`
     font-family: 'Spartan', sans-serif;
     font-weight: 400;
@@ -38,6 +56,19 @@ export const Paragraph = styled.p`
 
     @media (${QUERIES.large}) {
         font-size: 19px;
+    }
+`;
+
+export const Paragraph2 = styled.p`
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    letter-spacing: 4%;
+    line-height: 36.55px;
+    color: ${({ theme }) => theme.textLight};
+
+    @media (${QUERIES.large}) {
+        font-size: 16px;
+        margin: 30px 0;
     }
 `;
 
@@ -71,12 +102,12 @@ export const Full = styled.main`
 export const Midi = styled.div`
     width: 100%;
     height: auto;
-    margin: 70px auto 70px auto;
+    margin: 20px auto 50px auto;
     padding: 30px;
     max-width: 1110px;
 
     @media (${QUERIES.large}) {
-        margin: 220px auto 220px auto;
+        margin: 100px auto 170px auto;
         padding: 0px;
     }
 `;
