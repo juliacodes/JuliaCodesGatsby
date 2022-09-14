@@ -1,3 +1,4 @@
 import { Landing } from './Landing';
 import { Movie } from './Movie';
-export { Landing, Movie };
+import { AppWrapper } from './AppWrapper';
+export { Landing, Movie, AppWrapper };
