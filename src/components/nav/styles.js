@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import QUERIES from '../../theming/styles';
 import { fadeIn } from '../../theming/animate';
+
 export const NavCont = styled.nav`
     width: auto;
     padding: 0;
@@ -12,7 +13,7 @@ export const NavCont = styled.nav`
     animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
-        margin: 100px 0 0 0;
+        margin: 50px 0 0 0;
         padding: 0 0px;
     }
 `;

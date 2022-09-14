@@ -10,8 +10,7 @@ import QUERIES, {
 import styled from 'styled-components';
 import { Nav, Foot, Project } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Inner } from '../theming/styles';
-import { Awk1 } from '../images';
+import { Awk1, Vuln, Devops } from '../images';
 
 const Split = styled.div`
     display: flex;
@@ -58,24 +57,35 @@ const Landing = ({ toggleMode, mode, spread }) => {
             <Full>
                 <Image style={{ backgroundImage: `url(${Awk1})` }} />
             </Full>
-            <Midi style={{ marginTop: 200, marginBottom: 200 }}>
+            <Midi>
                 <Split>
                     <Heading style={{ textAlign: 'left', marginLeft: 0 }}>
                         Engineer <br /> Turned <br />{' '}
                         <span style={{ fontWeight: 600 }}>Designer.</span>
                     </Heading>
                     <Paragraph>
-                        I'm a software engineer with 3+ years experience,
-                        specializing in UI design and development. I have a
-                        strong comprehension of design process and I'm
-                        well-versed in the best practices of web design and
-                        implementation. I have Experience as a <br />
-                        <br /> UI/UX lead, where I implemented industry standard
-                        design principles and processes to improve customer
-                        experience. Looking to leverage my design and
-                        development expertise to transition into a lead UI
-                        Engineer role, where I can bridge the gap between
-                        engineers and designers more text here.
+                        UX Engineering sits at the intersection between my two
+                        backgrounds:{' '}
+                        <span style={{ fontWeight: 600 }}>UX Design</span> and{' '}
+                        <span style={{ fontWeight: 600 }}>
+                            Front End Engineering
+                        </span>
+                        . As I gained experience as a frontend developer, I
+                        realized that advocating for users through an
+                        understanding of human perspectives and user research
+                        was crucial for the success of any application. My dual
+                        knowledge of design and development allows me to
+                        understand{' '}
+                        <span style={{ fontWeight: 600 }}>user needs</span> as
+                        well as the{' '}
+                        <span style={{ fontWeight: 600 }}>
+                            technical needs{' '}
+                        </span>
+                        of any project . <br />
+                        <br /> I’m currently working as a UX Engineer at{' '}
+                        <span style={{ fontWeight: 600 }}>IBM</span> on the CIO
+                        team. I graduated with a degree in Web Development and
+                        Design from Purdue University.
                     </Paragraph>
                 </Split>
             </Midi>
@@ -83,9 +93,21 @@ const Landing = ({ toggleMode, mode, spread }) => {
             <Full
                 style={{ display: 'flex', flexDirection: 'column', gap: 160 }}
             >
-                <Project name='Movie Theater Case Study' />
-                <Project name='IBM, Vulnerability Manager Case Study' />
-                <Project name='IBM, DevOps Dashboard' />
+                <Project
+                    name='Movie Theater Case Study'
+                    url='movie'
+                    description='Reimagining the movie finding and seat selection process for movie theater applications'
+                />
+                <Project
+                    name='IBM, Vulnerability Manager'
+                    image={Vuln}
+                    description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
+                />
+                <Project
+                    name='IBM, DevOps Dashboard'
+                    image={Devops}
+                    description='Enabling developers to track and manage their deployments'
+                />
             </Full>
             <Foot />
         </Main>
