@@ -10,8 +10,6 @@ const Nav = ({ toggleMode, mode, spread }) => {
         <Midi
             style={{
                 mixBlendMode: 'difference',
-                marginTop: 80,
-                marginBottom: 150,
             }}
         >
             <NavCont

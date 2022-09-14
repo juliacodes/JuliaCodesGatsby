@@ -98,8 +98,16 @@ const Landing = ({ toggleMode, mode, spread }) => {
                     url='movie'
                     description='Reimagining the movie finding and seat selection process for movie theater applications'
                 />
-                <Project name='IBM, Vulnerability Manager' image={Vuln} />
-                <Project name='IBM, DevOps Dashboard' image={Devops} />
+                <Project
+                    name='IBM, Vulnerability Manager'
+                    image={Vuln}
+                    description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
+                />
+                <Project
+                    name='IBM, DevOps Dashboard'
+                    image={Devops}
+                    description='Enabling developers to track and manage their deployments'
+                />
             </Full>
             <Foot />
         </Main>
