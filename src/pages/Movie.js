@@ -4,17 +4,12 @@ import QUERIES, {
     Midi,
     Heading2,
     Full,
-    Image,
     Paragraph2,
 } from '../theming/styles';
 import styled from 'styled-components';
-import { Nav, Foot, Project } from '../components';
+import { Nav, Foot } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Inner } from '../theming/styles';
 import {
-    Awk1,
-    Vuln,
-    Devops,
     Change1,
     Hifi,
     Lofi,
@@ -33,23 +28,6 @@ import {
     Change2,
 } from '../images';
 
-const Split = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    margin: 200px auto;
-    flex-wrap: wrap;
-
-    > * {
-        width: 100%;
-
-        @media (${QUERIES.large}) {
-            width: calc(50% - 20px);
-        }
-    }
-`;
-
 const Movie = ({ toggleMode, mode, spread }) => {
     const spreadClass =
         spread === 'first'
@@ -62,8 +40,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
         <Main style={{ position: 'relative' }}>
             <Spread className={spreadClass} />
             <Nav mode={mode} toggleMode={toggleMode} />
-            <Midi style={{ marginBottom: 100 }}>
-                <Heading2 style={{ marginBottom: 50 }}>
+            <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
+                <Heading2
+                    style={{
+                        marginBottom: 50,
+                        mixBlendMode: 'difference',
+                        color: 'white',
+                    }}
+                >
                     Movie Theater Case Study
                 </Heading2>
                 <Paragraph2
@@ -92,6 +76,8 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 fontSize: 25,
                                 lineHeight: '10px',
                                 fontWeight: 600,
+                                mixBlendMode: 'difference',
+                                color: 'white',
                             }}
                         >
                             Design Process
@@ -112,6 +98,8 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 fontSize: 25,
                                 lineHeight: '10px',
                                 fontWeight: 600,
+                                mixBlendMode: 'difference',
+                                color: 'white',
                             }}
                         >
                             My Role
