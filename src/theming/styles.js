@@ -31,8 +31,8 @@ export const Heading = styled.h1`
 `;
 
 export const Heading2 = styled.h1`
-    font-size: 30px;
-    line-height: 29px;
+    font-size: 50px;
+    line-height: 50px;
     font-weight: 100;
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
@@ -102,12 +102,12 @@ export const Full = styled.main`
 export const Midi = styled.div`
     width: 100%;
     height: auto;
-    margin: 70px auto 70px auto;
+    margin: 20px auto 50px auto;
     padding: 30px;
     max-width: 1110px;
 
     @media (${QUERIES.large}) {
-        margin: 160px auto 220px auto;
+        margin: 100px auto 170px auto;
         padding: 0px;
     }
 `;

@@ -36,6 +36,19 @@ const Movie = ({ toggleMode, mode, spread }) => {
             ? 'growWhite'
             : '';
 
+    const FlexGroup = styled.div`
+        margin: 60px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+
+        @media (${QUERIES.large}) {
+            flex-wrap: nowrap;
+            gap: 100px;
+        }
+    `;
+
     return (
         <Main style={{ position: 'relative' }}>
             <Spread className={spreadClass} />
@@ -62,19 +75,12 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     that will generate custom html and css code that can be used
                     as a starter template for any website.{' '}
                 </Paragraph2>
-                <div
-                    style={{
-                        margin: '60px 0',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        gap: 100,
-                    }}
-                >
+                <FlexGroup>
                     <div>
                         <Heading2
                             style={{
                                 fontSize: 25,
-                                lineHeight: '10px',
+                                lineHeight: '30px',
                                 fontWeight: 600,
                                 mixBlendMode: 'difference',
                                 color: 'white',
@@ -96,7 +102,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Heading2
                             style={{
                                 fontSize: 25,
-                                lineHeight: '10px',
+                                lineHeight: '30px',
                                 fontWeight: 600,
                                 mixBlendMode: 'difference',
                                 color: 'white',
@@ -114,7 +120,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             (the "d. school").
                         </Paragraph2>
                     </div>
-                </div>
+                </FlexGroup>
             </Midi>
             <Full>
                 <img
@@ -211,19 +217,12 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     nunc.
                 </Paragraph2>
 
-                <div
-                    style={{
-                        margin: '60px 0',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        gap: 100,
-                    }}
-                >
+                <FlexGroup>
                     <div>
                         <Heading2
                             style={{
                                 fontSize: 25,
-                                lineHeight: '10px',
+                                lineHeight: '30px',
                                 fontWeight: 600,
                             }}
                         >
@@ -243,7 +242,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Heading2
                             style={{
                                 fontSize: 25,
-                                lineHeight: '10px',
+                                lineHeight: '30px',
                                 fontWeight: 600,
                             }}
                         >
@@ -263,7 +262,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Heading2
                             style={{
                                 fontSize: 25,
-                                lineHeight: '10px',
+                                lineHeight: '30px',
                                 fontWeight: 600,
                             }}
                         >
@@ -279,7 +278,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             (the "d. school").
                         </Paragraph2>
                     </div>
-                </div>
+                </FlexGroup>
             </Midi>
 
             <Midi style={{ marginBottom: 0 }}>
@@ -509,19 +508,12 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />
-                <div
-                    style={{
-                        margin: '100px 0 0 0',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        gap: 100,
-                    }}
-                >
+                <FlexGroup>
                     <div>
                         <Heading2
                             style={{
                                 fontSize: 25,
-                                lineHeight: '10px',
+                                lineHeight: '30px',
                                 fontWeight: 600,
                             }}
                         >
@@ -541,7 +533,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Heading2
                             style={{
                                 fontSize: 25,
-                                lineHeight: '10px',
+                                lineHeight: '30px',
                                 fontWeight: 600,
                             }}
                         >
@@ -557,7 +549,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             (the "d. school").
                         </Paragraph2>
                     </div>
-                </div>
+                </FlexGroup>
             </Midi>
             <Foot />
         </Main>
