@@ -1,14 +1,16 @@
 import React from 'react';
 import { NavCont } from './styles';
-import { Full } from '../../theming/styles';
+import { Midi } from '../../theming/styles';
 import { Logo } from '../logo';
 import { Switch } from '../switch';
 
 const Nav = ({ toggleMode, mode, spread }) => {
     return (
-        <Full
+        <Midi
             style={{
                 mixBlendMode: 'difference',
+                marginTop: 80,
+                marginBottom: 150,
             }}
         >
             <NavCont
@@ -25,7 +27,7 @@ const Nav = ({ toggleMode, mode, spread }) => {
                 />
                 <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
             </NavCont>
-        </Full>
+        </Midi>
     );
 };
 

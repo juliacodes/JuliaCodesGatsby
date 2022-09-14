@@ -3,7 +3,7 @@ import { useDarkMode } from './hooks';
 import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from './theming/themeContext';
 import GlobalStyles from './theming/global';
-import { Landing } from './pages';
+import { Landing, Movie } from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -28,9 +28,14 @@ const App = () => {
                         }
                     />
                     <Route
-                        exact
-                        path='/project'
-                        element={<h1>project page</h1>}
+                        path='/movie'
+                        element={
+                            <Movie
+                                spread={spread}
+                                mode={mode}
+                                toggleMode={toggleMode}
+                            />
+                        }
                     />
                 </Routes>
             </BrowserRouter>
