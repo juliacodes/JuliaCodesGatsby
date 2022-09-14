@@ -1,2 +1,3 @@
 import { Landing } from './Landing';
-export { Landing };
+import { Movie } from './Movie';
+export { Landing, Movie };

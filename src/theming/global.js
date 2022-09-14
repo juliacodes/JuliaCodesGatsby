@@ -48,12 +48,14 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: currentColor;
     text-decoration: none;
+    border-bottom: 3px solid transparent;
   }
+  
   a:hover {
     cursor: pointer;
     
     ${Heading}{
-      color: ${({ theme }) => theme.accent};
+     border-bottom: 3px solid black;
     }
   }
 `;
