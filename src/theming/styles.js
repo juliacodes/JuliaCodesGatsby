@@ -32,6 +32,7 @@ export const Heading = styled.h1`
 `;
 
 export const Heading2 = styled.h1`
+    font-family: 'Spectral', serif;
     font-size: 50px;
     line-height: 50px;
     font-weight: 200;
@@ -49,26 +50,25 @@ export const Heading2 = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-    font-family: 'Spartan', sans-serif;
-    font-weight: 400;
-    letter-spacing: -3%;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
     line-height: 37.2px;
     color: ${({ theme }) => theme.textLight};
 
     @media (${QUERIES.large}) {
-        font-size: 19px;
+        font-size: 23px;
     }
 `;
 
 export const Paragraph2 = styled.p`
-    font-family: 'Spartan', sans-serif;
-    font-weight: 400;
-    letter-spacing: 4%;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
     line-height: 36.55px;
-    color: ${({ theme }) => theme.textLight};
-
+    color: #b7b7b7;
     @media (${QUERIES.large}) {
-        font-size: 16px;
+        font-size: 23px;
         margin: 30px 0;
     }
 `;

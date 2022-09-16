@@ -5,6 +5,7 @@ import QUERIES, {
     Heading2,
     Full,
     Paragraph2,
+    Paragraph,
 } from '../theming/styles';
 import styled from 'styled-components';
 import { Nav, Foot } from '../components';
@@ -28,6 +29,19 @@ import {
     Change2,
 } from '../images';
 
+const FlexGroup = styled.div`
+    margin: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    @media (${QUERIES.large}) {
+        flex-wrap: nowrap;
+        gap: 100px;
+    }
+`;
+
 const Movie = ({ toggleMode, mode, spread }) => {
     const spreadClass =
         spread === 'first'
@@ -36,19 +50,6 @@ const Movie = ({ toggleMode, mode, spread }) => {
             ? 'growWhite'
             : '';
 
-    const FlexGroup = styled.div`
-        margin: 60px 0;
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
-        flex-wrap: wrap;
-
-        @media (${QUERIES.large}) {
-            flex-wrap: nowrap;
-            gap: 100px;
-        }
-    `;
-
     return (
         <Main style={{ position: 'relative' }}>
             <Spread className={spreadClass} />
@@ -56,7 +57,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
             <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
                 <Heading2
                     style={{
-                        marginBottom: 50,
+                        marginBottom: 35,
                         mixBlendMode: 'difference',
                         color: 'white',
                     }}
@@ -133,7 +134,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     User Research
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -143,7 +144,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
             </Midi>
             <Full>
                 <div
@@ -179,7 +180,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     User Journey Map
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -189,7 +190,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
                 <img
                     src={JourneyMap}
                     style={{
@@ -205,7 +206,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     Pain Points
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -215,7 +216,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
 
                 <FlexGroup>
                     <div>
@@ -228,7 +229,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             Design Process
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -236,7 +237,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
                             (the "d. school").
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                     <div>
                         <Heading2
@@ -248,7 +249,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             My Role
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -256,7 +257,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
                             (the "d. school").
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                     <div>
                         <Heading2
@@ -268,7 +269,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             My Role
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -276,7 +277,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
                             (the "d. school").
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
@@ -285,7 +286,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     Sketching and Ideation
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -295,7 +296,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
             </Midi>
             <Full>
                 <div
@@ -350,7 +351,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     Establishing User Flow
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -360,7 +361,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
                 <img
                     src={UserFlow}
                     style={{
@@ -375,7 +376,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     User Testing
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -385,7 +386,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
             </Midi>
             <Full>
                 <div
@@ -421,7 +422,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     Synthesizing Research Into Insights
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -431,7 +432,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
                 <img
                     src={Synth}
                     style={{
@@ -447,7 +448,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     Changes Implemented from Research
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -457,7 +458,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
                 <img
                     src={Change1}
                     style={{
@@ -488,7 +489,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
                     Final High Fidelity Wireframes
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -498,7 +499,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     lacus non in donec. Porttitor iaculis suspendisse malesuada
                     commodo, massa non luctus. Id pharetra augue sed egestas ut
                     nunc.
-                </Paragraph2>
+                </Paragraph>
                 <img
                     src={Hifi}
                     style={{
@@ -519,7 +520,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             Lessons Learned
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -527,7 +528,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
                             (the "d. school").
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                     <div>
                         <Heading2
@@ -539,7 +540,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             Next Steps
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -547,7 +548,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
                             (the "d. school").
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
