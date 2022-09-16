@@ -32,29 +32,32 @@ const Project = ({
     `;
 
     return (
-        <Link to={`/${url}`}>
-            <Project>
-                <Midi style={{ marginTop: 0, marginBottom: 40 }}>
-                    <Heading
-                        style={{
-                            textAlign: 'left',
-                            fontSize: 60,
-                            marginLeft: 0,
-                            marginRight: 0,
-                            width: 'fit-content',
-                            maxWidth: 1000,
-                        }}
-                    >
-                        {name}
-                    </Heading>
+        <Project>
+            <Midi style={{ marginTop: 0, marginBottom: 40 }}>
+                <Heading
+                    style={{
+                        textAlign: 'left',
+                        fontSize: 60,
+                        marginLeft: 0,
+                        marginRight: 0,
+                        width: 'fit-content',
+                        maxWidth: 1000,
+                    }}
+                    onMouseDown={(e) => {
+                        e.preventDefault();
+                    }}
+                >
+                    <Link to={`/${url}`}>{name}</Link>
+                </Heading>
 
-                    <Paragraph style={{ maxWidth: 650, marginTop: 20 }}>
-                        {description}
-                    </Paragraph>
-                </Midi>
+                <Paragraph style={{ maxWidth: 650, marginTop: 20 }}>
+                    {description}
+                </Paragraph>
+            </Midi>
+            <Link to={`/${url}`} tabIndex='-1'>
                 <ImageProj />
-            </Project>
-        </Link>
+            </Link>
+        </Project>
     );
 };
 

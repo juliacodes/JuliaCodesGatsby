@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
     z-index: 99;
     position:relative;
   }
+
+
+  *:focus {outline: ${({ theme }) => theme.outline}; outline-offset: 3px;}
+
   html {
     display: flex;
     min-height: 100%;
@@ -38,7 +42,6 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
-    font-family:  'Spectral';
     font-weight: 200;
   }
 
@@ -52,7 +55,8 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     
     ${Heading}{
-     border-bottom: 3px solid black;
+      border-bottom: 2px solid;
+      border-bottom-color: ${({ theme }) => theme.textMain};
     }
   }
 `;

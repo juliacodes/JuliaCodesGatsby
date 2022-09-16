@@ -3,9 +3,10 @@ import { NavCont } from './styles';
 import { Midi } from '../../theming/styles';
 import { Logo } from '../logo';
 import { Switch } from '../switch';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Nav = ({ toggleMode, mode, spread }) => {
+    const navigate = useNavigate();
     return (
         <Midi
             style={{
@@ -16,8 +17,19 @@ const Nav = ({ toggleMode, mode, spread }) => {
                 style={{
                     mixBlendMode: 'difference',
                 }}
+                onMouseDown={(e) => {
+                    e.preventDefault();
+                }}
             >
-                <Link to='/'>
+                <Link
+                    to='/'
+                    aria-current='page'
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            navigate(`/`);
+                        }
+                    }}
+                >
                     <Logo
                         style={{
                             position: 'relative',
