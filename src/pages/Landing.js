@@ -42,6 +42,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
             style={{
                 position: 'relative',
                 overflow: setDisableScroll ? 'hidden' : 'null',
+                paddingRight: setDisableScroll ? '15px' : 'unset',
                 height: setDisableScroll ? '100vh' : 'unset',
             }}
         >
