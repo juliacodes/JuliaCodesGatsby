@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/spartan": "^4.5.8",
+    "@fontsource/spectral": "^4.5.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",

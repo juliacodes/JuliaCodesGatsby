@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDarkMode } from './hooks';
 import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from './theming/themeContext';
 import GlobalStyles from './theming/global';
-import { AppWrapper, Landing, Movie } from './pages';
+import { AppWrapper, DevopsPage, Landing, Movie, VulnPage } from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -35,6 +35,30 @@ const App = () => {
                         element={
                             <AppWrapper>
                                 <Movie
+                                    spread={spread}
+                                    mode={mode}
+                                    toggleMode={toggleMode}
+                                />
+                            </AppWrapper>
+                        }
+                    />
+                    <Route
+                        path='/vuln'
+                        element={
+                            <AppWrapper>
+                                <VulnPage
+                                    spread={spread}
+                                    mode={mode}
+                                    toggleMode={toggleMode}
+                                />
+                            </AppWrapper>
+                        }
+                    />
+                    <Route
+                        path='/devops'
+                        element={
+                            <AppWrapper>
+                                <DevopsPage
                                     spread={spread}
                                     mode={mode}
                                     toggleMode={toggleMode}

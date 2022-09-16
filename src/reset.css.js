@@ -1,19 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-@import url('./Fontspring-DEMO-tt_ramillas_extralight_italic.otf');
-@import url('./Fontspring-DEMO-tt_ramillas_light_italic.otf');
-@import url('./Fontspring-DEMO-tt_ramillas_light.otf');
-@import url('./Fontspring-DEMO-tt_ramillas_medium.otf');
-@import url('./Fontspring-DEMO-tt_ramillas_extralight_italic.otf');
-@import url("@fontsource/spartan"); //
-
-
-
-/* @font-face {
-    font-family: FONTSPRING DEMO - TT Ramillas Light;
-    src: url("./Fontspring-DEMO-tt_ramillas_extralight_italic.otf") format("opentype");
-} */
 
     * {
     border: 0;
@@ -43,7 +30,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Montserrat';
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
