@@ -9,9 +9,9 @@ const QUERIES = {
 };
 
 export const Heading = styled.h1`
+    font-family: 'Spectral', serif;
     font-size: 50px;
-    line-height: 49px;
-    font-weight: 500;
+    line-height: 9px;
     margin: 0 auto;
     width: 100%;
     color: ${({ theme }) => theme.textMain};
@@ -19,7 +19,7 @@ export const Heading = styled.h1`
     border-bottom: 3px solid transparent;
     user-select: none;
     opacity: 0;
-    letter-spacing: -5%;
+    letter-spacing: -3px;
     max-width: 700px;
     text-align: center;
     animation: ${fadeIn} 1s forwards;
@@ -27,18 +27,19 @@ export const Heading = styled.h1`
     @media (${QUERIES.large}) {
         font-size: 82px;
         line-height: 82px;
+        font-weight: 200;
     }
 `;
 
 export const Heading2 = styled.h1`
     font-size: 50px;
     line-height: 50px;
-    font-weight: 100;
+    font-weight: 200;
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
     border-bottom: 3px solid transparent;
     opacity: 0;
-    letter-spacing: -5%;
+    letter-spacing: -1px;
     animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
@@ -52,7 +53,7 @@ export const Paragraph = styled.p`
     font-weight: 400;
     letter-spacing: -3%;
     line-height: 37.2px;
-    color: ${({ theme }) => theme.textMain};
+    color: ${({ theme }) => theme.textLight};
 
     @media (${QUERIES.large}) {
         font-size: 19px;
