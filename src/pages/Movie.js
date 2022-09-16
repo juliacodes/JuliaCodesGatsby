@@ -81,7 +81,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             style={{
                                 fontSize: 25,
                                 lineHeight: '30px',
-                                fontWeight: 600,
+                                fontWeight: 300,
                                 mixBlendMode: 'difference',
                                 color: 'white',
                             }}
@@ -103,7 +103,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             style={{
                                 fontSize: 25,
                                 lineHeight: '30px',
-                                fontWeight: 600,
+                                fontWeight: 300,
                                 mixBlendMode: 'difference',
                                 color: 'white',
                             }}
@@ -223,7 +223,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             style={{
                                 fontSize: 25,
                                 lineHeight: '30px',
-                                fontWeight: 600,
+                                fontWeight: 300,
                             }}
                         >
                             Design Process
@@ -243,7 +243,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             style={{
                                 fontSize: 25,
                                 lineHeight: '30px',
-                                fontWeight: 600,
+                                fontWeight: 300,
                             }}
                         >
                             My Role
@@ -263,7 +263,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             style={{
                                 fontSize: 25,
                                 lineHeight: '30px',
-                                fontWeight: 600,
+                                fontWeight: 300,
                             }}
                         >
                             My Role
@@ -514,7 +514,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             style={{
                                 fontSize: 25,
                                 lineHeight: '30px',
-                                fontWeight: 600,
+                                fontWeight: 300,
                             }}
                         >
                             Lessons Learned
@@ -534,7 +534,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             style={{
                                 fontSize: 25,
                                 lineHeight: '30px',
-                                fontWeight: 600,
+                                fontWeight: 300,
                             }}
                         >
                             Next Steps

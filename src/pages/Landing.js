@@ -48,7 +48,7 @@ const Landing = ({ toggleMode, mode, spread }) => {
                         color: 'white',
                     }}
                 >
-                    <span style={{ fontWeight: 600 }}>UX Engineer</span>{' '}
+                    <span style={{ fontWeight: 300 }}>UX Engineer</span>{' '}
                     crafting beautiful
                     <span style={{ fontStyle: 'italic' }}> digital</span> user
                     experiences
@@ -61,7 +61,7 @@ const Landing = ({ toggleMode, mode, spread }) => {
                 <Split>
                     <Heading style={{ textAlign: 'left', marginLeft: 0 }}>
                         Engineer <br /> Turned <br />{' '}
-                        <span style={{ fontWeight: 600 }}>Designer.</span>
+                        <span style={{ fontWeight: 300 }}>Designer.</span>
                     </Heading>
                     <Paragraph>
                         UX Engineering sits at the intersection between my two

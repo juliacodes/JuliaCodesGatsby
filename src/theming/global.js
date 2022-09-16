@@ -26,10 +26,8 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    -webkit-font-smoothing: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-weight: 600;
-    font-style: normal;
   }
 
   body {
@@ -40,9 +38,8 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
-    font-family: 'FONTSPRING DEMO - TT Ramillas ExtraLight';
-    /* font-weight: 100; */
-    font-style: normal;
+    font-family:  'Spectral';
+    font-weight: 200;
   }
 
   a {
