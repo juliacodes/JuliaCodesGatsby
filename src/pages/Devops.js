@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import QUERIES, {
     Main,
     Midi,
@@ -8,12 +8,12 @@ import QUERIES, {
     Paragraph,
 } from '../theming/styles';
 import styled from 'styled-components';
-import { Nav, Foot } from '../components';
+import { Nav, Foot, Lock } from '../components';
 import { Spread } from '../components/switch/styles';
 import {
     Change1,
     Hifi,
-    Lofi,
+    Devops,
     Person1,
     Person2,
     JourneyMap,
@@ -42,7 +42,8 @@ const FlexGroup = styled.div`
     }
 `;
 
-const Devops = ({ toggleMode, mode, spread }) => {
+const DevopsPage = ({ toggleMode, mode, spread }) => {
+    const [isLocked, setIsLocked] = useState(true);
     const spreadClass =
         spread === 'first'
             ? 'growBlack'
@@ -51,7 +52,14 @@ const Devops = ({ toggleMode, mode, spread }) => {
             : '';
 
     return (
-        <Main style={{ position: 'relative' }}>
+        <Main
+            style={{
+                position: 'relative',
+                overflow: isLocked ? 'hidden' : 'null',
+                height: isLocked ? '100vh' : 'unset',
+            }}
+        >
+            <Lock isLocked={isLocked} setIsLocked={setIsLocked} />
             <Spread className={spreadClass} />
             <Nav mode={mode} toggleMode={toggleMode} />
             <Midi style={{ marginBottom: 100, mixBlendMode: 'difference' }}>
@@ -62,7 +70,7 @@ const Devops = ({ toggleMode, mode, spread }) => {
                         color: 'white',
                     }}
                 >
-                    IES DevOps Dashboard
+                    DevOps Dashboard
                 </Heading2>
                 <Paragraph2
                     style={{
@@ -125,7 +133,7 @@ const Devops = ({ toggleMode, mode, spread }) => {
             </Midi>
             <Full>
                 <img
-                    src={Lofi}
+                    src={Devops}
                     style={{ width: '100%' }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />
@@ -557,4 +565,4 @@ const Devops = ({ toggleMode, mode, spread }) => {
     );
 };
 
-export { Devops };
+export { DevopsPage };
