@@ -101,11 +101,13 @@ const Landing = ({ toggleMode, mode, spread }) => {
                 <Project
                     name='IBM, Vulnerability Manager'
                     image={Vuln}
+                    url='vuln'
                     description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
                 />
                 <Project
                     name='IBM, DevOps Dashboard'
                     image={Devops}
+                    url='devops'
                     description='Enabling developers to track and manage their deployments'
                 />
             </Full>

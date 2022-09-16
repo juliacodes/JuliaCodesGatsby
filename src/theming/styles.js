@@ -11,7 +11,7 @@ const QUERIES = {
 export const Heading = styled.h1`
     font-family: 'Spectral', serif;
     font-size: 50px;
-    line-height: 9px;
+    line-height: 55px;
     margin: 0 auto;
     width: 100%;
     color: ${({ theme }) => theme.textMain};
@@ -53,7 +53,9 @@ export const Paragraph = styled.p`
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
-    line-height: 37.2px;
+    line-height: 38.2px;
+    font-size: 25px;
+
     color: ${({ theme }) => theme.textLight};
 
     @media (${QUERIES.large}) {
@@ -65,8 +67,10 @@ export const Paragraph2 = styled.p`
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
-    line-height: 36.55px;
+    line-height: 38.2px;
+    font-size: 25px;
     color: #b7b7b7;
+
     @media (${QUERIES.large}) {
         font-size: 23px;
         margin: 30px 0;
