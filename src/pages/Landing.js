@@ -29,7 +29,7 @@ const Split = styled.div`
     }
 `;
 
-const Landing = ({ toggleMode, mode, spread }) => {
+const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
     const spreadClass =
         spread === 'first'
             ? 'growBlack'
@@ -38,7 +38,13 @@ const Landing = ({ toggleMode, mode, spread }) => {
             : '';
 
     return (
-        <Main style={{ position: 'relative' }}>
+        <Main
+            style={{
+                position: 'relative',
+                overflow: setDisableScroll ? 'hidden' : 'null',
+                height: setDisableScroll ? '100vh' : 'unset',
+            }}
+        >
             <Spread className={spreadClass} />
             <Nav mode={mode} toggleMode={toggleMode} />
             <Midi style={{ mixBlendMode: 'difference' }}>
