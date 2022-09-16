@@ -22,6 +22,7 @@ export const darkTheme = {
     textMain: '#FFFFFF',
     grayText: '#ACACAC',
     formGray: '#3E3D43',
+    textLight: '#B7B7B7',
     togglerFill: '#34313D',
     outline: 'blue solid 2px',
     cover: 'rgba(13, 13, 13, 0.69)',

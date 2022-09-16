@@ -27,6 +27,7 @@ import {
     Synth,
     Change3,
     Change2,
+    Vuln,
 } from '../images';
 
 const FlexGroup = styled.div`
@@ -42,7 +43,7 @@ const FlexGroup = styled.div`
     }
 `;
 
-const Vuln = ({ toggleMode, mode, spread }) => {
+const VulnPage = ({ toggleMode, mode, spread }) => {
     const [isLocked, setIsLocked] = useState(true);
     const spreadClass =
         spread === 'first'
@@ -133,7 +134,7 @@ const Vuln = ({ toggleMode, mode, spread }) => {
             </Midi>
             <Full>
                 <img
-                    src={Lofi}
+                    src={Vuln}
                     style={{ width: '100%' }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />
@@ -565,4 +566,4 @@ const Vuln = ({ toggleMode, mode, spread }) => {
     );
 };
 
-export { Vuln };
+export { VulnPage };

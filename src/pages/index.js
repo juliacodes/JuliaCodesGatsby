@@ -1,7 +1,7 @@
 import { Landing } from './Landing';
 import { Movie } from './Movie';
 import { AppWrapper } from './AppWrapper';
-import { Vuln } from './Vuln';
-import { Devops } from './Devops';
+import { VulnPage } from './Vuln';
+import { DevopsPage } from './Devops';
 
-export { Landing, Movie, AppWrapper, Vuln, Devops };
+export { Landing, Movie, AppWrapper, VulnPage, DevopsPage };

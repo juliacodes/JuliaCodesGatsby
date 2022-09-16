@@ -69,12 +69,16 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Decore is a project I built alongside Ian Trent, for a class
-                    project. We decided to create a react web application that
-                    would help other developers get started with their web
-                    projects. Decore allows users to customize a layout setup
-                    that will generate custom html and css code that can be used
-                    as a starter template for any website.{' '}
+                    Throughout my life I've been to the movie theater countless
+                    times. Originally, the only option to buy tickets was in
+                    person at the ticket stand, but with the popularity of the
+                    internet and mobile phones, purchasing tickets online has
+                    enabled all of us to have even more control over our movie
+                    theater experience, including selecting our seats. <br />
+                    <br /> I've found a lot of these seat selection applications
+                    extremely unintuitive and frustrating to use, so I wanted to
+                    do a full case study to identify common pain points, and
+                    address potential solutions.
                 </Paragraph2>
                 <FlexGroup>
                     <div>
@@ -96,7 +100,6 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
-                            (the "d. school").
                         </Paragraph2>
                     </div>
                     <div>
@@ -116,9 +119,10 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 maxWidth: 700,
                             }}
                         >
-                            I used a 5-stage Design Thinking model proposed by
-                            the Hasso Plattner Institute of Design at Stanford
-                            (the "d. school").
+                            As the sole designer, I was able to work on all
+                            stages of the design including: User Research,
+                            Sketching, Journey Maps, Lo and High Fidelity
+                            Designs
                         </Paragraph2>
                     </div>
                 </FlexGroup>
@@ -132,18 +136,16 @@ const Movie = ({ toggleMode, mode, spread }) => {
             </Full>
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    User Research
+                    User Personas
                 </Heading2>
                 <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    To ensure inclusivity and edge case users, I created a
+                    handful of user personas to represent many of the different
+                    user groups that this app will be targeting{' '}
                 </Paragraph>
             </Midi>
             <Full>
@@ -155,7 +157,6 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    {' '}
                     <img
                         src={Person1}
                         style={{
@@ -185,11 +186,11 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    Each of the user personas were then taken through the
+                    existing user experience journey within many of the popular
+                    movie theater applications found today. This helped to begin
+                    establishing pain points and better empathize with users at
+                    each step of the application.
                 </Paragraph>
                 <img
                     src={JourneyMap}
@@ -211,11 +212,10 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    Following the creation of user journey maps and
+                    storyboarding a handful of pain points were established a
+                    select few were chosen to be the primary focus due to their
+                    high feasibility and importance
                 </Paragraph>
 
                 <FlexGroup>
@@ -227,16 +227,18 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 fontWeight: 300,
                             }}
                         >
-                            Design Process
+                            Just Browsing
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            I used a 5-stage Design Thinking model proposed by
-                            the Hasso Plattner Institute of Design at Stanford
-                            (the "d. school").
+                            Many users are in the mood to see a movie on a
+                            particular day, but aren't sure which movie they
+                            want to see. This makes many of the flows
+                            frustrating, as users can't see the availability of
+                            a theater until after they select a movie.
                         </Paragraph>
                     </div>
                     <div>
@@ -247,16 +249,42 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 fontWeight: 300,
                             }}
                         >
-                            My Role
+                            Good Seats
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            I used a 5-stage Design Thinking model proposed by
-                            the Hasso Plattner Institute of Design at Stanford
-                            (the "d. school").
+                            Many theaters will advertise having seats available
+                            for a showing, but they include the front row seats,
+                            which a large majority of viewers avoid. This leaves
+                            users feeling mislead.
+                        </Paragraph>
+                    </div>
+                </FlexGroup>
+                <FlexGroup>
+                    <div>
+                        <Heading2
+                            style={{
+                                fontSize: 25,
+                                lineHeight: '30px',
+                                fontWeight: 300,
+                            }}
+                        >
+                            Large Groups
+                        </Heading2>
+                        <Paragraph
+                            style={{
+                                maxWidth: 700,
+                            }}
+                        >
+                            I found that every application handled groups
+                            differently. Some apps made assumptions about the
+                            needs of the user by forcing all of the seats to be
+                            in a row together. Other apps ignored the grouping
+                            of users, and as a result, users were given showings
+                            that wouldn't work for their large group
                         </Paragraph>
                     </div>
                     <div>
@@ -267,16 +295,19 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 fontWeight: 300,
                             }}
                         >
-                            My Role
+                            Accessibility
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            I used a 5-stage Design Thinking model proposed by
-                            the Hasso Plattner Institute of Design at Stanford
-                            (the "d. school").
+                            A large amount of information necessary for those
+                            with disabilities is often not included on these
+                            apps and requires a phone call. Information such as,
+                            elevator locations, accessible seating, availability
+                            of assistive listening devices, sign language
+                            interpreters, etc.
                         </Paragraph>
                     </div>
                 </FlexGroup>
@@ -291,11 +322,11 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    To begin addressing these pain points, I created 6 digital
+                    sketches for each of the main screens that would be
+                    necessary: Landing page, movie details, and seat selection.
+                    These sketches helped me come up with ideas for flows as
+                    well as create a logical informational hierarchy.
                 </Paragraph>
             </Midi>
             <Full>
@@ -356,11 +387,9 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    Once my low fidelity wireframes were complete, I created
+                    additional screens to handle scroll events, filters, and
+                    searching so that I had a fully clickable prototype.
                 </Paragraph>
                 <img
                     src={UserFlow}
@@ -381,12 +410,95 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    We’re looking to determine whether the main user flows that
+                    enable selecting a movie, date, time slot and seat are easy
+                    for users to complete. We’re also looking to identify
+                    pain-points and challenges that could be impacting user
+                    retention and drop-off.{' '}
                 </Paragraph>
+                <FlexGroup>
+                    <div>
+                        <Heading2
+                            style={{
+                                fontSize: 25,
+                                lineHeight: '30px',
+                                fontWeight: 300,
+                            }}
+                        >
+                            Research Questions
+                        </Heading2>
+                        <Paragraph>
+                            - Are there areas in the flow where users get stuck?
+                        </Paragraph>
+                        <Paragraph>
+                            - Do users find the application easy or difficult to
+                            use?
+                        </Paragraph>
+                        <Paragraph>
+                            - Are there features that the user seems to think
+                            are missing?
+                        </Paragraph>
+                        <Paragraph>
+                            - What are the stopping points in the application?
+                        </Paragraph>
+                    </div>
+                </FlexGroup>
+                <FlexGroup>
+                    <div>
+                        <Heading2
+                            style={{
+                                fontSize: 25,
+                                lineHeight: '30px',
+                                fontWeight: 300,
+                            }}
+                        >
+                            Participants Must
+                        </Heading2>
+                        <Paragraph>
+                            - Have an awareness of movie theater ticket
+                            applications
+                        </Paragraph>
+                        <Paragraph>
+                            - Be somewhat tech literate (has used a smartphone
+                            before)
+                        </Paragraph>
+                        <Paragraph>
+                            - Two males, two females, and one nonbinary between
+                            the ages of 18 and 70
+                        </Paragraph>
+                        <Paragraph>
+                            - One user who requires as assitive device (screen
+                            reader, etc)
+                        </Paragraph>
+                    </div>
+                </FlexGroup>
+                <FlexGroup>
+                    <div>
+                        <Heading2
+                            style={{
+                                fontSize: 25,
+                                lineHeight: '30px',
+                                fontWeight: 300,
+                            }}
+                        >
+                            Methodology
+                        </Heading2>
+                        <Paragraph>Unmoderated usability study</Paragraph>
+                        <Paragraph>
+                            <span style={{ fontWeight: 400 }}>Location: </span>
+                            United States, Remote
+                        </Paragraph>
+                        <Paragraph>
+                            <span style={{ fontWeight: 400 }}>Date: </span>{' '}
+                            Interviews will take place in the next few weeks
+                        </Paragraph>
+                        <Paragraph>
+                            <span style={{ fontWeight: 400 }}>Length: </span>{' '}
+                            Sessions are not expected to last more than ~10
+                            minutes
+                        </Paragraph>
+                    </div>
+                </FlexGroup>
             </Midi>
             <Full>
                 <div
@@ -427,11 +539,9 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    Comments, Questions and Answers were added as sticky notes
+                    and then categorized to establish common themes and
+                    recognize patterns.
                 </Paragraph>
                 <img
                     src={Synth}
@@ -453,11 +563,18 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    From our research, we gathered that there were 3 primary
+                    pain points that were complicating the flow for users. The
+                    first related to filters, In general, the implementation of
+                    filters isn’t super clear as to what it does and when it
+                    needs to be used. Second, was the issue of
+                    traffic/busy-ness, Users care about how busy theaters are,
+                    and its taking too many clicks for them to get this
+                    information. And lastly, users were left in the dark with
+                    theater selection, and in many cases were unable to identify
+                    that they even had the option to change theaters. <br />
+                    <br />
+                    We made a series of changes to address these pain points:
                 </Paragraph>
                 <img
                     src={Change1}
@@ -494,11 +611,9 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque tempus, arcu volutpat ut amet. Ac quam sed
-                    lacus non in donec. Porttitor iaculis suspendisse malesuada
-                    commodo, massa non luctus. Id pharetra augue sed egestas ut
-                    nunc.
+                    Finally, after spending some time finding and establishing a
+                    visual style for the application, I created the final high
+                    fidelity designs.
                 </Paragraph>
                 <img
                     src={Hifi}
@@ -525,9 +640,13 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 maxWidth: 700,
                             }}
                         >
-                            I used a 5-stage Design Thinking model proposed by
-                            the Hasso Plattner Institute of Design at Stanford
-                            (the "d. school").
+                            This case study really helped me solidify the
+                            importance of user testing at the low fidelity
+                            stage. I got so caught up solving the original pain
+                            points that were found that I ended up creating new
+                            ones! User testing helped me take a step back and
+                            readdress the overall goal of the application and
+                            helped to identify many new paints points as well.
                         </Paragraph>
                     </div>
                     <div>
@@ -545,9 +664,12 @@ const Movie = ({ toggleMode, mode, spread }) => {
                                 maxWidth: 700,
                             }}
                         >
-                            I used a 5-stage Design Thinking model proposed by
-                            the Hasso Plattner Institute of Design at Stanford
-                            (the "d. school").
+                            If I were to continue building out and improving
+                            this project, I would do another round of usability
+                            testing to ensure that the original paint points
+                            were accurately addressed. Once solidified, I would
+                            create a site map and design guide to help
+                            developers transition my designs into code.
                         </Paragraph>
                     </div>
                 </FlexGroup>
