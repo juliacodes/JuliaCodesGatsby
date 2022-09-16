@@ -7,7 +7,13 @@ import { AppWrapper, DevopsPage, Landing, Movie, VulnPage } from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-    const [mode, toggleMode, spread, componentMounted] = useDarkMode();
+    const [
+        mode,
+        toggleMode,
+        spread,
+        componentMounted,
+        setDisableScroll,
+    ] = useDarkMode();
     if (!componentMounted) {
         return <div />;
     }
@@ -23,6 +29,7 @@ const App = () => {
                         element={
                             <AppWrapper>
                                 <Landing
+                                    setDisableScroll={setDisableScroll}
                                     spread={spread}
                                     mode={mode}
                                     toggleMode={toggleMode}
