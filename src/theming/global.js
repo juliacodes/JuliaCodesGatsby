@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
     z-index: 99;
     position:relative;
   }
+
+
+  *:focus {outline: ${({ theme }) => theme.outline}; outline-offset: 3px;}
+
   html {
     display: flex;
     min-height: 100%;
@@ -26,10 +30,8 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    -webkit-font-smoothing: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-weight: 600;
-    font-style: normal;
   }
 
   body {
@@ -40,9 +42,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
-    font-family: 'FONTSPRING DEMO - TT Ramillas ExtraLight';
-    /* font-weight: 100; */
-    font-style: normal;
+    font-weight: 200;
   }
 
   a {
@@ -55,7 +55,8 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     
     ${Heading}{
-     border-bottom: 3px solid black;
+      border-bottom: 2px solid;
+      border-bottom-color: ${({ theme }) => theme.textMain};
     }
   }
 `;

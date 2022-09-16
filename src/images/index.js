@@ -2,6 +2,10 @@ import Awk1 from '../images/Awkward1.jpg';
 import Movie from '../images/movie.png';
 import Vuln from '../images/vuln.png';
 import Devops from '../images/devops.png';
+import Error from '../images/error.svg';
+import Send from '../images/send.svg';
+import Lock from '../images/lock.svg';
+
 import {
     Change1,
     Change2,
@@ -44,4 +48,7 @@ export {
     Sketch4,
     UserFlow,
     Synth,
+    Error,
+    Send,
+    Lock,
 };

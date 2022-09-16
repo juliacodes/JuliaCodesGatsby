@@ -27,19 +27,28 @@ const Foot = () => {
                                 />
                             </LogoSvg>
                         </Link>
-                        <Paragraph>
+                        <Paragraph style={{ fontWeight: 300 }}>
                             Designed and Built by Julia Johnson
                         </Paragraph>
                     </FinalLeft>
                     <FinalRight>
                         <a href='https://github.com/juliacodes'>
-                            <Paragraph>GitHub</Paragraph>
+                            <Paragraph style={{ fontWeight: 300 }}>
+                                GitHub
+                            </Paragraph>
                         </a>
-                        <a href='https://github.com/juliacodes'>
-                            <Paragraph>LinkedIn</Paragraph>
+                        <a
+                            href='www.linkedin.com/in/juliacodes
+'
+                        >
+                            <Paragraph style={{ fontWeight: 300 }}>
+                                LinkedIn
+                            </Paragraph>
                         </a>
-                        <a href=''>
-                            <Paragraph>Email</Paragraph>
+                        <a href='mailto: julia@juliacodes.com'>
+                            <Paragraph style={{ fontWeight: 300 }}>
+                                Email
+                            </Paragraph>
                         </a>
                     </FinalRight>
                 </FootFinal>

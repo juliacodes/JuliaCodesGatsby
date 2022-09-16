@@ -3,7 +3,13 @@ import { SwitchBtn } from './styles';
 
 const Switch = ({ toggleMode, mode, spread }) => {
     return (
-        <SwitchBtn onClick={toggleMode}>
+        <SwitchBtn
+            onMouseDown={(e) => {
+                e.preventDefault();
+                toggleMode();
+            }}
+            onClick={toggleMode}
+        >
             {mode === 'light' ? (
                 <svg
                     width='14'

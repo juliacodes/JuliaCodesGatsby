@@ -72,7 +72,8 @@ export const FinalRight = styled(FinalLeft)`
         margin-left: 0;
         border-bottom: 1px solid transparent;
         :hover {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid;
+            border-bottom-color: ${({ theme }) => theme.textMain};
         }
     }
 
