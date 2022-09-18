@@ -83,7 +83,6 @@ export const Main = styled.main`
     background-color: ${({ theme }) => theme.main};
     overflow: hidden;
     @media (${QUERIES.large}) {
-        padding: 30px;
         padding-right: ${(props) => props.paddingRight};
     }
 
