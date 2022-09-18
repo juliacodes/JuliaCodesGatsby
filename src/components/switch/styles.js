@@ -18,6 +18,7 @@ export const SwitchBtn = styled.button`
     position: relative;
     z-index: -1;
     width: 45px;
+    margin-top: -10px;
     height: 45px;
     border-radius: 100px;
     transform: scale(0.7);
@@ -31,5 +32,6 @@ export const SwitchBtn = styled.button`
     }
     @media (${QUERIES.large}) {
         transform: scale(1);
+        margin-top: 0px;
     }
 `;

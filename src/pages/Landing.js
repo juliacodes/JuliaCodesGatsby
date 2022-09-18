@@ -39,10 +39,10 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
 
     return (
         <Main
+            paddingRight={setDisableScroll ? '15px' : 'unset'}
             style={{
                 position: 'relative',
                 overflow: setDisableScroll ? 'hidden' : 'null',
-                paddingRight: setDisableScroll ? '15px' : 'unset',
                 height: setDisableScroll ? '100vh' : 'unset',
             }}
         >

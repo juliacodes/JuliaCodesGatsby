@@ -82,6 +82,10 @@ export const Main = styled.main`
     height: 100%;
     background-color: ${({ theme }) => theme.main};
     overflow: hidden;
+    @media (${QUERIES.large}) {
+        padding: 30px;
+        padding-right: ${(props) => props.paddingRight};
+    }
 
     > .growBlack {
         animation: ${SpreadBlackAnim} 2s forwards;
