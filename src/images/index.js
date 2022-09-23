@@ -5,6 +5,17 @@ import Devops from '../images/devops.png';
 import Error from '../images/error.svg';
 import Send from '../images/send.svg';
 import Lock from '../images/lock.svg';
+import {
+    Log4j1,
+    Log4j2,
+    Vulnpersona1,
+    Vulnpersona2,
+    VulnJourney,
+    VulnWire1,
+    VulnWire2,
+    Onboarding,
+    VulnHifi,
+} from './vulns';
 
 import {
     Change1,
@@ -51,4 +62,13 @@ export {
     Error,
     Send,
     Lock,
+    Log4j1,
+    Log4j2,
+    Vulnpersona1,
+    Vulnpersona2,
+    VulnJourney,
+    VulnWire1,
+    VulnWire2,
+    Onboarding,
+    VulnHifi,
 };
