@@ -143,13 +143,14 @@ export const SpreadWhiteAnim = keyframes`
 `;
 
 export const TypeAnimation = keyframes`
-    from {
-        height: 5px;
-        border-radius: 20px;
+    0% {
+      height: 5px;
+      border-radius: 20px;
     }
 
-    to {
-        height: 30px;
-        border-radius: 100%;
+    100% {
+      height: 30px;
+      border-radius: 100%;
     }
+
 `;

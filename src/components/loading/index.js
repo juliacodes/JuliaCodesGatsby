@@ -19,12 +19,12 @@ const Container = styled.div`
 `;
 
 const Circle = styled.div`
-  height: 30px;
+  height: 5px;
   width: 30px;
   background-color: black;
-  border-radius: 100%;
+  border-radius: 20px;
   margin: 0 5px;
-  animation: ${TypeAnimation} 0.5s ${(p) => p.delay}
+  animation: ${TypeAnimation} 1s ${(p) => p.delay}
     cubic-bezier(0.075, 0.82, 0.165, 1);
 `;
 

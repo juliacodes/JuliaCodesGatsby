@@ -8,7 +8,7 @@ const AppWrapper = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       setAnimated(true);
-    }, 1000);
+    }, 1300);
   });
 
   function ScrollToTop() {
