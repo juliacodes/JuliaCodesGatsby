@@ -1,3 +1,5 @@
+# macOS Configuration files
+*.DS_Store
 
 packages/*/yarn.lock
 
