@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from "styled-components";
 
 export const fadeIn = keyframes`
   from {
@@ -140,4 +140,16 @@ export const SpreadWhiteAnim = keyframes`
     top: calc(-250vmax + 3rem);
     right: calc(-250vmax + 3rem);
   }
+`;
+
+export const TypeAnimation = keyframes`
+    from {
+        height: 5px;
+        border-radius: 20px;
+    }
+
+    to {
+        height: 30px;
+        border-radius: 100%;
+    }
 `;

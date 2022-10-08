@@ -1,23 +1,32 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import Loading from "../components/loading";
 
 const AppWrapper = ({ children }) => {
-    function ScrollToTop() {
-        const { pathname } = useLocation();
+  const [animated, setAnimated] = useState(false);
 
-        useEffect(() => {
-            window.scrollTo(0, 0);
-        }, [pathname]);
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimated(true);
+    }, 1000);
+  });
 
-        return null;
-    }
+  function ScrollToTop() {
+    const { pathname } = useLocation();
 
-    return (
-        <>
-            <ScrollToTop />
-            {children}
-        </>
-    );
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  }
+
+  return (
+    <>
+      <ScrollToTop />
+      {animated ? children : <Loading />}
+    </>
+  );
 };
 
 export { AppWrapper };
