@@ -38,7 +38,7 @@ const Foot = () => {
                             </Paragraph>
                         </a>
                         <a
-                            href='www.linkedin.com/in/juliacodes
+                            href='https://www.linkedin.com/in/juliacodes
 '
                         >
                             <Paragraph style={{ fontWeight: 300 }}>
