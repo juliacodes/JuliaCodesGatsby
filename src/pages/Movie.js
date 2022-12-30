@@ -121,7 +121,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             As the sole designer, I was able to work on all
                             stages of the design including: User Research,
-                            Sketching, Journey Maps, Lo and High Fidelity
+                            Sketching, Journey Maps, Low and High Fidelity
                             Designs
                         </Paragraph2>
                     </div>

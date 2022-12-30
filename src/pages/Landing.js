@@ -10,7 +10,7 @@ import QUERIES, {
 import styled from 'styled-components';
 import { Nav, Foot, Project } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Awk1, Vuln, Devops } from '../images';
+import { Awk1, Vuln, Devops, EA1 } from '../images';
 
 const Split = styled.div`
     display: flex;
@@ -71,27 +71,18 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     </Heading>
                     <Paragraph>
                         UX Engineering sits at the intersection between my two
-                        backgrounds:{' '}
-                        <span style={{ fontWeight: 600 }}>UX Design</span> and{' '}
-                        <span style={{ fontWeight: 600 }}>
-                            Front End Engineering
-                        </span>
-                        . As I gained experience as a frontend developer, I
-                        realized that advocating for users through an
-                        understanding of human perspectives and user research
-                        was crucial for the success of any application. My dual
-                        knowledge of design and development allows me to
-                        understand{' '}
-                        <span style={{ fontWeight: 600 }}>user needs</span> as
-                        well as the{' '}
-                        <span style={{ fontWeight: 600 }}>
-                            technical needs{' '}
-                        </span>
-                        of any project . <br />
-                        <br /> I’m currently working as a UX Engineer at{' '}
-                        <span style={{ fontWeight: 600 }}>IBM</span> on the CIO
-                        team. I graduated with a degree in Web Development and
-                        Design from Purdue University.
+                        backgrounds: <span>UX Design</span> and Front End
+                        Engineering. As I gained experience as a frontend
+                        developer, I realized that advocating for users through
+                        an understanding of human perspectives and user research
+                        was crucial for the success of any application. <br />{' '}
+                        <br />
+                        My dual knowledge of design and development allows me to
+                        understand user needs as well as the technical needs of
+                        any project
+                        <br /> I’m currently working as a UX Engineer at IBM on
+                        the CIO team. I graduated with a degree in Web
+                        Development and Design from Purdue University.
                     </Paragraph>
                 </Split>
             </Midi>
@@ -110,6 +101,12 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     url='vuln'
                     description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
                 />
+                {/* <Project
+                    name='EA1 Vehicle Service'
+                    image={EA1}
+                    url='ea1'
+                    description='Freelance design work done for a client who wanted to create the Uber for car repair and servicing'
+                /> */}
                 {/* <Project
                     name='IBM, DevOps Dashboard'
                     image={Devops}

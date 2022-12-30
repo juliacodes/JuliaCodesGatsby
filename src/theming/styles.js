@@ -35,7 +35,7 @@ export const Heading2 = styled.h1`
     font-family: 'Spectral', serif;
     font-size: 50px;
     line-height: 50px;
-    font-weight: 200;
+    font-weight: 300;
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
     border-bottom: 3px solid transparent;
@@ -53,13 +53,13 @@ export const Paragraph = styled.p`
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
-    line-height: 38.2px;
-    font-size: 25px;
+    line-height: auto;
+    font-size: 20px;
 
-    color: ${({ theme }) => theme.textLight};
+    color: ${({ theme }) => theme.textMain};
 
     @media (${QUERIES.large}) {
-        font-size: 23px;
+        font-size: 24px;
     }
 `;
 
@@ -67,12 +67,12 @@ export const Paragraph2 = styled.p`
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
-    line-height: 38.2px;
-    font-size: 25px;
+    line-height: auto;
+    font-size: 20px;
     color: #b7b7b7;
 
     @media (${QUERIES.large}) {
-        font-size: 23px;
+        font-size: 24px;
         margin: 30px 0;
     }
 `;
