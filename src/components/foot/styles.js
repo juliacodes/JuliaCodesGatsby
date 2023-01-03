@@ -26,7 +26,7 @@ export const FootCont = styled.footer`
         font-size: 15px;
         max-width: 700px;
         @media (${QUERIES.large}) {
-            font-size: 20px;
+            font-size: 25px;
         }
     }
 `;
@@ -51,6 +51,7 @@ export const FootFinal = styled.div`
 
         @media (${QUERIES.large}) {
             margin-left: 50px;
+            font-size: 20px;
         }
     }
 `;
