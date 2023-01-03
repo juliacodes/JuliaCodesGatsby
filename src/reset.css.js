@@ -14,8 +14,8 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-appearance: none;
     -moz-appearance: none;
-    overflow: hidden;
   }
+
   html {
     display: flex;
     min-height: 100%;
@@ -34,7 +34,8 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; 
+    -ms-overflow-style: none;
   }
 
   a {

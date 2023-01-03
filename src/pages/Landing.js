@@ -10,7 +10,7 @@ import QUERIES, {
 import styled from 'styled-components';
 import { Nav, Foot, Project } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Awk1, Vuln, Devops } from '../images';
+import { Awk1, Vuln, Devops, EA1Image } from '../images';
 
 const Split = styled.div`
     display: flex;
@@ -66,32 +66,18 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
             <Midi>
                 <Split>
                     <Heading style={{ textAlign: 'left', marginLeft: 0 }}>
-                        Engineer <br /> Turned <br />{' '}
-                        <span style={{ fontWeight: 300 }}>Designer.</span>
+                        What's a UX Engineer?
                     </Heading>
                     <Paragraph>
-                        UX Engineering sits at the intersection between my two
-                        backgrounds:{' '}
-                        <span style={{ fontWeight: 600 }}>UX Design</span> and{' '}
-                        <span style={{ fontWeight: 600 }}>
-                            Front End Engineering
-                        </span>
-                        . As I gained experience as a frontend developer, I
-                        realized that advocating for users through an
-                        understanding of human perspectives and user research
-                        was crucial for the success of any application. My dual
-                        knowledge of design and development allows me to
-                        understand{' '}
-                        <span style={{ fontWeight: 600 }}>user needs</span> as
-                        well as the{' '}
-                        <span style={{ fontWeight: 600 }}>
-                            technical needs{' '}
-                        </span>
-                        of any project . <br />
-                        <br /> I’m currently working as a UX Engineer at{' '}
-                        <span style={{ fontWeight: 600 }}>IBM</span> on the CIO
-                        team. I graduated with a degree in Web Development and
-                        Design from Purdue University.
+                        As a UX Engineer, I have the design thinking and visual
+                        expertise of a designer, as well as the technical skills
+                        of a frontend software engineer. <br /> <br />
+                        This allows me to advocate for users and create powerful
+                        wireframes, storyboards, and prototypes while also
+                        understanding the technical limitations and challenges
+                        that engineers may face. I'm also able to code out
+                        prototypes and build component libraries with user needs
+                        and accessibility in mind
                     </Paragraph>
                 </Split>
             </Midi>
@@ -99,6 +85,12 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
             <Full
                 style={{ display: 'flex', flexDirection: 'column', gap: 160 }}
             >
+                {/* <Project
+                    name='EA1 Vehicle Service'
+                    image={EA1Image}
+                    url='ea1'
+                    description='Freelance design work done for a client who wanted to create the Uber for car repair and servicing'
+                /> */}
                 <Project
                     name='Movie Theater Case Study'
                     url='movie'
@@ -110,6 +102,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     url='vuln'
                     description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
                 />
+
                 {/* <Project
                     name='IBM, DevOps Dashboard'
                     image={Devops}

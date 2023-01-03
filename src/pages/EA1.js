@@ -13,7 +13,6 @@ import { Spread } from '../components/switch/styles';
 import {
     Change1,
     Hifi,
-    Lofi,
     Person1,
     Person2,
     JourneyMap,
@@ -27,6 +26,12 @@ import {
     Synth,
     Change3,
     Change2,
+    EA1Image,
+    user1,
+    user2,
+    user3,
+    user4,
+    competitive,
 } from '../images';
 
 const FlexGroup = styled.div`
@@ -38,17 +43,11 @@ const FlexGroup = styled.div`
 
     @media (${QUERIES.large}) {
         flex-wrap: nowrap;
-        gap: 100px;
+        gap: 50px;
     }
 `;
 
-const ImageGrow = styled.img`
-    :hover {
-        cursor: zoom-in;
-    }
-`;
-
-const Movie = ({ toggleMode, mode, spread }) => {
+const EA1 = ({ toggleMode, mode, spread }) => {
     const spreadClass =
         spread === 'first'
             ? 'growBlack'
@@ -68,7 +67,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         color: 'white',
                     }}
                 >
-                    Movie Theater Case Study
+                    EA1 Vehicle Service
                 </Heading2>
                 <Paragraph2
                     style={{
@@ -131,18 +130,32 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             Designs
                         </Paragraph2>
                     </div>
+                    <div>
+                        <Heading2
+                            style={{
+                                fontSize: 25,
+                                lineHeight: '30px',
+                                fontWeight: 300,
+                                mixBlendMode: 'difference',
+                                color: 'white',
+                            }}
+                        >
+                            Team
+                        </Heading2>
+                        <Paragraph2
+                            style={{
+                                maxWidth: 700,
+                            }}
+                        >
+                            I collaborated with an engineer and a business lead
+                            to help facilitate the needs of our client
+                        </Paragraph2>
+                    </div>
                 </FlexGroup>
             </Midi>
             <Full>
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/lofi.6dae2f3a4e881159278e.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
-                    src={Lofi}
+                <img
+                    src={EA1Image}
                     style={{ width: '100%' }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />
@@ -156,9 +169,12 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    To ensure inclusivity and edge case users, I created a
-                    handful of user personas to represent many of the different
-                    user groups that this app will be targeting{' '}
+                    To ensure inclusivity and edge case users, I created many
+                    user personas to represent all of the different user groups
+                    that this app will be targeting. A few of the key areas
+                    included were: diversity in age groups, potential
+                    disabilities, exposure to technology, experience with car
+                    engines, as well as distance from cities.
                 </Paragraph>
             </Midi>
             <Full>
@@ -170,15 +186,8 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/person1.93f376a9c081a38ef49d.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
-                        }}
-                        src={Person1}
+                    <img
+                        src={user1}
                         style={{
                             width: 'calc(50% - 50px)',
                             filter:
@@ -186,15 +195,35 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/persona2.c62139dce34223c5e9c9.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
+                    <img
+                        src={user2}
+                        style={{
+                            width: 'calc(50% - 50px)',
+                            filter:
+                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
                         }}
-                        src={Person2}
+                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                    />{' '}
+                </div>{' '}
+                <div
+                    style={{
+                        margin: '60px 0',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        gap: 100,
+                    }}
+                >
+                    <img
+                        src={user3}
+                        style={{
+                            width: 'calc(50% - 50px)',
+                            filter:
+                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                        }}
+                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                    />{' '}
+                    <img
+                        src={user4}
                         style={{
                             width: 'calc(50% - 50px)',
                             filter:
@@ -206,7 +235,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
             </Full>
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    User Journey Map
+                    Competitive Audit
                 </Heading2>
                 <Paragraph
                     style={{
@@ -219,15 +248,10 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     establishing pain points and better empathize with users at
                     each step of the application.
                 </Paragraph>
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/journeyMap.e16467f492d79fb2f474.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
-                    src={JourneyMap}
+            </Midi>
+            <Full>
+                <img
+                    src={competitive}
                     style={{
                         marginTop: 50,
                         width: '100%',
@@ -235,7 +259,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />
-            </Midi>
+            </Full>
 
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
@@ -373,14 +397,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                 >
                     {' '}
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/sketch1.8e26f14c4a1736ffd22b.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
-                        }}
+                    <img
                         src={Sketch1}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -389,14 +406,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/sketch2.d0d224aa0c906c578930.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
-                        }}
+                    <img
                         src={Sketch2}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -405,14 +415,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/sketch3.4b872d0284a8bdb38dd3.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
-                        }}
+                    <img
                         src={Sketch3}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -421,14 +424,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/sketch4.6963b63499e64afbdb15.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
-                        }}
+                    <img
                         src={Sketch4}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -453,14 +449,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     additional screens to handle scroll events, filters, and
                     searching so that I had a fully clickable prototype.
                 </Paragraph>
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/userFlow.dc4456a997389461b7df.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
+                <img
                     src={UserFlow}
                     style={{
                         marginTop: 50,
@@ -578,14 +567,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/research1.7bc8895981b09166eb32.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
-                        }}
+                    <img
                         src={Research1}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -594,14 +576,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <ImageGrow
-                        onClick={() => {
-                            window.open(
-                                '/static/media/research2.8c8db431c3a322bcea73.png',
-                                '_blank',
-                                'noopener,noreferrer'
-                            );
-                        }}
+                    <img
                         src={Research2}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -626,14 +601,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     and then categorized to establish common themes and
                     recognize patterns.
                 </Paragraph>
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/synth.fb000b904aa4a876421e.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
+                <img
                     src={Synth}
                     style={{
                         marginTop: 50,
@@ -666,14 +634,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     <br />
                     We made a series of changes to address these pain points:
                 </Paragraph>
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/change1.6f66a9526e525314114b.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
+                <img
                     src={Change1}
                     style={{
                         marginTop: 50,
@@ -681,14 +642,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />{' '}
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/change2.0c44b1255e571ee93270.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
+                <img
                     src={Change2}
                     style={{
                         marginTop: 50,
@@ -696,14 +650,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />{' '}
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/change3.bc0b6f96c48039c16efd.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
+                <img
                     src={Change3}
                     style={{
                         marginTop: 50,
@@ -726,14 +673,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     visual style for the application, I created the final high
                     fidelity designs.
                 </Paragraph>
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/hifi.e5e4ffdce10851ba21d9.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
-                    }}
+                <img
                     src={Hifi}
                     style={{
                         marginTop: 50,
@@ -756,7 +696,6 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Paragraph
                             style={{
                                 maxWidth: 700,
-                                marginTop: 15,
                             }}
                         >
                             This case study really helped me solidify the
@@ -781,7 +720,6 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Paragraph
                             style={{
                                 maxWidth: 700,
-                                marginTop: 15,
                             }}
                         >
                             If I were to continue building out and improving
@@ -799,4 +737,4 @@ const Movie = ({ toggleMode, mode, spread }) => {
     );
 };
 
-export { Movie };
+export { EA1 };

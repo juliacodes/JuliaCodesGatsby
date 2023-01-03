@@ -3,7 +3,7 @@ import { useDarkMode } from './hooks';
 import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from './theming/themeContext';
 import GlobalStyles from './theming/global';
-import { AppWrapper, DevopsPage, Landing, Movie, VulnPage } from './pages';
+import { AppWrapper, DevopsPage, EA1, Landing, Movie, VulnPage } from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -66,6 +66,19 @@ const App = () => {
                         element={
                             <AppWrapper>
                                 <DevopsPage
+                                    spread={spread}
+                                    mode={mode}
+                                    toggleMode={toggleMode}
+                                />
+                            </AppWrapper>
+                        }
+                    />
+
+                    <Route
+                        path='/ea1'
+                        element={
+                            <AppWrapper>
+                                <EA1
                                     spread={spread}
                                     mode={mode}
                                     toggleMode={toggleMode}

@@ -42,6 +42,12 @@ const FlexGroup = styled.div`
     }
 `;
 
+const ImageGrow = styled.img`
+    :hover {
+        cursor: zoom-in;
+    }
+`;
+
 const DevopsPage = ({ toggleMode, mode, spread }) => {
     const [isLocked, setIsLocked] = useState(true);
     const spreadClass =
