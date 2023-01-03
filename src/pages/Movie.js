@@ -42,6 +42,12 @@ const FlexGroup = styled.div`
     }
 `;
 
+const ImageGrow = styled.img`
+    :hover {
+        cursor: zoom-in;
+    }
+`;
+
 const Movie = ({ toggleMode, mode, spread }) => {
     const spreadClass =
         spread === 'first'
@@ -128,7 +134,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 </FlexGroup>
             </Midi>
             <Full>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/lofi.6dae2f3a4e881159278e.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={Lofi}
                     style={{ width: '100%' }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
@@ -157,7 +170,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/person1.93f376a9c081a38ef49d.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Person1}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -166,7 +186,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/persona2.c62139dce34223c5e9c9.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Person2}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -192,7 +219,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     establishing pain points and better empathize with users at
                     each step of the application.
                 </Paragraph>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/journeyMap.e16467f492d79fb2f474.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={JourneyMap}
                     style={{
                         marginTop: 50,
@@ -339,7 +373,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                 >
                     {' '}
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/sketch1.8e26f14c4a1736ffd22b.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Sketch1}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -348,7 +389,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/sketch2.d0d224aa0c906c578930.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Sketch2}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -357,7 +405,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/sketch3.4b872d0284a8bdb38dd3.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Sketch3}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -366,7 +421,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/sketch4.6963b63499e64afbdb15.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Sketch4}
                         style={{
                             width: 'calc(25% - 5px)',
@@ -391,7 +453,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     additional screens to handle scroll events, filters, and
                     searching so that I had a fully clickable prototype.
                 </Paragraph>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/userFlow.dc4456a997389461b7df.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={UserFlow}
                     style={{
                         marginTop: 50,
@@ -509,7 +578,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/research1.7bc8895981b09166eb32.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Research1}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -518,7 +594,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/research2.8c8db431c3a322bcea73.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={Research2}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -543,7 +626,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     and then categorized to establish common themes and
                     recognize patterns.
                 </Paragraph>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/synth.fb000b904aa4a876421e.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={Synth}
                     style={{
                         marginTop: 50,
@@ -576,7 +666,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     <br />
                     We made a series of changes to address these pain points:
                 </Paragraph>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/change1.6f66a9526e525314114b.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={Change1}
                     style={{
                         marginTop: 50,
@@ -584,7 +681,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />{' '}
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/change2.0c44b1255e571ee93270.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={Change2}
                     style={{
                         marginTop: 50,
@@ -592,7 +696,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />{' '}
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/change3.bc0b6f96c48039c16efd.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={Change3}
                     style={{
                         marginTop: 50,
@@ -615,7 +726,14 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     visual style for the application, I created the final high
                     fidelity designs.
                 </Paragraph>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/hifi.e5e4ffdce10851ba21d9.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={Hifi}
                     style={{
                         marginTop: 50,
@@ -638,6 +756,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Paragraph
                             style={{
                                 maxWidth: 700,
+                                marginTop: 15,
                             }}
                         >
                             This case study really helped me solidify the
@@ -662,6 +781,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         <Paragraph
                             style={{
                                 maxWidth: 700,
+                                marginTop: 15,
                             }}
                         >
                             If I were to continue building out and improving

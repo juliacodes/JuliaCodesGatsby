@@ -138,15 +138,10 @@ export const Inner = styled.div`
 export const Image = styled.div`
     width: 100%;
     height: 500px;
-    border-radius: 0px;
     background-position: center center;
     background-size: cover;
     opacity: 0;
     animation: ${fadeIn} 1s forwards;
-
-    @media (${QUERIES.large}) {
-        border-radius: 6px;
-    }
 `;
 
 export default QUERIES;

@@ -50,6 +50,12 @@ const FlexGroup = styled.div`
     }
 `;
 
+const ImageGrow = styled.img`
+    :hover {
+        cursor: zoom-in;
+    }
+`;
+
 const VulnPage = ({ toggleMode, mode, spread }) => {
     const [isLocked, setIsLocked] = useState(true);
     const spreadClass =
@@ -164,7 +170,14 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                 </Paragraph>
             </Midi>
             <Full>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/vuln.750cd808f20742f67f6f.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={Vuln}
                     style={{ width: '100%' }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
@@ -362,7 +375,7 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
 
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Handing Onboarding
+                    Handling Onboarding
                 </Heading2>
                 <Paragraph
                     style={{
