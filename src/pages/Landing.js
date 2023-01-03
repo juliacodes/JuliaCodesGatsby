@@ -10,7 +10,7 @@ import QUERIES, {
 import styled from 'styled-components';
 import { Nav, Foot, Project } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Awk1, Vuln, Devops, EA1 } from '../images';
+import { Awk1, Vuln, Devops, EA1Image } from '../images';
 
 const Split = styled.div`
     display: flex;
@@ -91,6 +91,12 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 style={{ display: 'flex', flexDirection: 'column', gap: 160 }}
             >
                 <Project
+                    name='EA1 Vehicle Service'
+                    image={EA1Image}
+                    url='ea1'
+                    description='Freelance design work done for a client who wanted to create the Uber for car repair and servicing'
+                />
+                <Project
                     name='Movie Theater Case Study'
                     url='movie'
                     description='Reimagining the movie finding and seat selection process for movie theater applications'
@@ -101,12 +107,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     url='vuln'
                     description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
                 />
-                {/* <Project
-                    name='EA1 Vehicle Service'
-                    image={EA1}
-                    url='ea1'
-                    description='Freelance design work done for a client who wanted to create the Uber for car repair and servicing'
-                /> */}
+
                 {/* <Project
                     name='IBM, DevOps Dashboard'
                     image={Devops}

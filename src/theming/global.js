@@ -43,6 +43,8 @@ const GlobalStyles = createGlobalStyle`
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
     font-weight: 200;
+    -ms-overflow-style: none;  scrollbar-width: none;
+    ::-webkit-scrollbar { width: 0 !important }
   }
 
   a {

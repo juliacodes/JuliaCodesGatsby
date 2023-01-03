@@ -5,7 +5,13 @@ import Devops from '../images/devops.png';
 import Error from '../images/error.svg';
 import Send from '../images/send.svg';
 import Lock from '../images/lock.svg';
-import EA1 from '../images/ea1/main.png';
+import EA1Image from '../images/ea1/main.png';
+import user1 from '../images/ea1/Anika Lubin.png';
+import user2 from '../images/ea1/Ashlynn Bothman.png';
+import user3 from '../images/ea1/Cooper Saris.png';
+import user4 from '../images/ea1/Maren Donin.png';
+import competitive from '../images/ea1/competitive.png';
+
 import {
     Log4j1,
     Log4j2,
@@ -72,5 +78,10 @@ export {
     VulnWire2,
     Onboarding,
     VulnHifi,
-    EA1,
+    EA1Image,
+    user1,
+    user2,
+    user3,
+    user4,
+    competitive,
 };
