@@ -73,11 +73,11 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         expertise of a designer, as well as the technical skills
                         of a frontend software engineer. <br /> <br />
                         This allows me to advocate for users and create powerful
-                        wireframes, storyboards, and prototypes while also
-                        understanding the technical limitations and challenges
-                        that engineers may face. I'm also able to code out
-                        prototypes and build component libraries with user needs
-                        and accessibility in mind
+                        visual designs, wireframes, storyboards, and prototypes
+                        while also understanding the technical limitations and
+                        challenges that engineers may face. I'm also able to
+                        code out prototypes and build component libraries with
+                        user needs and accessibility in mind
                     </Paragraph>
                 </Split>
             </Midi>
@@ -85,12 +85,12 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
             <Full
                 style={{ display: 'flex', flexDirection: 'column', gap: 160 }}
             >
-                {/* <Project
+                <Project
                     name='EA1 Vehicle Service'
                     image={EA1Image}
                     url='ea1'
                     description='Freelance design work done for a client who wanted to create the Uber for car repair and servicing'
-                /> */}
+                />
                 <Project
                     name='Movie Theater Case Study'
                     url='movie'
@@ -110,6 +110,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     description='Enabling developers to track and manage their deployments'
                 /> */}
             </Full>
+
             <Foot />
         </Main>
     );
