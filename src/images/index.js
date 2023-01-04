@@ -11,6 +11,13 @@ import user2 from '../images/ea1/Ashlynn Bothman.png';
 import user3 from '../images/ea1/Cooper Saris.png';
 import user4 from '../images/ea1/Maren Donin.png';
 import competitive from '../images/ea1/competitive.png';
+import UserFlowEA from '../images/ea1/userflow.png';
+import selectionUI from '../images/ea1/selection-ui.png';
+import landingUI from '../images/ea1/landing-ui.png';
+import InProgress from '../images/ea1/InProgress.png';
+import SelectingVehicle from '../images/ea1/SelectingVehicle.png';
+import FinalEA from '../images/ea1/final.png';
+import FinalEA2 from '../images/ea1/final2.png';
 
 import {
     Log4j1,
@@ -84,4 +91,11 @@ export {
     user3,
     user4,
     competitive,
+    UserFlowEA,
+    selectionUI,
+    landingUI,
+    InProgress,
+    SelectingVehicle,
+    FinalEA,
+    FinalEA2,
 };

@@ -11,27 +11,19 @@ import styled from 'styled-components';
 import { Nav, Foot } from '../components';
 import { Spread } from '../components/switch/styles';
 import {
-    Change1,
-    Hifi,
-    Person1,
-    Person2,
-    JourneyMap,
-    Sketch1,
-    Sketch2,
-    Sketch3,
-    Sketch4,
-    UserFlow,
-    Research1,
-    Research2,
-    Synth,
-    Change3,
-    Change2,
     EA1Image,
     user1,
     user2,
     user3,
     user4,
     competitive,
+    UserFlowEA,
+    landingUI,
+    selectionUI,
+    InProgress,
+    SelectingVehicle,
+    FinalEA,
+    FinalEA2,
 } from '../images';
 
 const FlexGroup = styled.div`
@@ -44,6 +36,12 @@ const FlexGroup = styled.div`
     @media (${QUERIES.large}) {
         flex-wrap: nowrap;
         gap: 50px;
+    }
+`;
+
+const ImageGrow = styled.img`
+    :hover {
+        cursor: zoom-in;
     }
 `;
 
@@ -74,39 +72,18 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Throughout my life I've been to the movie theater countless
-                    times. Originally, the only option to buy tickets was in
-                    person at the ticket stand, but with the popularity of the
-                    internet and mobile phones, purchasing tickets online has
-                    enabled all of us to have even more control over our movie
-                    theater experience, including selecting our seats. <br />
-                    <br /> I've found a lot of these seat selection applications
-                    extremely unintuitive and frustrating to use, so I wanted to
-                    do a full case study to identify common pain points, and
-                    address potential solutions.
+                    The client for this application approached me because they
+                    were looking to create a product that allows drivers to
+                    quickly connect with mechanics when dealing with car
+                    problems. They also were loooking to enable hobbyist and
+                    mechanics unassociated with any particular shop the
+                    opportunity to gig-work and manage their own time.
+                    <br /> <br /> I was able to effectively create user
+                    personas, competitive audits, sketches, wireframes and a
+                    final prototype and send over final assets to an engineer in
+                    around three months.
                 </Paragraph2>
                 <FlexGroup>
-                    <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                                mixBlendMode: 'difference',
-                                color: 'white',
-                            }}
-                        >
-                            Design Process
-                        </Heading2>
-                        <Paragraph2
-                            style={{
-                                maxWidth: 700,
-                            }}
-                        >
-                            I used a 5-stage Design Thinking model proposed by
-                            the Hasso Plattner Institute of Design at Stanford
-                        </Paragraph2>
-                    </div>
                     <div>
                         <Heading2
                             style={{
@@ -127,7 +104,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                             As the sole designer, I was able to work on all
                             stages of the design including: User Research,
                             Sketching, Journey Maps, Low and High Fidelity
-                            Designs
+                            Designs.
                         </Paragraph2>
                     </div>
                     <div>
@@ -148,13 +125,21 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                             }}
                         >
                             I collaborated with an engineer and a business lead
-                            to help facilitate the needs of our client
+                            to help facilitate the needs of our client and
+                            determine scope.
                         </Paragraph2>
                     </div>
                 </FlexGroup>
             </Midi>
             <Full>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/lofi.6dae2f3a4e881159278e.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={EA1Image}
                     style={{ width: '100%' }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
@@ -169,12 +154,16 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    To ensure inclusivity and edge case users, I created many
-                    user personas to represent all of the different user groups
-                    that this app will be targeting. A few of the key areas
-                    included were: diversity in age groups, potential
-                    disabilities, exposure to technology, experience with car
-                    engines, as well as distance from cities.
+                    I chose to create user personas first, as I wanted a high
+                    level understanding of some of the reasons different users
+                    would use the app as well as some of the hestitations that
+                    could prevent a user from using ours. <br /> <br /> To
+                    ensure inclusivity and edge case users, I created many user
+                    personas to represent all of the different user groups that
+                    this app will be targeting. A few of the key areas included
+                    were: diversity in age groups, potential disabilities,
+                    exposure to technology, experience with car engines, as well
+                    as distance from major cities.
                 </Paragraph>
             </Midi>
             <Full>
@@ -186,7 +175,14 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={user1}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -195,7 +191,14 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={user2}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -213,7 +216,14 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={user3}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -222,7 +232,14 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
-                    <img
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
                         src={user4}
                         style={{
                             width: 'calc(50% - 50px)',
@@ -242,15 +259,33 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    Each of the user personas were then taken through the
-                    existing user experience journey within many of the popular
-                    movie theater applications found today. This helped to begin
-                    establishing pain points and better empathize with users at
-                    each step of the application.
+                    Following Personas, I decided to do a competitive audit on
+                    the similar B2C products in the market. To get the most
+                    useful insights, I decided to only focus on applications
+                    that were directly available to a broad market, which
+                    removes applications like State farm roadside assistance or
+                    any other insurance-associated service provider. <br />{' '}
+                    <br /> I specifically chose Angi, because they have a unique
+                    gig-work structure that would help me to understand common
+                    design standards that allow service providers to showcase
+                    their services and get connected with customers. Uber felt
+                    like an obvious choice as they handle complicated location
+                    tracking and connect drivers and riders in a similar way
+                    that we will connect service providers and
+                    requesters.Lastly, I chose to audit verizon media
+                    assistance, because I wanted to have a roadside assistance
+                    specific company to research.
                 </Paragraph>
             </Midi>
             <Full>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/lofi.6dae2f3a4e881159278e.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={competitive}
                     style={{
                         marginTop: 50,
@@ -260,99 +295,73 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />
             </Full>
-
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Pain Points
+                    Pain Points Found
                 </Heading2>
                 <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
                 >
-                    Following the creation of user journey maps and
-                    storyboarding a handful of pain points were established a
-                    select few were chosen to be the primary focus due to their
-                    high feasibility and importance
+                    Following the creation of user journey maps a handful of
+                    pain points were discovered, many of which were already
+                    being address by competitors. A handful of these problems
+                    were being addressed which were what I really wanted to
+                    spend time ideating and designing solutions for.
                 </Paragraph>
 
                 <FlexGroup>
                     <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                            }}
-                        >
-                            Just Browsing
+                        <Heading2 style={{ marginBottom: 10, fontSize: 35 }}>
+                            Handling Volume
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            Many users are in the mood to see a movie on a
-                            particular day, but aren't sure which movie they
-                            want to see. This makes many of the flows
-                            frustrating, as users can't see the availability of
-                            a theater until after they select a movie.
+                            Many applications (Uber, etc) only enable users to
+                            have one connection at a time, but in the auto
+                            industry users are going to want to compare rates
+                            and eta's accross different providers.
                         </Paragraph>
                     </div>
                     <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                            }}
-                        >
-                            Good Seats
+                        <Heading2 style={{ marginBottom: 10, fontSize: 35 }}>
+                            Price
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            Many theaters will advertise having seats available
-                            for a showing, but they include the front row seats,
-                            which a large majority of viewers avoid. This leaves
-                            users feeling mislead.
+                            Most applications like State Farm and Verizon
+                            roadside assitance will often bundle these services
+                            into their month to month rate, but since this app
+                            will be separate from those providers we'll need to
+                            handle cost in a transparent way
                         </Paragraph>
                     </div>
                 </FlexGroup>
                 <FlexGroup>
                     <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                            }}
-                        >
-                            Large Groups
+                        <Heading2 style={{ marginBottom: 10, fontSize: 35 }}>
+                            Safety
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            I found that every application handled groups
-                            differently. Some apps made assumptions about the
-                            needs of the user by forcing all of the seats to be
-                            in a row together. Other apps ignored the grouping
-                            of users, and as a result, users were given showings
-                            that wouldn't work for their large group
+                            Many users may be alone or in an unsafe location
+                            when they are having car trouble, its important that
+                            the person going to assist them is trustworthy and
+                            knowlegable
                         </Paragraph>
                     </div>
                     <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                            }}
-                        >
+                        <Heading2 style={{ marginBottom: 10, fontSize: 35 }}>
                             Accessibility
                         </Heading2>
                         <Paragraph
@@ -360,31 +369,33 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                                 maxWidth: 700,
                             }}
                         >
-                            A large amount of information necessary for those
-                            with disabilities is often not included on these
-                            apps and requires a phone call. Information such as,
-                            elevator locations, accessible seating, availability
-                            of assistive listening devices, sign language
-                            interpreters, etc.
+                            Accounting for users who are have speciific
+                            special-needs will be important in the applications
+                            design, as a user who is hard of hearing for example
+                            would need very different assistance than someone
+                            who is in a wheelchair.
                         </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
-
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Sketching and Ideation
+                    User Flow
                 </Heading2>
                 <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
                 >
-                    To begin addressing these pain points, I created 6 digital
-                    sketches for each of the main screens that would be
-                    necessary: Landing page, movie details, and seat selection.
-                    These sketches helped me come up with ideas for flows as
-                    well as create a logical informational hierarchy.
+                    After a few iterations of design thinking and exploration, I
+                    was able to create a user-flow site map that scopes out the
+                    necessary screens and expected interactions across the app.{' '}
+                    <br /> <br /> This layout really helps me look at the
+                    structure logically so we can catch any mismatches or
+                    miscommunications early. It also helps me to bring up
+                    business or technical challenges early on, so we can address
+                    for them now, instead of when the designs are in their final
+                    stages.
                 </Paragraph>
             </Midi>
             <Full>
@@ -397,166 +408,36 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     }}
                 >
                     {' '}
-                    <img
-                        src={Sketch1}
-                        style={{
-                            width: 'calc(25% - 5px)',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
                         }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
-                    />{' '}
-                    <img
-                        src={Sketch2}
+                        src={UserFlowEA}
                         style={{
-                            width: 'calc(25% - 5px)',
                             filter:
                                 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
-                        }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
-                    />
-                    <img
-                        src={Sketch3}
-                        style={{
-                            width: 'calc(25% - 5px)',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
-                        }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
-                    />
-                    <img
-                        src={Sketch4}
-                        style={{
-                            width: 'calc(25% - 5px)',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            width: '100%',
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
                 </div>
             </Full>
-
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Establishing User Flow
-                </Heading2>
+                    Low Fidelity - Design Decisions
+                </Heading2>{' '}
                 <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
                 >
-                    Once my low fidelity wireframes were complete, I created
-                    additional screens to handle scroll events, filters, and
-                    searching so that I had a fully clickable prototype.
+                    First approach at the structure of the application, lots of
+                    iteration and design thinking used here.
                 </Paragraph>
-                <img
-                    src={UserFlow}
-                    style={{
-                        marginTop: 50,
-                        width: '100%',
-                    }}
-                    alt='Low fidelity wireframes that display movie theater seat selection flow'
-                />
-            </Midi>
-
-            <Midi style={{ marginBottom: 0 }}>
-                <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    User Testing
-                </Heading2>
-                <Paragraph
-                    style={{
-                        maxWidth: 1200,
-                    }}
-                >
-                    We’re looking to determine whether the main user flows that
-                    enable selecting a movie, date, time slot and seat are easy
-                    for users to complete. We’re also looking to identify
-                    pain-points and challenges that could be impacting user
-                    retention and drop-off.{' '}
-                </Paragraph>
-                <FlexGroup>
-                    <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                            }}
-                        >
-                            Research Questions
-                        </Heading2>
-                        <Paragraph>
-                            - Are there areas in the flow where users get stuck?
-                        </Paragraph>
-                        <Paragraph>
-                            - Do users find the application easy or difficult to
-                            use?
-                        </Paragraph>
-                        <Paragraph>
-                            - Are there features that the user seems to think
-                            are missing?
-                        </Paragraph>
-                        <Paragraph>
-                            - What are the stopping points in the application?
-                        </Paragraph>
-                    </div>
-                </FlexGroup>
-                <FlexGroup>
-                    <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                            }}
-                        >
-                            Participants Must
-                        </Heading2>
-                        <Paragraph>
-                            - Have an awareness of movie theater ticket
-                            applications
-                        </Paragraph>
-                        <Paragraph>
-                            - Be somewhat tech literate (has used a smartphone
-                            before)
-                        </Paragraph>
-                        <Paragraph>
-                            - Two males, two females, and one nonbinary between
-                            the ages of 18 and 70
-                        </Paragraph>
-                        <Paragraph>
-                            - One user who requires as assitive device (screen
-                            reader, etc)
-                        </Paragraph>
-                    </div>
-                </FlexGroup>
-                <FlexGroup>
-                    <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
-                            }}
-                        >
-                            Methodology
-                        </Heading2>
-                        <Paragraph>Unmoderated usability study</Paragraph>
-                        <Paragraph>
-                            <span style={{ fontWeight: 400 }}>Location: </span>
-                            United States, Remote
-                        </Paragraph>
-                        <Paragraph>
-                            <span style={{ fontWeight: 400 }}>Date: </span>{' '}
-                            Interviews will take place in the next few weeks
-                        </Paragraph>
-                        <Paragraph>
-                            <span style={{ fontWeight: 400 }}>Length: </span>{' '}
-                            Sessions are not expected to last more than ~10
-                            minutes
-                        </Paragraph>
-                    </div>
-                </FlexGroup>
             </Midi>
             <Full>
                 <div
@@ -567,171 +448,193 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    <img
-                        src={Research1}
+                    <div
                         style={{
                             width: 'calc(50% - 50px)',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 20,
                         }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
-                    />{' '}
-                    <img
-                        src={Research2}
-                        style={{
-                            width: 'calc(50% - 50px)',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
-                        }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
-                    />
-                </div>
-            </Full>
-
-            <Midi style={{ marginBottom: 0 }}>
-                <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Synthesizing Research Into Insights
-                </Heading2>
-                <Paragraph
-                    style={{
-                        maxWidth: 1200,
-                    }}
-                >
-                    Comments, Questions and Answers were added as sticky notes
-                    and then categorized to establish common themes and
-                    recognize patterns.
-                </Paragraph>
-                <img
-                    src={Synth}
-                    style={{
-                        marginTop: 50,
-                        width: '100%',
-                        filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
-                    }}
-                    alt='Low fidelity wireframes that display movie theater seat selection flow'
-                />
-            </Midi>
-
-            <Midi style={{ marginBottom: 0 }}>
-                <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Changes Implemented from Research
-                </Heading2>
-                <Paragraph
-                    style={{
-                        maxWidth: 1200,
-                    }}
-                >
-                    From our research, we gathered that there were 3 primary
-                    pain points that were complicating the flow for users. The
-                    first related to filters, In general, the implementation of
-                    filters isn’t super clear as to what it does and when it
-                    needs to be used. Second, was the issue of
-                    traffic/busy-ness, Users care about how busy theaters are,
-                    and its taking too many clicks for them to get this
-                    information. And lastly, users were left in the dark with
-                    theater selection, and in many cases were unable to identify
-                    that they even had the option to change theaters. <br />
-                    <br />
-                    We made a series of changes to address these pain points:
-                </Paragraph>
-                <img
-                    src={Change1}
-                    style={{
-                        marginTop: 50,
-                        width: '100%',
-                    }}
-                    alt='Low fidelity wireframes that display movie theater seat selection flow'
-                />{' '}
-                <img
-                    src={Change2}
-                    style={{
-                        marginTop: 50,
-                        width: '100%',
-                    }}
-                    alt='Low fidelity wireframes that display movie theater seat selection flow'
-                />{' '}
-                <img
-                    src={Change3}
-                    style={{
-                        marginTop: 50,
-                        width: '100%',
-                    }}
-                    alt='Low fidelity wireframes that display movie theater seat selection flow'
-                />
-            </Midi>
-
-            <Midi style={{ marginBottom: 0 }}>
-                <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Final High Fidelity Wireframes
-                </Heading2>
-                <Paragraph
-                    style={{
-                        maxWidth: 1200,
-                    }}
-                >
-                    Finally, after spending some time finding and establishing a
-                    visual style for the application, I created the final high
-                    fidelity designs.
-                </Paragraph>
-                <img
-                    src={Hifi}
-                    style={{
-                        marginTop: 50,
-                        width: '100%',
-                        filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
-                    }}
-                    alt='Low fidelity wireframes that display movie theater seat selection flow'
-                />
-                <FlexGroup>
-                    <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
+                    >
+                        <ImageGrow
+                            onClick={() => {
+                                window.open(
+                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '_blank',
+                                    'noopener,noreferrer'
+                                );
                             }}
-                        >
-                            Lessons Learned
-                        </Heading2>
-                        <Paragraph
+                            src={landingUI}
                             style={{
-                                maxWidth: 700,
+                                width: '100%',
+                                filter:
+                                    'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
                             }}
-                        >
-                            This case study really helped me solidify the
-                            importance of user testing at the low fidelity
-                            stage. I got so caught up solving the original pain
-                            points that were found that I ended up creating new
-                            ones! User testing helped me take a step back and
-                            readdress the overall goal of the application and
-                            helped to identify many new paints points as well.
+                            alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        />{' '}
+                        <Paragraph style={{ fontSize: 20 }}>
+                            Landing page that displays once a user has logged in
                         </Paragraph>
                     </div>
-                    <div>
-                        <Heading2
-                            style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
+                    <div
+                        style={{
+                            width: 'calc(50% - 50px)',
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 20,
+                        }}
+                    >
+                        <ImageGrow
+                            onClick={() => {
+                                window.open(
+                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '_blank',
+                                    'noopener,noreferrer'
+                                );
                             }}
-                        >
-                            Next Steps
+                            src={selectionUI}
+                            style={{
+                                width: '100%',
+                                filter:
+                                    'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            }}
+                            alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        />{' '}
+                        <Paragraph style={{ fontSize: 20 }}>
+                            Service Provider Choice View
+                        </Paragraph>
+                    </div>
+                </div>{' '}
+                <div
+                    style={{
+                        margin: '60px 0',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        gap: 100,
+                    }}
+                >
+                    <div
+                        style={{
+                            width: 'calc(50% - 50px)',
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 20,
+                        }}
+                    >
+                        <ImageGrow
+                            onClick={() => {
+                                window.open(
+                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '_blank',
+                                    'noopener,noreferrer'
+                                );
+                            }}
+                            src={InProgress}
+                            style={{
+                                width: '100%',
+                                filter:
+                                    'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            }}
+                            alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        />{' '}
+                        <Paragraph style={{ fontSize: 20 }}>
+                            Service Request In Progress Page
+                        </Paragraph>
+                    </div>
+                    <div
+                        style={{
+                            width: 'calc(50% - 50px)',
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 20,
+                        }}
+                    >
+                        <ImageGrow
+                            onClick={() => {
+                                window.open(
+                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '_blank',
+                                    'noopener,noreferrer'
+                                );
+                            }}
+                            src={SelectingVehicle}
+                            style={{
+                                width: '100%',
+                                filter:
+                                    'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            }}
+                            alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        />{' '}
+                        <Paragraph style={{ fontSize: 20 }}>
+                            View when adding your vehicle to your service
+                            request
+                        </Paragraph>
+                    </div>
+                </div>
+            </Full>
+            <Midi style={{ marginBottom: 0 }}>
+                <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
+                    Visual Design
+                </Heading2>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                    }}
+                >
+                    After some feedback and reviews, I went back through each of
+                    the views to update the UI to reflect the visual design and
+                    look at feel that the client wanted to go with.
+                </Paragraph>
+            </Midi>
+
+            <Full>
+                <img
+                    src={FinalEA}
+                    style={{
+                        marginTop: 50,
+                        width: '100%',
+                    }}
+                    alt='Low fidelity wireframes that display movie theater seat selection flow'
+                />{' '}
+                <img
+                    src={FinalEA2}
+                    style={{
+                        marginTop: 50,
+                        width: '100%',
+                    }}
+                    alt='Low fidelity wireframes that display movie theater seat selection flow'
+                />
+            </Full>
+            <Midi style={{ marginBottom: 0 }}>
+                <FlexGroup>
+                    <div>
+                        <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
+                            Challenges
                         </Heading2>
                         <Paragraph
                             style={{
-                                maxWidth: 700,
+                                marginTop: 20,
                             }}
                         >
-                            If I were to continue building out and improving
-                            this project, I would do another round of usability
-                            testing to ensure that the original paint points
-                            were accurately addressed. Once solidified, I would
-                            create a site map and design guide to help
-                            developers transition my designs into code.
+                            The biggest challenge with this appication was the
+                            ambiguity of the requirements. I'm used to working
+                            with clients who are highly opinionated, but this
+                            client was truly open to anything. This made it
+                            tricky to get an established sense of which
+                            direction the application should go in. This ended
+                            up being a great personal challenge, as I was able
+                            to add more input in the direction of the product
+                            and company as a whole which challenged the way I
+                            approach design thinking.
                         </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
+
             <Foot />
         </Main>
     );
