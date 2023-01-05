@@ -6,6 +6,7 @@ import QUERIES, {
     Full,
     Paragraph2,
     Paragraph,
+    Caption,
 } from '../theming/styles';
 import styled from 'styled-components';
 import { Nav, Foot } from '../components';
@@ -132,18 +133,33 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                 </FlexGroup>
             </Midi>
             <Full>
-                <ImageGrow
-                    onClick={() => {
-                        window.open(
-                            '/static/media/lofi.6dae2f3a4e881159278e.png',
-                            '_blank',
-                            'noopener,noreferrer'
-                        );
+                <div
+                    style={{
+                        width: '100%',
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 20,
                     }}
-                    src={EA1Image}
-                    style={{ width: '100%' }}
-                    alt='Low fidelity wireframes that display movie theater seat selection flow'
-                />
+                >
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/main.846969c01b93406683f2.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
+                        src={EA1Image}
+                        style={{ width: '100%' }}
+                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                    />
+
+                    <Caption style={{ fontSize: 20, marginTop: 15 }}>
+                        Final Prototype of EA1, a service that allows users to
+                        request help when experiencing vehicle problems
+                    </Caption>
+                </div>
             </Full>
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
@@ -178,7 +194,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     <ImageGrow
                         onClick={() => {
                             window.open(
-                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '/static/media/Anika%20Lubin.1403dc0498c495f5b890.png',
                                 '_blank',
                                 'noopener,noreferrer'
                             );
@@ -194,7 +210,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     <ImageGrow
                         onClick={() => {
                             window.open(
-                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '/static/media/Ashlynn%20Bothman.373e3ff66063b51cdbd2.png',
                                 '_blank',
                                 'noopener,noreferrer'
                             );
@@ -219,7 +235,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     <ImageGrow
                         onClick={() => {
                             window.open(
-                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '/static/media/Cooper%20Saris.91c4e4952e3f57d82307.png',
                                 '_blank',
                                 'noopener,noreferrer'
                             );
@@ -235,7 +251,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     <ImageGrow
                         onClick={() => {
                             window.open(
-                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '/static/media/Maren%20Donin.f7bc22112785093343f9.png',
                                 '_blank',
                                 'noopener,noreferrer'
                             );
@@ -281,7 +297,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                 <ImageGrow
                     onClick={() => {
                         window.open(
-                            '/static/media/lofi.6dae2f3a4e881159278e.png',
+                            '/static/media/competitive.800e7d6899e94b40dd25.png',
                             '_blank',
                             'noopener,noreferrer'
                         );
@@ -372,7 +388,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                             Accounting for users who are have speciific
                             special-needs will be important in the applications
                             design, as a user who is hard of hearing for example
-                            would need very different assistance than someone
+                            would need very different accomodations than someone
                             who is in a wheelchair.
                         </Paragraph>
                     </div>
@@ -411,7 +427,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     <ImageGrow
                         onClick={() => {
                             window.open(
-                                '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                '/static/media/userflow.4320fd880a8a15c93e78.png',
                                 '_blank',
                                 'noopener,noreferrer'
                             );
@@ -460,7 +476,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         <ImageGrow
                             onClick={() => {
                                 window.open(
-                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '/static/media/landing-ui.1ae4f585c9c9d9b356e9.png',
                                     '_blank',
                                     'noopener,noreferrer'
                                 );
@@ -473,9 +489,9 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                             }}
                             alt='Low fidelity wireframes that display movie theater seat selection flow'
                         />{' '}
-                        <Paragraph style={{ fontSize: 20 }}>
+                        <Caption style={{ fontSize: 20 }}>
                             Landing page that displays once a user has logged in
-                        </Paragraph>
+                        </Caption>
                     </div>
                     <div
                         style={{
@@ -489,7 +505,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         <ImageGrow
                             onClick={() => {
                                 window.open(
-                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '/static/media/selection-ui.efe0e2f263f002a86396.png',
                                     '_blank',
                                     'noopener,noreferrer'
                                 );
@@ -502,9 +518,9 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                             }}
                             alt='Low fidelity wireframes that display movie theater seat selection flow'
                         />{' '}
-                        <Paragraph style={{ fontSize: 20 }}>
+                        <Caption style={{ fontSize: 20 }}>
                             Service Provider Choice View
-                        </Paragraph>
+                        </Caption>
                     </div>
                 </div>{' '}
                 <div
@@ -527,7 +543,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         <ImageGrow
                             onClick={() => {
                                 window.open(
-                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '/static/media/InProgress.56809265a1662d303912.png',
                                     '_blank',
                                     'noopener,noreferrer'
                                 );
@@ -540,9 +556,9 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                             }}
                             alt='Low fidelity wireframes that display movie theater seat selection flow'
                         />{' '}
-                        <Paragraph style={{ fontSize: 20 }}>
+                        <Caption style={{ fontSize: 20 }}>
                             Service Request In Progress Page
-                        </Paragraph>
+                        </Caption>
                     </div>
                     <div
                         style={{
@@ -556,7 +572,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         <ImageGrow
                             onClick={() => {
                                 window.open(
-                                    '/static/media/lofi.6dae2f3a4e881159278e.png',
+                                    '/static/media/SelectingVehicle.d4dc619d249f0340ea2b.png',
                                     '_blank',
                                     'noopener,noreferrer'
                                 );
@@ -569,10 +585,10 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                             }}
                             alt='Low fidelity wireframes that display movie theater seat selection flow'
                         />{' '}
-                        <Paragraph style={{ fontSize: 20 }}>
+                        <Caption style={{ fontSize: 20 }}>
                             View when adding your vehicle to your service
                             request
-                        </Paragraph>
+                        </Caption>
                     </div>
                 </div>
             </Full>
@@ -592,7 +608,14 @@ const EA1 = ({ toggleMode, mode, spread }) => {
             </Midi>
 
             <Full>
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/final.8e3913acd47c3d60c34e.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={FinalEA}
                     style={{
                         marginTop: 50,
@@ -600,7 +623,14 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     }}
                     alt='Low fidelity wireframes that display movie theater seat selection flow'
                 />{' '}
-                <img
+                <ImageGrow
+                    onClick={() => {
+                        window.open(
+                            '/static/media/final2.7b9d49dcdb8ae031f623.png',
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }}
                     src={FinalEA2}
                     style={{
                         marginTop: 50,

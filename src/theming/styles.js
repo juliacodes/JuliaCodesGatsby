@@ -77,6 +77,20 @@ export const Paragraph2 = styled.p`
     }
 `;
 
+export const Caption = styled.p`
+    color: ${({ theme }) => theme.textLight};
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: auto;
+    font-size: 20px;
+
+    @media (${QUERIES.large}) {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+`;
+
 export const Main = styled.main`
     width: 100%;
     height: 100%;
