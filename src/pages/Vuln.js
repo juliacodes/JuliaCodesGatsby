@@ -11,30 +11,16 @@ import styled from 'styled-components';
 import { Nav, Foot, Lock } from '../components';
 import { Spread } from '../components/switch/styles';
 import {
-    Change1,
-    Hifi,
-    Lofi,
-    Person1,
-    Person2,
-    JourneyMap,
-    Sketch1,
-    Sketch2,
-    Sketch3,
-    Sketch4,
-    UserFlow,
-    Research1,
-    Research2,
-    Synth,
-    Change3,
-    Change2,
     Vuln,
     Vulnpersona1,
-    Vulnpersona2,
     VulnJourney,
     VulnWire1,
     VulnWire2,
     Onboarding,
     VulnHifi,
+    Kenzie,
+    Tristan,
+    Personas,
 } from '../images';
 
 const FlexGroup = styled.div`
@@ -116,30 +102,19 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                                 color: 'white',
                             }}
                         >
-                            Pain Points with Current Process
+                            The Problem
                         </Heading2>
                         <Paragraph2>
-                            - Multiple sources of data all separately organized
-                        </Paragraph2>
-                        <Paragraph2>
-                            - Team leads are creating analytics and charts by
-                            hand every few weeks
-                        </Paragraph2>{' '}
-                        <Paragraph2>
-                            - Tools aren’t available to management, leaving them
-                            to get secondary accounts of vulnerability status
-                        </Paragraph2>{' '}
-                        <Paragraph2>
-                            - Developers are tracking and updating
-                            vulnerabilities in multiple different places,
-                            obscuring the true level of risk within applications
+                            Organizations at IBM need a standardized platform to
+                            track the vulnerabilities that exist within their
+                            applications.
                         </Paragraph2>
                     </div>
                 </FlexGroup>
             </Midi>
             <Midi style={{ marginTop: -40 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    My Role
+                    Project Scope
                 </Heading2>
                 <Paragraph
                     style={{
@@ -148,8 +123,9 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                     }}
                 >
                     Led the design of the vulnerability management application
-                    between January and May 2022. Collaborated with two other
-                    front end developers on features and direction
+                    between over 12 Weeks. Collaborated with two other front end
+                    developers and designsers with Figma on features and
+                    direction.
                 </Paragraph>
                 <Paragraph
                     style={{
@@ -158,7 +134,7 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                     }}
                 >
                     In addition, worked alongside a Senior Architect, Product
-                    Manage, and multiple backend engineers.
+                    Manager, and multiple backend engineers.
                 </Paragraph>
                 <Paragraph
                     style={{
@@ -185,10 +161,14 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
             </Full>
 
             <Midi style={{ marginBottom: 0 }}>
-                <Heading2 style={{ marginBottom: -20, fontSize: 35 }}>
-                    High Level Goals
+                <Heading2 style={{ fontSize: 35, marginBottom: 30 }}>
+                    Existing Tools used
                 </Heading2>
-
+                <Paragraph>
+                    We started by doing some background research on the current
+                    processes that were being used to mange and track
+                    vulnerabilities
+                </Paragraph>
                 <FlexGroup>
                     <div>
                         <Heading2
@@ -199,16 +179,15 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                                 marginBottom: 10,
                             }}
                         >
-                            For Developers
+                            AppScan
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            Congregate all vulnerability data from multiple
-                            sources and create a dashboard that allows users to
-                            view their vulnerability trends
+                            - Collects one type of vulnerability data, has a
+                            poor UI
                         </Paragraph>
                     </div>
 
@@ -221,15 +200,15 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                                 marginBottom: 10,
                             }}
                         >
-                            For Teams
+                            WhiteSource
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            Enable team leads to get their team onboarded the
-                            tool easily and seamlessly
+                            - Developer only, displays risks in github / in
+                            terminal
                         </Paragraph>
                     </div>
                     <div>
@@ -241,34 +220,150 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                                 marginBottom: 10,
                             }}
                         >
-                            For Managers
+                            Excel
                         </Heading2>
                         <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
-                            Target admins directly to enable them to view the
-                            current vulnerability reports for each organization
+                            Team Leads and managers are exporting the data from
+                            other sources into excel to build metrics
                         </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    Establishing Personas
+                    Primary Research
+                </Heading2>{' '}
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                    }}
+                >
+                    15 Users - 150+ data points - 9 Insights - 3 Main Themes
+                </Paragraph>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                    }}
+                >
+                    We interviewed 15 developers, devOps engineers, managers,
+                    iteration leads, etc to get a comprehensive perspective on
+                    the paint points for each group
+                </Paragraph>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                        fontWeight: 400,
+                    }}
+                >
+                    Interview Questions:
+                </Paragraph>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                    }}
+                >
+                    How do Vulnerabilities fit into your daily work? <br />
+                    What is the most difficult part about managing
+                    Vulnerabilities? <br />
+                    Walk me through how your team tracks and reports
+                    Vulnerabilities.
+                    <br /> How motivated do you feel to prioritize open
+                    Vulnerabilities?
+                </Paragraph>
+            </Midi>
+            <Midi style={{ marginBottom: 0 }}>
+                <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
+                    Main Themes Found
+                </Heading2>{' '}
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                        fontWeight: 400,
+                    }}
+                >
+                    Miscommunication
+                </Paragraph>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                    }}
+                >
+                    - Developers feel prepared to manage and fix
+                    vulnerabilities, and already have the tools to address them.
+                    <br /> - Managers are concerned that the vulnerability data
+                    they are receiving is inaccurate. <br />- Randomly exporting
+                    the data from multiple sources increases the likelihood of
+                    data that is old or missing.
+                </Paragraph>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                        fontWeight: 400,
+                    }}
+                >
+                    Data Dump
+                </Paragraph>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                    }}
+                >
+                    - Team leads are overwhelmed by the number of risks but
+                    aren’t sure which ones are important
+                    <br />
+                    - Executives have a few key metrics that they want each
+                    organization to share with them. <br />- Many
+                    vulnerabilities are being flagged unnecessarily, which
+                    inflates the real level of risk in each org.
+                </Paragraph>{' '}
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                        fontWeight: 400,
+                    }}
+                >
+                    Motivation
+                </Paragraph>
+                <Paragraph
+                    style={{
+                        maxWidth: 1200,
+                        marginBottom: 20,
+                    }}
+                >
+                    - Engineers lack motivation to resolve vulnerabilities
+                    because they don’t believe this data is being reviewed
+                    <br />
+                    - The security risk of vulnerabilities is not enough to
+                    motivate action. <br />- Executives want to see trends on a
+                    quarterly basis, creating a sudden sense of urgency near
+                    those end dates.
+                </Paragraph>
+            </Midi>
+            <Midi style={{ marginBottom: 0 }}>
+                <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
+                    User Journey Maps
                 </Heading2>
                 <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
                 >
-                    Our persona hypothesis consistent of 4 different user groups
-                    which we used to best identify user needs and empathize with
-                    different pain points. These characteristics could be best
-                    summarized through motivations such as the level of impact
-                    vulnerabilities have on their work, as well as the frequency
-                    at which they’ll use the application
+                    Each persona was then walked through the existing user
+                    journey map to establish themes and create a cleaner and
+                    more enjoyable user flow
                 </Paragraph>
             </Midi>
             <Full>
@@ -280,22 +375,19 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                         gap: 100,
                     }}
                 >
-                    {' '}
                     <img
-                        src={Vulnpersona2}
+                        src={Kenzie}
                         style={{
                             width: 'calc(50% - 50px)',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
                     <img
-                        src={Vulnpersona1}
+                        src={Tristan}
                         style={{
                             width: 'calc(50% - 50px)',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
@@ -303,19 +395,18 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
             </Full>
             <Midi style={{ marginBottom: 0 }}>
                 <Heading2 style={{ marginBottom: 30, fontSize: 35 }}>
-                    User Journey Map
+                    Core Personas
                 </Heading2>
                 <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
                 >
-                    Each persona was then walked through the existing user
-                    journey map to establish themes and create a cleaner and
-                    more enjoyable user flow
+                    Walking through the Journey map helped us establish who are
+                    core users were and what was frustrating them
                 </Paragraph>
                 <img
-                    src={VulnJourney}
+                    src={Personas}
                     style={{
                         marginTop: 50,
                         width: '100%',
@@ -334,10 +425,14 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                         maxWidth: 1200,
                     }}
                 >
-                    I created a series of low fidelity sketches and wireframes
-                    to best plan out the features and layouts that we would be
-                    creating. We spent a few design iterations here to ensure
-                    all user needs were being addressed
+                    Now that we have background and established the problems
+                    we're addressing as well as the user groups we're
+                    targetting, we were able to move on to be ideating
+                    solutions.
+                    <br />
+                    We asked ourselves: How might we simplify this reporting
+                    process while improving communication across the corporate
+                    chain of command?
                 </Paragraph>
             </Midi>
             <Full>
@@ -355,8 +450,7 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                         style={{
                             width: '700px',
                             height: 'auto',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}
@@ -365,8 +459,7 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                         style={{
                             width: '700px',
                             height: 'auto',
-                            filter:
-                                'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
+                            filter: 'drop-shadow(0px 8px 21px rgba(0, 0, 0, 0.06))',
                         }}
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />{' '}

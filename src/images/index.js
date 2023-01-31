@@ -29,6 +29,9 @@ import {
     VulnWire2,
     Onboarding,
     VulnHifi,
+    Kenzie,
+    Tristan,
+    Personas,
 } from './vulns';
 
 import {
@@ -98,4 +101,7 @@ export {
     SelectingVehicle,
     FinalEA,
     FinalEA2,
+    Kenzie,
+    Tristan,
+    Personas,
 };

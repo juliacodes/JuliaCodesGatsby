@@ -7,6 +7,9 @@ import VulnWire1 from './vuln-wire.png';
 import VulnWire2 from './vuln-wire2.png';
 import Onboarding from './onboarding.png';
 import VulnHifi from './vuln-hifi.png';
+import Kenzie from './kenzie.jpeg';
+import Tristan from './tristan.jpeg';
+import Personas from './personas.jpeg';
 
 export {
     Log4j1,
@@ -18,4 +21,7 @@ export {
     VulnWire2,
     Onboarding,
     VulnHifi,
+    Kenzie,
+    Tristan,
+    Personas,
 };
