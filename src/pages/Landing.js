@@ -54,7 +54,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         color: 'white',
                     }}
                 >
-                    <span style={{ fontWeight: 300 }}>UX Engineer</span>{' '}
+                    <span style={{ fontWeight: 300 }}>Product Designer</span>{' '}
                     crafting beautiful
                     <span style={{ fontStyle: 'italic' }}> digital</span> user
                     experiences
@@ -96,12 +96,12 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     url='movie'
                     description='Reimagining the movie finding and seat selection process for movie theater applications'
                 />
-                {/* <Project
+                <Project
                     name='IBM, Vulnerability Manager'
                     image={Vuln}
                     url='vuln'
                     description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
-                /> */}
+                /> 
 
                 {/* <Project
                     name='IBM, DevOps Dashboard'
