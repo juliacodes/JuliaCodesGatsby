@@ -14,12 +14,13 @@ const Project = ({
         background-image: url(${image});
         width: 100%;
         height: 400px;
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        border-radius: 100px;
 
         @media (${QUERIES.large}) {
-            height: 1100px;
+            height: 700px;
         }
     `;
 
@@ -33,7 +34,10 @@ const Project = ({
 
     return (
         <Project>
-            <Midi style={{ marginTop: 0, marginBottom: 40 }}>
+            <Link to={`/${url}`} tabIndex='-1'>
+                <ImageProj />
+            </Link>
+            <Midi style={{ marginTop: 40, marginBottom: 0 }}>
                 <Heading
                     style={{
                         textAlign: 'left',
@@ -50,13 +54,10 @@ const Project = ({
                     <Link to={`/${url}`}>{name}</Link>
                 </Heading>
 
-                <Paragraph style={{ maxWidth: 650, marginTop: 20 }}>
+                <Paragraph style={{ marginTop: 0 }}>
                     {description}
                 </Paragraph>
             </Midi>
-            <Link to={`/${url}`} tabIndex='-1'>
-                <ImageProj />
-            </Link>
         </Project>
     );
 };

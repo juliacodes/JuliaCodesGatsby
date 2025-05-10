@@ -20,13 +20,12 @@ export const Heading = styled.h1`
     user-select: none;
     opacity: 0;
     letter-spacing: -3px;
-    max-width: 700px;
-    text-align: center;
+    text-align: left;
     animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
-        font-size: 82px;
-        line-height: 82px;
+        font-size: 64px;
+        line-height: 66px;
         font-weight: 200;
     }
 `;
@@ -59,7 +58,7 @@ export const Paragraph = styled.p`
     color: ${({ theme }) => theme.textMain};
 
     @media (${QUERIES.large}) {
-        font-size: 24px;
+        font-size: 20px;
     }
 `;
 
