@@ -28,7 +28,7 @@ const Foot = () => {
                             </LogoSvg>
                         </Link>
                         <Paragraph style={{ fontWeight: 300 }}>
-                            Designed and Built by Julia Johnson
+                            coded with 💓 by julia
                         </Paragraph>
                     </FinalLeft>
                     <FinalRight>

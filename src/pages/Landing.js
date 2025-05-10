@@ -54,32 +54,8 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         color: 'white',
                     }}
                 >
-                    <span style={{ fontWeight: 300 }}>Product Designer</span>{' '}
-                    crafting beautiful
-                    <span style={{ fontStyle: 'italic' }}> digital</span> user
-                    experiences
+                  I’m Julia — a Technical Product Designer crafting elegant & scalable design.
                 </Heading>
-            </Midi>
-            <Full>
-                <Image style={{ backgroundImage: `url(${Awk1})` }} />
-            </Full>
-            <Midi>
-                <Split>
-                    <Heading style={{ textAlign: 'left', marginLeft: 0 }}>
-                        What's a UX Engineer?
-                    </Heading>
-                    <Paragraph>
-                        As a UX Engineer, I have the design thinking and visual
-                        expertise of a designer, as well as the technical skills
-                        of a frontend software engineer. <br /> <br />
-                        This allows me to advocate for users and create powerful
-                        visual designs, wireframes, storyboards, and prototypes
-                        while also understanding the technical limitations and
-                        challenges that engineers may face. I'm also able to
-                        code out prototypes and build component libraries with
-                        user needs and accessibility in mind
-                    </Paragraph>
-                </Split>
             </Midi>
 
             <Full
@@ -103,12 +79,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
                 /> 
 
-                {/* <Project
-                    name='IBM, DevOps Dashboard'
-                    image={Devops}
-                    url='devops'
-                    description='Enabling developers to track and manage their deployments'
-                /> */}
+                
             </Full>
 
             <Foot />
