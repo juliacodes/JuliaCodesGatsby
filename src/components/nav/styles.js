@@ -13,7 +13,7 @@ export const NavCont = styled.nav`
     animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
-        margin: 50px 0 0 0;
+        margin: 0 0 0 0;
         padding: 0 0px;
     }
 `;
