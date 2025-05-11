@@ -4,7 +4,6 @@ import QUERIES, {
     Midi,
     Heading2,
     Full,
-    Paragraph2,
     Paragraph,
 } from '../theming/styles';
 import styled from 'styled-components';
@@ -70,7 +69,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                 >
                     Movie Theater Case Study
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -85,7 +84,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                     extremely unintuitive and frustrating to use, so I wanted to
                     do a full case study to identify common pain points, and
                     address potential solutions.
-                </Paragraph2>
+                </Paragraph>
                 <FlexGroup>
                     <div>
                         <Heading2
@@ -99,28 +98,25 @@ const Movie = ({ toggleMode, mode, spread }) => {
                         >
                             Design Process
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
                         >
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                     <div>
                         <Heading2
                             style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
                                 mixBlendMode: 'difference',
                                 color: 'white',
                             }}
                         >
                             My Role
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -129,7 +125,7 @@ const Movie = ({ toggleMode, mode, spread }) => {
                             stages of the design including: User Research,
                             Sketching, Journey Maps, Low and High Fidelity
                             Designs
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>

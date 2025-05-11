@@ -15,7 +15,7 @@ const lightTheme = {
 };
 
 export const darkTheme = {
-    main: '#1A181F',
+    main: '#151517',
     inverse: '#FFFFFF',
     alt: '#201E26',
     altWhite: '#201E26',
@@ -23,7 +23,7 @@ export const darkTheme = {
     grayText: '#ACACAC',
     formGray: '#3E3D43',
     textLight: '#B7B7B7',
-    togglerFill: '#34313D',
+    togglerFill: '#151517',
     outline: 'blue solid 2px',
     cover: 'rgba(13, 13, 13, 0.69)',
     formShadow:

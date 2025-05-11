@@ -54,18 +54,18 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         color: 'white',
                     }}
                 >
-                  I’m Julia — a Technical Product Designer crafting elegant & scalable design.
+                    I'm Julia — a Technical Product Designer crafting elegant & scalable design.
                 </Heading>
             </Midi>
 
             <Full
-                style={{ display: 'flex', flexDirection: 'column', gap: 160 }}
+                style={{ display: 'flex', flexDirection: 'column', gap: 100 }}
             >
                 <Project
                     name='EA1 Vehicle Service'
                     image={EA1Image}
                     url='ea1'
-                    description='Freelance design work done for a client who wanted to create the Uber for car repair and servicing'
+                    description='Freelance design work done for a client who wanted to create the Uber for car repair & servicing'
                 />
                 <Project
                     name='Movie Theater Case Study'
@@ -78,8 +78,6 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     url='vuln'
                     description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
                 /> 
-
-                
             </Full>
 
             <Foot />

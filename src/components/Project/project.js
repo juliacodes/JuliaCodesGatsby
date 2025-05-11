@@ -1,4 +1,4 @@
-import QUERIES, { Heading, Paragraph, Midi } from '../../theming/styles';
+import QUERIES, { Heading2, Paragraph, Midi } from '../../theming/styles';
 import { Movie } from '../../images';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -10,17 +10,18 @@ const Project = ({
     image = Movie,
 }) => {
     const ImageProj = styled.div`
-        margin: 20px 0;
+        margin: 20px 0 10px;
         background-image: url(${image});
         width: 100%;
         height: 400px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        border-radius: 100px;
+        border-radius: 25px;
 
         @media (${QUERIES.large}) {
-            height: 700px;
+            height: 500px;
+            margin-bottom: 45px;
         }
     `;
 
@@ -34,30 +35,27 @@ const Project = ({
 
     return (
         <Project>
+            
             <Link to={`/${url}`} tabIndex='-1'>
+            <Midi style={{ marginTop: 0, marginBottom: 0 }}>
+
                 <ImageProj />
-            </Link>
-            <Midi style={{ marginTop: 40, marginBottom: 0 }}>
-                <Heading
+                <Heading2
                     style={{
                         textAlign: 'left',
-                        fontSize: 60,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        width: 'fit-content',
-                        maxWidth: 1000,
                     }}
                     onMouseDown={(e) => {
                         e.preventDefault();
                     }}
                 >
                     <Link to={`/${url}`}>{name}</Link>
-                </Heading>
+                </Heading2>
 
                 <Paragraph style={{ marginTop: 0 }}>
                     {description}
                 </Paragraph>
             </Midi>
+            </Link>
         </Project>
     );
 };
