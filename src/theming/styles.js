@@ -9,9 +9,9 @@ const QUERIES = {
 };
 
 export const Heading = styled.h1`
-    font-family: 'Spectral', serif;
-    font-size: 50px;
-    line-height: 55px;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    line-height: 52px;
     margin: 0 auto;
     width: 100%;
     color: ${({ theme }) => theme.textMain};
@@ -22,71 +22,66 @@ export const Heading = styled.h1`
     letter-spacing: -3px;
     text-align: left;
     animation: ${fadeIn} 1s forwards;
+    font-weight: 300;
 
     @media (${QUERIES.large}) {
-        font-size: 64px;
-        line-height: 66px;
-        font-weight: 200;
+        font-size: 48px;
+        line-height: 50px;
     }
 `;
 
 export const Heading2 = styled.h1`
-    font-family: 'Spectral', serif;
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    line-height: auto;
+    font-weight: 400;
+
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
     border-bottom: 3px solid transparent;
     opacity: 0;
-    letter-spacing: -1px;
     animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
-        font-size: 55px;
-        line-height: 52px;
+        font-size: 32px;
     }
 `;
 
-export const Paragraph = styled.p`
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
+export const Label = styled.h1`
+    font-family: 'Inter', sans-serif;
     line-height: auto;
-    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.textMain};
+    opacity: 0.5;
+    font-size: 14px;
+`;
+
+export const Paragraph = styled.p`
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: auto;
+    font-size: 16px;
+    line-height: 180%;
+    mixBlendMode: 'difference',
+    color: 'white',
 
     color: ${({ theme }) => theme.textMain};
 
     @media (${QUERIES.large}) {
-        font-size: 20px;
+        font-size: 16px;
     }
 `;
 
-export const Paragraph2 = styled.p`
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: auto;
-    font-size: 20px;
-    color: #b7b7b7;
-
-    @media (${QUERIES.large}) {
-        font-size: 24px;
-        margin: 30px 0;
-    }
-`;
 
 export const Caption = styled.p`
-    color: ${({ theme }) => theme.textLight};
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
-    letter-spacing: 1px;
     line-height: auto;
-    font-size: 20px;
 
     @media (${QUERIES.large}) {
-        font-size: 24px;
-        margin: 10px 0;
+        font-size: 16px;
+        margin: 30px 0;
     }
 `;
 
@@ -112,7 +107,7 @@ export const Full = styled.main`
     width: 100%;
     height: 100%;
     padding: 0px;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
 
     @media (${QUERIES.large}) {
@@ -125,7 +120,7 @@ export const Midi = styled.div`
     height: auto;
     margin: 20px auto 50px auto;
     padding: 30px;
-    max-width: 1110px;
+    max-width: 800px;
 
     @media (${QUERIES.large}) {
         margin: 100px auto 170px auto;

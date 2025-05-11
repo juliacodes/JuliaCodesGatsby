@@ -4,7 +4,6 @@ import QUERIES, {
     Midi,
     Heading2,
     Full,
-    Paragraph2,
     Paragraph,
 } from '../theming/styles';
 import styled from 'styled-components';
@@ -78,7 +77,7 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
                 >
                     DevOps Dashboard
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -89,7 +88,7 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
                     projects. Decore allows users to customize a layout setup
                     that will generate custom html and css code that can be used
                     as a starter template for any website.{' '}
-                </Paragraph2>
+                </Paragraph>
                 <FlexGroup>
                     <div>
                         <Heading2
@@ -103,7 +102,7 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
                         >
                             Design Process
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -111,7 +110,7 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
                             (the "d. school").
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                     <div>
                         <Heading2
@@ -125,7 +124,7 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
                         >
                             My Role
                         </Heading2>
-                        <Paragraph2
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
                             }}
@@ -133,7 +132,7 @@ const DevopsPage = ({ toggleMode, mode, spread }) => {
                             I used a 5-stage Design Thinking model proposed by
                             the Hasso Plattner Institute of Design at Stanford
                             (the "d. school").
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
