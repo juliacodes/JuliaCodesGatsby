@@ -4,7 +4,6 @@ import QUERIES, {
     Midi,
     Heading2,
     Full,
-    Paragraph2,
     Paragraph,
 } from '../theming/styles';
 import styled from 'styled-components';
@@ -86,7 +85,7 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                 >
                     Vulnerability Management
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
                     }}
@@ -99,12 +98,12 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                     had to move quickly to patch the issue and this brought the
                     attention of executives to better track vulnerabilities and
                     risks within their organizations.
-                </Paragraph2>
-                <Paragraph2>
+                </Paragraph>
+                <Paragraph>
                     IBM was no stranger to this and began regularly tracking
                     vulnerabilities and risks of each department monthly from a
                     number of their various vulnerability tracking applications.
-                </Paragraph2>
+                </Paragraph>
                 <FlexGroup>
                     <div>
                         <Heading2
@@ -118,22 +117,22 @@ const VulnPage = ({ toggleMode, mode, spread }) => {
                         >
                             Pain Points with Current Process
                         </Heading2>
-                        <Paragraph2>
+                        <Paragraph>
                             - Multiple sources of data all separately organized
-                        </Paragraph2>
-                        <Paragraph2>
+                        </Paragraph>
+                        <Paragraph>
                             - Team leads are creating analytics and charts by
                             hand every few weeks
-                        </Paragraph2>{' '}
-                        <Paragraph2>
+                        </Paragraph>{' '}
+                        <Paragraph>
                             - Tools aren’t available to management, leaving them
                             to get secondary accounts of vulnerability status
-                        </Paragraph2>{' '}
-                        <Paragraph2>
+                        </Paragraph>{' '}
+                        <Paragraph>
                             - Developers are tracking and updating
                             vulnerabilities in multiple different places,
                             obscuring the true level of risk within applications
-                        </Paragraph2>
+                        </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
