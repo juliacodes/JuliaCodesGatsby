@@ -21,14 +21,6 @@ export const FootCont = styled.footer`
         }
     }
 
-    ${Paragraph} {
-        color: ${({ theme }) => theme.textLight};
-        font-size: 15px;
-        max-width: 700px;
-        @media (${QUERIES.large}) {
-            font-size: 25px;
-        }
-    }
 `;
 
 export const FootFinal = styled.div`
@@ -43,17 +35,6 @@ export const FootFinal = styled.div`
         padding: 0;
     }
 
-    ${Paragraph} {
-        margin-left: 30px;
-        font-size: 15px;
-        font-weight: 500;
-        color: ${({ theme }) => theme.textMain};
-
-        @media (${QUERIES.large}) {
-            margin-left: 50px;
-            font-size: 20px;
-        }
-    }
 `;
 
 export const FinalLeft = styled.div`
