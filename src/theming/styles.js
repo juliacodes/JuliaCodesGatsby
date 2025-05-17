@@ -19,14 +19,14 @@ export const Heading = styled.h1`
     border-bottom: 3px solid transparent;
     user-select: none;
     opacity: 0;
-    letter-spacing: -2px;
+    letter-spacing: -.6px;
     text-align: left;
     animation: ${fadeIn} 1s forwards;
-    font-weight: 300;
+    font-weight: light;
 
     @media (${QUERIES.large}) {
         font-size: 40px;
-        line-height: 50px;
+        line-height: 113%;
     }
 `;
 
@@ -120,10 +120,10 @@ export const Midi = styled.div`
     height: auto;
     margin: 20px auto 50px auto;
     padding: 30px;
-    max-width: 800px;
+    max-width: 750px;
 
     @media (${QUERIES.large}) {
-        margin: 70px auto 100px auto;
+        margin: 44px auto 100px auto;
         padding: 0px;
     }
 `;
