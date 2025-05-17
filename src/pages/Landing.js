@@ -8,7 +8,7 @@ import QUERIES, {
     Paragraph,
 } from '../theming/styles';
 import styled from 'styled-components';
-import { Nav, Foot, Project } from '../components';
+import { Nav, Foot, Project, Collage } from '../components';
 import { Spread } from '../components/switch/styles';
 import { Awk1, Vuln, Devops, EA1Image } from '../images';
 
@@ -47,7 +47,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
         >
             <Spread className={spreadClass} />
             <Nav mode={mode} toggleMode={toggleMode} />
-            <Midi style={{ mixBlendMode: 'difference' }}>
+            <Midi style={{ mixBlendMode: 'difference', paddingTop: 17 }}>
                 <Heading
                     style={{
                         mixBlendMode: 'difference',
@@ -56,6 +56,10 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 >
                     I'm Julia — a Technical Product Designer crafting elegant & scalable design.
                 </Heading>
+            </Midi>
+
+            <Midi style={{ mixBlendMode: 'difference', paddingTop: 17 }}>
+                <Collage />
             </Midi>
 
             <Full
