@@ -30,7 +30,16 @@ export const SwitchBtn = styled.button`
 
     :hover {
         cursor: pointer;
+        outline: 2px solid rgba(255, 255, 255, 0.26);
+        transition: all 0.2s ease-in-out;
     }
+
+    :active {
+        svg {
+            opacity: 0.5;
+        }
+    }
+
     @media (${QUERIES.large}) {
         transform: scale(1);
     }

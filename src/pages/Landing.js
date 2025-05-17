@@ -58,7 +58,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 </Heading>
             </Midi>
 
-            <Midi style={{ mixBlendMode: 'difference', paddingTop: 17 }}>
+            <Midi style={{ paddingTop: 17 }}>
                 <Collage />
             </Midi>
 
