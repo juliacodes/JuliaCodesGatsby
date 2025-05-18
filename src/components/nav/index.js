@@ -39,11 +39,11 @@ const Nav = ({ toggleMode, mode, spread }) => {
                         }}
                     />
                 </Link>
-                <NavLinks>
+                {/* <NavLinks>
                     <a href='/'><p className={window.location.pathname === '/' ? 'active' : ''}>Home</p></a>
                     <a href='/about'><p className={window.location.pathname === '/about' ? 'active' : ''}>About</p></a>
                     <a href='/contact'><p className={window.location.pathname === '/contact' ? 'active' : ''}>Contact</p></a>
-                </NavLinks>
+                </NavLinks> */}
                 <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
             </NavCont>
         </Midi>

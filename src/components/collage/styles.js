@@ -11,6 +11,7 @@ export const CollageCont = styled.div`
     display: flex;
     flex-direction: row;
     gap: 0;
+    padding-bottom: 50px;
 `;
 
 export const CollageItem = styled.div`
@@ -36,6 +37,10 @@ export const CollageItem = styled.div`
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         border-radius: 9px;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     &:hover {
@@ -64,22 +69,22 @@ export const CollageItem = styled.div`
     }
 
     &:nth-child(1) { 
-        transform: rotate(-4deg);
+        transform: rotate(-4deg) translateZ(0);
     }
     &:nth-child(2) { 
-        transform: rotate(6deg);
+        transform: rotate(6deg) translateZ(0);
     }
     &:nth-child(3) { 
-        transform: rotate(-4deg);
+        transform: rotate(-4deg) translateZ(0);
     }
     &:nth-child(4) { 
-        transform: rotate(3.5deg);
+        transform: rotate(3.5deg) translateZ(0);
     }
     &:nth-child(5) { 
-        transform: rotate(-3deg);
+        transform: rotate(-3deg) translateZ(0);
     }
     &:nth-child(6) { 
-        transform: rotate(3.4deg);
+        transform: rotate(3.4deg) translateZ(0);
     }
 
     &:nth-child(5) {
