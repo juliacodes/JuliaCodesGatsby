@@ -3,57 +3,38 @@ import QUERIES, { Full, Heading, Paragraph } from '../../theming/styles';
 
 export const FootCont = styled.footer`
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     ${Full} {
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 100px;
 
-        @media (${QUERIES.large}) {
+        @media (${QUERIES.small}) {
             padding-top: 100px;
         }
     }
 
     ${Heading} {
         font-size: 25px;
-        @media (${QUERIES.large}) {
+        @media (${QUERIES.small}) {
             font-size: 50px;
         }
     }
 
-    ${Paragraph} {
-        color: ${({ theme }) => theme.textLight};
-        font-size: 15px;
-        max-width: 700px;
-        @media (${QUERIES.large}) {
-            font-size: 25px;
-        }
-    }
 `;
 
 export const FootFinal = styled.div`
     display: flex;
     width: 100%;
-    padding: 0 20px;
+    padding: 0
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    @media (${QUERIES.large}) {
+    @media (${QUERIES.small}) {
         flex-wrap: nowrap;
         padding: 0;
     }
 
-    ${Paragraph} {
-        margin-left: 30px;
-        font-size: 15px;
-        font-weight: 500;
-        color: ${({ theme }) => theme.textMain};
-
-        @media (${QUERIES.large}) {
-            margin-left: 50px;
-            font-size: 20px;
-        }
-    }
 `;
 
 export const FinalLeft = styled.div`
@@ -66,33 +47,31 @@ export const FinalLeft = styled.div`
 
 export const FinalRight = styled(FinalLeft)`
     justify-content: flex-start;
-    gap: 30px;
+    gap: 20px;
     margin-top: 40px;
 
     ${Paragraph} {
         margin-left: 0;
         border-bottom: 1px solid transparent;
         :hover {
-            border-bottom: 1px solid;
-            border-bottom-color: ${({ theme }) => theme.textMain};
+           opacity: .5
         }
     }
 
-    @media (${QUERIES.large}) {
+    @media (${QUERIES.small}) {
         justify-content: flex-end;
         margin-top: 0px;
     }
 `;
 
-export const LogoSvg = styled.svg`
-    transform: scale(0.7);
-
-    * {
+export const HeroIcon = styled.svg`
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: ${props => props.marginLeft || '0'};
+    opacity: 0.5;
+    
+    path {
         fill: ${({ theme }) => theme.textMain};
-        stroke: ${({ theme }) => theme.textMain};
-    }
-
-    @media (${QUERIES.large}) {
-        transform: scale(1);
     }
 `;

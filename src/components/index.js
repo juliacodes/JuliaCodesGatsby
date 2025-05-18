@@ -4,5 +4,7 @@ import { Nav } from './nav';
 import { Switch } from './switch';
 import { Project } from './Project';
 import { Lock } from './lock';
+import { Collage } from './collage';
+import { Experience } from './Experience';
 
-export { Foot, Logo, Nav, Switch, Project, Lock };
+export { Foot, Logo, Nav, Switch, Project, Lock, Collage, Experience };

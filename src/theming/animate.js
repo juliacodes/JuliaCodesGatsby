@@ -115,14 +115,14 @@ export const SpreadBlackAnim = keyframes`
     height: 0;
     top: 0px;
     right: 0px;
-    background-color: #1a181f;
+    background-color: #151517;
 }
 100%{
     width: 400vmax;
     height: 400vmax;
     top: calc(-250vmax + 3rem);
     right: calc(-250vmax + 3rem);
-    background-color: #1a181f;
+    background-color: #151517;
 }`;
 
 export const SpreadWhiteAnim = keyframes`
