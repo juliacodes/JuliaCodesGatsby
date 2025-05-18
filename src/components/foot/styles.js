@@ -9,14 +9,14 @@ export const FootCont = styled.footer`
         margin-bottom: 0;
         padding-top: 100px;
 
-        @media (${QUERIES.large}) {
+        @media (${QUERIES.small}) {
             padding-top: 100px;
         }
     }
 
     ${Heading} {
         font-size: 25px;
-        @media (${QUERIES.large}) {
+        @media (${QUERIES.small}) {
             font-size: 50px;
         }
     }
@@ -30,7 +30,7 @@ export const FootFinal = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    @media (${QUERIES.large}) {
+    @media (${QUERIES.small}) {
         flex-wrap: nowrap;
         padding: 0;
     }
@@ -58,7 +58,7 @@ export const FinalRight = styled(FinalLeft)`
         }
     }
 
-    @media (${QUERIES.large}) {
+    @media (${QUERIES.small}) {
         justify-content: flex-end;
         margin-top: 0px;
     }

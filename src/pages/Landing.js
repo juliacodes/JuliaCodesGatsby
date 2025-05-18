@@ -86,9 +86,9 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
 
             <Midi style={{ paddingTop: 32 }}>
                 <Collage />
-            </Midi>
+            </Midi> 
 
-            <Midi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
+            {/*<Midi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
                 <Heading2  
                     style={{
                         mixBlendMode: 'difference',
@@ -110,7 +110,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     url='ea1'
                     description='Led research & design to solve content staleness problems'
                 />
-            </Midi>
+            </Midi>*/}
 
             <Midi style={{mixBlendMode: 'difference', paddingTop: '84px', margin: '0 auto' }}>
                 <Heading2  
