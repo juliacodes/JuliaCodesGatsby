@@ -10,8 +10,8 @@ const QUERIES = {
 
 export const Heading = styled.h1`
     font-family: 'Inter', sans-serif;
-    font-size: 48px;
-    line-height: 52px;
+    font-size: 40px;
+    line-height: 113%;
     margin: 0 auto;
     width: 100%;
     color: ${({ theme }) => theme.textMain};
@@ -19,31 +19,42 @@ export const Heading = styled.h1`
     border-bottom: 3px solid transparent;
     user-select: none;
     opacity: 0;
-    letter-spacing: -.6px;
+    letter-spacing: -0.01em;
     text-align: left;
     animation: ${fadeIn} 1s forwards;
-    font-weight: light;
-
-    @media (${QUERIES.large}) {
-        font-size: 40px;
-        line-height: 113%;
-    }
+    font-weight: 200;
 `;
 
-export const Heading2 = styled.h1`
+export const Heading2 = styled.h2`
     font-family: 'Inter', sans-serif;
-    font-size: 32px;
     line-height: auto;
     font-weight: 400;
-
+    font-size: 24px;
     color: ${({ theme }) => theme.textMain};
     transition: all 0.3s ease-in-out;
     border-bottom: 3px solid transparent;
     opacity: 0;
+    letter-spacing: -0.01em;
     animation: ${fadeIn} 1s forwards;
 
     @media (${QUERIES.large}) {
-        font-size: 32px;
+        font-size: 24px;
+    }
+`;
+
+export const Heading3 = styled.h3`
+    font-family: 'Inter', sans-serif;
+    font-size: 18px
+    line-height: auto;
+    font-weight: 400;
+    color: ${({ theme }) => theme.textMain};
+    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    opacity: 0;
+    letter-spacing: -0.03em;
+    animation: ${fadeIn} 1s forwards;
+
+    @media (${QUERIES.large}) {
     }
 `;
 
@@ -60,13 +71,14 @@ export const Label = styled.h1`
 export const Paragraph = styled.p`
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    line-height: auto;
     font-size: 16px;
-    line-height: 180%;
-    mixBlendMode: 'difference',
-    color: 'white',
+    line-height: auto;
+    mix-blend-mode: difference;
+    color: white;
+    padding: 0;
+    letter-spacing: -0.03em;
 
-    color: ${({ theme }) => theme.textMain};
+    color: ${({ theme }) => theme.textLight};
 
     @media (${QUERIES.large}) {
         font-size: 16px;
@@ -119,7 +131,7 @@ export const Midi = styled.div`
     width: 100%;
     height: auto;
     margin: 20px auto 50px auto;
-    padding: 30px;
+    padding: 20px;
     max-width: 750px;
 
     @media (${QUERIES.large}) {
