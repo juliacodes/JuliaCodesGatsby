@@ -38,11 +38,13 @@ const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.main};
     color: ${({ theme }) => theme.heading};
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    letter-spacing: -1.1%;
     width: 100%;
     height: 100%;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
-    font-weight: 200;
     -ms-overflow-style: none;  scrollbar-width: none;
     ::-webkit-scrollbar { width: 0 !important }
   }

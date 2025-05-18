@@ -4,9 +4,9 @@ import QUERIES, {
     Midi,
     Heading2,
     Full,
-    Paragraph2,
     Paragraph,
     Caption,
+    Label,
 } from '../theming/styles';
 import styled from 'styled-components';
 import { Nav, Foot } from '../components';
@@ -68,9 +68,11 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                 >
                     EA1 Vehicle Service
                 </Heading2>
-                <Paragraph2
+                <Paragraph
                     style={{
                         maxWidth: 1200,
+                        mixBlendMode: 'difference',
+                        color: 'white',
                     }}
                 >
                     The client for this application approached me because they
@@ -83,52 +85,45 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                     personas, competitive audits, sketches, wireframes and a
                     final prototype and send over final assets to an engineer in
                     around three months.
-                </Paragraph2>
+                </Paragraph>
                 <FlexGroup>
                     <div>
-                        <Heading2
+                        <Label
                             style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
                                 mixBlendMode: 'difference',
                                 color: 'white',
                             }}
                         >
                             My Role
-                        </Heading2>
-                        <Paragraph2
+                        </Label>
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
+                                mixBlendMode: 'difference',
+                                color: 'white',
                             }}
                         >
-                            As the sole designer, I was able to work on all
-                            stages of the design including: User Research,
-                            Sketching, Journey Maps, Low and High Fidelity
-                            Designs.
-                        </Paragraph2>
+                            Design Man
+                        </Paragraph>
                     </div>
-                    <div>
-                        <Heading2
+                    <div style={{width: '50%'}}>
+                        <Label
                             style={{
-                                fontSize: 25,
-                                lineHeight: '30px',
-                                fontWeight: 300,
                                 mixBlendMode: 'difference',
                                 color: 'white',
                             }}
                         >
                             Team
-                        </Heading2>
-                        <Paragraph2
+                        </Label>
+                        <Paragraph
                             style={{
                                 maxWidth: 700,
+                                mixBlendMode: 'difference',
+                                color: 'white',
                             }}
                         >
-                            I collaborated with an engineer and a business lead
-                            to help facilitate the needs of our client and
-                            determine scope.
-                        </Paragraph2>
+                            Design Man
+                        </Paragraph>
                     </div>
                 </FlexGroup>
             </Midi>
@@ -155,7 +150,7 @@ const EA1 = ({ toggleMode, mode, spread }) => {
                         alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
 
-                    <Caption style={{ fontSize: 20, marginTop: 15 }}>
+                    <Caption>
                         Final Prototype of EA1, a service that allows users to
                         request help when experiencing vehicle problems
                     </Caption>

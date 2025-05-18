@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavCont } from './styles';
+import { NavCont, NavLinks } from './styles';
 import { Midi } from '../../theming/styles';
 import { Logo } from '../logo';
 import { Switch } from '../switch';
@@ -29,6 +29,7 @@ const Nav = ({ toggleMode, mode, spread }) => {
                             navigate(`/`);
                         }
                     }}
+                    style={{margin: 0, padding: 0, border: 'none', height: '28px'}}
                 >
                     <Logo
                         style={{
@@ -38,6 +39,11 @@ const Nav = ({ toggleMode, mode, spread }) => {
                         }}
                     />
                 </Link>
+                {/* <NavLinks>
+                    <a href='/'><p className={window.location.pathname === '/' ? 'active' : ''}>Home</p></a>
+                    <a href='/about'><p className={window.location.pathname === '/about' ? 'active' : ''}>About</p></a>
+                    <a href='/contact'><p className={window.location.pathname === '/contact' ? 'active' : ''}>Contact</p></a>
+                </NavLinks> */}
                 <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
             </NavCont>
         </Midi>
