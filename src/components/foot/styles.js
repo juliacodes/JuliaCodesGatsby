@@ -3,7 +3,7 @@ import QUERIES, { Full, Heading, Paragraph } from '../../theming/styles';
 
 export const FootCont = styled.footer`
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     ${Full} {
         margin-top: 0;
         margin-bottom: 0;
@@ -26,7 +26,7 @@ export const FootCont = styled.footer`
 export const FootFinal = styled.div`
     display: flex;
     width: 100%;
-    padding: 0 20px;
+    padding: 0
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -47,15 +47,14 @@ export const FinalLeft = styled.div`
 
 export const FinalRight = styled(FinalLeft)`
     justify-content: flex-start;
-    gap: 30px;
+    gap: 20px;
     margin-top: 40px;
 
     ${Paragraph} {
         margin-left: 0;
         border-bottom: 1px solid transparent;
         :hover {
-            border-bottom: 1px solid;
-            border-bottom-color: ${({ theme }) => theme.textMain};
+           opacity: .5
         }
     }
 
@@ -65,15 +64,14 @@ export const FinalRight = styled(FinalLeft)`
     }
 `;
 
-export const LogoSvg = styled.svg`
-    transform: scale(0.7);
-
-    * {
+export const HeroIcon = styled.svg`
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: ${props => props.marginLeft || '0'};
+    opacity: 0.5;
+    
+    path {
         fill: ${({ theme }) => theme.textMain};
-        stroke: ${({ theme }) => theme.textMain};
-    }
-
-    @media (${QUERIES.large}) {
-        transform: scale(1);
     }
 `;

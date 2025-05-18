@@ -18,6 +18,7 @@ import InProgress from '../images/ea1/InProgress.png';
 import SelectingVehicle from '../images/ea1/SelectingVehicle.png';
 import FinalEA from '../images/ea1/final.png';
 import FinalEA2 from '../images/ea1/final2.png';
+import ScheduleMain from './schedule/key.png';
 
 import {
     Log4j1,
@@ -98,4 +99,5 @@ export {
     SelectingVehicle,
     FinalEA,
     FinalEA2,
+    ScheduleMain
 };

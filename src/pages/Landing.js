@@ -6,11 +6,14 @@ import QUERIES, {
     Full,
     Image,
     Paragraph,
+    Heading2,
+    Heading3,
 } from '../theming/styles';
 import styled from 'styled-components';
-import { Nav, Foot, Project, Collage } from '../components';
+import { Nav, Foot, Project, Collage, Experience } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Awk1, Vuln, Devops, EA1Image } from '../images';
+import { Vuln, EA1Image } from '../images';
+import { ScheduleMain } from '../images';
 
 const Split = styled.div`
     display: flex;
@@ -28,6 +31,29 @@ const Split = styled.div`
         }
     }
 `;
+
+const experiences = [
+    {
+        years: '2024 - now',
+        title: 'Senior Product Designer at Atmosphere TV',
+        description: 'Lead designer for tv for bars & restaurants'
+    },
+    {
+        years: '2023 - 2024',
+        title: 'Product Designer at Atmosphere TV',
+        description: 'Led design & research for customer tooling'
+    },
+    {
+        years: '2020 - 2023',
+        title: 'UX Engineer at IBM',
+        description: 'Designed & developed tools for engineers'
+    },
+    {
+        years: '2019 - 2020',
+        title: 'UI Developer at Awkward Co.',
+        description: 'Developing component system alongside designers'
+    }
+];
 
 const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
     const spreadClass =
@@ -58,33 +84,51 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 </Heading>
             </Midi>
 
-            <Midi style={{ paddingTop: 17 }}>
+            <Midi style={{ paddingTop: 32 }}>
                 <Collage />
             </Midi>
 
-            <Full
-                style={{ display: 'flex', flexDirection: 'column', gap: 100 }}
-            >
+            <Midi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
+                <Heading2  
+                    style={{
+                        mixBlendMode: 'difference',
+                        color: 'white',
+                    }}>
+                    Case studies
+                </Heading2>
+            </Midi>
+            <Midi style={{paddingTop: 0, margin: '0 auto' }}>
                 <Project
-                    name='EA1 Vehicle Service'
-                    image={EA1Image}
+                    name='Content Variety & Scheduling'
+                    image={ScheduleMain}
                     url='ea1'
-                    description='Freelance design work done for a client who wanted to create the Uber for car repair & servicing'
+                    description='Led research & design to solve content staleness problems'
                 />
                 <Project
-                    name='Movie Theater Case Study'
-                    url='movie'
-                    description='Reimagining the movie finding and seat selection process for movie theater applications'
+                    name='Content Variety & Scheduling'
+                    image={ScheduleMain}
+                    url='ea1'
+                    description='Led research & design to solve content staleness problems'
                 />
-                <Project
-                    name='IBM, Vulnerability Manager'
-                    image={Vuln}
-                    url='vuln'
-                    description='Enabling IBMers to view the vulnerabilities that exist within their offerings in one easy to understand tool'
-                /> 
-            </Full>
+            </Midi>
 
-            <Foot />
+            <Midi style={{mixBlendMode: 'difference', paddingTop: '84px', margin: '0 auto' }}>
+                <Heading2  
+                    style={{
+                        mixBlendMode: 'difference',
+                        color: 'white',
+                    }}>
+                    Experience
+                </Heading2>
+            </Midi>
+
+            <Midi style={{ paddingTop: 0, margin: '0 auto 80px auto' }}>
+                <Experience experiences={experiences} />
+            </Midi>
+
+            <Midi style={{ marginBottom: '10px' }}>
+                <Foot />
+            </Midi>
         </Main>
     );
 };

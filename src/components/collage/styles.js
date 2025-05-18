@@ -18,11 +18,11 @@ export const CollageItem = styled.div`
     flex-direction: column;
     background-color: white;
     border: 2px solid rgb(255, 255, 255);
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.13);
     border-radius: 11px;
     aspect-ratio: 1;
     width: 160px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: visible;
     will-change: transform;
@@ -40,6 +40,7 @@ export const CollageItem = styled.div`
 
     &:hover {
         transform: rotate(0deg) !important;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.23);
     }
 
     &::after {
@@ -79,5 +80,15 @@ export const CollageItem = styled.div`
     }
     &:nth-child(6) { 
         transform: rotate(3.4deg);
+    }
+
+    &:nth-child(5) {
+        display: none;
+    }
+
+    @media (${QUERIES.large}) {
+        &:nth-child(5) {
+            display: block;
+        }
     }
 `;
