@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
-const COLLAPSED_WIDTH = '24px';
+const COLLAPSED_WIDTH = '30px';
 const EXPANDED_WIDTH = '260px';
-const SECTION_COUNT = 10; // Number of main sections (Heading2s)
+const SECTION_COUNT = 10;
 
 const SECTION_IDS = [
   'scheduler-improving-content-variety-for-atmosphere-tv',
@@ -17,58 +17,40 @@ const SECTION_IDS = [
   'impact-and-results',
 ];
 
-const Card = styled.nav`
+const Container = styled.div`
   position: fixed;
   top: 50%;
-  right: 12px;
+  right: 20px;
   transform: translateY(-50%);
-  border-radius: 16px;
-  min-width: ${EXPANDED_WIDTH};
-  max-width: ${EXPANDED_WIDTH};
-  width: ${EXPANDED_WIDTH};
-  height: auto;
   z-index: 1000;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  pointer-events: auto;
-  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
-  cursor: pointer;
-  background: ${({ theme }) => theme.main};
-  box-shadow: none;
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  
+
   @media (max-width: 900px) {
     display: none;
   }
 
-  &:hover, &:focus-within {
+  &:hover nav {
     opacity: 1;
+    pointer-events: auto;
+    transform: translate(0, -50%);
     background: ${({ theme }) => theme.main};
     border: 1px solid ${({ theme }) => theme.outline};
   }
 `;
 
-const CollapsedLines = styled.div`
+const CollapsedLinesContainer = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: ${COLLAPSED_WIDTH};
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  right: -100px;
-  top: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-  z-index: 2;
-  ${Card}:hover &,
-  ${Card}:focus-within & {
-    opacity: 0;
-    pointer-events: none;
-  }
+  padding: 10px 0;
+  cursor: pointer;
+  z-index: 1;
 `;
 
 const CollapsedLine = styled.div`
@@ -82,23 +64,38 @@ const CollapsedLine = styled.div`
   box-shadow: ${({ active }) => (active ? '0 0 2px #111' : 'none')};
 `;
 
+const Card = styled.nav`
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(20px, -50%);
+  border-radius: 16px;
+  min-width: ${EXPANDED_WIDTH};
+  max-width: ${EXPANDED_WIDTH};
+  width: ${EXPANDED_WIDTH};
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  background: ${({ theme }) => theme.main};
+  border: 1px solid transparent;
+  border-radius: 10px;
+  z-index: 2;
+`;
+
 const OutlineList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 20px;
   color: ${({ theme }) => theme.textMain};
-  opacity: 0;
-  pointer-events: none;
   min-width: 180px;
   max-width: 100%;
   height: 100%;
   overflow-y: auto;
 
-  ${Card}:hover &,
-  ${Card}:focus-within & {
-    opacity: 1;
-    pointer-events: auto;
-  }
   &::-webkit-scrollbar {
     width: 4px;
   }
@@ -113,7 +110,6 @@ const OutlineList = styled.ul`
     background: #ccc;
   }
 `;
-
 
 const OutlineSection = styled.li`
   width: 100%;
@@ -175,7 +171,7 @@ function getActiveSection() {
     const el = document.getElementById(id);
     if (!el) return Infinity;
     const rect = el.getBoundingClientRect();
-    return Math.abs(rect.top - 120); // 120px offset for nav, tweak as needed
+    return Math.abs(rect.top - 120);
   });
   return offsets.indexOf(Math.min(...offsets));
 }
@@ -193,61 +189,63 @@ const Outline = () => {
   }, []);
 
   return (
-    <Card tabIndex={0} aria-label="Page outline">
-      <CollapsedLines>
+    <Container>
+      <CollapsedLinesContainer>
         {SECTION_IDS.map((_, i) => (
           <CollapsedLine key={i} active={i === activeIdx} />
         ))}
-      </CollapsedLines>
-      <CardButton tabIndex={-1} aria-hidden="true">
-        <OutlineList>
-          <OutlineSection>
-            <OutlineLink href="#scheduler-improving-content-variety-for-atmosphere-tv" active={activeIdx === 0}>Summary</OutlineLink>
-          </OutlineSection>
-          <OutlineSection>
-            <OutlineLink href="#the-challenge" active={activeIdx === 1}>The Challenge</OutlineLink>
-          </OutlineSection>
-          <OutlineSectionWithChildren> 
-            <OutlineLink href="#discovery-phase" active={activeIdx === 2}>Discovery Phase</OutlineLink>
-            <OutlineSubsection>
-              <OutlineSubitem><OutlineLink href="#uncovering-the-real-problems">Uncovering the Real Problems</OutlineLink></OutlineSubitem>
-              <OutlineSubitem><OutlineLink href="#key-insights">Key Insights</OutlineLink></OutlineSubitem>
-            </OutlineSubsection>
-          </OutlineSectionWithChildren>
-          <OutlineSectionWithChildren>
-            <OutlineLink href="#understanding-the-feedback" active={activeIdx === 3}>Understanding the feedback</OutlineLink>
-            <OutlineSubsection>
-              <OutlineSubitem><OutlineLink href="#the-hypothesis">The Hypothesis</OutlineLink></OutlineSubitem>
-              <OutlineSubitem><OutlineLink href="#prototyping-process">Prototyping Process</OutlineLink></OutlineSubitem>
-            </OutlineSubsection>
-          </OutlineSectionWithChildren>
-          <OutlineSection>
-            <OutlineLink href="#a-critical-turning-point" active={activeIdx === 4}>A Critical Turning Point</OutlineLink>
-          </OutlineSection>
-          <OutlineSectionWithChildren>
-            <OutlineLink href="#beta-testing-with-real-users" active={activeIdx === 5}>Beta Testing with Real Users</OutlineLink>
-          </OutlineSectionWithChildren>
-          <OutlineSection>
-            <OutlineLink href="#unexpected-insights" active={activeIdx === 6}>Unexpected Insights</OutlineLink>
-          </OutlineSection>
-          <OutlineSectionWithChildren>
-            <OutlineLink href="#design-iterations" active={activeIdx === 7}>Design Iterations</OutlineLink>
-            <OutlineSubsection>
-              <OutlineSubitem><OutlineLink href="#enterprise-management">Enterprise Management</OutlineLink></OutlineSubitem>
-              <OutlineSubitem><OutlineLink href="#scheduling-enhancements">Scheduling Enhancements</OutlineLink></OutlineSubitem>
-              <OutlineSubitem><OutlineLink href="#automation-and-control">Automation and Control</OutlineLink></OutlineSubitem>
-            </OutlineSubsection>
-          </OutlineSectionWithChildren>
-          <OutlineSection>
-            <OutlineLink href="#impact-and-results" active={activeIdx === 8}>Impact and Results</OutlineLink>
-          </OutlineSection>
-          <OutlineSection>
-            <OutlineLink href="#reflections" active={activeIdx === 9}>Reflections</OutlineLink>
-          </OutlineSection>
-        </OutlineList>
-      </CardButton>
-    </Card>
+      </CollapsedLinesContainer>
+      <Card tabIndex={0} aria-label="Page outline">
+        <CardButton tabIndex={-1} aria-hidden="true">
+          <OutlineList>
+            <OutlineSection>
+              <OutlineLink href="#scheduler-improving-content-variety-for-atmosphere-tv" active={activeIdx === 0}>Summary</OutlineLink>
+            </OutlineSection>
+            <OutlineSection>
+              <OutlineLink href="#the-challenge" active={activeIdx === 1}>The Challenge</OutlineLink>
+            </OutlineSection>
+            <OutlineSectionWithChildren> 
+              <OutlineLink href="#discovery-phase" active={activeIdx === 2}>Discovery Phase</OutlineLink>
+              <OutlineSubsection>
+                <OutlineSubitem><OutlineLink href="#uncovering-the-real-problems">Uncovering the Real Problems</OutlineLink></OutlineSubitem>
+                <OutlineSubitem><OutlineLink href="#key-insights">Key Insights</OutlineLink></OutlineSubitem>
+              </OutlineSubsection>
+            </OutlineSectionWithChildren>
+            <OutlineSectionWithChildren>
+              <OutlineLink href="#understanding-the-feedback" active={activeIdx === 3}>Understanding the feedback</OutlineLink>
+              <OutlineSubsection>
+                <OutlineSubitem><OutlineLink href="#the-hypothesis">The Hypothesis</OutlineLink></OutlineSubitem>
+                <OutlineSubitem><OutlineLink href="#prototyping-process">Prototyping Process</OutlineLink></OutlineSubitem>
+              </OutlineSubsection>
+            </OutlineSectionWithChildren>
+            <OutlineSection>
+              <OutlineLink href="#a-critical-turning-point" active={activeIdx === 4}>A Critical Turning Point</OutlineLink>
+            </OutlineSection>
+            <OutlineSectionWithChildren>
+              <OutlineLink href="#beta-testing-with-real-users" active={activeIdx === 5}>Beta Testing with Real Users</OutlineLink>
+            </OutlineSectionWithChildren>
+            <OutlineSection>
+              <OutlineLink href="#unexpected-insights" active={activeIdx === 6}>Unexpected Insights</OutlineLink>
+            </OutlineSection>
+            <OutlineSectionWithChildren>
+              <OutlineLink href="#design-iterations" active={activeIdx === 7}>Design Iterations</OutlineLink>
+              <OutlineSubsection>
+                <OutlineSubitem><OutlineLink href="#enterprise-management">Enterprise Management</OutlineLink></OutlineSubitem>
+                <OutlineSubitem><OutlineLink href="#scheduling-enhancements">Scheduling Enhancements</OutlineLink></OutlineSubitem>
+                <OutlineSubitem><OutlineLink href="#automation-and-control">Automation and Control</OutlineLink></OutlineSubitem>
+              </OutlineSubsection>
+            </OutlineSectionWithChildren>
+            <OutlineSection>
+              <OutlineLink href="#impact-and-results" active={activeIdx === 8}>Impact and Results</OutlineLink>
+            </OutlineSection>
+            <OutlineSection>
+              <OutlineLink href="#reflections" active={activeIdx === 9}>Reflections</OutlineLink>
+            </OutlineSection>
+          </OutlineList>
+        </CardButton>
+      </Card>
+    </Container>
   );
 };
 
-export default Outline; 
+export default Outline;
