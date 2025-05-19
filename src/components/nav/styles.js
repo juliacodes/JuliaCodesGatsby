@@ -20,10 +20,14 @@ export const NavLinks = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 4px; 
-    a {
+    button {
         border: none;
         padding: 0;
         margin: 0;
+        background-color: transparent;
+        font-weight: 300;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
     }
 
     p {

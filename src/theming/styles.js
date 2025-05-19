@@ -65,14 +65,28 @@ export const Label = styled.h1`
     text-transform: uppercase;
     color: ${({ theme }) => theme.textMain};
     opacity: 0.5;
-    font-size: 14px;
+    font-size: 12px;
+    margin-bottom: 10px;
+`;
+
+export const Quote = styled.p`
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 170%;
+    padding: 0;
+    letter-spacing: -0.03em;
+    border-left: 2px solid ${({ theme }) => theme.textMain};
+    padding: 8px 24px;
+    margin-bottom: 20px;
+    color: ${({ theme }) => theme.textMain};
 `;
 
 export const Paragraph = styled.p`
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 16px;
-    line-height: auto;
+    line-height: 170%;
     mix-blend-mode: difference;
     color: white;
     padding: 0;
@@ -90,10 +104,11 @@ export const Caption = styled.p`
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     line-height: auto;
+    color: ${({ theme }) => theme.textLight};
+    margin: 16px 0 0 0;
+    font-size: 14px;
 
     @media (${QUERIES.large}) {
-        font-size: 16px;
-        margin: 30px 0;
     }
 `;
 

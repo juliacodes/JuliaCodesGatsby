@@ -88,8 +88,9 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 <Collage />
             </Midi> 
 
-            {/*<Midi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
+            <Midi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
                 <Heading2  
+                    id="case-studies"
                     style={{
                         mixBlendMode: 'difference',
                         color: 'white',
@@ -101,6 +102,12 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 <Project
                     name='Content Variety & Scheduling'
                     image={ScheduleMain}
+                    url='schedule'
+                    description='Led research & design to solve content staleness problems'
+                />
+                <Project
+                    name='Content Variety & Scheduling'
+                    image={ScheduleMain}
                     url='ea1'
                     description='Led research & design to solve content staleness problems'
                 />
@@ -110,10 +117,11 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     url='ea1'
                     description='Led research & design to solve content staleness problems'
                 />
-            </Midi>*/}
+            </Midi>
 
             <Midi style={{mixBlendMode: 'difference', paddingTop: '84px', margin: '0 auto' }}>
                 <Heading2  
+                    id="experience"
                     style={{
                         mixBlendMode: 'difference',
                         color: 'white',
