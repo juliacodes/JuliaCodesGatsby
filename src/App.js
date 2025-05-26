@@ -3,7 +3,7 @@ import { useDarkMode } from './hooks';
 import { ThemeProvider } from 'styled-components';
 import lightTheme, { darkTheme } from './theming/themeContext';
 import GlobalStyles from './theming/global';
-import { AppWrapper, DevopsPage, EA1, Landing, Movie, VulnPage, Scheduler } from './pages';
+import { AppWrapper, DevopsPage, EA1, Landing, Movie, VulnPage, Scheduler, MarketingSite } from './pages';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -91,10 +91,24 @@ const App = () => {
                         element={
                             <AppWrapper>
                                 <Scheduler
+                                    setDisableScroll={setDisableScroll}
                                     spread={spread}
                                     mode={mode}
                                     toggleMode={toggleMode}
                                 />
+                            </AppWrapper>
+                        }
+                    />
+                    <Route
+                        path='/marketing-site'
+                        element={
+                            <AppWrapper>
+                                <MarketingSite   
+                                    setDisableScroll={setDisableScroll}  
+                                    spread={spread}
+                                    mode={mode}
+                                    toggleMode={toggleMode}
+                                    /> 
                             </AppWrapper>
                         }
                     />

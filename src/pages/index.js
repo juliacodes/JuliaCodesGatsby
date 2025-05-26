@@ -5,5 +5,6 @@ import { VulnPage } from './Vuln';
 import { DevopsPage } from './Devops';
 import { EA1 } from './EA1';
 import { Scheduler } from './Scheduler';
+import { MarketingSite } from './MarketingSite';
     
-export { Landing, Movie, AppWrapper, VulnPage, DevopsPage, EA1, Scheduler };
+export { Landing, Movie, AppWrapper, VulnPage, DevopsPage, EA1, Scheduler, MarketingSite };

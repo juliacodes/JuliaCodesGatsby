@@ -44,6 +44,7 @@ export const CollageItem = styled.div`
     }
 
     &:hover {
+        cursor: pointer;
         transform: rotate(0deg) !important;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.23);
     }

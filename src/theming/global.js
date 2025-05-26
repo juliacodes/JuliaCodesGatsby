@@ -47,12 +47,13 @@ const GlobalStyles = createGlobalStyle`
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;  scrollbar-width: none;
     ::-webkit-scrollbar { width: 0 !important }
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   a {
     color: currentColor;
     text-decoration: none;
-    border-bottom: 3px solid transparent;
   }
   
   a:hover {

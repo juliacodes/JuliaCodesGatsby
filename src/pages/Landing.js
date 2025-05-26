@@ -8,12 +8,12 @@ import QUERIES, {
     Paragraph,
     Heading2,
     Heading3,
+    LandingMidi,
 } from '../theming/styles';
 import styled from 'styled-components';
-import { Nav, Foot, Project, Collage, Experience } from '../components';
+import { Nav, Foot, Project, ProjectVideo, Collage, Experience } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Vuln, EA1Image } from '../images';
-import { ScheduleMain } from '../images';
+import { NewVid, Thumb } from '../images';
 
 const Split = styled.div`
     display: flex;
@@ -73,7 +73,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
         >
             <Spread className={spreadClass} />
             <Nav mode={mode} toggleMode={toggleMode} />
-            <Midi style={{ mixBlendMode: 'difference', paddingTop: 17 }}>
+            <LandingMidi style={{ mixBlendMode: 'difference', paddingTop: 64 }}>
                 <Heading
                     style={{
                         mixBlendMode: 'difference',
@@ -82,13 +82,13 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 >
                     I'm Julia — a Technical Product Designer crafting elegant & scalable design.
                 </Heading>
-            </Midi>
+            </LandingMidi>
 
-            <Midi style={{ paddingTop: 32 }}>
+            <LandingMidi style={{ paddingTop: 32 }}>
                 <Collage />
-            </Midi> 
+            </LandingMidi> 
 
-            <Midi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
+            <LandingMidi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
                 <Heading2  
                     id="case-studies"
                     style={{
@@ -97,46 +97,35 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     }}>
                     Case studies
                 </Heading2>
-            </Midi>
-            <Midi style={{paddingTop: 0, margin: '0 auto' }}>
+            </LandingMidi>
+            <LandingMidi style={{paddingTop: 0, margin: '0 auto' }}>
                 <Project
                     name='Content Variety & Scheduling'
-                    image={ScheduleMain}
+                    image={Thumb}
                     url='schedule'
                     description='Led research & design to solve content staleness problems'
                 />
-                <Project
-                    name='Content Variety & Scheduling'
-                    image={ScheduleMain}
-                    url='ea1'
-                    description='Led research & design to solve content staleness problems'
+                <ProjectVideo
+                    name='Redesigning B2B Signup'
+                    image={NewVid}
+                    url='marketing-site'
+                    description='Reimagining the signup flow for Atmosphere TV'
                 />
-                <Project
-                    name='Content Variety & Scheduling'
-                    image={ScheduleMain}
-                    url='ea1'
-                    description='Led research & design to solve content staleness problems'
-                />
-            </Midi>
+            </LandingMidi>
 
-            <Midi style={{mixBlendMode: 'difference', paddingTop: '84px', margin: '0 auto' }}>
+            <LandingMidi style={{ paddingTop: '84px', margin: '0 auto' }}>
                 <Heading2  
                     id="experience"
-                    style={{
-                        mixBlendMode: 'difference',
-                        color: 'white',
-                    }}>
+                >
                     Experience
                 </Heading2>
-            </Midi>
-
-            <Midi style={{ paddingTop: 0, margin: '0 auto 80px auto' }}>
                 <Experience experiences={experiences} />
-            </Midi>
+            </LandingMidi>
 
-            <Midi style={{ marginBottom: '10px' }}>
+
+            <LandingMidi style={{ marginBottom: '10px' }}>
                 <Foot />
-            </Midi>
+            </LandingMidi>
         </Main>
     );
 };

@@ -7,7 +7,7 @@ const lightTheme = {
     textMain: '#000000',
     cover: 'rgba(169, 169, 169, 0.69)',
     formGray: '#F8F8F8',
-    textLight: 'rgba(0, 0, 0, 0.30)',
+    textLight: 'rgba(0, 0, 0, 0.40)',
     togglerFill: '#FFFFFF',
     grayText: '#6B6B6B',
     outline: 'rgba(0, 0, 0, 0.10)',

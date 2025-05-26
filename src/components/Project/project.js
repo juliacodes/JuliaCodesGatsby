@@ -14,11 +14,10 @@ const Project = ({
         width: 100%;
         height: 290px;
         border-radius: 25px;
-        border: 1px solid ${props => props.theme.outline};
         position: relative;
         overflow: hidden;
         @media (${QUERIES.large}) {
-            height: 290px;
+            height: 400px;
         }
 
         &::before {
@@ -31,7 +30,7 @@ const Project = ({
             background-image: url(${image});
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: 20% 0%;
+            background-position: left;
             transition: filter 0.3s ease;
             @media (${QUERIES.large}) {
                 background-position: center;
@@ -57,15 +56,15 @@ const Project = ({
     `;
 
     const Project = styled.div`
-        padding: 0 0 40px 0;
+        padding: 20px 0 40px 0;
         margin: 0;
         width: 100%;
         @media (${QUERIES.large}) {
-            padding: 15px 0 13px;
+            padding: 15px 0 32px;
         }
 
         &:hover ${ImageProj}::before {
-            filter: blur(8px);
+            background-color: black;
         }
 
         &:hover ${ImageProj}::after {

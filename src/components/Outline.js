@@ -10,11 +10,13 @@ const SECTION_IDS = [
   'the-challenge',
   'discovery-phase',
   'understanding-the-feedback',
-  'a-critical-turning-point',
+  'designing-a-solution',
   'beta-testing-with-real-users',
   'unexpected-insights',
   'design-iterations',
   'impact-and-results',
+  'reflections',
+
 ];
 
 const Container = styled.div`
@@ -154,7 +156,7 @@ const OutlineLink = styled.a`
   background-color: ${({ active }) => active ? 'rgba(0, 0, 0, 0.05)' : 'transparent'};
   border-radius: 4px;
   width: 100%;
-  padding: 2px 8px;
+  padding: 6px 8px;
   &:hover {
     background-color: ${({ theme }) => theme.outline};
   }
@@ -207,19 +209,18 @@ const Outline = () => {
             <OutlineSectionWithChildren> 
               <OutlineLink href="#discovery-phase" active={activeIdx === 2}>Discovery Phase</OutlineLink>
               <OutlineSubsection>
-                <OutlineSubitem><OutlineLink href="#uncovering-the-real-problems">Uncovering the Real Problems</OutlineLink></OutlineSubitem>
+                <OutlineSubitem><OutlineLink href="#uncovering-the-real-problems">Uncovering Root Problems</OutlineLink></OutlineSubitem>
+                <OutlineSubitem><OutlineLink href="#prototyping-process">Prototype</OutlineLink></OutlineSubitem>
+
                 <OutlineSubitem><OutlineLink href="#key-insights">Key Insights</OutlineLink></OutlineSubitem>
               </OutlineSubsection>
             </OutlineSectionWithChildren>
             <OutlineSectionWithChildren>
               <OutlineLink href="#understanding-the-feedback" active={activeIdx === 3}>Understanding the feedback</OutlineLink>
-              <OutlineSubsection>
-                <OutlineSubitem><OutlineLink href="#the-hypothesis">The Hypothesis</OutlineLink></OutlineSubitem>
-                <OutlineSubitem><OutlineLink href="#prototyping-process">Prototyping Process</OutlineLink></OutlineSubitem>
-              </OutlineSubsection>
+
             </OutlineSectionWithChildren>
             <OutlineSection>
-              <OutlineLink href="#a-critical-turning-point" active={activeIdx === 4}>A Critical Turning Point</OutlineLink>
+              <OutlineLink href="#designing-a-solution" active={activeIdx === 4}>Designing a Solution</OutlineLink>
             </OutlineSection>
             <OutlineSectionWithChildren>
               <OutlineLink href="#beta-testing-with-real-users" active={activeIdx === 5}>Beta Testing with Real Users</OutlineLink>
@@ -229,11 +230,6 @@ const Outline = () => {
             </OutlineSection>
             <OutlineSectionWithChildren>
               <OutlineLink href="#design-iterations" active={activeIdx === 7}>Design Iterations</OutlineLink>
-              <OutlineSubsection>
-                <OutlineSubitem><OutlineLink href="#enterprise-management">Enterprise Management</OutlineLink></OutlineSubitem>
-                <OutlineSubitem><OutlineLink href="#scheduling-enhancements">Scheduling Enhancements</OutlineLink></OutlineSubitem>
-                <OutlineSubitem><OutlineLink href="#automation-and-control">Automation and Control</OutlineLink></OutlineSubitem>
-              </OutlineSubsection>
             </OutlineSectionWithChildren>
             <OutlineSection>
               <OutlineLink href="#impact-and-results" active={activeIdx === 8}>Impact and Results</OutlineLink>
