@@ -68,16 +68,6 @@ export const scaleDown = keyframes`
     }
 `;
 
-export const cardSpread1 = keyframes`
-  0%{
-    transform: scale(1) translateY(-20px);
-  }
-
-  100%{
-    transform: scale(1) translateY(-80px);
-    
-  }
-`;
 
 export const SpreadBlackAnim = keyframes`
 0%{

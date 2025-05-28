@@ -67,7 +67,6 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
         <Main
             style={{
                 position: 'relative',
-                overflow: setDisableScroll ? 'hidden' : 'null',
                 height: setDisableScroll ? '100vh' : 'unset',
             }}
         >

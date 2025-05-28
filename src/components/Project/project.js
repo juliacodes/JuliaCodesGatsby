@@ -16,7 +16,7 @@ const Project = ({
         border-radius: 25px;
         position: relative;
         overflow: hidden;
-        @media (${QUERIES.large}) {
+        @media (${QUERIES.small}) {
             height: 400px;
         }
 
@@ -36,23 +36,6 @@ const Project = ({
                 background-position: center;
             }
         }
-
-        &::after {
-            content: 'Open';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 16px;
-            font-weight: 300;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            letter-spacing: -.01em;
-            background-color:rgba(255, 255, 255, 0.16);
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
     `;
 
     const Project = styled.div`
@@ -64,7 +47,6 @@ const Project = ({
         }
 
         &:hover ${ImageProj}::before {
-            background-color: black;
         }
 
         &:hover ${ImageProj}::after {

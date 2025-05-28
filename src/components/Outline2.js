@@ -214,7 +214,6 @@ const Outline2 = () => {
               <OutlineLink href="#understanding-the-feedback" active={activeIdx === 3}>Designing the Solution</OutlineLink>
               <OutlineSubsection>
                 <OutlineSubitem><OutlineLink href="#the-hypothesis">Bridging Physical & Digital</OutlineLink></OutlineSubitem>
-                <OutlineSubitem><OutlineLink href="#secondary-improvements">Secondary Improvements</OutlineLink></OutlineSubitem>
               </OutlineSubsection>
             </OutlineSectionWithChildren>
             <OutlineSection>

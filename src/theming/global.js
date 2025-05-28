@@ -23,7 +23,6 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     display: flex;
-    min-height: 100%;
     width: 100%;
     box-sizing: border-box;
     font-size: 16px;
@@ -42,7 +41,6 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 200;
     letter-spacing: -1.1%;
     width: 100%;
-    height: 100%;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;  scrollbar-width: none;

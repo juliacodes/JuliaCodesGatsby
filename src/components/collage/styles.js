@@ -23,6 +23,7 @@ export const CollageItem = styled.div`
     border-radius: 11px;
     aspect-ratio: 1;
     width: 160px;
+    height: 160px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: visible;

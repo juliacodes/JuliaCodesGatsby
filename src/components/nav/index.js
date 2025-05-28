@@ -6,73 +6,68 @@ import { Switch } from '../switch';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Nav = ({ toggleMode, mode, spread }) => {
-    const location = useLocation();
-    const navigate = useNavigate();
-    const isHome = location.pathname === '/';
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
 
-    const scrollToSection = (e, sectionId) => {
-        e.preventDefault();
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const yOffset = -100; // Adjust based on your nav height
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
 
-    useEffect(() => {
-        if (location.hash === '#experience') {
-            const element = document.getElementById('experience');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }, [location]);
+  useEffect(() => {
+    const hash = location.hash?.replace('#', '');
+    if (hash) {
+      setTimeout(() => scrollTo(hash), 0); // ensures DOM is ready
+    }
+  }, [location]);
 
-    return (
-        <Midi
-            style={{
-                mixBlendMode: 'difference',
+  return (
+    <Midi style={{ mixBlendMode: 'difference' }}>
+      <NavCont>
+        <Link to="/" style={{ margin: 0, padding: 0, border: 'none', height: '28px' }}>
+          <Logo style={{ position: 'relative', display: 'block' }} />
+        </Link>
+
+        <NavLinks>
+          <Link to="/">
+            <p className={isHome ? 'active' : ''}>Home</p>
+          </Link>
+
+          <button
+            onClick={() => {
+              if (!isHome) {
+                navigate('/#case-studies');
+              } else {
+                scrollTo('case-studies');
+              }
             }}
-        >
-            <NavCont
-                style={{
-                    mixBlendMode: 'difference',
-                }}
-                onMouseDown={(e) => {
-                    e.preventDefault();
-                }}
-            >
-                <Link
-                    to='/'
-                    aria-current='page'
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                    }}
-                    style={{margin: 0, padding: 0, border: 'none', height: '28px'}}
-                >
-                    <Logo
-                        style={{
-                            position: 'relative',
-                            display: 'block',
-                            zIndex: 2,
-                        }}
-                    />
-                </Link>
-                <NavLinks>
-                    <Link to="/"><p className={isHome ? "active" : ""}>Home</p></Link>
-                    <a href="#case-studies" onClick={(e) => scrollToSection(e, 'case-studies')}><p className={!isHome ? "active" : ""}>Work</p></a>
-                    <Link to="/#experience" onClick={(e) => {
-                        if (isHome) {
-                            e.preventDefault();
-                            scrollToSection(e, 'experience');
-                        }
-                    }}><p>About</p></Link>
-                </NavLinks>
-                <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
-            </NavCont>
-        </Midi>
-    );
+            className={!isHome ? 'active' : ''}
+          >
+            Work
+          </button>
+
+          <button
+            onClick={() => {
+              if (!isHome) {
+                navigate('/#experience');
+              } else {
+                scrollTo('experience');
+              }
+            }}
+          >
+            About
+          </button>
+        </NavLinks>
+
+        <Switch spread={spread} mode={mode} toggleMode={toggleMode} />
+      </NavCont>
+    </Midi>
+  );
 };
 
 export { Nav };

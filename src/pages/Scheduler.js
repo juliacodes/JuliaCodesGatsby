@@ -30,6 +30,7 @@ import {
     UserFlow,
     Layout8,
     Layout9,
+    Sketches,
 
 } from '../images';
 import Outline from '../components/Outline';
@@ -517,11 +518,34 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     }}
                 >
                    After several rounds of iterations and sketches, I decided to move schedule creation into a full-page experience rather than a popup or multi-step flow. I wanted users to have the flexibility to choose their starting point.
-                    <br/><br/>
                     The designs below allow users to create schedules with custom names, venue selection, and channel choices. I also included a thumbnail to visually represent the content within each schedule as users add them.
                 </DarkerParagraph>
             </Midi>
             <Full>
+            <div
+                    style={{
+                        width: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',    
+                        marginBottom: 44,
+                    }}
+                >
+                    <ImageGrow
+                        onClick={() => {
+                            window.open(
+                                '/static/media/useflow.03641c0af76474001887.png',
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+                        }}
+                        src={Sketches}
+                        style={{ width: '100%' }}
+                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                    />
+                    <Caption>
+                        Early phase sketches of scheduler layout
+                    </Caption>
+                </div>
             <div
                     style={{
                         width: '100%',

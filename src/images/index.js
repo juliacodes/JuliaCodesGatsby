@@ -35,6 +35,7 @@ import Layout8 from './schedule/layout8.png';
 import Layout9 from './schedule/layout9.png';
 import Thumb from './schedule/thumb.png';
 import NewVid from './newvid.mp4'
+import Sketches from './schedule/sketches.jpg'
 import Dragging from './schedule/dragging.gif';
 import UserFlow from './schedule/useflow.png';
 import {
@@ -48,6 +49,9 @@ import {
     Onboarding,
     VulnHifi,
 } from './vulns';
+import { marketingFinished, marketingInspo, marketingSketch, oldFlow, newFlow, finalFigma, scheduleDemo, signUp, productPageVid } from './marketing-site'
+
+
 
 import {
     Change1,
@@ -133,4 +137,12 @@ export {
     Thumb,
     Dragging,
     NewVid,
+    Sketches,
+    marketingFinished,
+    marketingInspo,
+    marketingSketch,
+    newFlow, 
+    finalFigma,
+    oldFlow,
+    scheduleDemo, signUp, productPageVid
 };

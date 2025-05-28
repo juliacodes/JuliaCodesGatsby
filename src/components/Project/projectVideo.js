@@ -28,7 +28,6 @@ const ProjectVideo = ({
         }
 
         &:hover ${ImageProj}::before {
-            background-color: black;
         }
 
         &:hover ${ImageProj}::after {
