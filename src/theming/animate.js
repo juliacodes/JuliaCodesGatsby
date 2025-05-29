@@ -68,46 +68,6 @@ export const scaleDown = keyframes`
     }
 `;
 
-export const cardSpread1 = keyframes`
-  0%{
-    transform: scale(1) translateY(-20px);
-  }
-
-  100%{
-    transform: scale(1) translateY(-80px);
-    
-  }
-`;
-
-export const cardSpread1Rev = keyframes`
-  0%{
-    transform: translateY(-80px);
-  }
-
-  100%{
-    transform: scale(1) translateY(-20px);
-  }
-`;
-
-export const cardSpread2 = keyframes`
-  0%{
-    transform: scale(0.9) translateY(20px);
-  }
-
-  100%{
-    transform: scale(0.9) translateY(-10px);  
-  }
-`;
-
-export const cardSpread2Rev = keyframes`
-  0%{
-    transform: scale(0.9) translateY(-10px); 
-  }
-
- 100%{
-    transform: scale(0.9) translateY(20px);
-  }
-`;
 
 export const SpreadBlackAnim = keyframes`
 0%{

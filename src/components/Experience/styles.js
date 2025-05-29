@@ -5,7 +5,11 @@ export const ExperienceList = styled.div`
     display: flex;
     flex-direction: column;
     gap: 48px;
-    margin: 24px 0;
+    margin: 24px 0 100px;
+
+     @media (max-width: 870px) {
+        margin: 24px 0;
+    }
 `;
 
 export const ExperienceItem = styled.div`

@@ -14,7 +14,7 @@ const useDarkMode = () => {
         setTimeout(() => {
             setMode(newMode);
             setDisableScroll(false);
-        }, 2000);
+        }, 1000);
     };
 
     const toggleMode = () => {

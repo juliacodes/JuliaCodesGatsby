@@ -1,2 +1,3 @@
 import { Project } from './project';
-export { Project };
+import { ProjectVideo } from './projectVideo';
+export { Project, ProjectVideo };

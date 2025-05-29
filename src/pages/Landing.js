@@ -8,12 +8,15 @@ import QUERIES, {
     Paragraph,
     Heading2,
     Heading3,
+    LandingMidi,
+    ImageProj,
+    
 } from '../theming/styles';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Nav, Foot, Project, Collage, Experience } from '../components';
+import { Nav, Foot, Project, ProjectVideo, Collage, Experience } from '../components';
 import { Spread } from '../components/switch/styles';
-import { Vuln, EA1Image } from '../images';
-import { ScheduleMain } from '../images';
+import { NewVid, Thumb } from '../images';
 
 const Split = styled.div`
     display: flex;
@@ -67,68 +70,82 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
         <Main
             style={{
                 position: 'relative',
-                overflow: setDisableScroll ? 'hidden' : 'null',
                 height: setDisableScroll ? '100vh' : 'unset',
             }}
         >
             <Spread className={spreadClass} />
             <Nav mode={mode} toggleMode={toggleMode} />
-            <Midi style={{ mixBlendMode: 'difference', paddingTop: 17 }}>
+            <LandingMidi style={{ mixBlendMode: 'difference', paddingTop: 64 }}>
                 <Heading
                     style={{
                         mixBlendMode: 'difference',
                         color: 'white',
                     }}
                 >
-                    I'm Julia — a Technical Product Designer crafting elegant & scalable design.
+                    I'm Julia — a Technical Product Designer crafting elegant, scalable design.
                 </Heading>
-            </Midi>
+            </LandingMidi>
 
-            <Midi style={{ paddingTop: 32 }}>
+            <LandingMidi style={{ paddingTop: 32 }}>
                 <Collage />
-            </Midi> 
+            </LandingMidi> 
 
-            {/*<Midi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
+            <LandingMidi style={{mixBlendMode: 'difference', margin: '0 auto', paddingBottom: 0 }}>
                 <Heading2  
+                    id="case-studies"
                     style={{
                         mixBlendMode: 'difference',
                         color: 'white',
                     }}>
                     Case studies
                 </Heading2>
-            </Midi>
-            <Midi style={{paddingTop: 0, margin: '0 auto' }}>
-                <Project
-                    name='Content Variety & Scheduling'
-                    image={ScheduleMain}
-                    url='ea1'
-                    description='Led research & design to solve content staleness problems'
-                />
-                <Project
-                    name='Content Variety & Scheduling'
-                    image={ScheduleMain}
-                    url='ea1'
-                    description='Led research & design to solve content staleness problems'
-                />
-            </Midi>*/}
-
-            <Midi style={{mixBlendMode: 'difference', paddingTop: '84px', margin: '0 auto' }}>
-                <Heading2  
+            </LandingMidi>
+            <LandingMidi style={{paddingTop: 20, margin: '0 auto' }}>
+                <Link to='schedule'><ImageProj $image={Thumb} /></Link>
+                </LandingMidi>
+                <LandingMidi style={{mixBlendMode: 'difference', color: 'white', paddingTop: 0, margin: '0 auto' }}>
+                <Heading3
                     style={{
+                        textAlign: 'left',
+                        margin: 0,
+                        padding: 0,
                         mixBlendMode: 'difference',
-                        color: 'white',
-                    }}>
+                        color: 'white'
+                    }}
+                    onMouseDown={(e) => {
+                        e.preventDefault();
+                    }}
+                >
+                    <Link to='schedule'>Content Variety & Scheduling</Link>
+                </Heading3>
+
+                <Paragraph style={{ marginTop: '-4px', mixBlendMode: 'difference',
+                        color: 'white', opacity: .4 }}>
+                    Led research & design to solve content staleness problems
+                </Paragraph>
+            </LandingMidi>
+            <LandingMidi style={{paddingTop: 20, margin: '0 auto' }}>
+                <ProjectVideo
+                    name='Redesigning B2B Signup'
+                    image={NewVid}
+                    url='marketing-site'
+                    description='Reimagining the signup flow for Atmosphere TV'
+                />
+            </LandingMidi>
+
+            <Midi style={{ paddingTop: '84px', margin: '0 auto' }}>
+                <Heading2  
+                    id="experience"
+                >
                     Experience
                 </Heading2>
-            </Midi>
-
-            <Midi style={{ paddingTop: 0, margin: '0 auto 80px auto' }}>
                 <Experience experiences={experiences} />
             </Midi>
 
-            <Midi style={{ marginBottom: '10px' }}>
+
+            <LandingMidi style={{ marginBottom: '10px' }}>
                 <Foot />
-            </Midi>
+            </LandingMidi>
         </Main>
     );
 };

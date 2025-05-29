@@ -14,11 +14,10 @@ const Project = ({
         width: 100%;
         height: 290px;
         border-radius: 25px;
-        border: 1px solid ${props => props.theme.outline};
         position: relative;
         overflow: hidden;
-        @media (${QUERIES.large}) {
-            height: 290px;
+        @media (${QUERIES.small}) {
+            height: 400px;
         }
 
         &::before {
@@ -31,41 +30,23 @@ const Project = ({
             background-image: url(${image});
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: 20% 0%;
+            background-position: left;
             transition: filter 0.3s ease;
             @media (${QUERIES.large}) {
                 background-position: center;
             }
         }
-
-        &::after {
-            content: 'Open';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 16px;
-            font-weight: 300;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            letter-spacing: -.01em;
-            background-color:rgba(255, 255, 255, 0.16);
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
     `;
 
     const Project = styled.div`
-        padding: 0 0 40px 0;
+        padding: 20px 0 40px 0;
         margin: 0;
         width: 100%;
         @media (${QUERIES.large}) {
-            padding: 15px 0 13px;
+            padding: 15px 0 32px;
         }
 
         &:hover ${ImageProj}::before {
-            filter: blur(8px);
         }
 
         &:hover ${ImageProj}::after {
