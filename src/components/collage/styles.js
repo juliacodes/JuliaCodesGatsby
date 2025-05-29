@@ -21,13 +21,27 @@ export const CollageItem = styled.div`
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.13);
     border-radius: 11px;
-    aspect-ratio: 1;
-    width: 160px;
-    height: 160px;
+    width: 90px;
+    height: 90px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: visible;
     will-change: transform;
+
+    @media (${QUERIES.xs}) {
+        width: 120px;
+        height: 120px;
+    }
+
+    @media (${QUERIES.small}) {
+        width: 140px;
+        height: 140px;
+    }
+
+    @media (${QUERIES.large}) {
+        width: 150px;
+        height: 150px;
+    }
 
     img {
         width: 100%;
@@ -93,7 +107,7 @@ export const CollageItem = styled.div`
         display: none;
     }
 
-    @media (${QUERIES.large}) {
+    @media (${QUERIES.small}) {
         &:nth-child(5) {
             display: block;
         }

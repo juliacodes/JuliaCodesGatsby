@@ -5,6 +5,7 @@ const QUERIES = {
     large: `min-width: 1200px`,
     medium: `min-width: 870px`,
     small: `min-width: 660px`,
+    xs:  `min-width: 460px`,
     maxWidth: `1500px`,
 };
 
@@ -193,6 +194,52 @@ export const Image = styled.div`
     background-size: cover;
     opacity: 0;
     animation: ${fadeIn} 1s forwards;
+`;
+
+export const ImageProj = styled.div`
+margin-bottom: 18px;
+width: 100%;
+height: 290px;
+border-radius: 25px;
+position: relative;
+overflow: hidden;
+@media (${QUERIES.small}) {
+    height: 400px;
+}
+
+&::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(${props => props.$image || "#BF4F74"});
+    ${props => props.$inputColor || "#BF4F74"};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: filter 0.3s ease;
+    @media (${QUERIES.large}) {
+        background-position: center;
+    }
+}
+`;
+
+export const Project = styled.div`
+padding: 20px 0 40px 0;
+margin: 0;
+width: 100%;
+@media (${QUERIES.large}) {
+    padding: 15px 0 32px;
+}
+
+&:hover ${ImageProj}::before {
+}
+
+&:hover ${ImageProj}::after {
+    opacity: .6;
+}
 `;
 
 export default QUERIES;

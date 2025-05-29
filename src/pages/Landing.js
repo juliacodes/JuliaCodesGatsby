@@ -9,7 +9,10 @@ import QUERIES, {
     Heading2,
     Heading3,
     LandingMidi,
+    ImageProj,
+    
 } from '../theming/styles';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Nav, Foot, Project, ProjectVideo, Collage, Experience } from '../components';
 import { Spread } from '../components/switch/styles';
@@ -79,7 +82,7 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         color: 'white',
                     }}
                 >
-                    I'm Julia — a Technical Product Designer crafting elegant & scalable design.
+                    I'm Julia — a Technical Product Designer crafting elegant, scalable design.
                 </Heading>
             </LandingMidi>
 
@@ -97,13 +100,31 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                     Case studies
                 </Heading2>
             </LandingMidi>
-            <LandingMidi style={{paddingTop: 0, margin: '0 auto' }}>
-                <Project
-                    name='Content Variety & Scheduling'
-                    image={Thumb}
-                    url='schedule'
-                    description='Led research & design to solve content staleness problems'
-                />
+            <LandingMidi style={{paddingTop: 20, margin: '0 auto' }}>
+                <Link to='schedule'><ImageProj $image={Thumb} /></Link>
+                </LandingMidi>
+                <LandingMidi style={{mixBlendMode: 'difference', color: 'white', paddingTop: 0, margin: '0 auto' }}>
+                <Heading3
+                    style={{
+                        textAlign: 'left',
+                        margin: 0,
+                        padding: 0,
+                        mixBlendMode: 'difference',
+                        color: 'white'
+                    }}
+                    onMouseDown={(e) => {
+                        e.preventDefault();
+                    }}
+                >
+                    <Link to='schedule'>Content Variety & Scheduling</Link>
+                </Heading3>
+
+                <Paragraph style={{ marginTop: '-4px', mixBlendMode: 'difference',
+                        color: 'white', opacity: .4 }}>
+                    Led research & design to solve content staleness problems
+                </Paragraph>
+            </LandingMidi>
+            <LandingMidi style={{paddingTop: 20, margin: '0 auto' }}>
                 <ProjectVideo
                     name='Redesigning B2B Signup'
                     image={NewVid}
