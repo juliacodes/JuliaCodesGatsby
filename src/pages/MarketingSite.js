@@ -15,7 +15,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { Nav, Foot } from '../components';
 import { Spread } from '../components/switch/styles';
 import {
-    EA1Image,
     finalFigma,
     marketingInspo,
     marketingSketch,
@@ -31,7 +30,6 @@ import Outline2 from '../components/Outline2';
 const FlexGroup = styled.div`
     margin: 40px 0;
     display: flex;
-    justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
     background-color:rgba(255, 255, 255, 0.02);
@@ -42,7 +40,7 @@ const FlexGroup = styled.div`
         width: 100%;
     
         @media (${QUERIES.medium}) {
-            width: unset;
+            width: 45%;
         }
     }
 
@@ -179,37 +177,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                             Developer
                         </Paragraph>
                     </div>
-                    <div>
-                        <Label
-                            style={{
-                                mixBlendMode: 'difference',
-                                color: 'white',
-                            }}
-                        >
-                            Outcome
-                        </Label>
-                        <Paragraph
-                            style={{
-                                maxWidth: 700,
-                                mixBlendMode: 'difference',
-                                lineHeight: '32px',
-                                color: 'white',
-                            }}
-                        >
-                            +24% conversion
-                        </Paragraph>
-                        <Paragraph
-                            style={{
-                                maxWidth: 700,
-                                mixBlendMode: 'difference',
-                                lineHeight: '32px',
-                                color: 'white',
-                            }}
-                        >
-                            60k+ page views
-                        </Paragraph>
-
-                    </div>
+                 
                 </FlexGroup>
                 <Paragraph
                     style={{
@@ -221,7 +189,9 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                 >
                     Atmosphere TV’s signup flow was underperforming—not because of friction, but because users didn’t understand what they were signing up for. As a hybrid product (a physical device + streaming service), it didn’t fit cleanly into existing mental models. Instead of simplifying the funnel, I added a step: a product-focused page that clarified the offering before asking for commitment.
                     <br /> <br />
-                    The result? A 24% lift in conversions, fewer drop-offs, and a clearer, more confident path to signup. This case study explores how rethinking our funnel around user understanding, not just efficiency, transformed our acquisition strategy.
+                    The result? A dramatic lift in conversions, fewer drop-offs, and a clearer, more confident path to signup. This case study explores how rethinking our funnel around user understanding, not just efficiency, transformed our acquisition strategy.
+                    <br/> <br/> 
+                    Note: Some details have been modified or generalized to respect company confidentiality.
                 </Paragraph>
 
             </Midi>
@@ -249,7 +219,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                 </Heading2>
 
                 <DarkerParagraph style={{ marginBottom: 24 }}>
-                    Atmosphere TV’s signup flow was underperforming—only <mark>2% of visitors were converting.</mark> The issue wasn’t hidden in the data; it was clear in user behavior. People were abandoning the funnel or circling back through multiple pages, trying to piece together what exactly they were signing up for.
+                    Atmosphere TV’s signup flow was underperforming <mark>and not enough visitors were converting.</mark> The issue wasn’t hidden in the data; it was clear in user behavior. People were abandoning the funnel or circling back through multiple pages, trying to piece together what exactly they were signing up for.
                 </DarkerParagraph>
                 <DarkerParagraph style={{ marginBottom: 24 }}>
                     The problem? Our product didn’t fit into a familiar mold. Atmosphere is a hybrid offering: a physical device paired with a streaming subscription. But the existing funnel treated it like a typical SaaS signup, pushing an imediate sign up and failing to explain the value or clarify what users would receive.
@@ -276,7 +246,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                         }}
                         src={oldFlow}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt="Atmosphere's previous sign up flow"
                     />
 
                     <Caption>
@@ -326,11 +296,11 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                         }}
                         src={marketingInspo}
                         style={{ width: '100%', }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt=' competitor product pages'
                     />
 
                     <Caption>
-                        competitor product pages
+                        Comparable competitor product pages
                     </Caption>
                 </div>
             </Full>
@@ -417,7 +387,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                         }}
                         src={newFlow}
                         style={{ width: '100%' }}
-                        alt='Sketches of the product details page'
+                        alt=' New suggested user flow'
                     />
 
                     <Caption>
@@ -534,7 +504,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                         }}
                         src={scheduleDemo}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='  New schedule a demo page for enterprise users '
                     />
 
                     <Caption>
@@ -567,7 +537,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                     The Results
                 </Heading2>
                 <DarkerParagraph style={{ marginBottom: 24 }}>
-                    When the results came in, they validated our hypothesis: <mark>the new product-focused journey showed a nearly 24% improvement in signup rates compared to the control.</mark>
+                    When the results came in, they validated our hypothesis: <mark>the new product-focused journey showed a very significant improvement in signup rates compared to the control.</mark>
                 </DarkerParagraph>
 
                 <DarkerParagraph style={{ marginBottom: 24 }}>
@@ -576,7 +546,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                         <li>Users spent more time on the product page than we anticipated</li>
                         <li>Back-and-forth navigation decreased significantly</li>
                         <li>The percentage of users who completed the signup form after reaching it increased</li>
-                        <li>Demo page was a huge hit, with 80% of users who reached it converting</li>
+                        <li>The demo page proved highly effective, converting a large portion of visitors who engaged with it.</li>
 
                     </ul>
 
@@ -636,7 +606,7 @@ const MarketingSite = ({ toggleMode, mode, spread }) => {
                         }}
                         src={finalFigma}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='Final figma file for marketing site work'
                     />
 
                     <Caption>

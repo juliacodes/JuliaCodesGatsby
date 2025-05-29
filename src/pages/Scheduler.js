@@ -49,7 +49,7 @@ const FlexGroup = styled.div`
         width: 100%;
     
         @media (${QUERIES.medium}) {
-            width: unset;
+            width: 45%;
         }
     }
 
@@ -192,47 +192,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                             Lead Researcher
                         </Paragraph>
                     </div>
-                    <div>
-                        <Label
-                            style={{
-                                mixBlendMode: 'difference',
-                                color: 'white',
-                            }}
-                        >
-                            Outcome
-                        </Label>
-                        <Paragraph
-                            style={{
-                                maxWidth: 700,
-                                mixBlendMode: 'difference',
-                                lineHeight: '32px',
-                                color: 'white',
-                            }}
-                        >
-                            Used by 30k+ users
-                        </Paragraph>
-                        <Paragraph
-                            style={{
-                                maxWidth: 700,
-                                mixBlendMode: 'difference',
-                                lineHeight: '32px',
-                                color: 'white',
-                            }}
-                        >
-                            +34% content varience
-                        </Paragraph>
-
-                        <Paragraph
-                            style={{
-                                maxWidth: 700,
-                                mixBlendMode: 'difference',
-                                lineHeight: '32px',
-                                color: 'white',
-                            }}
-                        >
-                            56k schedules created
-                        </Paragraph>
-                    </div>
+                    
                 </FlexGroup>
                 <Paragraph
                     style={{
@@ -244,6 +204,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 >
                     Atmosphere TV delivers streaming content to thousands of venues across the country—but despite a robust content library, many business owners were seeing the same few clips on repeat. This case study details how I led a UX initiative to uncover the root of this content fatigue, and designed a scalable scheduling solution that increased content discovery, improved engagement, and balanced the needs of both small businesses and enterprise users. 
                     <br/> <br/> Through user interviews, prototyping, and real-world testing, we reimagined how content is selected, scheduled, and controlled—transforming the way businesses use Atmosphere to entertain their customers.
+                    <br/> <br/> Note: Some details have been modified or generalized to respect company confidentiality.
                 </Paragraph>
 
             </Midi>
@@ -352,7 +313,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Prototype}
                         style={{ width: '100%', borderRadius: 24 }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='The resulting low fidelity prototype that users could interact with'
                     />
 
                     <Caption>
@@ -390,7 +351,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Interview}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt=' Dovetail overview of interview notes and images of me in action (clearly I talk with my hands)'
                     />
 
                     <Caption>
@@ -461,7 +422,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Affinity}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='Dovetail diagram of key quotes and themes'
                     />
 
                     <Caption>
@@ -540,7 +501,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Sketches}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='Early phase sketches of scheduler layout'
                     />
                     <Caption>
                         Early phase sketches of scheduler layout
@@ -564,7 +525,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={UserFlow}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt=' User flow of the entire scheduling experience and its impact across existing pages and flows'
                     />
                     <Caption>
                         User flow of the entire scheduling experience and its impact across existing pages and flows
@@ -588,7 +549,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Layout1}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='Empty starting view and finished filled out view'
                     />
                     <Caption>
                         Empty starting view and finished filled out view
@@ -612,7 +573,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Layout2}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt=' Different states of the schedule naming component'
                     />
 
                     <Caption>
@@ -637,7 +598,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Layout3}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='Adding venues to the schedule'
                     />
                     <Caption>
                         Adding venues to the schedule
@@ -661,7 +622,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Layout4}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='Different states of the adding venues flow'
                     />
 
                     <Caption>
@@ -686,7 +647,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Dragging}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='Adding channels to the schedule'
                     />
                     <Caption>
                         Adding channels to the schedule
@@ -736,7 +697,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Layout5}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='  Affinity diagram of quotes from interviews'
                     />
 
                     <Caption>
@@ -803,7 +764,6 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Layout6}
                         style={{ width: '50%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
 
                     <ImageGrow
@@ -816,7 +776,6 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={Layout7}
                         style={{ width: '50%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
                     />
                 </div>
 
@@ -857,7 +816,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                             }}
                             src={Layout8}
                             style={{ width: '100%' }}
-                            alt='Low fidelity wireframes that display movie theater seat selection flow'
+                            alt='Default channel drastically reduced the amount of time required to create a schedule.'
                         />
 
                         <Caption>
@@ -898,7 +857,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                             }}
                             src={Layout9}
                             style={{ width: '100%' }}
-                            alt='Low fidelity wireframes that display movie theater seat selection flow'
+                            alt=' Channel taglines in our Wine & Dine curated schedule'
                         />
 
                         <Caption>
@@ -923,14 +882,14 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 >  
                     <ul>
                         <li>Content awareness increased from <mark>2.0 to 4.3 (out of 5)</mark></li>
-                        <li>Over <mark>8% of all ~100,000 customers</mark> switched to schedules from default content. </li>
-                        <li><mark>+34%</mark> content variance</li>
+                        <li>Schedules quickly gained traction, with a significant portion of our audience switching to scheduled content.</li>
+                        <li>The feature has shown low usability risk, with minimal customer support requests since launch.</li>
                     </ul>  
                 </DarkerParagraph>
                 <DarkerParagraph style={{ marginBottom: 24 }}>
                     Most importantly, the scheduling feature became a powerful tool for reducing content fatigue. Users who adopted scheduling reported significantly higher satisfaction with content variety.
 
-                    An enterprise customer shared: 
+                    One customer shared: 
                     <Quote style={{ marginTop: 20, marginBottom: 24 }}>
                         "This finally gives us the control we need while making sure our customers see fresh content throughout the day. It's the best of both worlds."
                     </Quote>
@@ -955,7 +914,7 @@ const Scheduler = ({ toggleMode, mode, spread, setDisableScroll }) => {
                         }}
                         src={ScheduleMain}
                         style={{ width: '100%' }}
-                        alt='Low fidelity wireframes that display movie theater seat selection flow'
+                        alt='  Modified final design with a new color scheme & modern navigation'
                     />
 
                     <Caption>

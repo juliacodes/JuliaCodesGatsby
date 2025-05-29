@@ -112,14 +112,14 @@ const Landing = ({ toggleMode, mode, spread, setDisableScroll }) => {
                 />
             </LandingMidi>
 
-            <LandingMidi style={{ paddingTop: '84px', margin: '0 auto' }}>
+            <Midi style={{ paddingTop: '84px', margin: '0 auto' }}>
                 <Heading2  
                     id="experience"
                 >
                     Experience
                 </Heading2>
                 <Experience experiences={experiences} />
-            </LandingMidi>
+            </Midi>
 
 
             <LandingMidi style={{ marginBottom: '10px' }}>
