@@ -19,7 +19,25 @@ import SelectingVehicle from '../images/ea1/SelectingVehicle.png';
 import FinalEA from '../images/ea1/final.png';
 import FinalEA2 from '../images/ea1/final2.png';
 import ScheduleMain from './schedule/key.png';
-
+import Interview from './schedule/interview.png';
+import ContentVariety from './schedule/content.png';
+import Affinity from './schedule/affinity.png';
+import PrototypeMess from './schedule/prototype-mess.png';
+import Prototype from './schedule/prototype.gif';
+import Layout1 from './schedule/layout1.png';
+import Layout2 from './schedule/layout2.png';
+import Layout3 from './schedule/layout3.png';
+import Layout4 from './schedule/layout4.png';
+import Layout5 from './schedule/layout5.png';
+import Layout6 from './schedule/layout6.png';
+import Layout7 from './schedule/layout7.png';
+import Layout8 from './schedule/layout8.png';
+import Layout9 from './schedule/layout9.png';
+import Thumb from './schedule/thumb.png';
+import NewVid from './newvid.mp4'
+import Sketches from './schedule/sketches.jpg'
+import Dragging from './schedule/dragging.gif';
+import UserFlow from './schedule/useflow.png';
 import {
     Log4j1,
     Log4j2,
@@ -31,6 +49,9 @@ import {
     Onboarding,
     VulnHifi,
 } from './vulns';
+import { marketingFinished, marketingInspo, marketingSketch, oldFlow, newFlow, finalFigma, scheduleDemo, signUp, productPageVid } from './marketing-site'
+
+
 
 import {
     Change1,
@@ -48,7 +69,6 @@ import {
     Sketch2,
     Sketch3,
     Sketch4,
-    UserFlow,
     Synth,
 } from './movie-theater';
 
@@ -99,5 +119,30 @@ export {
     SelectingVehicle,
     FinalEA,
     FinalEA2,
-    ScheduleMain
+    ScheduleMain,
+    Interview,
+    ContentVariety,
+    Affinity,
+    PrototypeMess,
+    Prototype,
+    Layout1,
+    Layout2,
+    Layout3,
+    Layout4,
+    Layout5,
+    Layout6,
+    Layout7,
+    Layout8,
+    Layout9,
+    Thumb,
+    Dragging,
+    NewVid,
+    Sketches,
+    marketingFinished,
+    marketingInspo,
+    marketingSketch,
+    newFlow, 
+    finalFigma,
+    oldFlow,
+    scheduleDemo, signUp, productPageVid
 };

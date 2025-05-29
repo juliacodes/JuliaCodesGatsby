@@ -48,7 +48,7 @@ export const FinalLeft = styled.div`
 export const FinalRight = styled(FinalLeft)`
     justify-content: flex-start;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
 
     ${Paragraph} {
         margin-left: 0;
